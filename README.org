@@ -1,0 +1,21 @@
+#+TITLE:Operating Systems
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE: CSC 420 @ Lyon College Spring 2022
+#+OPTIONS: toc:nil
+* What's in this repo?
+
+  * Repository for CSC 420 - Operating Systems
+  * Emacs Org-mode files are rendered as Markdown.
+  * For a TOC, open the bullet point list menu 
+
+** [[https://github.com/birkenkrahe/dsc101/blob/main/schedule.md][Schedule]] of the course (up to date)
+** [[https://github.com/birkenkrahe/dsc101/blob/main/agenda.md][Agenda]] for every session
+** [[https://github.com/birkenkrahe/dsc101/blob/main/diary.md][Course diary]] for further reading
+** [[https://github.com/birkenkrahe/dsc101/discussions][Discussion forums]] for assignments
+** [[https://github.com/birkenkrahe/dsc101/blob/main/FAQ.md][Frequently Asked Questions (FAQ)]]
+** [[https://github.com/birkenkrahe/dsc101/blob/main/syllabus.md][Syllabus]] for a course overview
+
+** History
+
+   First offered @Lyon: Spring 2022 (Undergrad). To be offered:
+   Spring 2024, 2026, 2028.

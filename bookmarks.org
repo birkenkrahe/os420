@@ -1,0 +1,26 @@
+#+TITLE:CSC420 OS Bookmarks 
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE: CSC420 (Operating Systems) web bookmarks 
+#+STARTUP:overview
+#+OPTIONS:hideblocks
+* Bookmarks
+** What is this about?
+
+   When I find an interesting article or video, I share it here. Most
+   of these are possible starting points for a short presentation, or
+   may be useful for your application research.
+
+   I usually look at the articles in some detail (though I rarely work
+   through them - that would be your job), and assign a label for the
+   difficulty level Lvl = 0 (simple), 1 (moderate), 2 (difficult), or 3
+   (hard). Sites or tutorials aren't labeled by difficulty.
+
+   Papers can be hard for different reason: length, technical
+   vocabulary, writing style, mathematics, number of citations etc. If
+   you find any of these interesting and want to use them for your
+   research, you might ask me why I assigned a particular level.
+
+** [[https://www.coursera.org/learn/os-power-user/lecture/tVQ51/course-introduction][Google certificate course]]
+
+   Useful to compare this with our syllabus. I've started this course
+   in November 2021 - not sure yet if I will finish it. 

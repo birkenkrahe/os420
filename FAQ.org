@@ -1,0 +1,10 @@
+#+TITLE:CSC330 FAQ 
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:CSC330 Frequently Asked Questions
+#+STARTUP:overview hideblocks
+* What is this?
+
+  This is a Frequently Asked Questions (FAQ) file for the course
+  "Database Theory & Applications" (CSC 330). For the FAQs across
+  courses, see the [[https://github.com/birkenkrahe/org][org repo]].
+

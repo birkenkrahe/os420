@@ -1,0 +1,287 @@
+#+TITLE:CSC 420 Spring 2022 Syllabus
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: Operating Systems (CSC 420) Spring 2022
+#+options: toc:nil
+* General Course Information
+
+  * Meeting Times: Tuesday/Thursday, 13:00-14:15 hrs
+  * Meeting place: Lyon Building Room 104
+  * Professor: Marcus Birkenkrahe
+  * Office: Derby Science Building 210
+  * Phone: (870) 307-7254
+  * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
+  * Textbook: Lemahieu/Vanden Broucke/Baesens (2021). Principles of
+    Database Management. Cambridge: Cambridge University Press. URL:
+
+    #+attr_html: :width 300px
+    [[./img/cover.png]]
+
+** Objectives
+
+   Operating systems manage a computer’s resources for its users and
+   their applications. We focus on the underlying concepts, look at
+   examples and try them out - my preferred sandbox being Linux, which
+   you will be introduced to, including process management and simple
+   shell programming. We also address concurrency and parallelization,
+   cloud computing, memory, and storage management. We may use the
+   Raspberry Pi as a platform to try stuff and get much closer to the
+   machine than PC OS like Windows or MacOS allow. The lessons will
+   directly lead to you feeling calm and powerful when working on your
+   computer. A worthwhile investment! We will endeavour to cover
+   chapter 1-10 of the textbook by Vanderbauwhede and Singer (2019).
+
+   #+attr_html: :width 600px
+   [[./img/landscape.png]]
+
+   /Image: Computer landscape - modified after Steinhart, 2019/
+
+** Student Learning Outcomes
+
+   Students who complete CSC 100.01 "Introduction to programming in
+   C/C++", will be able to:
+
+   * Master basic sequential programming skills (conditional
+     statements, loops, functions, input/output, use of data types)
+   * Explain the basic components of a procedural programming language
+   * Apply the basics of programming to solve a variety of
+     quantitative problems
+   * Master computing infrastructure (compiler, editor, shell)
+   * Know how to effectively present assignment results
+
+** Course requirements
+
+   No prior knowledge required. Some knowledge of, and experience with
+   computers is useful but not critical. Curiosity is essential. You
+   will gain data literacy skills by taking this course. The course
+   will prepare you for further studies in computer and data science,
+   or in other disciplines that use modern computing, i.e. every
+   discipline, from accounting to zoology).
+
+** Grading system
+
+   | WHEN[fn:1]    | DESCRIPTION       | IMPACT |
+   |---------------+-------------------+--------|
+   | Every session | Class assignments |    10% |
+   | Weekly        | Quizzes           |    10% |
+   | Monthly       | Tests             |    30% |
+   | Biweekly      | Lab projects      |    30% |
+   | End of term   | Final exam        |    20% |
+
+   You should be able to see your current grade at any time using the
+   Schoology gradebook for the course.
+
+*** Grading table
+
+    This table is used to convert completion rates into letter
+    grades. For the midterm results, letter grades still carry signs,
+    while for the term results, only straight letters are given (by
+    rounding up).
+
+    |--------+-----------------+---------------|
+    |    *%* | *Midterm Grade* | *Final Grade* |
+    |--------+-----------------+---------------|
+    | 100-98 | A+              |               |
+    |  97-96 | A               | A (passed -   |
+    |  95-90 | A-              | very good)    |
+    |--------+-----------------+---------------|
+    |  89-86 | B+              |               |
+    |  85-80 | B               | B (passed -   |
+    |  79-76 | B-              | good)         |
+    |--------+-----------------+---------------|
+    |  75-70 | C+              |               |
+    |  69-66 | C               | C (passed -   |
+    |  65-60 | C-              | satisfactory) |
+    |--------+-----------------+---------------|
+    |  59-56 | D+              |               |
+    |  55-50 | D               | D (passed)    |
+    |--------+-----------------+---------------|
+    |   49-0 | F               | F (failed)    |
+    |--------+-----------------+---------------|
+
+*** Class assignments (10%)
+    - Complete small assignments in class (participation)
+    - Complete assignments outside of class (homework)
+    - Be ready to present your results
+
+*** Weekly Quizzes (10%)
+    - Answer multiple choice questions
+    - Complete quiz online outside of class
+    - Use for drills thereafter
+
+*** Monthly tests (30%)
+    - Complete 45 min online test in class
+    - Recall last month of lectures and labs
+    - Read relevant textbook chapters
+
+*** Biweekly lab projects (30%)
+    - Solve programming problems in class
+    - Complete assignments outside of class if necessary
+    - Be ready to present your solutions
+
+*** Final exam (20%)
+    - 120 min multiple choice exam
+    - Online in Schoology in the classroom
+    - Sourced from the weekly quiz questions
+
+* Standard Policies[fn:3]
+** Honor Code
+
+   All graded work in this class is to be pledged in accordance with
+   the Lyon College Honor Code. The use of a phone for any reason
+   during the course of an exam is considered an honor code
+   violation.
+
+** Class Attendance Policy
+
+   Students are expected to attend all class periods for the courses
+   in which they are enrolled. They are responsible for conferring
+   with individual professors regarding any missed
+   assignments. Faculty members are to notify the Registrar when a
+   student misses the equivalent of one, two, three, and four weeks
+   of class periods in a single course. Under this policy, there is
+   no distinction between “excused” and “unexcused” absences, except
+   that a student may make up work missed during an excused
+   absence. A reminder of the college’s attendance policy will be
+   issued to the student at one week, a second reminder at two weeks,
+   a warning at three weeks, and notification of administrative
+   withdrawal and the assigning of an “F” grade at four
+   weeks. Students who are administratively withdrawn from more than
+   one course will be placed on probation or suspended.
+
+** Disabilities
+
+   Students seeking reasonable accommodations based on documented
+   learning disabilities must contact Interim Director of Academic
+   Support Courtney Beal in the Morrow Academic Center at (870)
+   307-7016 or at courtney.beal@lyon.edu.
+
+** Harassment, Discrimination, and Sexual Misconduct
+
+   Title IX and Lyon’s policy prohibit harassment, discrimination and
+   sexual misconduct. Lyon encourages anyone experiencing harassment,
+   discrimination or sexual misconduct to talk to Danell Hetrick,
+   Title IX Coordinator and Interim Vice-President for Student Life,
+   or Sh’Nita Mitchell, Title IX Investigator and Associate Dean for
+   Students, about what happened so they can get the support they need
+   and Lyon can respond appropriately.  Lyon is legally obligated to
+   respond to reports of sexual misconduct, and therefore we cannot
+   guarantee the confidentiality of a report, unless made to a
+   confidential resource (Chaplain, Counselor, or Nurse). As a faculty
+   member, I am required to report possible Title IX violations and
+   must provide our Title IX coordinator with all relevant details.  I
+   cannot, therefore, guarantee confidentiality.
+
+** College-Wide COVID-19 Policies for Spring, 2022
+
+   - Masks are mandated for all students in classrooms, laboratories
+     and studios.  They remain optional for all persons on the Lyon
+     campus in all other locations and outside.
+   - Participation in community surveillance testing is mandatory.
+   - Vaccines are STRONGLY encouraged for all faculty, staff, and
+     students. Vaccines are NOT MANDATED for Lyon College community
+     members.
+
+   Details specific to this course may be found in the subsequent
+   pages of this syllabus. Those details will include at least the
+   following:
+   - A description of the course consistent with the Lyon College catalog.
+   - A list of student learning outcomes for the course.
+   - A summary of all course requirements.
+   - An explanation of the grading system to be used in the course.
+   - Any course-specific attendance policies that go beyond the College policy.
+   - Details about what constitutes acceptable and unacceptable
+     student collaboration on graded work.
+
+* Course specific information
+** Assignments and Honor Code[fn:2]
+
+   There will be numerous assignments during the semester - e.g.
+   programming, lessons, tests, quizzes, and sprint reviews. They are
+   due at the beginning of the class period on the due date. Once
+   class begins, the assigment will be considered one day late if it
+   has not been turned in.  Late programs will not be accepted without
+   an extension. Extensions will *not* be granted for reasons such as:
+
+   * You could not get to a computer
+   * You could not get a computer to do what you wanted it to do
+   * The network was down
+   * The printer was out of paper or toner
+   * You erased your files, lost your homework, or misplaced your
+     flash drive
+   * You had other coursework or family commitments that interfered
+     with your work in this course
+
+   Put “Pledged” and a note of any collaboration in the comments of
+   any program you turn in. Programming assignments are individual
+   efforts, but you may seek assistance from another student or the
+   course instructor.  You may not copy someone else’s solution. If
+   you are having trouble finishing an assignment, it is far better to
+   do your own work and receive a low score than to go through an
+   honor trial and suffer the penalties that may be involved.
+
+   What is cheating on an assignment? Here are a few examples:
+
+   * Having someone else write your assignment, in whole or in part
+   * Copying an assignment someone else wrote, in whole or in part
+   * Collaborating with someone else to the extent that your
+     submissions are identifiably very similar, in whole or in part
+   * Turning in a submission with the wrong name on it
+
+   What is not cheating?  Here are some examples:
+
+   * Talking to someone in general terms about concepts involved in an
+     assignment
+   * Asking someone for help with a specific error message or bug in
+     your program
+   * Getting help with the specifics of language syntax or citation
+     style
+   * Utilizing information given to you by the instructor
+
+   Any assistance must be clearly explained in the comments at the
+   beginning of your submission.  If you have any questions about
+   this, please ask or review the policies relating to the Honor Code.
+
+   Absences on Days of Exams:
+
+   Test “make-ups” will only be allowed if arrangements have been
+   made prior to the scheduled time.  If you are sick the day of the
+   test, please e-mail me or leave a message on my phone before the
+   scheduled time, and we can make arrangements when you return.
+
+** Important Dates[fn:4]:
+
+   | DATE        | DAY              | DESCRIPTION                                  |
+   |-------------+------------------+----------------------------------------------|
+   | 4 January   | Tuesday          | Last day to deposit for 2022 spring semester |
+   | 11 January  | Tuesday          | Classes begin                                |
+   | 17 January  | Monday           | MLK Day - no classes                         |
+   | 18 January  | Tuesday          | Last day to add a class                      |
+   | 25 January  | Tuesday          | Last day to drop without record of a course  |
+   |             |                  | Last day to declare a course pass-fail       |
+   |             |                  | Deadline for removal of incompletes          |
+   | 19-27 March | Saturday-Sunday  | Spring break                                 |
+   | 15-18 April | Friday-Monday    | Easter break                                 |
+   | 4 May       | Wednesday        | Last day of classes                          |
+   | 5-10 May    | Thursday-Tuesday | Final exams                                  |
+   | 10 May      | Tuesday          | Senior grades due by noon                    |
+   | 18 May      | Wednesday        | All grades due by noon                       |
+
+** Schedule and session content
+
+   Changes are possible - an [[https://github.com/birkenkrahe/os420/blob/main/schedule.org][updated schedule is available]].
+
+
+* References
+  * Vanderbauwhede/Singer (2019). Operating System Foundations with
+    Linux on the Raspberry Pi. ARM Education. [[https://www.arm.com/resources/education/books/operating-systems][URL: arm.com]].
+  * Steinhart (2019). The Secret Life of Programs. NoStarch.
+
+* Footnotes
+
+[fn:4]Academic calendar sent by the Provost, Melissa Taverner.
+
+[fn:3]Sent by the Interim Provost, Anthony Grafton.
+
+[fn:2]Taken from David Sonnier with minor modifications.
+
+[fn:1]Schedule may change depending on course load and progress.

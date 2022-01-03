@@ -5,10 +5,10 @@
 * General Course Information
 
   * Meeting Times: Tuesday/Thursday, 13:00-14:15 hrs
-  * Meeting place: Lyon Building Room 104
+  * Meeting place: Derby Science Building 207 (seminar room)
   * Professor: Marcus Birkenkrahe
   * Office: Derby Science Building 210
-  * Phone: (870) 307-7254
+  * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
   * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
   * Textbook: Lemahieu/Vanden Broucke/Baesens (2021). Principles of
     Database Management. Cambridge: Cambridge University Press. URL:

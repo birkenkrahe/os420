@@ -10,11 +10,12 @@
   * Office: Derby Science Building 210
   * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
   * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
-  * Textbook: Lemahieu/Vanden Broucke/Baesens (2021). Principles of
-    Database Management. Cambridge: Cambridge University Press. URL:
+  * Textbooks: (1) Lectures: OS Concepts (10ed) by Silberschatz et al,
+    Wiley, 2018. (2) Labs: Lemahieu/Vanden Broucke/Baesens (2021).
 
-    #+attr_html: :width 300px
-    [[./img/cover.png]]
+
+  #+attr_html: :width 500px
+  [[./img/covers.png]]
 
 ** Objectives
 
@@ -23,12 +24,12 @@
    examples and try them out - my preferred sandbox being Linux, which
    you will be introduced to, including process management and simple
    shell programming. We also address concurrency and parallelization,
-   cloud computing, memory, and storage management. We may use the
-   Raspberry Pi as a platform to try stuff and get much closer to the
-   machine than PC OS like Windows or MacOS allow. The lessons will
-   directly lead to you feeling calm and powerful when working on your
-   computer. A worthwhile investment! We will endeavour to cover
-   chapter 1-10 of the textbook by Vanderbauwhede and Singer (2019).
+   cloud computing, memory, and storage management. In lab sessions,
+   we use the Raspberry Pi as a platform to try stuff and get much
+   closer to the machine than PC OS like Windows or MacOS allow. The
+   lessons will directly lead to you feeling calm and powerful when
+   working on your computer. A worthwhile investment! We will try to
+   cover
 
    #+attr_html: :width 600px
    [[./img/landscape.png]]
@@ -37,35 +38,38 @@
 
 ** Student Learning Outcomes
 
-   Students who complete CSC 100.01 "Introduction to programming in
-   C/C++", will be able to:
+   Students who complete CSC 420 "Operating Systems (OS)", will be
+   able to:
 
-   * Master basic sequential programming skills (conditional
-     statements, loops, functions, input/output, use of data types)
-   * Explain the basic components of a procedural programming language
-   * Apply the basics of programming to solve a variety of
-     quantitative problems
-   * Master computing infrastructure (compiler, editor, shell)
+   * Understand how operating systems manage concurrent processes
+   * Know OS design principles and implementation strategies
+   * Know how to configure and run a Raspberry Pi-based Linux box
+   * Know principles and practice of virtualization
+   * Use the command line interface and UNIX-style shell (~bash~)
    * Know how to effectively present assignment results
 
 ** Course requirements
 
-   No prior knowledge required. Some knowledge of, and experience with
-   computers is useful but not critical. Curiosity is essential. You
-   will gain data literacy skills by taking this course. The course
-   will prepare you for further studies in computer and data science,
-   or in other disciplines that use modern computing, i.e. every
-   discipline, from accounting to zoology).
+   Some knowledge of, and experience with computers is useful but not
+   critical: we will start from basic concepts. Curiosity is
+   essential. You will gain data literacy skills by taking this
+   course. The course will prepare you for further studies in computer
+   and data science, or in other disciplines that use modern
+   computing, i.e. every discipline, from accounting to zoology).
+
+   For a deeper understanding of the concepts, familiarity with basic
+   data structures, computer architecture, and a high-level language,
+   such as C or Java, is useful.
 
 ** Grading system
 
-   | WHEN[fn:1]    | DESCRIPTION       | IMPACT |
-   |---------------+-------------------+--------|
-   | Every session | Class assignments |    10% |
-   | Weekly        | Quizzes           |    10% |
-   | Monthly       | Tests             |    30% |
-   | Biweekly      | Lab projects      |    30% |
-   | End of term   | Final exam        |    20% |
+   | WHEN[fn:1]    | DESCRIPTION        | IMPACT |
+   |---------------+--------------------+--------|
+   | Every session | Practice questions |    10% |
+   | Weekly        | Quizzes            |    10% |
+   | Monthly       | Tests              |    30% |
+   | Weekly        | Lab projects       |    30% |
+   | End of term   | Final exam         |    20% |
 
    You should be able to see your current grade at any time using the
    Schoology gradebook for the course.
@@ -98,10 +102,10 @@
     |   49-0 | F               | F (failed)    |
     |--------+-----------------+---------------|
 
-*** Class assignments (10%)
+*** Practice questions (10%)
     - Complete small assignments in class (participation)
     - Complete assignments outside of class (homework)
-    - Be ready to present your results
+    - Be ready to present your results at any time
 
 *** Weekly Quizzes (10%)
     - Answer multiple choice questions
@@ -113,8 +117,8 @@
     - Recall last month of lectures and labs
     - Read relevant textbook chapters
 
-*** Biweekly lab projects (30%)
-    - Solve programming problems in class
+*** Weekly lab projects (30%)
+    - Solve configuration/programming problems in class
     - Complete assignments outside of class if necessary
     - Be ready to present your solutions
 
@@ -271,10 +275,10 @@
 
    Changes are possible - an [[https://github.com/birkenkrahe/os420/blob/main/schedule.org][updated schedule is available]].
 
+   
 
 * References
-  * Vanderbauwhede/Singer (2019). Operating System Foundations with
-    Linux on the Raspberry Pi. ARM Education. [[https://www.arm.com/resources/education/books/operating-systems][URL: arm.com]].
+
   * Steinhart (2019). The Secret Life of Programs. NoStarch.
 
 * Footnotes

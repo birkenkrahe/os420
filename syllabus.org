@@ -10,9 +10,8 @@
   * Office: Derby Science Building 210
   * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
   * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
-  * Textbooks: (1) Lectures: OS Concepts (10ed) by Silberschatz et al,
-    Wiley, 2018. (2) Labs: Lemahieu/Vanden Broucke/Baesens (2021).
-
+  * Textbook: Operating Systems Concepts (10ed) by Silberschatz et al,
+    Wiley, 2018.
 
   #+attr_html: :width 500px
   [[./img/covers.png]]
@@ -127,7 +126,7 @@
     - Online in Schoology in the classroom
     - Sourced from the weekly quiz questions
 
-* Standard Policies[fn:3]
+* Standard Policies[fn:2]
 ** Honor Code
 
    All graded work in this class is to be pledged in accordance with
@@ -198,7 +197,7 @@
      student collaboration on graded work.
 
 * Course specific information
-** Assignments and Honor Code[fn:2]
+** Assignments and Honor Code[fn:3]
 
    There will be numerous assignments during the semester - e.g.
    programming, lessons, tests, quizzes, and sprint reviews. They are
@@ -273,9 +272,57 @@
 
 ** Schedule and session content
 
-   Changes are possible - an [[https://github.com/birkenkrahe/os420/blob/main/schedule.org][updated schedule is available]].
+   Changes are possible - an [[https://github.com/birkenkrahe/os420/blob/main/schedule.org][updated schedule is available in GitHub]].
 
-   
+   | DATE       | TEXTBOOK CHAPTER[fn:5]     | GITHUB LAB[fn:6]  | TEST[fn:7] |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-11-Jan | 1 Introduction             | 0_lab_overview    | Entry quiz |
+   | Thu-13-Jan |                            |                   | Quiz 1     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-18-Jan | 2 OS Structures            |                   |            |
+   | Thu-20-Jan |                            | 1_pi_overview     | Quiz 2     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-25-Jan | 3 OS Processes             |                   |            |
+   | Thu-27-Jan |                            | 2_pi_setup        | Quiz 3     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-01-Feb | 4 Threads & Concurrency    |                   |            |
+   | Thu-03-Feb |                            | 3_getting_started | Quiz 4     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-08-Feb | 5 CPU Scheduling           |                   |            |
+   |------------+----------------------------+-------------------+------------|
+   | Thu-10-Feb |                            | 4_basic_shell     | Test 1     |
+   | Tue-15-Feb | 6 Synchronization Tools    |                   |            |
+   | Thu-17-Feb |                            | 5_file_mgmt       | Quiz 5     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-22-Feb | 7 Synchronization Examples |                   |            |
+   | Thu-24-Feb |                            | 6_user_mgmt       | Quiz 6     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-01-Feb | 8 Deadlocks                |                   |            |
+   | Thu-03-Mar |                            | 7_package_mgmt    | Quiz 7     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-08-Mar | 9 Main Memory              |                   |            |
+   | Thu-10-Mar |                            | 8_file_systems    | Test 2     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-15-Mar | 10 Virtual Memory          |                   |            |
+   | Thu-17-Mar |                            | 9_process_mgmt    | Quiz 8     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-29-Mar | 11 Mass-Storage Structure  |                   |            |
+   | Thu-31-Mar |                            | 10_remote_access  | Quiz 9     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-05-Apr | 12 I/O Systems             |                   |            |
+   | Thu-07-Apr |                            | 11_pi_projects_1  | Quiz 10    |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-12-Apr | 13 File Systems            |                   |            |
+   | Thu-14-Apr |                            | 12_pi_projects_2  | Quiz 11    |
+   |------------+----------------------------+-------------------+------------|
+   | Thu-19-Apr | 18 Virtual Machines        |                   |            |
+   | Fri-21-Apr |                            | 13_pi_projects_3  | Test 3     |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-26-Apr | 19 Linux vs Windows        | 14_virtual_box    |            |
+   | Thu-28-Apr |                            |                   | Quiz 12    |
+   |------------+----------------------------+-------------------+------------|
+   | Tue-03-May |                            |                   |            |
+   |------------+----------------------------+-------------------+------------|
 
 * References
 
@@ -283,10 +330,19 @@
 
 * Footnotes
 
+[fn:1]Schedule may change depending on course load and progress.
+
+[fn:2]Sent by the Interim Provost, Anthony Grafton. COVID-Update Jan 2022.
+
+[fn:3]Taken from David Sonnier with minor modifications.
+
 [fn:4]Academic calendar sent by the Provost, Melissa Taverner.
 
-[fn:3]Sent by the Interim Provost, Anthony Grafton.
+[fn:5]Chapter in Silberschatz et al, Operating System Concepts, Wiley
+(2018).
 
-[fn:2]Taken from David Sonnier with minor modifications.
+[fn:6]Lab sessions begin as soon as the Raspberry Pi equipment has
+arrived. Two students work on one Linux box together.
 
-[fn:1]Schedule may change depending on course load and progress.
+[fn:7]Quiz: covers the material of the past week. Usually 5 min at the
+beginning of class, multiple choice. Test: in class exercises.

@@ -1,0 +1,29 @@
+#+TITLE:Agenda
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:Agenda DB330 Database Theory and Applications
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* Week 1 - Jan 11 + 13
+
+  #+attr_html: :width 500px
+  [[./img/fivearmies.jpg]]
+
+  * Aspirations
+  * Ambitions
+  * Syllabus - this course
+
+** Aspirations
+
+   
+
+** Ambitions (DS program 2021-2023)
+
+   | CLASS                                 | CODE    | TERM        | Topics                              |
+   |---------------------------------------+---------+-------------+-------------------------------------|
+   | Data Science Tools and Methods        | DSC 101 | Fall 2021   | R, Basic EDA, Base R                |
+   | Introduction to Advanced Data Science | DSC 205 | Spring 2022 | R, Advanced EDA, Tidyverse          |
+   | Database Theory and Applications      | CSC 330 | Spring 2022 | SQL, SQLite                         |
+   | Operating Systems                     | CSC 420 | Spring 2022 | Bash, awk, sed, regular expressions |
+   | Data Visualization                    | DSC 302 | Fall 2022   | D3, Processing, Javascript          |
+   | Machine Learning                      | DSC 305 | Spring 2023 | Predictive algorithms, neural nets  |
+   | Digital Humanities                    | CSC 105 | Spring 2023 | Data science applications           |

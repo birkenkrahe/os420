@@ -1,0 +1,11 @@
+#+TITLE:Course Diary
+#+AUTHOR: Marcus Birkenkrahe
+#+STARTUP: overview hideblocks
+#+options: ^:nil toc:1
+* What is this?
+
+  A place for irregular articles of possible interest to students of
+  this course, mostly to avoid lengthy emails and to park content that
+  I may want to develop later on, if I find the time.
+
+  The public cross-course all-purpose diary is [[https://github.com/birkenkrahe/org/blob/master/diary.org][here in GitHub]].

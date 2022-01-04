@@ -8,14 +8,23 @@
   * Emacs Org-mode files are rendered as Markdown.
   * For a TOC, open the bullet point list menu 
 
-** [[https://github.com/birkenkrahe/dsc101/blob/main/schedule.md][Schedule]] of the course (up to date)
-** [[https://github.com/birkenkrahe/dsc101/blob/main/agenda.md][Agenda]] for every session
-** [[https://github.com/birkenkrahe/dsc101/blob/main/diary.md][Course diary]] for further reading
-** [[https://github.com/birkenkrahe/dsc101/discussions][Discussion forums]] for assignments
-** [[https://github.com/birkenkrahe/dsc101/blob/main/FAQ.md][Frequently Asked Questions (FAQ)]]
-** [[https://github.com/birkenkrahe/dsc101/blob/main/syllabus.md][Syllabus]] for a course overview
+** [[https://github.com/birkenkrahe/os420/blob/main/schedule.org][Schedule]] of the course (up to date)
+** [[https://github.com/birkenkrahe/os420/blob/main/agenda.org][Agenda]] for every session
+** [[https://github.com/birkenkrahe/os420/blob/main/diary.org][Course diary]] for further reading
+** [[https://github.com/birkenkrahe/os420/blob/main/FAQ.org][Frequently Asked Questions (FAQ)]]
+** [[https://github.com/birkenkrahe/os420/blob/main/syllabus.org][Syllabus]] for a course overview
+* How to use GitHub
 
-** History
+  * Register and get added as a collaborator to this repo
+  * Complete the GitHub starter course
+  * Fork this repo to your own GitHub account
+  * File access: on desktop/laptop, open ~.org~ files
+  * Mobile file access on the mobile GitHub app (you need ~.md~ files,
+    which you might have to create yourself)
+  * Check regularly (or setup notification) for changes
+  * Commit changes to your fork
 
-   First offered @Lyon: Spring 2022 (Undergrad). To be offered:
-   Spring 2024, 2026, 2028.
+* History
+
+  First offered @Lyon: Spring 2022 (Undergrad). To be offered:
+  Spring 2024, 2026, 2028.

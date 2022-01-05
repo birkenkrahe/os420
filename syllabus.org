@@ -46,6 +46,8 @@
    * Know how to configure and run a Raspberry Pi-based Linux box
    * Know principles and practice of virtualization
    * Use the command line interface and UNIX-style shell (~bash~)
+   * Know how to write simple shell scripts
+   * Know how to process data with the shell
    * Know how to effectively present assignment results
 
 ** Course requirements
@@ -63,13 +65,13 @@
 
 ** Grading system
 
-   | WHEN[fn:1]    | DESCRIPTION        | IMPACT |
-   |---------------+--------------------+--------|
-   | Every session | Class assignments  |    10% |
-   | Weekly        | Quizzes            |    10% |
-   | Monthly       | Tests              |    30% |
-   | Weekly        | Lab projects       |    30% |
-   | End of term   | Final exam         |    20% |
+   | WHEN[fn:1]    | DESCRIPTION          | IMPACT |
+   |---------------+----------------------+--------|
+   | Every session | Class assignments    |    10% |
+   | Weekly        | Quizzes              |    10% |
+   | Monthly       | Tests                |    30% |
+   | Weekly        | DataCamp assignments |    30% |
+   | End of term   | Final exam           |    20% |
 
    You should be able to see your current grade at any time using the
    Schoology gradebook for the course.
@@ -117,10 +119,10 @@
     - Recall last month of lectures and labs
     - Read relevant textbook chapters
 
-*** Weekly lab projects (30%)
-    - Solve configuration/programming problems in class
-    - Complete assignments outside of class if necessary
-    - Be ready to present your solutions
+*** DataCamp assignments (30%)
+    - Complete weekly chapters of DataCamp assignments
+    - Spend 30-45 min per week on an assignment
+    - Bring questions and comments to class for discussion
 
 *** Final exam (20%)
     - 120 min multiple choice exam
@@ -275,56 +277,57 @@
 
    Changes are possible - an [[https://github.com/birkenkrahe/os420/blob/main/schedule.org][updated schedule is available in GitHub]].
 
-   | DATE       | TEXTBOOK CHAPTERS[fn:5]                             | GITHUB LAB[fn:6]  | TEST[fn:7] |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-11-Jan | OS:1 Introduction                                   | 0_lab_overview    | Entry quiz |
-   | Thu-13-Jan |                                                     |                   | Quiz 1     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-18-Jan | OS:2 OS Structures                                  |                   |            |
-   | Thu-20-Jan |                                                     | 1_pi_overview     | Quiz 2     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-25-Jan | OS:3 OS Processes                                   |                   |            |
-   | Thu-27-Jan |                                                     | 2_pi_setup        | Quiz 3     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-01-Feb | LX:1 What is the Shell?                             |                   |            |
-   | Thu-03-Feb |                                                     | 3_getting_started | Quiz 4     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-08-Feb | LX:2 Navigation                                     |                   |            |
-   | Thu-10-Feb |                                                     | 4_basic_shell     | Test 1     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-15-Feb | LX:3 Exploring the system                           |                   |            |
-   | Thu-17-Feb |                                                     | 5_file_systems    | Quiz 5     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-22-Feb | LX:4 Manipulating files and directories             |                   |            |
-   | Thu-24-Feb |                                                     | 6_file_mgmt       | Quiz 6     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-01-Feb | LX:5 Working with commands                          |                   |            |
-   | Thu-03-Mar |                                                     | 7_pipelines       | Quiz 7     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-08-Mar | LX:6 Redirection                                    |                   |            |
-   | Thu-10-Mar |                                                     | 8_file_systems    | Test 2     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-15-Mar | LX:9 Permissions                                    |                   |            |
-   | Thu-17-Mar |                                                     | 9_user_mgmt       | Quiz 8     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-29-Mar | LX:10 Processes / 14 Package Mgmt                   |                   |            |
-   | Thu-31-Mar |                                                     | 10_package_mgmt   | Quiz 9     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-05-Apr | LX:15 Storage Media / 16 Networking                 |                   |            |
-   | Thu-07-Apr |                                                     | 11_remote_access  | Quiz 10    |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-12-Apr | LX:17 Searching for files / 18 Archiving and Backup |                   |            |
-   | Thu-14-Apr |                                                     | 12_editors        | Quiz 11    |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Thu-19-Apr | LX:19 Regular Expressions / 20 Text Processing      |                   |            |
-   | Fri-21-Apr |                                                     | 13_remote_access  | Test 3     |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-26-Apr | OS:19 Linux vs. Windows                             | 14_virtual_box    |            |
-   | Thu-28-Apr |                                                     |                   | Quiz 12    |
-   |------------+-----------------------------------------------------+-------------------+------------|
-   | Tue-03-May |                                                     |                   |            |
-   |------------+-----------------------------------------------------+-------------------+------------|
 
+  | DATE       | TEXTBOOK CHAPTERS[fn:1]                             | DataCamp Assignments                                                    | TEST[fn:2] |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-11-Jan | OS:1 Introduction                                   |                                                                         | Entry quiz |
+  | Thu-13-Jan |                                                     |                                                                         | Quiz 1     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-18-Jan | OS:2 OS Structures                                  |                                                                         |            |
+  | Thu-20-Jan |                                                     |                                                                         | Quiz 2     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-25-Jan | OS:3 OS Processes                                   | Introduction to Shell: manipulating files and directories               |            |
+  | Thu-27-Jan |                                                     |                                                                         | Quiz 3     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-01-Feb | LX:1 What is the Shell?                             | Introduction to Shell: manipulating data                                |            |
+  | Thu-03-Feb |                                                     |                                                                         | Quiz 4     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-08-Feb | LX:2 Navigation                                     | Introduction to Shell: combining tools                                  |            |
+  | Thu-10-Feb |                                                     |                                                                         | Test 1     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-15-Feb | LX:3 Exploring the system                           | Introduction to Shell: Batch processing                                 |            |
+  | Thu-17-Feb |                                                     |                                                                         | Quiz 5     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-22-Feb | LX:4 Manipulating files and directories             | Introduction to Shell: Creating new tools                               |            |
+  | Thu-24-Feb |                                                     |                                                                         | Quiz 6     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-01-Mar | LX:5 Working with commands                          | Introduction to Bash Scripting: From Command-Line to Bash Script        |            |
+  | Thu-03-Mar |                                                     |                                                                         | Quiz 7     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-08-Mar | LX:6 Redirection                                    | Introduction to Bash Scripting: Variables                               |            |
+  | Thu-10-Mar |                                                     |                                                                         | Test 2     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-15-Mar | LX:9 Permissions                                    | Introduction to Bash Scripting: Control Statements                      |            |
+  | Thu-17-Mar |                                                     |                                                                         | Quiz 8     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-29-Mar | LX:10 Processes / 14 Package Mgmt                   | Introduction to Bash Scripting: Functions and Automation                |            |
+  | Thu-31-Mar |                                                     |                                                                         | Quiz 9     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-05-Apr | LX:15 Storage Media / 16 Networking                 | Data processing in Shell: Downloading Data on the Command Line          |            |
+  | Thu-07-Apr |                                                     |                                                                         | Quiz 10    |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-12-Apr | LX:17 Searching for files / 18 Archiving and Backup | Data processing in Shell: Data Cleaning and Munging on the Command Line |            |
+  | Thu-14-Apr |                                                     |                                                                         | Quiz 11    |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Thu-19-Apr | LX:19 Regular Expressions / 20 Text Processing      | Data processing in Shell: Database Operations on the Command Line       |            |
+  | Fri-21-Apr |                                                     |                                                                         | Test 3     |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-26-Apr | OS:19 Linux vs. Windows                             | Data processing in Shell: Data Pipeline on the Command Line             |            |
+  | Thu-28-Apr |                                                     |                                                                         | Quiz 12    |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+  | Tue-03-May |                                                     |                                                                         |            |
+  |------------+-----------------------------------------------------+-------------------------------------------------------------------------+------------|
+   
 * References
 
   * Steinhart (2019). The Secret Life of Programs. NoStarch.

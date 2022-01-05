@@ -9,3 +9,21 @@
   I may want to develop later on, if I find the time.
 
   The public cross-course all-purpose diary is [[https://github.com/birkenkrahe/org/blob/master/diary.org][here in GitHub]].
+* Getting ready to roll! (Jan-5-2022)
+
+  Unpacked a couple of old Raspberry Pi's and got them going. The way
+  this works (for me) is that I remember little and need to re-learn
+  quite a bit - e.g. how to enable remote access (which is easier
+  under Linux, but now I'm on Windows, alas). Taking notes as I go
+  along. The upper pic is the first boot of my oldest Pi, a Rasperry
+  Pi 2 B, the lower one shows the Pi-top, which is built on a
+  Raspberry Pi 3 B+. I had installed Ubuntu Mate but I'm going back to
+  Raspbian for the course.
+
+  #+name:pi2
+  #+attr_html: :width 500px
+  [[./img/pi2.jpg]]
+
+  #+name:pi-top
+  #+attr_html: :width 500px
+  [[./img/pi-top.jpg]]

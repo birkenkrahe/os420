@@ -3,68 +3,108 @@
 #+SUBTITLE:Raspberry Pi Notes
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Rasperry Pi 2 networking (Jan-5-2022)
+* Rasperry Pi 2 networking  <2022-01-05 Wed>
 **  Problem
-  WiFi dongle present (and powered - check with ~iwconfig
-  -a~) but ~iwconfig~ shows no network activity, and ~ping~ is not
-  working (website not recognized).
+   WiFi dongle present (and powered - check with ~iwconfig
+   -a~) but ~iwconfig~ shows no network activity, and ~ping~ is not
+   working (website not recognized).
 
 ** Solution
-  * Edit ~/etc/network/interfaces~ with the ~nano~ editor and put in
-    the code block [[wlan]]. Put in the name (~ssid~) and WPA-~password~
-    (you find these on your router), and save the file (~C-x y RET~).
+   * Edit ~/etc/network/interfaces~ with the ~nano~ editor and put in
+     the code block [[wlan]]. Put in the name (~ssid~) and WPA-~password~
+     (you find these on your router), and save the file (~C-x y RET~).
 
-  #+name: wlan
-  #+begin_src sh
-    # The loopback network interface
-    auto lo
-    iface lo inet loopback
+   #+name: wlan
+   #+begin_src sh
+     # The loopback network interface
+     auto lo
+     iface lo inet loopback
 
-    # The primary (wired) network interface
-    iface eth0 inet dhcp
+     # The primary (wired) network interface
+     iface eth0 inet dhcp
 
-    # The wifi (wireless) network interface
-    auto wlan0
-    allow-hotplug wlan0
-    iface wlan0 inet dhcp
-    wpa-ssid "ssid"
-    wpa-psk "password"
-  #+end_src
+     # The wifi (wireless) network interface
+     auto wlan0
+     allow-hotplug wlan0
+     iface wlan0 inet dhcp
+     wpa-ssid "ssid"
+     wpa-psk "password"
+   #+end_src
 
-  * Restart the Pi: ~sudo shutdown -r now~. Check that WiFi is up with [[iwconfig]]:
-  #+name:iwconfig
-  #+begin_src sh
-    # display status of all interfaces
-    iwconfig -a
-    ping r-project.org
-  #+end_src
+   * Restart the Pi: ~sudo shutdown -r now~. Check that WiFi is up with [[iwconfig]]:
+   #+name:iwconfig
+   #+begin_src sh
+     # display status of all interfaces
+     iwconfig -a
+     ping r-project.org
+   #+end_src
 
-  * ~sudo apt update~ and ~sudo apt upgrade -y~ to bring system up to
-    date.
-  * For WPA2/AES security, [[https://coderwall.com/p/v290ta/raspberry-pi-wifi-setup-with-wpa2-psk-aes][see here]].
-  * To enable automatic reconnect, install ~wicd~.
+   * ~sudo apt update~ and ~sudo apt upgrade -y~ to bring system up to
+     date.
+   * For WPA2/AES security, [[https://coderwall.com/p/v290ta/raspberry-pi-wifi-setup-with-wpa2-psk-aes][see here]].
+   * To enable automatic reconnect, install ~wicd~.
 
 **  Sources
-  * Solution: [[https://raspberrypi.stackexchange.com/questions/22349/wi-fi-dongle-not-working][stackexchange]]
-  * WPA2/AES: [[https://coderwall.com/p/v290ta/raspberry-pi-wifi-setup-with-wpa2-psk-aes][coderwall.com]]
-  * General information: [[https://www.electronicshub.org/setup-wifi-raspberry-pi-2-using-usb-dongle/][electronicshub.org]]
-  * WICD information: [[https://ubidots.com/blog/setup-wifi-on-raspberry-pi-using-wicd/][ubidots.com]]
-    
-* NEXT Installing GNU Emacs
+   * Solution: [[https://raspberrypi.stackexchange.com/questions/22349/wi-fi-dongle-not-working][stackexchange]]
+   * WPA2/AES: [[https://coderwall.com/p/v290ta/raspberry-pi-wifi-setup-with-wpa2-psk-aes][coderwall.com]]
+   * General information: [[https://www.electronicshub.org/setup-wifi-raspberry-pi-2-using-usb-dongle/][electronicshub.org]]
+   * WICD information: [[https://ubidots.com/blog/setup-wifi-on-raspberry-pi-using-wicd/][ubidots.com]]
+
+* Installing GNU Emacs  <2022-01-05 Wed>
+  I need my favorite editor on the Pi (though ~nano~ does a good job
+  for simple tasks)!
 
   * Check available disk space with ~df -h~.
   * ~sudo apt install emacs~
 
-* TODO Create an ~ssh~ tunnel for remote access
+* Source:
+  * [[https://www.gnu.org/software/emacs/download.html][GNU Emacs download page]]
 
-  * Enable ~ssh~ via the ~raspi-config~ menu.
-  * For Windows: get ~PuTTY~ (MSI 64-bit x86 installer).
-  * Get the IP address of the Pi with ~hostname -I~. This will be the
-    IP address on the local network (~192.168.0.XXX~).
 
+* Create an ~ssh~ tunnel for remote access  <2022-01-05 Wed>
+
+  * Enable ~ssh~ via the ~raspi-config~ menu
+  * You can make sure that the service is up with ~sudo service
+    --status-all~
+  * For Windows: get ~PuTTY~ (MSI 64-bit x86 installer)
+  * Get the IP address of the Pi with ~sudo hostname -I~. This will be
+    the IP address on the local network (~192.168.0.XXX~)
+  * Upon the first connect attempt, pick ~Access~ to establish the
+    server's key (and make sure that it is trusted)
+  * Login with the Pi's username and password, and you should be in.
+
+    #+name:key
+    #+attr_html: :width 500px
+    [[./img/putty.png]]
+
+    #+name:key
+    #+attr_html: :width 500px
+    [[./img/ssh.png]]
+
+    And now I'm running GNU Emacs over ~ssh~:
+
+    #+name:emacs
+    #+attr_html: :width 500px
+    [[./img/emacs.png]]
+
+    To increase the font size in this window, right-click on the
+    frame:
+
+    #+begin_example
+    Change Settings
+    Window
+     Appearance
+      Change Font
+      Apply
+    #+end_example
+
+    #+name:emacs
+    #+attr_html: :width 500px
+    [[./img/font.png]]
 
 **  Sources
-  * [[https://the.earth.li/~sgtatham/putty/0.76/htmldoc/index.html][PuTTY User Manual]]
-  * [[https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html][PuTTY download]]
-  * [[https://geek-university.com/raspberry-pi/enable-ssh-in-raspbian/][Enable ssh in Raspbian]]
-  * [[https://pimylifeup.com/raspberry-pi-ip-address/][Find IP address of your Pi]]
+
+   * [[https://the.earth.li/~sgtatham/putty/0.76/htmldoc/index.html][PuTTY User Manual]]
+   * [[https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html][PuTTY download]]
+   * [[https://geek-university.com/raspberry-pi/enable-ssh-in-raspbian/][Enable ssh in Raspbian]]
+   * [[https://pimylifeup.com/raspberry-pi-ip-address/][Find IP address of your Pi]]

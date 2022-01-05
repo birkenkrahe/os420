@@ -22,7 +22,8 @@
   going back to Raspbian for the course.
 
   Unfortunately, I caught a flu, which slows me down but doesn't stop
-  me from hacking away.
+  me from hacking away. My next mini-project is turning the Pi2 into a
+  backup server for my work - it's sporting a 500GB SD card.
 
   #+name:pi2
   #+attr_html: :width 500px

@@ -2,63 +2,67 @@
 #+startup: overview
 * Schedule
 
-   | NO | WEEK | DATE       | TEXTBOOK[fn:1]             | GITHUB LAB[fn:2]  | TEST[fn:3] |
-   |----+------+------------+----------------------------+-------------------+------------|
-   |  1 |    1 | Tue-11-Jan | 1 Introduction             | 0_lab_overview    | Entry quiz |
-   |  2 |      | Thu-13-Jan |                            |                   | Quiz 1     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   |  3 |    2 | Tue-18-Jan | 2 OS Structures            |                   |            |
-   |  4 |      | Thu-20-Jan |                            | 1_pi_overview     | Quiz 2     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   |  5 |    3 | Tue-25-Jan | 3 OS Processes             |                   |            |
-   |  5 |      | Thu-27-Jan |                            | 2_pi_setup        | Quiz 3     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   |  7 |    4 | Tue-01-Feb | 4 Threads & Concurrency    |                   |            |
-   |  8 |      | Thu-03-Feb |                            | 3_getting_started | Quiz 4     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   |  9 |    5 | Tue-08-Feb | 5 CPU Scheduling           |                   |            |
-   | 10 |      | Thu-10-Feb |                            | 4_basic_shell     | Test 1     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 11 |    6 | Tue-15-Feb | 6 Synchronization Tools    |                   |            |
-   | 12 |      | Thu-17-Feb |                            | 5_file_mgmt       | Quiz 5     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 13 |    7 | Tue-22-Feb | 7 Synchronization Examples |                   |            |
-   | 14 |      | Thu-24-Feb |                            | 6_user_mgmt       | Quiz 6     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 15 |    8 | Tue-01-Feb | 8 Deadlocks                |                   |            |
-   | 16 |      | Thu-03-Mar |                            | 7_package_mgmt    | Quiz 7     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 17 |    9 | Tue-08-Mar | 9 Main Memory              |                   |            |
-   | 18 |      | Thu-10-Mar |                            | 8_file_systems    | Test 2     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 19 |   10 | Tue-15-Mar | 10 Virtual Memory          |                   |            |
-   | 20 |      | Thu-17-Mar |                            | 9_process_mgmt    | Quiz 8     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 21 |   11 | Tue-29-Mar | 11 Mass-Storage Structure  |                   |            |
-   | 22 |      | Thu-31-Mar |                            | 10_remote_access  | Quiz 9     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 23 |   12 | Tue-05-Apr | 12 I/O Systems             |                   |            |
-   | 24 |      | Thu-07-Apr |                            | 11_pi_projects_1  | Quiz 10    |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 25 |   13 | Tue-12-Apr | 13 File Systems            |                   |            |
-   | 26 |      | Thu-14-Apr |                            | 12_pi_projects_2  | Quiz 11    |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 27 |   14 | Thu-19-Apr | 18 Virtual Machines        |                   |            |
-   | 28 |      | Fri-21-Apr |                            | 13_pi_projects_3  | Test 3     |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 29 |   15 | Tue-26-Apr | 19 Linux vs Windows        | 14_virtual_box    |            |
-   | 30 |      | Thu-28-Apr |                            |                   | Quiz 12    |
-   |----+------+------------+----------------------------+-------------------+------------|
-   | 31 |   16 | Tue-03-May |                            |                   |            |
-   |----+------+------------+----------------------------+-------------------+------------|
+
+  | NO | WEEK | DATE       | TEXTBOOK CHAPTERS[fn:5]                             | GITHUB LAB[fn:6]  | TEST[fn:7] |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  |  1 |   1  | Tue-11-Jan | OS:1 Introduction                                   | 0_lab_overview    | Entry quiz |
+  |  2 |      | Thu-13-Jan |                                                     |                   | Quiz 1     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  |  3 |  2   | Tue-18-Jan | OS:2 OS Structures                                  |                   |            |
+  |  4 |      | Thu-20-Jan |                                                     | 1_pi_overview     | Quiz 2     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  |  5 |   3  | Tue-25-Jan | OS:3 OS Processes                                   |                   |            |
+  |  6 |      | Thu-27-Jan |                                                     | 2_pi_setup        | Quiz 3     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  |  7 |   4  | Tue-01-Feb | LX:1 What is the Shell?                             |                   |            |
+  |  8 |      | Thu-03-Feb |                                                     | 3_getting_started | Quiz 4     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  |  9 |   5  | Tue-08-Feb | LX:2 Navigation                                     |                   |            |
+  | 10 |      | Thu-10-Feb |                                                     | 4_basic_shell     | Test 1     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 11 |   6  | Tue-15-Feb | LX:3 Exploring the system                           |                   |            |
+  | 12 |      | Thu-17-Feb |                                                     | 5_file_systems    | Quiz 5     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 13 |   7  | Tue-22-Feb | LX:4 Manipulating files and directories             |                   |            |
+  | 14 |      | Thu-24-Feb |                                                     | 6_file_mgmt       | Quiz 6     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 15 |   8  | Tue-01-Feb | LX:5 Working with commands                          |                   |            |
+  | 16 |      | Thu-03-Mar |                                                     | 7_pipelines       | Quiz 7     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 17 |   9  | Tue-08-Mar | LX:6 Redirection                                    |                   |            |
+  | 18 |      | Thu-10-Mar |                                                     | 8_file_systems    | Test 2     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 19 |  10  | Tue-15-Mar | LX:9 Permissions                                    |                   |            |
+  | 20 |      | Thu-17-Mar |                                                     | 9_user_mgmt       | Quiz 8     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 21 |  11  | Tue-29-Mar | LX:10 Processes / 14 Package Mgmt                   |                   |            |
+  | 22 |      | Thu-31-Mar |                                                     | 10_package_mgmt   | Quiz 9     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 23 |  12  | Tue-05-Apr | LX:15 Storage Media / 16 Networking                 |                   |            |
+  | 24 |      | Thu-07-Apr |                                                     | 11_remote_access  | Quiz 10    |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 25 |   13 | Tue-12-Apr | LX:17 Searching for files / 18 Archiving and Backup |                   |            |
+  | 26 |      | Thu-14-Apr |                                                     | 12_editors        | Quiz 11    |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 27 |  14  | Thu-19-Apr | LX:19 Regular Expressions / 20 Text Processing      |                   |            |
+  | 28 |      | Fri-21-Apr |                                                     | 13_remote_access  | Test 3     |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 29 |  15  | Tue-26-Apr | OS:19 Linux vs. Windows                             | 14_virtual_box    |            |
+  | 30 |      | Thu-28-Apr |                                                     |                   | Quiz 12    |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
+  | 31 |  16  | Tue-03-May |                                                     |                   |            |
+  |----+------+------------+-----------------------------------------------------+-------------------+------------|
 
 * Footnotes
 
-[fn:1]Chapter in Silberschatz et al, Operating System Concepts, Wiley
-(2018).
+  [fn:1](OS) Chapter in Silberschatz et al, "Operating System Concepts",
+  Wiley (2018). (LX) Shotts' "[[https://linuxcommand.org/tlcl.php][The Linux Command Line]]" (2019) - 5th
+  Internet edition [[https://sourceforge.net/projects/linuxcommand/][freely available here]]. (AD) Shotts' "[[https://linuxcommand.org/lc3_adventures.php][Adventures with
+  the Linux Command Line]]" (2021) - 1st Internet edition [[https://sourceforge.net/projects/linuxcommand/files/AWTLCL/21.10/AWTLCL-21.10.pdf/download][freely available
+  here]].
 
-[fn:2]Lab sessions begin as soon as the Raspberry Pi equipment has
-arrived. Two students work on one Linux box together.
+  [fn:2]Lab sessions begin as soon as the Raspberry Pi equipment has
+  arrived. Two students work on one Linux box together.
 
-[fn:3]Quiz: covers the material of the past week. Usually 5 min at the
-beginning of class, multiple choice. Test: in class exercises.
+  [fn:3]Quiz: covers the material of the past week. Usually 5 min at the
+  beginning of class, multiple choice. Test: in class exercises.

@@ -68,7 +68,7 @@
 ** Source:
    * [[https://www.gnu.org/software/emacs/download.html][GNU Emacs download page]]
 
-* Create an ~ssh~ tunnel for remote access  <2022-01-05 Wed>
+* Access the Pi remotely with ~ssh~ <2022-01-05 Wed>
 
   * Enable ~ssh~ via the ~raspi-config~ menu
   * You can make sure that the service is up with ~sudo service
@@ -126,13 +126,10 @@
 
 * Running ~ssh~ inside Emacs with ~Tramp~ <2022-01-05 Wed>
 
-  * Refresh Emacs package list: ~M-x package-refresh-contents~
-  * Upgrade packages (~U x RET~) in ~M-x packages-list-packages~
-  * Get the ~Tramp~ package via *Packages*
   * Put ~plink.exe~ from the PuTTY folder into the Windows ~PATH~
-  * In Emacs, execute
+  * In Emacs, execute (using the correct IP number):
   #+begin_src emacs-lisp
-    Dired (directory): /plink:pi@192.168.1.136:/
+    Dired (directory): /plink:pi@192.168.1.xxx:/
   #+end_src
   * Enter the password and you're in.
 

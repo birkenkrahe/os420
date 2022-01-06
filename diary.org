@@ -23,8 +23,8 @@
 
   Unfortunately, I caught a flu, which slows me down but doesn't stop
   me from hacking away - did a good bit of work on the Pi2:
-  * Got WiFi (with dongle) working
-  * Installed GNU Emacs
+  * Got WiFi (with dongle) working on the Pi2
+  * Installed GNU Emacs, my favorite editor, on the Pi2
   * Used ~ssh~ (with PuTTY) to access the Pi2 from my Windows laptop
   * Used ~Tramp~ to connect to the Pi2 remotely from within Emacs via
     ~plink~.
@@ -33,6 +33,12 @@
 
   My next mini-project is turning the Pi2 into a [[https://www.howtoforge.com/tutorial/raspberry-pi-as-backup-server-for-linux-and-windows/][backup server]] for my
   local network.
+
+  Picture gallery:
+
+   #+name:pi2box
+  #+attr_html: :width 500px
+  [[./img/pi2box.jpg]]
 
   #+name:pi2
   #+attr_html: :width 500px

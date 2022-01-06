@@ -16,14 +16,23 @@
   quite a bit - e.g. how to enable remote access (which is easier
   under Linux, but now I'm on Windows, alas).
 
-  [[https://github.com/birkenkrahe/os420/blob/main/pi/README.org][Taking notes]] as I go along. The upper pic is the first boot of my
-  oldest Pi, a Rasperry Pi 2 B, the lower one shows the Pi-top, which
-  is built on a Raspberry Pi 3 B+. I had installed Ubuntu Mate but I'm
-  going back to Raspbian for the course.
+  The upper pic is the first boot of my oldest Pi, a Rasperry Pi 2 B,
+  the lower one shows the Pi-top, which is built on a Raspberry Pi 3
+  B+. I had installed Ubuntu Mate but I'm going back to Raspbian for
+  the course.
 
   Unfortunately, I caught a flu, which slows me down but doesn't stop
-  me from hacking away. My next mini-project is turning the Pi2 into a
-  backup server for my work - it's sporting a 500GB SD card.
+  me from hacking away - did a good bit of work on the Pi2:
+  * Got WiFi (with dongle) working
+  * Installed GNU Emacs
+  * Used ~ssh~ (with PuTTY) to access the Pi2 from my Windows laptop
+  * Used ~Tramp~ to connect to the Pi2 remotely from within Emacs via
+    ~plink~.
+
+  [[https://github.com/birkenkrahe/os420/blob/main/pi/README.org][Here are my notes.]]
+
+  My next mini-project is turning the Pi2 into a [[https://www.howtoforge.com/tutorial/raspberry-pi-as-backup-server-for-linux-and-windows/][backup server]] for my
+  local network.
 
   #+name:pi2
   #+attr_html: :width 500px

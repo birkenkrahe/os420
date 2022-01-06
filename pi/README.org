@@ -3,7 +3,7 @@
 #+SUBTITLE:Raspberry Pi Notes
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Rasperry Pi 2 networking  <2022-01-05 Wed>
+* Rasperry Pi 2 WiFi networking  <2022-01-05 Wed>
 **  Problem
    WiFi dongle present (and powered - check with ~iwconfig
    -a~) but ~iwconfig~ shows no network activity, and ~ping~ is not
@@ -42,7 +42,12 @@
    * ~sudo apt update~ and ~sudo apt upgrade -y~ to bring system up to
      date.
    * For WPA2/AES security, [[https://coderwall.com/p/v290ta/raspberry-pi-wifi-setup-with-wpa2-psk-aes][see here]].
-   * To enable automatic reconnect, install ~wicd~.
+   * To enable automatic reconnect, install ~wicd~ and start
+     ~wicd-curses~:
+
+     #+name:wicd
+     #+attr_html: :width 500px
+     [[./img/wicd.png]]
 
 **  Sources
    * Solution: [[https://raspberrypi.stackexchange.com/questions/22349/wi-fi-dongle-not-working][stackexchange]]
@@ -57,9 +62,8 @@
   * Check available disk space with ~df -h~.
   * ~sudo apt install emacs~
 
-* Source:
-  * [[https://www.gnu.org/software/emacs/download.html][GNU Emacs download page]]
-
+** Source:
+   * [[https://www.gnu.org/software/emacs/download.html][GNU Emacs download page]]
 
 * Create an ~ssh~ tunnel for remote access  <2022-01-05 Wed>
 
@@ -68,7 +72,7 @@
     --status-all~
   * For Windows: get ~PuTTY~ (MSI 64-bit x86 installer)
   * Get the IP address of the Pi with ~sudo hostname -I~. This will be
-    the IP address on the local network (~192.168.0.XXX~)
+    the IP address on the local network (~192.168.1.135~)
   * Upon the first connect attempt, pick ~Access~ to establish the
     server's key (and make sure that it is trusted)
   * Login with the Pi's username and password, and you should be in.
@@ -77,7 +81,7 @@
     #+attr_html: :width 500px
     [[./img/putty.png]]
 
-    #+name:key
+    #+name:ssh
     #+attr_html: :width 500px
     [[./img/ssh.png]]
 
@@ -98,9 +102,17 @@
       Apply
     #+end_example
 
-    #+name:emacs
+    #+name:font
     #+attr_html: :width 500px
     [[./img/font.png]]
+
+    You can also save the PuTTY session (but be aware that the
+    hostname is likely to change when the WiFi connection drops
+    intermittently):
+
+    #+name:save
+    #+attr_html: :width 500px
+    [[./img/session.png]]
 
 **  Sources
 
@@ -108,3 +120,29 @@
    * [[https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html][PuTTY download]]
    * [[https://geek-university.com/raspberry-pi/enable-ssh-in-raspbian/][Enable ssh in Raspbian]]
    * [[https://pimylifeup.com/raspberry-pi-ip-address/][Find IP address of your Pi]]
+
+* Running ~ssh~ inside Emacs with ~Tramp~ <2022-01-05 Wed>
+
+  * Refresh Emacs package list: ~M-x package-refresh-contents~
+  * Upgrade packages (~U x RET~) in ~M-x packages-list-packages~
+  * Get the ~Tramp~ package via *Packages*
+  * Put ~plink.exe~ from the PuTTY folder into the Windows ~PATH~
+  * In Emacs, execute
+  #+begin_src emacs-lisp
+    Dired (directory): /plink:pi@192.168.1.136:/
+  #+end_src
+  * Enter the password and you're in.
+
+    #+name:plink
+    #+attr_html: :width 600px
+    [[./img/plink.png]]
+
+    * Advantage: now you can run a proper Linux shell inside Emacs
+    * ~M-x package-install RET tramp-theme RET~ installs custom theme
+      (slight adaptation of the modeline)
+
+** Source:
+   * [[https://www.emacswiki.org/emacs/Tramp_on_Windows][EmacsWiki Tramp on Windows]]
+   * [[https://youtu.be/Iqh50fgbIVk][Using Emacs - 25 tramp]] (video)
+     
+* NEXT Pi as Backup Server

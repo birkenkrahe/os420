@@ -3,6 +3,9 @@
 #+SUBTITLE:Raspberry Pi Notes
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+
+#+attr_html: :width 500px
+[[./img/pi2box.jpg]]
 * Rasperry Pi 2 WiFi networking  <2022-01-05 Wed>
 **  Problem
    WiFi dongle present (and powered - check with ~iwconfig
@@ -137,7 +140,9 @@
     #+attr_html: :width 600px
     [[./img/plink.png]]
 
-    * Advantage: now you can run a proper Linux shell inside Emacs
+    * Advantage: now you can run a proper Linux shell inside Emacs. If
+      the connection breaks, the ~*shell*~ buffer will be retained and
+      if you reactivate it, the connection will be reopened.
     * ~M-x package-install RET tramp-theme RET~ installs custom theme
       (slight adaptation of the modeline)
 

@@ -35,8 +35,8 @@
 
 ** Homework assignments week 1 (11-Jan/13-Jan-2022)
 
-
-
+   
+   
    * GitHub Hello World Project
    * DataCamp platform registration
    * GNU Emacs installation

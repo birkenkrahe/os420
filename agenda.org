@@ -10,11 +10,9 @@
 
   * Syllabus for this course.
 
-** Aspirations
-
    
 
-** Ambitions (DS program 2021-2023)
+** Aspirations and ambitions (DS program 2021-2023)
 
    | CLASS                                 | CODE    | TERM        | Topics                              |
    |---------------------------------------+---------+-------------+-------------------------------------|

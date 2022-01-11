@@ -11,6 +11,7 @@
   * Aspiration and ambition (Lyon Data Science program)
   * Introduction to the course & the lecturer
   * Homework assignments: GitHub, DataCamp, Emacs
+  * What's next?
 
 ** Aspirations and ambitions (DS program 2021-2023)
 
@@ -119,7 +120,22 @@
 
 *** DataCamp
 
+    #+attr_html: :width 400px
+    [[./img/datacamp.png]]
     
-    
-    * 
+    * Why are we using it?
+    * How are we using it?
+    * What will you have to do?
 
+*** GNU Emacs
+    
+    #+attr_html: :width 400px
+    [[./img/emacs.png]]
+
+    * Why are we using it?
+    * How are we using it?
+    * What will you have to do?
+    
+** What's next?
+
+   See schedule.

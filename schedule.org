@@ -65,7 +65,8 @@ here]].
 access to almost all content for free, as part of the academic
 alliance program (normal pricing $300/year). If you complete all
 assignments in this course, you get three DataCamp certificates that
-you can put on your resume!
+you can put on your resume! - At the start of the course, there'll be
+a few setup assignments outside of DataCamp.
 
 [fn:3]Quiz: covers the material of the past week. Usually 5 min at the
 beginning of class, multiple choice. Test: in class exercises.

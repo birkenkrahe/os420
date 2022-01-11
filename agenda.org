@@ -8,7 +8,8 @@
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
 
-  * Syllabus for this course.
+  * Introduction to the course
+  * Syllabus for this course
 
    
 

@@ -52,4 +52,5 @@
 
    * Register with GitHub (2 min)
    * Complete the GitHub Hello World exercise (20 min)
-   * Give me your GitHub user name on Thursday
+   * Give me your GitHub user name (email - with course ID - or
+     Thursday in class)

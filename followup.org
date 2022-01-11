@@ -18,7 +18,8 @@
   
 * Week 1 - Jan 11
   
-  * [[https://github.com/birkenkrahe/os420/blob/main/agenda.org][Agenda]] - we covered all of it (and more)
+  * [[https://github.com/birkenkrahe/os420/blob/main/agenda.org][Agenda]] - we covered all of it (and more) - agenda is available in
+    GitHub only
 
   * Showed a few books to demonstrate the relevance of Linux and
     command line skills to cybersecurity:

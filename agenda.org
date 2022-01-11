@@ -14,14 +14,16 @@
 
 ** Introduction to the course & the lecturer
 
-   
-   
-     * Why me?
-     * Syllabus for this course ([[https://lyon.schoology.com/course/5516220833/materials/gp/5549927065][Schoology]])
+   #+attr_html: :width 500px
+   #+caption: DESY APE research group, Hamburg/Rome, 1994
+   [[./img/desy.jpg]]
 
-** Homework assignments week 1 (11-Jan/13-Jan-2022)    
+   * Why me?
+   * Syllabus for this course ([[https://lyon.schoology.com/course/5516220833/materials/gp/5549927065][Schoology]])
 
-   
+** Homework assignments week 1 (11-Jan/13-Jan-2022)
+
+
 
 ** Aspirations and ambitions (DS program 2021-2023)
 

@@ -1,18 +1,55 @@
 #+TITLE:Followup 
-#+AUTHOR:Followup 
+#+AUTHOR:Marcus Birkenkrahe 
 #+SUBTITLE:Followup for CSC420 Operating Systems Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * What is this?
 
-  Instead of bugging you with emails, I opt to summarize my
-  course observations regarding content, process, in this file.
+  Instead of bugging you with emails, I opt to summarize my course
+  observations regarding content, process, in this file. These often
+  contain additional links, articles, and musings.
 
   I usually update it after each class - it also contains the homework
   (if any). The relevant section is copied to Schoology (by hand,
   alas).
+
+  First point of call for any questions should be the FAQ. There are
+  two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my courses), and a [[https://github.com/birkenkrahe/os420/blob/main/FAQ.org][FAQ for CSC420]].
   
 * Week 1 - Jan 11
+  
+  * [[https://github.com/birkenkrahe/os420/blob/main/agenda.org][Agenda]] - we covered all of it (and more)
 
-  * Agenda
-  * 
+  * Showed a few books to demonstrate the relevance of Linux and
+    command line skills to cybersecurity:
+
+    [[./img/cybersec.png]]
+
+    [[./img/hackers.png]]
+
+  * [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][More about the APE]] (Ital. for "bee") parallel computer from the
+    German particle lab DESY, Hamburg, and University of Rome La
+    Sapienzia, Rome. Incidentally, one of the creators of this machine
+    was [[https://en.wikipedia.org/wiki/Giorgio_Parisi][Giorgio Parisi]], who recently received the Nobel Prize for
+    physics 2021. One of my graduate student jobs was to take care of
+    the first APE.
+
+    [[./img/bees.gif]]
+
+  * Showed Windows Cmd line, Windows PowerShell, and the ~bash~
+    shell, and summoned the wrath of Bill Gates by putting down
+    Microsoft's attempts to provide half-hearted OS access 
+
+    [[./img/marathon.gif]]
+    
+  * Demonstrated remotely accessing a Linux from a Windows box using
+    ~ssh~ both on the shell and inside GNU Emacs (using the Tramp
+    package and the program ~plink~, which is part of ~PuTTY~). 
+
+    [[./img/tramp.gif]]
+
+** Homework (by Thursday 13-Jan)
+
+   * Register with GitHub (2 min)
+   * Complete the GitHub Hello World exercise (20 min)
+   * Give me your GitHub user name on Thursday

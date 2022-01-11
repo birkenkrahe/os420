@@ -66,7 +66,7 @@
 
      * It's free
      * To host course materials
-     * Upload assignments (esp. Org-files)
+     * Upload assignments (esp. Emacs Org-files)
      * Discussion
      * Wiki for collaboration
      * Complements Schoology[fn:2]
@@ -118,6 +118,7 @@
      #+attr_html: :width 800px
      [[./img/gh.png]]
 
+
 *** DataCamp
 
     #+attr_html: :width 400px
@@ -138,7 +139,10 @@
     
 ** What's next?
 
-   * See schedule (GitHub)
-   * See also online lecture on "Systems"
+   * See schedule ([[https://github.com/birkenkrahe/os420/blob/main/schedule.org][GitHub]])
+   * Watch online lecture on "Systems"
    * Everything else = online summary
    * See you (hopefully) Thursday in class! (Lyon 104)
+
+
+

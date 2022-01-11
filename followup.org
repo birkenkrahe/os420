@@ -1,0 +1,18 @@
+#+TITLE:Followup 
+#+AUTHOR:Followup 
+#+SUBTITLE:Followup for CSC420 Operating Systems Spring 2022
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+* What is this?
+
+  Instead of bugging you with emails, I opt to summarize my
+  course observations regarding content, process, in this file.
+
+  I usually update it after each class - it also contains the homework
+  (if any). The relevant section is copied to Schoology (by hand,
+  alas).
+  
+* Week 1 - Jan 11
+
+  * Agenda
+  * 

@@ -138,7 +138,7 @@
     
 ** What's next?
 
-   * See schedule.
+   * See schedule (GitHub)
    * See also online lecture on "Systems"
-   * Everything else = online
-   * See you (hopefully) Thursday in class!
+   * Everything else = online summary
+   * See you (hopefully) Thursday in class! (Lyon 104)

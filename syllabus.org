@@ -10,11 +10,15 @@
   * Office: Derby Science Building 210
   * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
   * Office hours: Mon/Wed/Fri 12:00-12:30 PM; Tue/Thu 2.30-3.00 PM
-  * Textbook: (1) Operating Systems Concepts (10ed) by Silberschatz et
-    al, Wiley, 2018. (2) The Linux Command Line (5e), NoStarch, 2019.
+  * Textbook[fn:8]: (1) Operating Systems Concepts (10ed) by
+    Silberschatz et al, Wiley, 2018. (2) The Linux Command Line (5e),
+    NoStarch, 2019.
 
   #+attr_html: :width 500px
   [[./img/covers.png]]
+
+  #+attr_html: :width 500px
+  [[./img/cover2.png]] 
 
 ** Objectives
 
@@ -53,11 +57,12 @@
 ** Course requirements
 
    Some knowledge of, and experience with computers is useful but not
-   critical: we will start from basic concepts. Curiosity is
-   essential. You will gain data literacy skills by taking this
-   course. The course will prepare you for further studies in computer
-   and data science, or in other disciplines that use modern
-   computing, i.e. every discipline, from accounting to zoology).
+   critical: we will start from basic concepts. Curiosity and personal
+   discipline are essential. You will gain data literacy skills by
+   taking this course. The course will prepare you for further studies
+   in computer and data science, or in other disciplines that use
+   modern computing, i.e. every discipline, from accounting to
+   zoology).
 
    For a deeper understanding of the concepts, familiarity with basic
    data structures, computer architecture, and a high-level language,
@@ -331,8 +336,13 @@
 * References
 
   * Steinhart (2019). The Secret Life of Programs. NoStarch.
+  * Vanderbauwhede/Singer (2019). Operating Systems Foundations with
+    Linux on the Raspberry Pi. ARM Education Media.
 
 * Footnotes
+
+[fn:8]I might also use the book by Vanderbauwhede/Singer on OS for the
+Pi. This is a very nice book by the two creators of Haskell.
 
 [fn:1]Schedule may change depending on course load and progress.
 

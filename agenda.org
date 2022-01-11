@@ -9,9 +9,15 @@
   [[./img/fivearmies.jpg]]
 
   * Introduction to the course & the lecturer
-  * Syllabus for this course ([[https://lyon.schoology.com/course/5516220833/materials/gp/5549927065][Schoology]])
   * Homework assignments
   * Aspiration and ambition (Lyon Data Science program)
+
+** Introduction to the course & the lecturer
+
+   
+   
+     * Why me?
+     * Syllabus for this course ([[https://lyon.schoology.com/course/5516220833/materials/gp/5549927065][Schoology]])
 
 ** Homework assignments week 1 (11-Jan/13-Jan-2022)    
 

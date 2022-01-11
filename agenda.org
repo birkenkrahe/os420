@@ -8,9 +8,7 @@
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
 
-  * Aspirations
-  * Ambitions
-  * Syllabus - this course
+  * Syllabus for this course.
 
 ** Aspirations
 

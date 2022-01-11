@@ -5,7 +5,7 @@
 * General Course Information
 
   * Meeting Times: Tuesday/Thursday, 09:30-10:45 hrs
-  * Meeting place: Derby Science Building 207 (seminar room)
+  * Meeting place: Lyon building computer lab 104
   * Professor: Marcus Birkenkrahe
   * Office: Derby Science Building 210
   * Phone: (870) 307-7254 (office) / (501 422-4725 (private)
@@ -48,11 +48,11 @@
    * Understand how operating systems manage concurrent processes
    * Know OS design principles and implementation strategies
    * Know how to configure and run a Raspberry Pi-based Linux box
-   * Know principles and practice of virtualization
    * Use the command line interface and UNIX-style shell (~bash~)
-   * Know how to write simple shell scripts
+   * Learn how to write simple shell scripts
    * Know how to process data with the shell
    * Know how to effectively present assignment results
+   * Know principles and practice of virtualization
 
 ** Course requirements
 

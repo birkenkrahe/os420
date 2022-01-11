@@ -78,8 +78,8 @@
        e.g. ~MarcusBirkenkrahe~, or ~DonaldTrump~
      * [[https://docs.github.com/en/get-started/quickstart/hello-world][Complete the "Hello World" exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.md#completing-the-github-hello-world-exercise][FAQ]])
      * Give me your GitHub username so that I can add you as a
-       collaborator to my private ~cc100~ repository
-     * [[https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository][Create an issue]] from the [[https://github.com/birkenkrahe/cc100/issues][~cc100~ repository]] like in the example
+       collaborator to my private ~os420~ repository
+     * [[https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository][Create an issue]] from the [[https://github.com/birkenkrahe/cc100/issues][~os420~ repository]] like in the example
        below (except from your account instead of mine).
      -----
      /Image: Issue "Assignment completed"/
@@ -95,8 +95,8 @@
 
 **** What else can you do?
 
-     * You can [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][fork]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~cc100~]] repository
-     * You can [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions][watch]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~cc100~]] repository - and set [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications][~Notifications~]] to
+     * You can [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][fork]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~os420~]] repository
+     * You can [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github/viewing-your-subscriptions][watch]] the [[https://docs.github.com/en/get-started/quickstart/fork-a-repo][~os420~]] repository - and set [[https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications][~Notifications~]] to
        ~Participating and @mentions~ so that you see my comments (see
        image below).
 
@@ -115,7 +115,7 @@
        (see image below).
 
      /Image: GitHub desktop client commit/
-     #+attr_html: :width 600px
+     #+attr_html: :width 800px
      [[./img/gh.png]]
 
 *** DataCamp
@@ -138,4 +138,7 @@
     
 ** What's next?
 
-   See schedule.
+   * See schedule.
+   * See also online lecture on "Systems"
+   * Everything else = online
+   * See you (hopefully) Thursday in class!

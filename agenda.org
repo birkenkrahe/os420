@@ -10,7 +10,7 @@
 
   * Aspiration and ambition (Lyon Data Science program)
   * Introduction to the course & the lecturer
-  * Homework assignments: GitHub, DataCamp, Emacs
+  * Homework assignments: *GitHub*, DataCamp, Emacs
   * What's next?
 
 ** Aspirations and ambitions (DS program 2021-2023)
@@ -141,8 +141,7 @@
 
    * See schedule ([[https://github.com/birkenkrahe/os420/blob/main/schedule.org][GitHub]])
    * Watch online lecture on "Systems"
-   * Everything else = online summary
+   * Everything else => followup (Schoology, GitHub)
    * See you (hopefully) Thursday in class! (Lyon 104)
 
-
-
+     

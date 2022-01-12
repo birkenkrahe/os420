@@ -19,8 +19,8 @@
 
    * [[https://github.com/][Register with GitHub]] (5 min)
    * Complete the [[https://docs.github.com/en/get-started/quickstart/hello-world][GitHub Hello World exercise]] (20 min)
-   * Give me your GitHub user name (email - with course ID - or
-     Thursday in class)
+   * +Give me your GitHub user name (email - with course ID - or
+     Thursday in class)+ (no need - course is public)
    * Submit an issue to ~birkenkrahe/os420~ which confirms that you
      did the exercise!
      
@@ -62,3 +62,5 @@
     package and the program ~plink~, which is part of ~PuTTY~). 
 
     [[./img/tramp.gif]]
+
+** References

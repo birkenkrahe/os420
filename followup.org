@@ -63,4 +63,14 @@
 
     [[./img/tramp.gif]]
 
-** References
+* References
+
+  Grubb (2021). How Cybersecurity Really Works. NoStarch Press.
+
+  OccupyTheWeb (2018). Linux Basics for Hackers. NoStarch Press.
+
+  PuTTY (n.d.). SSH and telnet client program for Windows. [[https://www.putty.org/][URL:
+  www.putty.org.]]
+
+  Simma (2004). Parallel Computing on APE Systems [website]. [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][URL:
+  www-zeuthen.desy.de.]]

@@ -108,6 +108,10 @@
    #+caption: OS and computer hardware w/peripherals
    [[./img/hw.png]]
 
+   * Diversity of architecture is like gaming success: a team
+     consisting of 1 wizard + 1 dwarf + 1 elf has better chances to
+     win than teams of three of each.
+
    #+attr_html: :width 400px
    #+caption: Architecture of Information Systems (ARIS) model
    [[./img/aris.png]]

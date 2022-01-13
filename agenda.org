@@ -150,9 +150,9 @@
 
   | HOW      | WHAT                                          |
   |----------+-----------------------------------------------|
-  | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]]                   |
+  | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]])             |
   | Lecture  | What operating systems do                     |
-  | Practice | [[file:~/Documents/GitHub/org/FAQ.org:: How to install Emacs (+ESS) under Windows and MacOS][Install GNU Emacs]]                             |
+  | Practice | [[file:~/Documents/GitHub/org/FAQ.org:: How to install Emacs (+ESS) under Windows and MacOS][Install GNU Emacs]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][FAQ]])                       |
   | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
   | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
 

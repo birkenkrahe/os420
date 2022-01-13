@@ -162,7 +162,27 @@
 
    * Describe the general organization of a computer system
 
-   * Understand the role of system interrupts
+   * Install the GNU Emacs editor on your OS
+
+   * Understand how GNU Emacs works
+
+   * Make GNU Emacs work for you
+
+* Week 2 - January 18 , 2022    
+** Overview
+
+  | HOW      | WHAT                                          |
+  |----------+-----------------------------------------------|
+  | Review   | Quiz: course, OS foundations / GNU Emacs      |
+  | Lecture  | Interrupt basics                              |
+  | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
+  | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
+
+** Objectives
+
+   * Understand the basics of Git
+
+   * Describe the general organization of a computer system
 
    * Install the GNU Emacs editor on your OS
 

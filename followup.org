@@ -155,4 +155,4 @@
   The Computer Chronicles (Nov 8, 2012). Operating Systems
   (1984). [[https://youtu.be/V5S8kFvXpo4][URL: youtu.be/V5S8kFvXpo4.]]
 
-  xkcd (n.d.). A webcomic
+  xkcd (n.d.). A webcomic [website]. [[https://xkcd.com/][URL: xkcd.com]].

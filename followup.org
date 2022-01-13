@@ -114,29 +114,28 @@
      apps), and mainframe. They have different OS types.
 
 ** GNU Emacs installation
-*** Real programmers use Emacs
 
-    #+attr_html: :width 600px
-    #+caption: Real Programmers Use Emacs (Source: xkcd).
-    [[./img/real_programmers.png]]
+   #+attr_html: :width 600px
+   #+caption: Real Programmers Use Emacs (Source: xkcd).
+   [[./img/real_programmers.png]]
 
-    * xkcd (xkcd.com) is a cartoonist/nerd with a healthy appreciation
-      for IT and computing (and also science)
-    * ~nano~ is a tiny GNU/Linux based editor
-    * ~vim~ is another (slightly larger) GNU/Linux based editor
-      (available for Windows and Mac)
-    * ~ed~ is another editor, and ~sed~ on GNU/Linux is important for
-      data science on the command line
-    * ~cat~ is a viewing program
+   * xkcd (xkcd.com) is a cartoonist/nerd with a healthy appreciation
+     for IT and computing (and also science)
+   * ~nano~ is a tiny GNU/Linux based editor
+   * ~vim~ is another (slightly larger) GNU/Linux based editor
+     (available for Windows and Mac)
+   * ~ed~ is another editor, and ~sed~ on GNU/Linux is important for
+     data science on the command line
+   * ~cat~ is a viewing program
 
-    * GNU Emacs v27 Windows installation: you need the
-      ~emacs-27.1-x86_64-installer.exe~ [[http://gnu.freemirror.org/gnu/emacs/windows/emacs-27/][from this page]].
+   * GNU Emacs v27 Windows installation: you need the
+     ~emacs-27.1-x86_64-installer.exe~ [[http://gnu.freemirror.org/gnu/emacs/windows/emacs-27/][from this page]].
 
 * References
 
   Computer History Museum (Sep 5, 2019). History of Databases
   [video]. [[https://youtu.be/KG-mqHoXOXY][URL: youtu.be/KG-mqHoXOXY]].
-  
+
   Grubb (2021). How Cybersecurity Really Works. NoStarch Press.
 
   OccupyTheWeb (2018). Linux Basics for Hackers. NoStarch Press.

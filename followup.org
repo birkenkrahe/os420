@@ -33,6 +33,12 @@
     and computer science about the importance of learning languages
     over learning concepts.
 
+  * When people speak of Linux they usually mean the 'kernel' (the
+    part of the OS that's always "on"). When they say GNU/Linux, they
+    mean kernel + a bundle of functions. The word "kernel" contains
+    the German word 'Kern' for nucleus, or core (which in turn, I
+    think, comes from the Latin word for heart, 'cor').
+
   * Showed a few books to demonstrate the relevance of Linux and
     command line skills to cybersecurity:
 

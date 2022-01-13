@@ -148,86 +148,27 @@
 * Week 1 - January 13 , 2022    
 ** Overview
 
-  * Install GNU Emacs
-  * Emacs guided tour
-  * Work through (some of) the Emacs onboard tutorial (ca. 18 pages)
-    - In Emacs: C-h t
-    - [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][HTML version]]
-  * Solve some sample editing problems
-
-    A gentle introduction [[https://youtu.be/1YOrd7NCGkg]["First Steps with Emacs"]]
-    (Eddelbuettel, 2021)
+  | HOW      | WHAT                                          |
+  |----------+-----------------------------------------------|
+  | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]]                   |
+  | Lecture  | What operating systems do                     |
+  | Practice | [[file:~/Documents/GitHub/org/FAQ.org:: How to install Emacs (+ESS) under Windows and MacOS][Install GNU Emacs]]                             |
+  | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
+  | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
 
 ** Objectives
 
-   * A lot of what goes on in Emacs is Unix stuff - commands carry
-     over to the shell
+   * Understand the basics of Git
 
-   * Emacs is a small (ca. 1.5 mio lines of code[fn:1]), extensible,
-     transparent operating system
+   * Describe the general organization of a computer system
 
-   * It's a mellow start to our journey (stuff to do)
-   
-** Install GNU Emacs
-** Emacs Guided Tour
+   * Understand the role of system interrupts
 
-   - See also: https://www.gnu.org/software/emacs/tour/
+   * Install the GNU Emacs editor on your OS
 
-   - Emacs in a terminal (~emacs -nw~)
-   
-** Work through the Emacs onboard tutorial
+   * Understand how GNU Emacs works
 
-*** Minibuffer & basic navigation
-
-    * Starting emacs (~PATH~)
-    * Minibuffer
-    * Leaving Emacs
-
-*** Basic cursor control
-
-*** Numeric arguments
-
-*** Stopping Emacs
-
-*** Disabled commands
-
-*** Windows control (buffers/frames)
-
-*** Inserting and deleting (yank/kill)
-
-*** Undo
-
-*** File management
-
-*** Auto-save and recovery
-
-*** Modeline   
-
-*** Modes
-
-*** Searching
-
-*** Multiple windows / frames
-
-*** Getting more help
-
-*** Custom themes and fonts
-
-*** Initialization (~/.emacs~) 
-
-*** Packages
-
-*** Org-mode
-    
-** Practice: solve some sample editing problems
-
-*** Practice problem 1 - buffers
-
-*** Practice problem 2 - insert/delete
-
-*** Practice problem 3 - file management
-
-*** Practice problem 4 - searching and counting
+   * Make GNU Emacs work for you
 
 * References
 

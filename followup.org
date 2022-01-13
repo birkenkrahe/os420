@@ -70,7 +70,7 @@
      [[./img/tramp.gif]]
 
 * Week 1 - Jan 13
-** Lecture on OS foundations
+** GitHub assignment/DataCamp
 
    * DataCamp: You should all be in your courses now.
      - Your assignments are on one page but you'll be notified via
@@ -90,14 +90,16 @@
    * This is what I was thinking of - worth watching: [[https://youtu.be/V5S8kFvXpo4][The Computer
      Chronicles - Operating Systems (1984)]]
 
-   #+attr_html: :width 400px
-   #+caption: Computer chronicles-OS (1984)
-   [[./img/history.png]]
+     #+attr_html: :width 400px
+     #+caption: Computer chronicles-OS (1984)
+     [[./img/history.png]]
 
-   * However, my first thought, [[https://youtu.be/KG-mqHoXOXY][History of Databases (2019)]] is also
-     really relevant for OS, because it shows how an important
-     application (database management systems) is developed in concert
-     with the operating systems on which it runs
+     * However, my first thought, [[https://youtu.be/KG-mqHoXOXY][History of Databases (2019)]] is also
+       really relevant for OS, because it shows how an important
+       application (database management systems) is developed in concert
+       with the operating systems on which it runs
+
+** Lecture on OS foundations
 
    * Why different models? Each POV is a different model. Models change
      with time and represent focus and interests (e.g. IT careers)

@@ -158,15 +158,15 @@
 
 ** Objectives
 
-   * Understand the basics of Git
+   * [X] Understand the basics of Git
 
-   * Describe the general organization of a computer system
+   * [X] Describe the general organization of a computer system
 
-   * Install the GNU Emacs editor on your OS
+   * [X] Install the GNU Emacs editor on your OS
 
-   * Understand how GNU Emacs works
+   * [ ] Understand how GNU Emacs works
 
-   * Make GNU Emacs work for you
+   * [ ] Make GNU Emacs work for you
 
 * Week 2 - January 18 , 2022    
 ** Overview
@@ -180,14 +180,12 @@
 
 ** Objectives
 
-   * Understand the basics of Git
+   * [ ] Interrupt / storage management
 
-   * Describe the general organization of a computer system
+   * [ ] GNU Emacs
 
-   * Install the GNU Emacs editor on your OS
+   * [ ] Understand how GNU Emacs works
 
-   * Understand how GNU Emacs works
-
-   * Make GNU Emacs work for you
+   * [ ] Make GNU Emacs work for you
 
 

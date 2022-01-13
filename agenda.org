@@ -128,6 +128,7 @@
     * How are we using it?
     * What will you have to do?
 
+
 *** GNU Emacs
     
     #+attr_html: :width 400px
@@ -137,11 +138,12 @@
     * How are we using it?
     * What will you have to do?
     
+
 ** What's next?
 
    * See schedule ([[https://github.com/birkenkrahe/os420/blob/main/schedule.org][GitHub]])
-   * Watch online lecture on "Systems"
+   * Watch online lecture on "Systems" (to be published)
    * Everything else => followup (Schoology, GitHub)
-   * See you (hopefully) Thursday in class! (Lyon 104)
+   * +See you (hopefully) Thursday in class! (Lyon 104)+ 
 
      

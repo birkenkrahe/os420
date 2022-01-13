@@ -1,5 +1,5 @@
-#+TITLE:Followup 
-#+AUTHOR:Marcus Birkenkrahe 
+#+TITLE:Followup
+#+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Followup for CSC420 Operating Systems Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
@@ -13,7 +13,7 @@
   *homework* (if any). The first point of call for any questions
   should be the FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my
   courses), and a [[https://github.com/birkenkrahe/os420/blob/main/FAQ.org][FAQ for CSC420]].
-  
+
 * Week 1 - Jan 11
 ** Homework (by Thursday 13-Jan)
 
@@ -23,51 +23,109 @@
      Thursday in class)+ (no need - course is public)
    * Submit an issue to ~birkenkrahe/os420~ which confirms that you
      did the exercise!
-     
+
 ** Stuff
-   
-  * [[https://github.com/birkenkrahe/os420/blob/main/agenda.org][Agenda]] - we covered all of it (and more) - agenda is available in
-    GitHub only
 
-  * There's been a long and still open debate in software engineering
-    and computer science about the importance of learning languages
-    over learning concepts.
+   * [[https://github.com/birkenkrahe/os420/blob/main/agenda.org][Agenda]] - we covered all of it (and more) - agenda is available in
+     GitHub only
 
-  * When people speak of Linux they usually mean the 'kernel' (the
-    part of the OS that's always "on"). When they say GNU/Linux, they
-    mean kernel + a bundle of functions. The word "kernel" contains
-    the German word 'Kern' for nucleus, or core (which in turn, I
-    think, comes from the Latin word for heart, 'cor').
+   * There's been a long and still open debate in software engineering
+     and computer science about the importance of learning languages
+     over learning concepts.
 
-  * Showed a few books to demonstrate the relevance of Linux and
-    command line skills to cybersecurity:
+   * When people speak of Linux they usually mean the 'kernel' (the
+     part of the OS that's always "on"). When they say GNU/Linux, they
+     mean kernel + a bundle of functions. The word "kernel" contains
+     the German word 'Kern' for nucleus, or core (which in turn, I
+     think, comes from the Latin word for heart, 'cor').
 
-    [[./img/cybersec.png]]
+   * Showed a few books to demonstrate the relevance of Linux and
+     command line skills to cybersecurity:
 
-    [[./img/hackers.png]]
+     [[./img/cybersec.png]]
 
-  * [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][More about the APE]] (Ital. for "bee") parallel computer from the
-    German particle lab DESY, Hamburg, and University of Rome La
-    Sapienzia, Rome. Incidentally, one of the creators of this machine
-    was [[https://en.wikipedia.org/wiki/Giorgio_Parisi][Giorgio Parisi]], who recently received the Nobel Prize for
-    physics 2021. One of my graduate student jobs was to take care of
-    the first APE.
+     [[./img/hackers.png]]
 
-    [[./img/bees.gif]]
+   * [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][More about the APE]] (Ital. for "bee") parallel computer from the
+     German particle lab DESY, Hamburg, and University of Rome La
+     Sapienzia, Rome. Incidentally, one of the creators of this machine
+     was [[https://en.wikipedia.org/wiki/Giorgio_Parisi][Giorgio Parisi]], who recently received the Nobel Prize for
+     physics 2021. One of my graduate student jobs was to take care of
+     the first APE.
 
-  * Showed Windows Cmd line, Windows PowerShell, and the ~bash~ shell,
-    and summoned the wrath of Bill Gates by putting down Microsoft's
-    attempts to provide half-hearted OS access. The GIF shows how the
-    OS world might look like without Microsoft, Apple, Google:
-    everybody's running Open Source (Linux)!
+     [[./img/bees.gif]]
 
-    [[./img/marathon.gif]]
-    
-  * Demonstrated remotely accessing a Linux from a Windows box using
-    ~ssh~ both on the shell and inside GNU Emacs (using the Tramp
-    package and the program ~plink~, which is part of ~PuTTY~). 
+   * Showed Windows Cmd line, Windows PowerShell, and the ~bash~ shell,
+     and summoned the wrath of Bill Gates by putting down Microsoft's
+     attempts to provide half-hearted OS access. The GIF shows how the
+     OS world might look like without Microsoft, Apple, Google:
+     everybody's running Open Source (Linux)!
 
-    [[./img/tramp.gif]]
+     [[./img/marathon.gif]]
+
+   * Demonstrated remotely accessing a Linux from a Windows box using
+     ~ssh~ both on the shell and inside GNU Emacs (using the Tramp
+     package and the program ~plink~, which is part of ~PuTTY~).
+
+     [[./img/tramp.gif]]
+
+* Week 1 - Jan 13
+** Lecture on OS foundations
+
+   * DataCamp: You should all be in your courses now.
+     - Your assignments are on one page but you'll be notified via
+       schoology as soon as an assignment is due
+
+   #+attr_html: :width 400px
+   #+caption: DataCamp OS course member list
+   [[./img/members.png]]
+
+   * Importance of README files for packages that (super) users can
+     build from source for their computer architecture (CPU) and OS
+
+   * Git is about version control, developed by Linus Torvalds, who
+     also is the ~main~ branch maintainer for the Linux kernel. Here
+     is [[https://github.com/torvalds/linux][his GitHub repo with the kernel]].
+
+   * Worth watching: [[https://youtu.be/V5S8kFvXpo4][The Computer Chronicles - Operating Systems
+     (1984)]]
+
+   #+attr_html: :width 400px
+   #+caption: Computer chronicles-OS (1984)
+   [[./img/history.png]]
+
+   * Why different models? Each POV is a different model. Models change
+     with time and represent focus and interests (e.g. IT careers)
+
+   #+attr_html: :width 400px
+   #+caption: OS and computer hardware w/peripherals
+   [[./img/hw.png]]
+
+   #+attr_html: :width 400px
+   #+caption: Architecture of Information Systems (ARIS) model
+   [[./img/aris.png]]
+
+   * Distinguish between PCs (solo), workstations (group, specific
+     apps), and mainframe. They have different OS types.
+
+** GNU Emacs installation
+*** Real programmers use Emacs
+
+    #+attr_html: :width 600px
+    #+caption: Real Programmers Use Emacs (Source: xkcd).
+    [[./img/real_programmers.png]]
+
+    * xkcd (xkcd.com) is a cartoonist/nerd with a healthy appreciation
+      for IT and computing (and also science)
+    * ~nano~ is a tiny GNU/Linux based editor
+    * ~vim~ is another (slightly larger) GNU/Linux based editor
+      (available for Windows and Mac)
+    * ~ed~ is another editor, and ~sed~ on GNU/Linux is important for
+      data science on the command line
+    * ~cat~ is a viewing program
+
+    * GNU Emacs v27 Windows installation: you need the
+      ~emacs-27.1-x86_64-installer.exe~ [[http://gnu.freemirror.org/gnu/emacs/windows/emacs-27/][from this page]].
 
 * References
 
@@ -80,3 +138,8 @@
 
   Simma (2004). Parallel Computing on APE Systems [website]. [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][URL:
   www-zeuthen.desy.de.]]
+
+  The Computer Chronicles (Nov 8, 2012). Operating Systems
+  (1984). [[https://youtu.be/V5S8kFvXpo4][URL: youtu.be/V5S8kFvXpo4.]]
+
+  xkcd (n.d.). A webcomic

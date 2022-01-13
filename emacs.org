@@ -92,3 +92,18 @@
 
 *** Practice problem 4 - searching and counting
 
+* References
+
+  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
+  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
+
+  Kenlon (10 Mar 2020). Getting started with Emacs [blog]. [[https://opensource.com/article/20/3/getting-started-emacs][URL:
+  opensource.com.]]
+  
+  System Crafters (Mar 8, 2021). The Absolute Beginner's Guide to
+  Emacs [video]. [[https://youtu.be/48JlgiBpw_I][URL: youtu.be/48JlgiBpw_I]].
+
+* Footnotes
+
+[fn:1]Found this via reddit. Obtained using the source code line
+counter [[ https://github.com/blackducksoftware/ohcount][ohcount]].

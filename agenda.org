@@ -170,12 +170,4 @@
 
    * Make GNU Emacs work for you
 
-* References
 
-  Emacs Speaks Statistics (Mar 19, 2021). First Steps With Emacs
-  [video]. [[https://youtu.be/1YOrd7NCGkg][URL: youtu.be/1YOrd7NCGkg]].
-
-* Footnotes
-
-[fn:1]Found this via reddit. Obtained using the source code line
-counter [[ https://github.com/blackducksoftware/ohcount][ohcount]].

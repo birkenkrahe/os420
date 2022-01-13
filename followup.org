@@ -87,12 +87,17 @@
      also is the ~main~ branch maintainer for the Linux kernel. Here
      is [[https://github.com/torvalds/linux][his GitHub repo with the kernel]].
 
-   * Worth watching: [[https://youtu.be/V5S8kFvXpo4][The Computer Chronicles - Operating Systems
-     (1984)]]
+   * This is what I was thinking of - worth watching: [[https://youtu.be/V5S8kFvXpo4][The Computer
+     Chronicles - Operating Systems (1984)]]
 
    #+attr_html: :width 400px
    #+caption: Computer chronicles-OS (1984)
    [[./img/history.png]]
+
+   * However, my first thought, [[https://youtu.be/KG-mqHoXOXY][History of Databases (2019)]] is also
+     really relevant for OS, because it shows how an important
+     application (database management systems) is developed in concert
+     with the operating systems on which it runs
 
    * Why different models? Each POV is a different model. Models change
      with time and represent focus and interests (e.g. IT careers)
@@ -129,6 +134,9 @@
 
 * References
 
+  Computer History Museum (Sep 5, 2019). History of Databases
+  [video]. [[https://youtu.be/KG-mqHoXOXY][URL: youtu.be/KG-mqHoXOXY]].
+  
   Grubb (2021). How Cybersecurity Really Works. NoStarch Press.
 
   OccupyTheWeb (2018). Linux Basics for Hackers. NoStarch Press.

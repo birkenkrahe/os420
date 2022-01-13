@@ -178,6 +178,8 @@
   | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
   | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
 
+  /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]]/
+  
 ** Objectives
 
    * [ ] Interrupt / storage management

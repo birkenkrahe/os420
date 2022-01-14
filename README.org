@@ -10,6 +10,7 @@
 
 ** [[https://github.com/birkenkrahe/os420/blob/main/schedule.org][Schedule]] of the course (up to date)
 ** [[https://github.com/birkenkrahe/os420/blob/main/agenda.org][Agenda]] for every session
+** [[https://github.com/birkenkrahe/os420/blob/main/notes.org][Notes]] after sessions
 ** [[https://github.com/birkenkrahe/os420/blob/main/diary.org][Course diary]] for further reading
 ** [[https://github.com/birkenkrahe/os420/blob/main/FAQ.org][Frequently Asked Questions (FAQ)]]
 ** [[https://github.com/birkenkrahe/os420/blob/main/syllabus.org][Syllabus]] for a course overview

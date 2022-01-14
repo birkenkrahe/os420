@@ -142,7 +142,7 @@
 
    * See schedule ([[https://github.com/birkenkrahe/os420/blob/main/schedule.org][GitHub]])
    * Watch online lecture on "Systems" (to be published)
-   * Everything else => followup (Schoology, GitHub)
+   * Everything else => followup notes (GitHub)
    * +See you (hopefully) Thursday in class! (Lyon 104)+ 
 
 * Week 1 - January 13 , 2022    

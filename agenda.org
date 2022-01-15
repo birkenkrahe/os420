@@ -3,7 +3,7 @@
 #+SUBTITLE:Agenda DB330 Database Theory and Applications
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Week 1 - January 11, 2022
+* 1.1 (01/11/22)
 
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
@@ -145,7 +145,7 @@
    * Everything else => followup notes (GitHub)
    * +See you (hopefully) Thursday in class! (Lyon 104)+ 
 
-* Week 1 - January 13 , 2022    
+* 1.2 (01/13/22)
 ** Overview
 
   | HOW      | WHAT                                          |
@@ -168,18 +168,24 @@
 
    * [ ] Make GNU Emacs work for you
 
-* Week 2 - January 18 , 2022    
+* 2.1 (01/18/22)
+
+** Emacs tip  
+
+   Start/stop session with ~org-timer-set-timer~ (C-c C-x ;)/
+  ~org-timer-stop~ (System Crafters, 2021)
+   
 ** Overview
 
-  | HOW      | WHAT                                          |
-  |----------+-----------------------------------------------|
-  | Review   | Quiz: course, OS foundations / GNU Emacs      |
-  | Lecture  | Interrupt basics                              |
-  | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
-  | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
+  | HOW     | WHAT                                          |
+  |---------+-----------------------------------------------|
+  | Review  | Quiz: course, OS foundations / GNU Emacs      |
+  | Lecture | Interrupt basics                              |
+  | Demo    | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
+  | Self    | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
 
   /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]]/
-  
+
 ** Objectives
 
    * [ ] Interrupt / storage management
@@ -190,4 +196,8 @@
 
    * [ ] Make GNU Emacs work for you
 
+* References
+
+  System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
+  [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
 

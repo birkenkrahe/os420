@@ -38,11 +38,11 @@
 
    #+attr_html: :width 600px
    [[./img/homework.png]]
-   
+
    * GitHub Hello World Exercise ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][Info: FAQ]])
    * DataCamp platform registration ([[https://lyon.schoology.com/course/5516220833/materials][Link: Schoology]])
    * GNU Emacs installation ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][Info: FAQ]])
-   
+
 *** GitHub
 
 **** What is it?
@@ -123,38 +123,38 @@
 
     #+attr_html: :width 400px
     [[./img/datacamp.png]]
-    
+
     * Why are we using it?
     * How are we using it?
     * What will you have to do?
 
 
 *** GNU Emacs
-    
+
     #+attr_html: :width 400px
     [[./img/emacs.png]]
 
     * Why are we using it?
     * How are we using it?
     * What will you have to do?
-    
+
 ** What's next?
 
    * See schedule ([[https://github.com/birkenkrahe/os420/blob/main/schedule.org][GitHub]])
    * Watch online lecture on "Systems" (to be published)
    * Everything else => followup notes (GitHub)
-   * +See you (hopefully) Thursday in class! (Lyon 104)+ 
+   * +See you (hopefully) Thursday in class! (Lyon 104)+
 
 * 1.2 (01/13/22)
 ** Overview
 
-  | HOW      | WHAT                                          |
-  |----------+-----------------------------------------------|
-  | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]])             |
-  | Lecture  | What operating systems do                     |
-  | Practice | [[file:~/Documents/GitHub/org/FAQ.org:: How to install Emacs (+ESS) under Windows and MacOS][Install GNU Emacs]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][FAQ]])                       |
-  | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
-  | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
+   | HOW      | WHAT                                          |
+   |----------+-----------------------------------------------|
+   | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]])             |
+   | Lecture  | What operating systems do                     |
+   | Practice | [[file:~/Documents/GitHub/org/FAQ.org:: How to install Emacs (+ESS) under Windows and MacOS][Install GNU Emacs]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][FAQ]])                       |
+   | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
+   | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
 
 ** Objectives
 
@@ -170,21 +170,25 @@
 
 * 2.1 (01/18/22)
 
-** Emacs tip  
+  #+caption: "I'm back, baby."
+  #+attr_html: :width 300px
+  [[./img/back.jpg]]
+
+** Emacs tip
 
    Start/stop session with ~org-timer-set-timer~ (C-c C-x ;)/
-  ~org-timer-stop~ (System Crafters, 2021)
-   
+   ~org-timer-stop~ (System Crafters, 2021)
+
 ** Overview
 
-  | HOW     | WHAT                                          |
-  |---------+-----------------------------------------------|
-  | Review  | Quiz: course, OS foundations / GNU Emacs      |
-  | Lecture | Interrupt basics                              |
-  | Demo    | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
-  | Self    | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
+   | HOW     | WHAT                                          |
+   |---------+-----------------------------------------------|
+   | Review  | Quiz: course, OS foundations / GNU Emacs      |
+   | Lecture | Interrupt basics                              |
+   | Demo    | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
+   | Self    | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
 
-  /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]]/
+   /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]]/
 
 ** Objectives
 
@@ -200,4 +204,3 @@
 
   System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
   [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]
-

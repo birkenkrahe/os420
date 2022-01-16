@@ -181,16 +181,19 @@
 
 ** Overview
 
-   | HOW     | WHAT                                          |
-   |---------+-----------------------------------------------|
-   | Review  | Quiz: course, OS foundations / GNU Emacs      |
-   | Lecture | Interrupt basics                              |
-   | Demo    | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
-   | Self    | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
+   | HOW          | WHAT                                               |
+   |--------------+----------------------------------------------------|
+   | Review (S)   | Quiz: course, OS foundations / GNU Emacs           |
+   | Resource (S) | [[https://www.youtube.com/watch?v=zJTqTs7Ujr8&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq][Fundamentals of Operating Systems YouTube playlist]] |
+   | Lecture (S)  | Interrupt basics                                   |
+   | Demo         | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                                  |
+   | Self         | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]]      |
 
    /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]]/
 
 ** Objectives
+
+   * [ ] Review / retention: complete Schoology Quiz 1 (5 min)
 
    * [ ] Interrupt / storage management
 

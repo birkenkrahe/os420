@@ -137,6 +137,30 @@
    * GNU Emacs v27 Windows installation: you need the
      ~emacs-27.1-x86_64-installer.exe~ [[http://gnu.freemirror.org/gnu/emacs/windows/emacs-27/][from this page]].
 
+* 2.1 (01/18/22)
+
+** Quiz - feedback
+
+   * Too much time? Too little? Questions too hard? Too easy?
+   * You should be able to see the correct solutions for rehearsal
+   
+** Review - OS position and purpose
+
+   ABSTRACTION[fn:1]:
+   * The computer can be viewed from different angles (models):
+     - Computer architecture (e.g. ARIS or CPU+RAM+HD)
+     - User + applications + OS + hardware
+
+   ARBITRATION[fn:2]:
+   * The main (defining) job of the OS is to control and allocate
+     computer resources 
+   * Users want easy of use + performance
+   * Shared computers include mainframes and dedicated workstations
+   
+** Log   
+  
+   
+   
 * References
 
   Computer History Museum (Sep 5, 2019). History of Databases
@@ -159,3 +183,11 @@
   (1984). [[https://youtu.be/V5S8kFvXpo4][URL: youtu.be/V5S8kFvXpo4.]]
 
   xkcd (n.d.). A webcomic [website]. [[https://xkcd.com/][URL: xkcd.com]].
+
+* Footnotes
+
+[fn:2]Word origin: /arbitrari/ (Latin) = to resolve a dispute [because
+on a computer many different parties compete for available resources]
+
+[fn:1]Word origin: /abs-trahere/ (Latin) = to withdraw [from
+details] - abstraction is the opposite of specialization (add detail)

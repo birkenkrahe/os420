@@ -169,15 +169,16 @@
    * [ ] Make GNU Emacs work for you
 
 * 2.1 (01/18/22)
+** I'm back
+   #+caption: "I'm back, baby."
+   #+attr_html: :width 300px
+   [[./img/back.jpg]]
 
-  #+caption: "I'm back, baby."
-  #+attr_html: :width 300px
-  [[./img/back.jpg]]
+** Emacs tip: ERC
 
+   [[./img/gnuemacs.png]]
 
-**  [[./img/gnuemacs.png]]
-
-   [[file:~/Documents/GitHub/org/emacs/README.org::Pomodoro][GNU Emacs tip: Pomodoro]]
+   [[file:~/Documents/GitHub/org/emacs/README.org::Emacs IRC][GNU Emacs tip: Emacs Inter Relay Chat (ERC)]]
 
 ** Overview
 

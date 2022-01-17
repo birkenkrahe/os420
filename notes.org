@@ -161,15 +161,34 @@
    * The OS kernel is the program that runs on your computer at all
      times, and is always in memory
 
-   | COMPUTER PROGRAMS            |   EXAMPLES             |
-   |------------------------------+------------------------|
-   | Operating System (OS) kernel | /daemon/ = supervisor  |
-   | System (control) programs    | /shell/ = command line |
-   | Application (user) programs  | /emacs/ editor         |
+   | COMPUTER PROGRAMS            | EXAMPLES           |
+   |------------------------------+--------------------|
+   | Operating System (OS) kernel | ~systemd~ /daemon/ |
+   | System (control) programs    | ~bash~ /shell/     |
+   | Application (user) programs  | ~emacs~ editor     |
 
-** Log
+** Log - from bootloading to interrupts
 
+   #+caption: A computer system (Source: Silberschatz et al, 2018)
+   #+attr_html: :width 600px
+   [[./img/system.png]]
 
+   * Computer hardware = Motherboard (run) + Peripherals (I/O)
+
+   * In the past, application software had to explicitly be connected
+     and configured to the operating system (MS DOS, Apple DOS, CP/M)
+
+* Glossary
+
+  | WHAT            | DEFINITION                               | PURPOSE                     |
+  |-----------------+------------------------------------------+-----------------------------|
+  | Motherboard (h) | CPU + controllers + system bus + memory  | Connect with I/O devices    |
+  | Bootloader (p)  | Computer startup sequence                | Find and load OS            |
+  | ROM/EPROM (h)   | [Erasable Programmable] Read-Only-Memory | Permanent firmware          |
+  | CMOS (h)        | Complementary Metal-Oxide Semiconductor  | BIOS memory                 |
+  | BIOS (s)        | [Basic Input Output System]              | Identify/configure hardware |
+
+  Legend: h=hardware, p=process, s=software
 
 * References
 

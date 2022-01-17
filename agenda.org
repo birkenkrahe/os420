@@ -170,15 +170,10 @@
 
 * 2.1 (01/18/22)
 ** I'm back
+
    #+caption: "I'm back, baby."
    #+attr_html: :width 300px
    [[./img/back.jpg]]
-
-** Emacs tip: Pomodoro Timer
-
-   [[./img/gnuemacs.png]]
-
-   [[file:~/Documents/GitHub/org/emacs/README.org::Pomodoro Timer][GNU Emacs tip: Pomodoro Timer]]
 
 ** Overview
 

@@ -174,11 +174,11 @@
    #+attr_html: :width 300px
    [[./img/back.jpg]]
 
-** Emacs tip: ERC
+** Emacs tip: Pomodoro Timer
 
    [[./img/gnuemacs.png]]
 
-   [[file:~/Documents/GitHub/org/emacs/README.org::Emacs IRC][GNU Emacs tip: Emacs Inter Relay Chat (ERC)]]
+   [[file:~/Documents/GitHub/org/emacs/README.org::Pomodoro Timer][GNU Emacs tip: Pomodoro Timer]]
 
 ** Overview
 

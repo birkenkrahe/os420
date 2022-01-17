@@ -143,7 +143,7 @@
 
    * Too much time? Too little? Questions too hard? Too easy?
    * You should be able to see the correct solutions for rehearsal
-   
+
 ** Review - OS position and purpose
 
    ABSTRACTION[fn:1]:
@@ -153,14 +153,24 @@
 
    ARBITRATION[fn:2]:
    * The main (defining) job of the OS is to control and allocate
-     computer resources 
+     computer resources
    * Users want easy of use + performance
    * Shared computers include mainframes and dedicated workstations
-   
-** Log   
-  
-   
-   
+
+   DEFINITION:
+   * The OS kernel is the program that runs on your computer at all
+     times, and is always in memory
+
+   | COMPUTER PROGRAMS            |   EXAMPLES             |
+   |------------------------------+------------------------|
+   | Operating System (OS) kernel | /daemon/ = supervisor  |
+   | System (control) programs    | /shell/ = command line |
+   | Application (user) programs  | /emacs/ editor         |
+
+** Log
+
+
+
 * References
 
   Computer History Museum (Sep 5, 2019). History of Databases
@@ -172,7 +182,7 @@
 
   Parisi (14 May 2002). Complex Systems: a Physicist's Viewpoint
   [preprint]. [[https://arxiv.org/abs/cond-mat/0205297][URL: arxiv.org.]]
-  
+
   PuTTY (n.d.). SSH and telnet client program for Windows. [[https://www.putty.org/][URL:
   www.putty.org.]]
 

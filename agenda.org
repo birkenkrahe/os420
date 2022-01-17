@@ -174,10 +174,10 @@
   #+attr_html: :width 300px
   [[./img/back.jpg]]
 
-** Emacs tip
 
-   Start/stop session with ~org-timer-set-timer~ (C-c C-x ;)/
-   ~org-timer-stop~ (System Crafters, 2021)
+**  [[./img/emacslogo.png]]
+
+   [[file:~/Documents/GitHub/org/emacs/README.org::Pomodoro][GNU Emacs tip: Pomodoro]]
 
 ** Overview
 
@@ -202,8 +202,3 @@
    * [ ] Understand how GNU Emacs works
 
    * [ ] Make GNU Emacs work for you
-
-* References
-
-  System Crafters (Aug 1, 2021). Emacs Has a Built-in Pomodoro Timer??
-  [video]. [[https://youtu.be/JbHE819kVGQ][URL: youtu.be/JbHE819kVGQ.]]

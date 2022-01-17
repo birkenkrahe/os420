@@ -175,7 +175,7 @@
   [[./img/back.jpg]]
 
 
-**  [[./img/emacslogo.png]]
+**  [[./img/gnuemacs.png]]
 
    [[file:~/Documents/GitHub/org/emacs/README.org::Pomodoro][GNU Emacs tip: Pomodoro]]
 

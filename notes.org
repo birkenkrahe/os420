@@ -138,7 +138,6 @@
      ~emacs-27.1-x86_64-installer.exe~ [[http://gnu.freemirror.org/gnu/emacs/windows/emacs-27/][from this page]].
 
 * 2.1 (01/18/22)
-
 ** Quiz - feedback
 
    * Too much time? Too little? Questions too hard? Too easy?
@@ -167,16 +166,41 @@
    | System (control) programs    | ~bash~ /shell/     |
    | Application (user) programs  | ~emacs~ editor     |
 
-** Log - from bootloading to interrupts
+** From bootstrapping to interrupts
 
    #+caption: A computer system (Source: Silberschatz et al, 2018)
-   #+attr_html: :width 600px
+   #+attr_html: :width 600px
    [[./img/system.png]]
 
    * Computer hardware = Motherboard (run) + Peripherals (I/O)
 
    * In the past, application software had to explicitly be connected
      and configured to the operating system (MS DOS, Apple DOS, CP/M)
+
+*** Input/Output (I/O) Operation
+
+   #+caption: Input/Output (I/O) operation (schematic)
+   #+attr_html: :width 600px
+   [[./img/io.png]]
+
+
+   | Organizational unit | Interrupt action                          |
+   |---------------------+-------------------------------------------|
+   | Device controller   | Raises interrupt signal                   |
+   | CPU                 | Catches interrupt signal                  |
+   |                     | Dispatches interrupt to interrupt handler |
+   | Interrupt handler   | Clears interrupt                          |
+   | CPU                 | Waits for next interrupt                  |
+   
+   #+caption: Input/Output (I/O) process diagram
+   #+attr_html: :width 800px
+   [[./img/ioprocess.png]]
+   
+   * [[https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os][Here is a tutorial]] to develop a simple device driver is developed
+     (Savin, 2022). It doesn't do anything else but read characters
+     from input and generating output on a device. The driver has to
+     be attached to a file using the ~mknod~ - then the device can be
+     addressed/configured etc. using that file.
 
 * Glossary
 
@@ -204,6 +228,9 @@
 
   PuTTY (n.d.). SSH and telnet client program for Windows. [[https://www.putty.org/][URL:
   www.putty.org.]]
+
+  Savin (2022). Linux Device Drivers: Tutorial for Linux Driver
+  Development [website]. [[https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os][URL: www.apriorit.com]].
 
   Simma (2004). Parallel Computing on APE Systems [website]. [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][URL:
   www-zeuthen.desy.de.]]

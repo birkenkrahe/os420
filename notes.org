@@ -138,7 +138,7 @@
      ~emacs-27.1-x86_64-installer.exe~ [[http://gnu.freemirror.org/gnu/emacs/windows/emacs-27/][from this page]].
 
 * 2.1 (01/18/22)
-** Quiz - feedback
+** Quiz 1
 
 
    THE QUIZ IS ON ... Schoology 9.30 - 9.45 AM

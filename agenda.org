@@ -169,32 +169,33 @@
    * [ ] Make GNU Emacs work for you
 
 * 2.1 (01/18/22)
-** I'm back
-
-   #+caption: "I'm back, baby."
-   #+attr_html: :width 300px
-   [[./img/back.jpg]]
-
 ** Overview
 
-   | HOW          | WHAT                                               |
-   |--------------+----------------------------------------------------|
-   | Review (S)   | Quiz: course, OS foundations / GNU Emacs           |
-   | Resource (S) | [[https://www.youtube.com/watch?v=zJTqTs7Ujr8&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq][Fundamentals of Operating Systems YouTube playlist]] |
-   | Lecture (S)  | Interrupt basics                                   |
-   | Demo         | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                                  |
-   | Self         | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]]      |
+   | HOW          | WHAT                                                |
+   |--------------+-----------------------------------------------------|
+   | Review (S)   | [[https://lyon.schoology.com/assignment/5563838206][Quiz: course, OS foundations / GNU Emacs]]            |
+   | Resource (S) | [[https://www.youtube.com/watch?v=zJTqTs7Ujr8&list=PLW1yb8L3S1ngGmtKlI5XYcTNQQ1r3xZvq][Fundamentals of Operating Systems YouTube playlist]]  |
+   | Lecture (S)  | Interrupts / I/O operations example / bootstrapping |
+   | Demo         | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                                   |
+   | Self         | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]]       |
 
    /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]]/
 
 ** Objectives
 
-   * [ ] Review / retention: complete Schoology Quiz 1 (5 min)
+   * [ ] Review / retention: complete Schoology Quiz 1 (15 min)
 
-   * [ ] Interrupt / storage management
+   * [ ] Understand bootstrapping, and interrupts management
 
-   * [ ] GNU Emacs
+   * [ ] Understand how basic I/O processes work 
 
    * [ ] Understand how GNU Emacs works
 
    * [ ] Make GNU Emacs work for you
+
+** What's next?
+
+   * GNU Emacs practice exercises (class)
+   * Computer system architecture
+   * Getting started with Pi
+   * DataCamp assignments beginning next week (online)

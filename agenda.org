@@ -179,15 +179,42 @@
    | Demo         | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                                   |
    | Self         | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]]       |
 
-   /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]]/
+   /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]] and The Computer Chronicles/
 
 ** Objectives
 
-   * [ ] Review / retention: complete Schoology Quiz 1 (15 min)
+   * [X] Review / retention: complete Schoology Quiz 1 (15 min)
 
-   * [ ] Understand bootstrapping, and interrupts management
+   * [X] Understand bootstrapping, and interrupts management
 
-   * [ ] Understand how basic I/O processes work 
+   * [X] Understand how basic I/O processes work 
+
+   * [ ] Understand how GNU Emacs works
+
+   * [ ] Make GNU Emacs work for you
+
+** What's next?
+
+   * GNU Emacs practice exercises (class)
+   * Computer system architecture
+   * Getting started with Pi
+   * DataCamp assignments beginning next week (online)
+* 2.2 (01/20/22)
+** Overview
+
+   | HOW  | WHAT                                          |
+   |------+-----------------------------------------------|
+   |      |                                               |
+   | Demo | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
+   | Self | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
+
+** Objectives
+
+   * [X] Review / retention: complete Schoology Quiz 1 (15 min)
+
+   * [X] Understand bootstrapping, and interrupts management
+
+   * [X] Understand how basic I/O processes work 
 
    * [ ] Understand how GNU Emacs works
 

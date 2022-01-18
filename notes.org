@@ -140,25 +140,51 @@
 * 2.1 (01/18/22)
 ** Quiz - feedback
 
-   * Too much time? Too little? Questions too hard? Too easy?
+
+   THE QUIZ IS ON ... Schoology 9.30 - 9.45 AM
+
+   FOLLOWED by brief FEEDBACK:
+
+   * We'll do one of these per week
+   * Any content questions?
+   * Too much time? Too little?
+   * Questions too hard? Too easy?
    * You should be able to see the correct solutions for rehearsal
+   * A subset of these questions will become the final exam
+
+** OS functions
+
+   (Source: [[https://youtu.be/V5S8kFvXpo4][the Computer Chronicles 1984]])
+
+   1. Establish interface
+   2. Permit multiple users
+   3. Manage data files
+   4. Handle I/O
+   5. Error recovery
+   6. System accounting
+   7. Maintenance accounting
+   -----
+   * CP/M: IBM PC operating system
+   * Apple IIe (BASIC) - early Apple PC
+   * FORTRAN (FORmula TRANslator - sci comp language)
+   * New kids: Go(lang), Rust,...but in OS, C programming rules
 
 ** Review - OS position and purpose
 
    ABSTRACTION[fn:1]:
    * The computer can be viewed from different angles (models):
-     - Computer architecture (e.g. ARIS or CPU+RAM+HD)
+     - Computer architecture (e.g. ARIS or CPU+RAM+NVM)
      - User + applications + OS + hardware
 
    ARBITRATION[fn:2]:
    * The main (defining) job of the OS is to control and allocate
      computer resources
-   * Users want easy of use + performance
+   * Users want easy of use + performance + hidden from view
    * Shared computers include mainframes and dedicated workstations
 
    DEFINITION:
    * The OS kernel is the program that runs on your computer at all
-     times, and is always in memory
+     times, and is always in (volatile) memory
 
    | COMPUTER PROGRAMS            | EXAMPLES           |
    |------------------------------+--------------------|
@@ -177,36 +203,46 @@
    * In the past, application software had to explicitly be connected
      and configured to the operating system (MS DOS, Apple DOS, CP/M)
 
-   * Bootstrapping: the OS kernel program is loaded into (volatile) memory
+   * Bootstrapping: the OS kernel program is loaded into (volatile)
+     memory
 
-   * Booting = the BIOS is executed, establishing the basic I/O structure
+   * Booting = the BIOS is executed, establishing the basic I/O
+     structure
 
-   * The system daemon (~systemd~ in Linux) starts other daemons/services
+   * The system daemon (~systemd~ in Linux) starts other
+     daemons/services
+
+   * On Linux, firmware updates are not automatic, instead you apply
+     them manually using ~sudo apt update~ and ~sudo apt upgrade -y~
+     - ~sudo~ give super-user privileges
+     - ~apt~ is a package manager program for Debian Linux systems
+     - ~update~ and ~upgrade~ are system programs
+     - ~-y~ is a flag ("do it without asking questions") 
 
 *** Input/Output (I/O) Operation
 
-   #+caption: Input/Output (I/O) operation (schematic)
-   #+attr_html: :width 600px
-   [[./img/io.png]]
+    #+caption: Input/Output (I/O) operation (schematic)
+    #+attr_html: :width 600px
+    [[./img/io.png]]
 
 
-   | Organizational unit | Interrupt action                          |
-   |---------------------+-------------------------------------------|
-   | Device controller   | Raises interrupt signal                   |
-   | CPU                 | Catches interrupt signal                  |
-   |                     | Dispatches interrupt to interrupt handler |
-   | Interrupt handler   | Clears interrupt                          |
-   | CPU                 | Waits for next interrupt                  |
-   
-   #+caption: Input/Output (I/O) process diagram
-   #+attr_html: :width 800px
-   [[./img/ioprocess.png]]
-   
-   * [[https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os][Here is a tutorial]] to develop a simple device driver is developed
-     (Savin, 2022). It doesn't do anything else but read characters
-     from input and generating output on a device. The driver has to
-     be attached to a file using the ~mknod~ - then the device can be
-     addressed/configured etc. using that file.
+    | Organizational unit | Interrupt action                          |
+    |---------------------+-------------------------------------------|
+    | Device controller   | Raises interrupt signal                   |
+    | CPU                 | Catches interrupt signal                  |
+    |                     | Dispatches interrupt to interrupt handler |
+    | Interrupt handler   | Clears interrupt                          |
+    | CPU                 | Waits for next interrupt                  |
+
+    #+caption: Input/Output (I/O) BPMN process diagram
+    #+attr_html: :width 900px
+    [[./img/ioprocess.png]]
+
+    * [[https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os][Here is a tutorial]] to develop a simple device driver is developed
+      (Savin, 2022). It doesn't do anything else but read characters
+      from input and generating output on a device. The driver has to
+      be attached to a file using the ~mknod~ - then the device can be
+      addressed/configured etc. using that file.
 
 * Glossary
 
@@ -217,6 +253,8 @@
   | ROM/EPROM (h)   | [Erasable Programmable] Read-Only-Memory | Permanent firmware          |
   | CMOS (h)        | Complementary Metal-Oxide Semiconductor  | BIOS memory                 |
   | BIOS (s)        | [Basic Input Output System]              | Identify/configure hardware |
+  | BPMN            | Business Process Model and Notation      | Process diagram language    |
+  | sudo            | Linux shell command                      | Super user privileges       |
 
   Legend: h=hardware, p=process, s=software
 

@@ -177,6 +177,12 @@
    * In the past, application software had to explicitly be connected
      and configured to the operating system (MS DOS, Apple DOS, CP/M)
 
+   * Bootstrapping: the OS kernel program is loaded into (volatile) memory
+
+   * Booting = the BIOS is executed, establishing the basic I/O structure
+
+   * The system daemon (~systemd~ in Linux) starts other daemons/services
+
 *** Input/Output (I/O) Operation
 
    #+caption: Input/Output (I/O) operation (schematic)

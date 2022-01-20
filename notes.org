@@ -246,7 +246,9 @@
 
 * NEXT w2s4 (01/20/22)
 
-** 
+** From batch mode to interactive timesharing
+
+   * 
 
 * Glossary
 

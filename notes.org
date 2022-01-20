@@ -217,7 +217,7 @@
      - ~sudo~ give super-user privileges
      - ~apt~ is a package manager program for Debian Linux systems
      - ~update~ and ~upgrade~ are system programs
-     - ~-y~ is a flag ("do it without asking questions") 
+     - ~-y~ is a flag ("do it without asking questions")
 
 *** Input/Output (I/O) Operation
 
@@ -246,10 +246,26 @@
 
 * NEXT w2s4 (01/20/22)
 
-** From batch mode to interactive timesharing
+** What does the OS manage? (With Linux examples)
 
-   * 
+   * Task / process management (ps -a)
+   * Memory management (df -H)
+   * File-system management (ls -la)
+   * Mass-storage management (sudo fdisk -l)
+   * Network management (ifconfig)ping 
 
+** Batch mode vs. interactive timesharing
+
+   * Multitasking is a smart scheduling illusion
+   * Virtual memory allows execution of large jobs
+   * Timer used to prevent infinite loop or resource hogging
+
+** User mode vs. kernel mode (with Linux examples)
+
+   * Mode-bit (hardware) indicates user vs. kernel mode (hostname -a)
+   * Kernel mode is privileged (sudo)
+   * Modern OS: Virtual Machine Manager mode for guest VMs ([[https://www.virtualbox.org/][VirtualBox]])
+   
 * Glossary
 
   | WHAT            | DEFINITION                               | PURPOSE                     |

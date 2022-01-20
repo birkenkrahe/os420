@@ -3,7 +3,7 @@
 #+SUBTITLE:Agenda DB330 Database Theory and Applications
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* 1.1 (01/11/22)
+* w1s1 (01/11/22)
 
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
@@ -145,7 +145,7 @@
    * Everything else => followup notes (GitHub)
    * +See you (hopefully) Thursday in class! (Lyon 104)+
 
-* 1.2 (01/13/22)
+* w1s2 (01/13/22)
 ** Overview
 
    | HOW      | WHAT                                          |
@@ -168,7 +168,7 @@
 
    * [ ] Make GNU Emacs work for you
 
-* 2.1 (01/18/22)
+* w2s3 (01/18/22)
 ** Overview
 
    | HOW          | WHAT                                                |
@@ -198,23 +198,20 @@
    * GNU Emacs practice exercises (class)
    * Computer system architecture
    * Getting started with Pi
-   * DataCamp assignments beginning next week (online)
-* 2.2 (01/20/22)
+
+* w2s4 (01/20/22)
 ** Overview
 
-   | HOW  | WHAT                                          |
-   |------+-----------------------------------------------|
-   |      |                                               |
-   | Demo | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
-   | Self | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
+   | HOW      | WHAT                                    |
+   |----------+-----------------------------------------|
+   | Lecture  | Storage structure & OS management tasks |
+   | Practice | [[file:~/Documents/GitHub/org/emacs/emacs.org::GNU Emacs][Emacs guided tour]] ([[https://www.gnu.org/software/emacs/tour/][tour]])([[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][tutorial]])      |
 
 ** Objectives
 
-   * [X] Review / retention: complete Schoology Quiz 1 (15 min)
+   * [ ] Storage structure, User vs kernel mode, multiprogramming
 
-   * [X] Understand bootstrapping, and interrupts management
-
-   * [X] Understand how basic I/O processes work 
+   * [ ] Management tasks of the Operating System
 
    * [ ] Understand how GNU Emacs works
 
@@ -222,7 +219,8 @@
 
 ** What's next?
 
-   * GNU Emacs practice exercises (class)
-   * Computer system architecture
-   * Getting started with Pi
-   * DataCamp assignments beginning next week (online)
+   * Operating system services & design principles
+   * Emacs practice assignment
+   * Getting started with Pi: bootloading Raspbian Linux
+   * Complete quiz 2 online *before class*
+   * Will do 5 min review in class together

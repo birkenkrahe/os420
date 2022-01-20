@@ -8,7 +8,7 @@
   |  1 |    1 | Tue-11-Jan | Introduction to the course        | OS:1 Introduction                                   | GitHub Hello World Project                                              | Entry survey[fn:4] |
   |  2 |      | Thu-13-Jan |                                   |                                                     |                                                                         |                    |
   |----+------+------------+-----------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+--------------------|
-  |  3 |    2 | Tue-18-Jan | Course infrastructure             | OS:2 OS Structures                                  | GNU Emacs Tutorial                                                      | Quiz 1             |
+  |  3 |    2 | Tue-18-Jan | Course infrastructure             | OS:2 OS Services                                    | GNU Emacs Tutorial                                                      | Quiz 1             |
   |  4 |      | Thu-20-Jan |                                   |                                                     |                                                                         |                    |
   |----+------+------------+-----------------------------------+-----------------------------------------------------+-------------------------------------------------------------------------+--------------------|
   |  5 |    3 | Tue-25-Jan | Getting started with Raspberry Pi | OS:3 OS Processes                                   | Introduction to Shell: manipulating files and directories               | Quiz 2             |

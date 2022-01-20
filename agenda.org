@@ -209,9 +209,11 @@
 
 ** Objectives
 
-   * [ ] Storage structure, User vs kernel mode, multiprogramming
+   * [X] Storage structure, User vs kernel mode, multiprogramming
 
-   * [ ] Management tasks of the Operating System
+   * [X] Management tasks of the Operating System
+
+   * [X] Virtualization and open source vs commercial system
 
    * [ ] Understand how GNU Emacs works
 

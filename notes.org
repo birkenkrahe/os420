@@ -251,8 +251,8 @@
    * Task / process management (ps -a)
    * Memory management (df -H)
    * File-system management (ls -la)
+   * Network management (ifconfig) (ping)
    * Mass-storage management (sudo fdisk -l)
-   * Network management (ifconfig)ping 
 
 ** Batch mode vs. interactive timesharing
 

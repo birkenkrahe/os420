@@ -73,10 +73,9 @@
    | WHEN[fn:1]    | DESCRIPTION          | IMPACT |
    |---------------+----------------------+--------|
    | Every session | Class assignments    |    10% |
-   | Weekly        | Quizzes              |    10% |
    | Monthly       | Tests                |    30% |
    | Weekly        | DataCamp assignments |    30% |
-   | End of term   | Final exam           |    20% |
+   | End of term   | Final exam           |    30% |
 
    You should be able to see your current grade at any time using the
    Schoology gradebook for the course.
@@ -114,13 +113,8 @@
     - Complete assignments outside of class (DataCamp)
     - Be ready to present your results at any time
 
-*** Weekly Quizzes (10%)
-    - Answer multiple choice questions
-    - Complete quiz online outside of class
-    - Use for drills thereafter
-
 *** Monthly tests (30%)
-    - Complete 45 min online test in class
+    - Complete 45 min online test in class OR
     - Recall last month of lectures and labs
     - Read relevant textbook chapters
 
@@ -129,7 +123,7 @@
     - Spend 30-45 min per week on an assignment
     - Bring questions and comments to class for discussion
 
-*** Final exam (20%)
+*** Final exam (30%)
     - 120 min multiple choice exam
     - Online in Schoology in the classroom
     - Sourced from the weekly quiz questions

@@ -215,14 +215,14 @@
 
    * [X] Virtualization and open source vs commercial system
 
-   * [ ] Understand how GNU Emacs works
+   * [X] Understand how GNU Emacs works
 
    * [ ] Make GNU Emacs work for you
 
 ** What's next?
 
    * Operating system services & design principles
-   * Emacs practice assignment
+   * Emacs practice & assignment
    * Getting started with Pi: bootloading Raspbian Linux
    * Complete quiz 2 online *before class*
    * Will do 5 min review in class together

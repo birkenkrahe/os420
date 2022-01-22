@@ -14,6 +14,8 @@
   should be the FAQ. There are two FAQs - a [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#frequently-asked-questions][general one]] (for all my
   courses), and a [[https://github.com/birkenkrahe/os420/blob/main/FAQ.org][FAQ for CSC420]].
 
+  You find the whiteboard photos [[https://drive.google.com/drive/folders/1A5gp0fIiVz126IbU9VKBKejF8xyNKQLW?usp=sharing][here in GDrive]].
+
 * w1s1 (01/11/22)
 ** Homework (by Thursday 13-Jan)
 
@@ -244,7 +246,7 @@
       be attached to a file using the ~mknod~ - then the device can be
       addressed/configured etc. using that file.
 
-* NEXT w2s4 (01/20/22)
+* w2s4 (01/20/22)
 
 ** What does the OS manage? (With Linux examples)
 
@@ -253,7 +255,7 @@
    * File-system management (ls -la)
    * Network management (ifconfig) (ping)
    * Mass-storage management (sudo fdisk -l)
-
+     
 ** Batch mode vs. interactive timesharing
 
    * Multitasking is a smart scheduling illusion
@@ -265,6 +267,20 @@
    * Mode-bit (hardware) indicates user vs. kernel mode (hostname -a)
    * Kernel mode is privileged (sudo)
    * Modern OS: Virtual Machine Manager mode for guest VMs ([[https://www.virtualbox.org/][VirtualBox]])
+   
+
+** Captain's Log
+
+   * We looked at different virtual OS solutions under Windows
+   * We compared open source and commercial systems ("bloatware")
+   * Linux has a package manager concept - you download/install only
+     the software that you really need.
+   * Linux will run on very old computers ("bare metal")
+   * Three key issues in OS:
+     - persistence (memory hardware)
+     - concurrency (process mgmt)
+     - virtualisation (memory mgmt)
+   * ~sudo~ is the Linux command for mode-bit = 0 ("kernel mode")
    
 * Glossary
 

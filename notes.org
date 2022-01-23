@@ -272,6 +272,14 @@
 ** Captain's Log
 
    * We looked at different virtual OS solutions under Windows
+     - Dual boot (incl Linux on USB)
+     - [[https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6][Ubuntu Linux]] as a Microsoft App from the Microsoft Store - there are
+       [[https://www.makeuseof.com/pros-cons-windows-subsystem-for-linux/][pros and cons]] (Delony, 2022), but more pros!
+     - [[https://www.cygwin.com/][Cygwin]] (not a complete OS but many Linux functions)
+     - ~ssh~ to a Linux box (I showed this for the Pi) - something you
+       can do from within Emacs with the (pre-installed) ~Tramp~
+       package ([[https://github.com/birkenkrahe/os420/blob/main/diary.org][FAQ]]).
+     - [[https://www.oracle.com/virtualization/solutions/try-oracle-vm-virtualbox/][VirtualBox]] (works for many different OS)
    * We compared open source and commercial systems ("bloatware")
    * Linux has a package manager concept - you download/install only
      the software that you really need.

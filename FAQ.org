@@ -7,3 +7,5 @@
 
   This is a Frequently Asked Questions (FAQ) file for this course. For
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
+* TODO Running a shell inside Emacs
+  DEADLINE: <2022-01-25 Tue>

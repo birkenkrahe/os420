@@ -226,3 +226,34 @@
    * Getting started with Pi: bootloading Raspbian Linux
    * Complete quiz 2 online *before class*
    * Will do 5 min review in class together
+
+* w3s5 (01/25/22)
+** Overview
+
+   | HOW      | WHAT                                |
+   |----------+-------------------------------------|
+   | Lecture  |                                     |
+   | Demo     |                                     |
+   |----------+-------------------------------------|
+   | Practice | Emacs tutorial - Shell inside Emacs |
+   |----------+-------------------------------------|
+
+** Objectives
+
+   * [X] Storage structure, User vs kernel mode, multiprogramming
+
+   * [X] Management tasks of the Operating System
+
+   * [X] Virtualization and open source vs commercial system
+
+   * [X] Understand how GNU Emacs works
+
+   * [ ] Make GNU Emacs work for you
+
+** What's next?
+
+   * Operating system services & design principles
+   * Emacs practice & assignment
+   * Getting started with Pi: bootloading Raspbian Linux
+   * Complete quiz 2 online *before class*
+   * Will do 5 min review in class together

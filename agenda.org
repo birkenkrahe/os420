@@ -242,9 +242,11 @@
 
    * [ ] Summarize foundations of operating systems
 
-   * [ ] Understand how GNU Emacs (and Linux) file management works
+   * [ ] Understand how GNU Emacs shells work
 
-   * [ ] Create an Emacs ~.emacs~ configuration file
+   * [ ] Create an bash(1) hello world program in the shell
+
+   * [ ] Run shell program inside Emacs
 
    * [ ] Understand the first DataCamp assignment ([[https://app.datacamp.com/learn/courses/introduction-to-shell][Intro to Shell]])
 

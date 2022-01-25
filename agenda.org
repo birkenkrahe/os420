@@ -230,63 +230,93 @@
 * w3s5 (01/25/22)
 ** Overview
 
-   | HOW      | WHAT                                         |
-   |----------+----------------------------------------------|
-   | Summary  | Foundations of Operating Systems (10 tenets) |
-   | Preview  | DataCamp course "[[https://app.datacamp.com/learn/courses/introduction-to-shell][Introduction to Shell]]"      |
-   |----------+----------------------------------------------|
-   | Practice | Emacs tutorial - Shell inside Emacs          |
-   |          | File system management: create .emacs file   |
+   | HOW        | WHAT                                         |
+   |------------+----------------------------------------------|
+   | Summary    | Foundations of Operating Systems (10 tenets) |
+   | Preview    | DataCamp course "[[https://app.datacamp.com/learn/courses/introduction-to-shell][Introduction to Shell]]"      |
+   |------------+----------------------------------------------|
+   | Practice   | Open three shells inside Emacs               |
+   | Assignment | Create ~hello world~ shell program in Emacs  |
 
 ** Objectives
 
    * [ ] Summarize foundations of operating systems
-     
+
    * [ ] Understand how GNU Emacs (and Linux) file management works
 
    * [ ] Create an Emacs ~.emacs~ configuration file
 
    * [ ] Understand the first DataCamp assignment ([[https://app.datacamp.com/learn/courses/introduction-to-shell][Intro to Shell]])
 
-** Summary foundations of operating systems
+** Summary: foundations of operating systems
+*** 10 tenets
+    1) An operating system is software that manages the computer
+       hardware, as well as providing an environment for application
+       programs to run.
 
-   1) An operating system is software that manages the computer
-      hardware, as well as providing an environment for application
-      programs to run.
+    2) Interrupts are a key way in which hardware interacts with the
+       operating system. A hardware device triggers an interrupt by
+       sending a signal to alert the CPU, whose interrupt handler
+       manages the interrupt.
 
-   2) Interrupts are a key way in which hardware interacts with the
-      operating system. A hardware device triggers an interrupt by
-      sending a signal to alert the CPU, whose interrupt handler
-      manages the interrupt.
+    3) For a computer to do its job, programs must be loaded in main
+       memory (RAM), which is the only memory area that the CPU can
+       access directly.
 
-   3) For a computer to do its job, programs must be loaded in main
-      memory (RAM), which is the only memory area that the CPU can
-      access directly.
+    4) To best utilize the CPU, the OS can handle several jobs in
+       memory at the same time so that there's always one job to
+       execute. True multitasking, however, is an illusion.
 
-   4) To best utilize the CPU, the OS can handle several jobs in
-      memory at the same time so that there's always one job to
-      execute. True multitasking, however, is an illusion.
+    5) To prevent user programs from interfering, the system hardware
+       has two modes: user mode and kernel ("sudo") mode.
 
-   5) To prevent user programs from interfering, the system hardware
-      has two modes: user mode and kernel ("sudo") mode.
+    6) Privileged instructions that can only be executed in kernel mode
+       include: switching to kernel mode; I/O control; time management;
+       interrupt management.
 
-   6) Privileged instructions that can only be executed in kernel mode
-      include: switching to kernel mode; I/O control; time management;
-      interrupt management.
+    7) Process management includes creating and deleting processes, and
+       providing process communication and synchronization. Processes
+       are active, programs are passive.
 
-   7) Process management includes creating and deleting processes, and
-      providing process communication and synchronization.
+    8) Memory management means that the OS keeps track of what parts of
+       memory are being used and by whom, and dynamically freeing and
+       allocating memory.
 
-   8) Memory management means that the OS keeps track of what parts of
-      memory are being used and by whom, and dynamically freeing and
-      allocating memory.
+    9) Storage space is managed by the OS through file systems (files,
+       directories) and managing space on mass-storage devices.
 
-   9) Storage space is managed by the OS through file systems (files,
-      directories) and managing space on mass-storage devices.
+    10) Virtualization involves abstracting a computer's hardware into
+        several different execution environments.
 
-   10) Virtualization involves abstracting a computer's hardware into
-       several different execution environments.
-   
+*** Short definition
+
+    #+begin_quote
+    The Operating System takes physical resources (CPU, memory, disk),
+    and *virtualizes* them. It handles *concurrent* processes, and it
+    stores files *persistently* to make them safe in the long term.
+    #+end_quote
+
+*** OS attributes
+
+    - *Performance* / overhead reduction
+    - *Protection* between applications, and between OS and apps
+    - *Isolation* of processes from one another
+    - *Reliability* of operations
+    - *Security* against malicious attacks
+    - *Mobility* across, and towards smaller, and embedded devices
+
+*** OS Timeline
+
+    | Early era        | OS are just libraries with (human) batch |
+    | Mainframe era    | Protection through the system handler    |
+    | Minicomputer era | Interrupt-based memory management        |
+    | PC era           | DOS attacks and infinite MacOS loops     |
+    | Modern era       | Linux and the return to sanity           |
+
+    #+caption: Unix the white knight of Operating Systems
+    #+attr_html: :width 200px
+    [[./img/knight.png]]
+
 ** DataCamp course: Introduction to Shell
 
    #+begin_quote
@@ -299,7 +329,7 @@
 ** Three shells inside Emacs!
 
    * Works really well only under Linux or MacOS
-     
+
    | SHELL COMMAND | CHARACTERISTICS         | MODELINE     |
    |---------------+-------------------------+--------------|
    | ~M-x shell~   | Windows shell ~CMD.exe~ | ~*shell*~    |
@@ -308,6 +338,32 @@
 
    Cp. the variable ~shell-file-name~.
 
+   * Start Emacs from the terminal: ~emacs -nw -q~
+   * Start all three shells in Emacs
+   * Start Emacs with ~emacs -nw inside an Emacs ~*shell*~
+
+     #+begin_quote
+     You should get the error message ~emacs: standard input is not a
+     tty~. TTY stands for "TeleTYpewriter". The (Unix) ~tty~ command is
+     used to check if the output is a terminal or not (see [[https://en.wikipedia.org/wiki/Tty_(Unix)][Wikipedia]]).
+     #+end_quote
+
+     #+caption: 
+     #+attr_html: :width 500px
+     [[./img/wintty.png]]
+   
+   On Linux (Ubuntu App in Windows 10):
+   
+     #+caption: 
+     #+attr_html: :width 300px
+     [[./img/tty.png]]
+
+*** Assignment: hello world!
+
+    #+caption: Windows CMD shell in Emacs and hello world pgm
+    #+attr_html: :width 600px
+    [[./img/hello.png]]
+
 *** Eshell demo ~cpu.c~
 
     * Start several processes using ~cpu.exe~
@@ -315,7 +371,7 @@
     * Kill processes in list with ~d~
     * Start same processes in Ubuntu
     * Kill processes with ~kill~
-   
+
 ** GNU Emacs practice: creating a config file
 ** What's next?
 

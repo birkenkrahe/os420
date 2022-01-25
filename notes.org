@@ -247,7 +247,6 @@
       addressed/configured etc. using that file.
 
 * w2s4 (01/20/22)
-
 ** What does the OS manage? (With Linux examples)
 
    * Task / process management (ps -a)
@@ -268,7 +267,6 @@
    * Kernel mode is privileged (sudo)
    * Modern OS: Virtual Machine Manager mode for guest VMs ([[https://www.virtualbox.org/][VirtualBox]])
    
-
 ** Captain's Log
 
    * We looked at different virtual OS solutions under Windows
@@ -290,6 +288,8 @@
      - virtualisation (memory mgmt)
    * ~sudo~ is the Linux command for mode-bit = 0 ("kernel mode")
    
+* w3s5 (01/25/22)
+
 * Glossary
 
   | WHAT            | DEFINITION                               | PURPOSE                     |

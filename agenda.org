@@ -187,7 +187,7 @@
 
    * [X] Understand bootstrapping, and interrupts management
 
-   * [X] Understand how basic I/O processes work 
+   * [X] Understand how basic I/O processes work
 
    * [ ] Understand how GNU Emacs works
 
@@ -230,30 +230,87 @@
 * w3s5 (01/25/22)
 ** Overview
 
-   | HOW      | WHAT                                |
-   |----------+-------------------------------------|
-   | Lecture  |                                     |
-   | Demo     |                                     |
-   |----------+-------------------------------------|
-   | Practice | Emacs tutorial - Shell inside Emacs |
-   |----------+-------------------------------------|
+   | HOW      | WHAT                                         |
+   |----------+----------------------------------------------|
+   | Summary  | Foundations of Operating Systems (10 tenets) |
+   | Preview  | DataCamp course "[[https://app.datacamp.com/learn/courses/introduction-to-shell][Introduction to Shell]]"      |
+   |----------+----------------------------------------------|
+   | Practice | Emacs tutorial - Shell inside Emacs          |
+   |          | File system management: create .emacs file   |
 
 ** Objectives
 
-   * [X] Storage structure, User vs kernel mode, multiprogramming
+   * [ ] Summarize foundations of operating systems
+     
+   * [ ] Understand how GNU Emacs (and Linux) file management works
 
-   * [X] Management tasks of the Operating System
+   * [ ] Create an Emacs ~.emacs~ configuration file
 
-   * [X] Virtualization and open source vs commercial system
+   * [ ] Understand the first DataCamp assignment ([[https://app.datacamp.com/learn/courses/introduction-to-shell][Intro to Shell]])
 
-   * [X] Understand how GNU Emacs works
+** Summary foundations of operating systems
 
-   * [ ] Make GNU Emacs work for you
+   1) An operating system is software that manages the computer
+      hardware, as well as providing an environment for application
+      programs to run.
 
+   2) Interrupts are a key way in which hardware interacts with the
+      operating system. A hardware device triggers an interrupt by
+      sending a signal to alert the CPU, whose interrupt handler
+      manages the interrupt.
+
+   3) For a computer to do its job, programs must be loaded in main
+      memory (RAM), which is the only memory area that the CPU can
+      access directly.
+
+   4) To best utilize the CPU, the OS can handle several jobs in
+      memory at the same time so that there's always one job to
+      execute. True multitasking, however, is an illusion.
+
+   5) To prevent user programs from interfering, the system hardware
+      has two modes: user mode and kernel ("sudo") mode.
+
+   6) Privileged instructions that can only be executed in kernel mode
+      include: switching to kernel mode; I/O control; time management;
+      interrupt management.
+
+   7) Process management includes creating and deleting processes, and
+      providing process communication and synchronization.
+
+   8) Memory management means that the OS keeps track of what parts of
+      memory are being used and by whom, and dynamically freeing and
+      allocating memory.
+
+   9) Storage space is managed by the OS through file systems (files,
+      directories) and managing space on mass-storage devices.
+
+   10) Virtualization involves abstracting a computer's hardware into
+       several different execution environments.
+   
+** DataCamp course: Introduction to Shell
+
+   #+begin_quote
+   This chapter is a brief introduction to the Unix shell. You'll learn
+   why it is still in use after almost 50 years, how it compares to the
+   graphical tools you may be more familiar with, how to move around in
+   the shell, and how to create, modify, and delete files and folders.
+   #+end_quote
+
+** Three shells inside Emacs!
+
+   * Works really well only under Linux or MacOS
+     
+   | SHELL COMMAND | CHARACTERISTICS         | MODELINE     |
+   |---------------+-------------------------+--------------|
+   | ~M-x shell~   | Windows shell ~CMD.exe~ | ~*shell*~    |
+   | ~M-x eshell~  | Lisp simulated shell    | ~*eshell*~   |
+   | ~M-x term~    | Terminal emulator       | ~*terminal*~ |
+
+   Cp. the variable ~shell-file-name~.
+   
+** GNU Emacs practice: creating a config file
 ** What's next?
 
-   * Operating system services & design principles
-   * Emacs practice & assignment
    * Getting started with Pi: bootloading Raspbian Linux
    * Complete quiz 2 online *before class*
    * Will do 5 min review in class together

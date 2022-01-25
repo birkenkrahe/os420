@@ -307,6 +307,14 @@
    | ~M-x term~    | Terminal emulator       | ~*terminal*~ |
 
    Cp. the variable ~shell-file-name~.
+
+*** Eshell demo ~cpu.c~
+
+    * Start several processes using ~cpu.exe~
+    * Show process list with ~jobs~
+    * Kill processes in list with ~d~
+    * Start same processes in Ubuntu
+    * Kill processes with ~kill~
    
 ** GNU Emacs practice: creating a config file
 ** What's next?

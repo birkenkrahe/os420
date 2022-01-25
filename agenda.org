@@ -364,7 +364,7 @@
     #+attr_html: :width 600px
     [[./img/hello.png]]
 
-*** Eshell demo ~cpu.c~
+*** Next @Pi: eshell demo ~cpu.c~
 
     * Start several processes using ~cpu.exe~
     * Show process list with ~jobs~
@@ -372,7 +372,6 @@
     * Start same processes in Ubuntu
     * Kill processes with ~kill~
 
-** GNU Emacs practice: creating a config file
 ** What's next?
 
    * Getting started with Pi: bootloading Raspbian Linux

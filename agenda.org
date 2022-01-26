@@ -327,7 +327,7 @@
    graphical tools you may be more familiar with, how to move around in
    the shell, and how to create, modify, and delete files and folders.
    #+end_quote
-
+   
 ** Three shells inside Emacs!
 
    * Works really well only under Linux or MacOS
@@ -357,7 +357,7 @@
    On Linux (Ubuntu App in Windows 10):
    
      #+caption: 
-     #+attr_html: :width 300px
+     #+attr_html: :width 200px
      [[./img/tty.png]]
 
 *** Assignment: hello world!

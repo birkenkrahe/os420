@@ -290,6 +290,22 @@
    
 * w3s5 (01/25/22)
 
+* Captain's Log Star Date 99667.82
+
+  * [[https://www.stoacademy.com/tools/stardate.php][Star Date Calculator]]
+
+  * [[https://ish.app/][Linux for iOS devices]]
+
+  * [[https://termux.com/][Termux: Linux for Android]] (get it via FDroid, not Google Play)
+
+  * [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][What is CPU Clock Speed?]] ([[intel][Intel]])
+
+  * [[https://youtu.be/ciNHn38EyRc][SQL injection]] ([[sql][Computerphile, 2016]])
+
+  * Online IDE: [[https://replit.com/][repl.it (replit.com)]] - REPL = Read-Eval-Print-Loop
+
+  * ~bash(1)~ shell program - [[https://linux.die.net/man/1/bash][Unix manual page]]
+
 * Glossary
 
   | WHAT            | DEFINITION                               | PURPOSE                     |
@@ -305,31 +321,24 @@
   Legend: h=hardware, p=process, s=software
 
 * References
-
-  Computer History Museum (Sep 5, 2019). History of Databases
-  [video]. [[https://youtu.be/KG-mqHoXOXY][URL: youtu.be/KG-mqHoXOXY]].
-
-  Grubb (2021). How Cybersecurity Really Works. NoStarch Press.
-
-  OccupyTheWeb (2018). Linux Basics for Hackers. NoStarch Press.
-
-  Parisi (14 May 2002). Complex Systems: a Physicist's Viewpoint
-  [preprint]. [[https://arxiv.org/abs/cond-mat/0205297][URL: arxiv.org.]]
-
-  PuTTY (n.d.). SSH and telnet client program for Windows. [[https://www.putty.org/][URL:
-  www.putty.org.]]
-
-  Savin (2022). Linux Device Drivers: Tutorial for Linux Driver
-  Development [website]. [[https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os][URL: www.apriorit.com]].
-
-  Simma (2004). Parallel Computing on APE Systems [website]. [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][URL:
-  www-zeuthen.desy.de.]]
-
-  The Computer Chronicles (Nov 8, 2012). Operating Systems
-  (1984). [[https://youtu.be/V5S8kFvXpo4][URL: youtu.be/V5S8kFvXpo4.]]
-
-  xkcd (n.d.). A webcomic [website]. [[https://xkcd.com/][URL: xkcd.com]].
-
+  * Computer History Museum (Sep 5, 2019). History of Databases
+    [video]. [[https://youtu.be/KG-mqHoXOXY][URL: youtu.be/KG-mqHoXOXY]].
+  * <<sql>> Computerphile (Jun 15, 2016). Running an SQL Injection
+    Attack - Computerphile [video]. [[https://youtu.be/ciNHn38EyRc][URL: youtu.be/ciNHn38EyRc]].
+  * Grubb (2021). How Cybersecurity Really Works. NoStarch Press.
+  * <<intel>> Intel (n.d.). What is Clock Speed? [website]. [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][URL: intel.com.]]
+  * OccupyTheWeb (2018). Linux Basics for Hackers. NoStarch Press.
+  * Parisi (14 May 2002). Complex Systems: a Physicist's Viewpoint
+    [preprint]. [[https://arxiv.org/abs/cond-mat/0205297][URL: arxiv.org.]]
+  * PuTTY (n.d.). SSH and telnet client program for Windows. [[https://www.putty.org/][URL:
+    www.putty.org.]]
+  * Savin (2022). Linux Device Drivers: Tutorial for Linux Driver
+    Development [website]. [[https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os][URL: www.apriorit.com]].
+  * Simma (2004). Parallel Computing on APE Systems [website]. [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][URL:
+    www-zeuthen.desy.de.]]
+  * The Computer Chronicles (Nov 8, 2012). Operating Systems
+    (1984). [[https://youtu.be/V5S8kFvXpo4][URL: youtu.be/V5S8kFvXpo4.]]
+  * xkcd (n.d.). A webcomic [website]. [[https://xkcd.com/][URL: xkcd.com]].
 * Footnotes
 
 [fn:2]Word origin: /arbitrari/ (Latin) = to resolve a dispute [because

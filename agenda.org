@@ -236,7 +236,7 @@
    | Preview    | DataCamp course "[[https://app.datacamp.com/learn/courses/introduction-to-shell][Introduction to Shell]]"      |
    |------------+----------------------------------------------|
    | Practice   | Open three shells inside Emacs               |
-   | Assignment | Create ~hello world~ shell program in Emacs  |
+   | [[https://lyon.schoology.com/assignment/5603304144/info][Assignment]] | Create ~hello world~ shell program in Emacs  |
 
 ** Objectives
 

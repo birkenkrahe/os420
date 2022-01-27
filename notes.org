@@ -309,8 +309,8 @@
 * w3s6 (01/27/22)
 
   * NOOBS stands for "New Out Of Box Software" - an SD card-based
-  installer for Pi. The Raspberry Pi Foundation now recommends to use an
-  imager instead ([[https://www.raspberrypi.com/documentation/computers/getting-started.html][Source]]).
+    installer for Pi. The Raspberry Pi Foundation now recommends to
+    use an imager instead ([[https://www.raspberrypi.com/documentation/computers/getting-started.html][Source]]).
 
   * Windows Imager: https://rufus.ie/en/ - takes an OS image and
     unpacks (=flashes) it on a mass-storage device (e.g. a USB stick).

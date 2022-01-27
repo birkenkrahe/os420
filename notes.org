@@ -317,6 +317,16 @@
     
   * Better (for all OS): [[https://www.balena.io/etcher/][Balena Etcher]]. Works on tiny devices.
 
+  * ~Hello World~ shell program problem under Windows: I realized that
+    I had ~bash~ because I had installed the ~cygwin~ suite of
+    tools. This is a really simply installation and you should do it
+    (on your PC). Opens a world of (emulated) Linux commands.
+
+  * Cygwin installation: go to this page, download and run the file
+    ~setup-x86_64.exe~ that you see linked to at the top of the
+    page. This will give you the Cygwin App and also bash (I
+    believe). Worth trying out - let me know if it works!
+  
 * Glossary
 
   | WHAT            | DEFINITION                               | PURPOSE                     |

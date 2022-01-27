@@ -240,15 +240,15 @@
 
 ** Objectives
 
-   * [ ] Summarize foundations of operating systems
+   * [X] Summarize foundations of operating systems
 
-   * [ ] Understand how GNU Emacs shells work
+   * [X] Understand how GNU Emacs shells work
+
+   * [X] Understand the first DataCamp assignment ([[https://app.datacamp.com/learn/courses/introduction-to-shell][Intro to Shell]])
 
    * [ ] Create an bash(1) hello world program in the shell
 
    * [ ] Run shell program inside Emacs
-
-   * [ ] Understand the first DataCamp assignment ([[https://app.datacamp.com/learn/courses/introduction-to-shell][Intro to Shell]])
 
 ** Summary: foundations of operating systems
 *** 10 tenets
@@ -327,7 +327,7 @@
    graphical tools you may be more familiar with, how to move around in
    the shell, and how to create, modify, and delete files and folders.
    #+end_quote
-   
+
 ** Three shells inside Emacs!
 
    * Works really well only under Linux or MacOS
@@ -350,15 +350,15 @@
      used to check if the output is a terminal or not (see [[https://en.wikipedia.org/wiki/Tty_(Unix)][Wikipedia]]).
      #+end_quote
 
-     #+caption: 
+     #+caption:
      #+attr_html: :width 500px
      [[./img/wintty.png]]
-   
+
    On Linux (Ubuntu App in Windows 10):
-   
-     #+caption: 
-     #+attr_html: :width 200px
-     [[./img/tty.png]]
+
+   #+caption:
+   #+attr_html: :width 200px
+   [[./img/tty.png]]
 
 *** Assignment: hello world!
 
@@ -376,6 +376,99 @@
 
 ** What's next?
 
+   * Review 'hello world' shell exercise
+   * Fix ~.emacs~ issue on desktop computers
    * Getting started with Pi: bootloading Raspbian Linux
-   * Complete quiz 2 online *before class*
-   * Will do 5 min review in class together
+
+* w3s6 (01/27/22)
+** Overview
+
+   | HOW      | WHAT                                            |
+   |----------+-------------------------------------------------|
+   | Review   | ~hello.sh~ [[https://lyon.schoology.com/assignment/5603304144/info][assignment]]                           |
+   | Fix      | ~.emacs~ issue (https://tinyurl.com/lyonemacs   |
+   |          | Find the file on the lab desktop                |
+   |          | Put it into the ~$HOME~ directory               |
+   |          | Restart Emacs                                   |
+   |----------+-------------------------------------------------|
+   | Practice | Getting started with Raspberry Pi: installation |
+
+** Objectives
+
+   * [ ] Review ~hello.sh~ exercise
+
+   * [ ] Install Raspberry Pi OS (Raspbian Linux) via NOOBS
+
+   * [ ] Complete basic Pi setup with ~sudo raspi-config~
+
+** Review assignment
+
+   * Start Emacs without init file
+
+   #+begin_example
+   > emacs -nw -q
+   #+end_example
+
+   * Known ~Class not registered~ error on Windows 10 ([[https://www.drivereasy.com/knowledge/fix-class-not-registered-error-on-windows-10-solved/][fix]])
+
+** Fix ~.emacs~ please!
+
+   * Find ~.emacs~ file on your lab desktop PC (not your own PC), or
+     download it again from ~https://tinyurl.com/lyonemacs~
+
+   * Open Emacs from the terminal with ~emacs -nw -q~
+
+   * Go to the home directory with ~C-x d $HOME RET~
+
+   * Put the ~/.emacs~ file there
+
+   * See doc on [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Windows-HOME.html][Windows $HOME issue]]
+
+** Set up Raspberry Pi
+
+   1) Open the box in front of you
+
+   2) Take out the Pi and connect it to the KVM switch
+
+   3) Connect the Ethernet cable to the Pi
+
+   4) Plug in the power cord and then plug it into the Pi
+
+   5) Install using NOOBS
+
+   6) Get the password from me!
+
+   7) Open a terminal app on the Pi
+
+   8) In terminal, enter ~sudo raspi-config~
+
+   9) In the configurator, change boot options > Desktop/GUI to
+      ~Console autologin~, then <TAB> to <Finish>
+
+   10) Reboot the Pi (~sudo reboot~)
+
+   11) Login as user ~pi~ with password
+
+   12) Check network connection with ~ifconfig~
+
+   13) Update OS with ~sudo apt update~
+
+   14) Upgrade OS with ~sudo apt upgrade -y~
+
+   15) Install Emacs with ~sudo apt install emacs~
+
+   16) Start emacs, check it and exit again
+
+   17) Finish session with ~sudo shutdown now~
+
+   18) Unplug the power chord, then the KVM connections
+
+   19) Return Pi to box
+
+   20) Cross yourself and close the box.
+
+** What's next
+
+   * Review first DataCamp assignment
+   * Explore Linux on the command line
+   * Download and install Emacs on the Pi

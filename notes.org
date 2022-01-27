@@ -254,7 +254,7 @@
    * File-system management (ls -la)
    * Network management (ifconfig) (ping)
    * Mass-storage management (sudo fdisk -l)
-     
+
 ** Batch mode vs. interactive timesharing
 
    * Multitasking is a smart scheduling illusion
@@ -266,7 +266,7 @@
    * Mode-bit (hardware) indicates user vs. kernel mode (hostname -a)
    * Kernel mode is privileged (sudo)
    * Modern OS: Virtual Machine Manager mode for guest VMs ([[https://www.virtualbox.org/][VirtualBox]])
-   
+
 ** Captain's Log
 
    * We looked at different virtual OS solutions under Windows
@@ -287,24 +287,35 @@
      - concurrency (process mgmt)
      - virtualisation (memory mgmt)
    * ~sudo~ is the Linux command for mode-bit = 0 ("kernel mode")
-   
+
 * w3s5 (01/25/22)
 
-* Captain's Log Star Date 99667.82
+** Captain's Log Star Date 99667.82
 
-  * [[https://www.stoacademy.com/tools/stardate.php][Star Date Calculator]]
+   * [[https://www.stoacademy.com/tools/stardate.php][Star Date Calculator]]
 
-  * [[https://ish.app/][Linux for iOS devices]]
+   * [[https://ish.app/][Linux for iOS devices]]
 
-  * [[https://termux.com/][Termux: Linux for Android]] (get it via FDroid, not Google Play)
+   * [[https://termux.com/][Termux: Linux for Android]] (get it via FDroid, not Google Play)
 
-  * [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][What is CPU Clock Speed?]] ([[intel][Intel]])
+   * [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][What is CPU Clock Speed?]] ([[intel][Intel]])
 
-  * [[https://youtu.be/ciNHn38EyRc][SQL injection]] ([[sql][Computerphile, 2016]])
+   * [[https://youtu.be/ciNHn38EyRc][SQL injection]] ([[sql][Computerphile, 2016]])
 
-  * Online IDE: [[https://replit.com/][repl.it (replit.com)]] - REPL = Read-Eval-Print-Loop
+   * Online IDE: [[https://replit.com/][repl.it (replit.com)]] - REPL = Read-Eval-Print-Loop
 
-  * ~bash(1)~ shell program - [[https://linux.die.net/man/1/bash][Unix manual page]]
+   * ~bash(1)~ shell program - [[https://linux.die.net/man/1/bash][Unix manual page]]
+
+* w3s6 (01/27/22)
+
+  * NOOBS stands for "New Out Of Box Software" - an SD card-based
+  installer for Pi. The Raspberry Pi Foundation now recommends to use an
+  imager instead ([[https://www.raspberrypi.com/documentation/computers/getting-started.html][Source]]).
+
+  * Windows Imager: https://rufus.ie/en/ - takes an OS image and
+    unpacks (=flashes) it on a mass-storage device (e.g. a USB stick).
+    
+  * Better (for all OS): [[https://www.balena.io/etcher/][Balena Etcher]]. Works on tiny devices.
 
 * Glossary
 

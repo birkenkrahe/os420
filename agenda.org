@@ -395,11 +395,11 @@
 
 ** Objectives
 
-   * [ ] Review ~hello.sh~ exercise
+   * [X] Review ~hello.sh~ exercise
 
-   * [ ] Install Raspberry Pi OS (Raspbian Linux) via NOOBS
+   * [X] Install Raspberry Pi OS (Raspbian Linux) via NOOBS
 
-   * [ ] Complete basic Pi setup with ~sudo raspi-config~
+   * [X] Complete basic Pi setup with ~sudo raspi-config~
 
 ** Review assignment
 
@@ -409,20 +409,8 @@
    > emacs -nw -q
    #+end_example
 
-   * Known ~Class not registered~ error on Windows 10 ([[https://www.drivereasy.com/knowledge/fix-class-not-registered-error-on-windows-10-solved/][fix]])
-
-** Fix ~.emacs~ please!
-
-   * Find ~.emacs~ file on your lab desktop PC (not your own PC), or
-     download it again from ~https://tinyurl.com/lyonemacs~
-
-   * Open Emacs from the terminal with ~emacs -nw -q~
-
-   * Go to the home directory with ~C-x d $HOME RET~
-
-   * Put the ~/.emacs~ file there
-
-   * See doc on [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Windows-HOME.html][Windows $HOME issue]]
+   * Known ~Class not registered~ error on Windows 10 ([[https://www.drivereasy.com/knowledge/fix-class-not-registered-error-on-windows-10-solved/][fix]]). See notes
+     for a quick solution (installing CygWin). 
 
 ** Set up Raspberry Pi
 
@@ -471,4 +459,28 @@
 
    * Review first DataCamp assignment
    * Explore Linux on the command line
-   * Download and install Emacs on the Pi
+
+* w4s7 (02/02/22)
+** Overview
+
+   | HOW         | WHAT                                      |
+   |-------------+-------------------------------------------|
+   | Lecture     | Raspberry Pi - the hardware & the history |
+   | FAQ         | Should you upgrade your Operating System? |
+   |-------------+-------------------------------------------|
+   | Review      | DataCamp assignment 1                     |
+   |-------------+-------------------------------------------|
+   | Pi Practice | Manipulating files and folders            |
+
+** Objectives
+
+   * [ ] Review Introduction to the shell - Files and folders
+
+   * [ ] Raspberry Pi: hardware and history
+
+   * [ ] Learn to manipulate files and folders (Org notes)
+
+** Review assignment
+
+** What's next
+

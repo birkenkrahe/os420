@@ -308,14 +308,24 @@
 
 * w3s6 (01/27/22)
 
+  * Assembly: last night, all the Pis were built with an improvised,
+    family-based assembly line. Here is [[https://drive.google.com/drive/folders/1K8IguOpVoboFfX1r1pbncAHq3kP0TEtg?usp=sharing][the complete process]] from
+    start to finish in the hands of my daughter Lucia.
+
+    #+caption: assembly of the CanaKit Raspberry Pi for Dummies
+    #+attr_html: :width 500px
+    [[./img/assembly.png]]
+  
   * NOOBS stands for "New Out Of Box Software" - an SD card-based
     installer for Pi. The Raspberry Pi Foundation now recommends to
     use an imager instead ([[https://www.raspberrypi.com/documentation/computers/getting-started.html][Source]]).
 
   * Windows Imager: https://rufus.ie/en/ - takes an OS image and
     unpacks (=flashes) it on a mass-storage device (e.g. a USB stick).
-    
-  * Better (for all OS): [[https://www.balena.io/etcher/][Balena Etcher]]. Works on tiny devices.
+
+  * Better (for all OS): [[https://www.balena.io/etcher/][Balena Etcher]]. Works like a charm. Just for
+    fun, try to flash [[https://trisquel.info/][GNU Linux Trisquel]] on a USB Stick: "Run
+    free!". I've got this on my Windows PC via VirtualBox.
 
   * ~Hello World~ shell program problem under Windows: I realized that
     I had ~bash~ because I had installed the ~cygwin~ suite of
@@ -326,7 +336,39 @@
     ~setup-x86_64.exe~ that you see linked to at the top of the
     page. This will give you the Cygwin App and also bash (I
     believe). Worth trying out - let me know if it works!
+
+  * Started the installation at 10.15 AM - and I personally finished
+    the last installation at 3.30 pm of that day. Why did it take this
+    long? I think mostly because the Pi's had a hard time getting all
+    the stuff from the network - perhaps it's Lyon's fault. We'll
+    never know because we won't have to do it again! Cp. "[[https://projects.raspberrypi.org/en/projects/noobs-install][Installing
+    Raspbian with NOOBS]]" ([[noobs][Source]]).
+    #+caption: NOOBS-based installation of Raspbian Linux "Buster"
+    #+attr_html: :width 500px
+    [[./img/install.png]]
   
+  * I installed the OS ([[https://en.wikipedia.org/wiki/Raspberry_Pi_OS][Raspbian OS "Buster"]] - which you can find out
+    with the command ~cat /etc/os-release~) on 10 of the 12 Pi's, as
+    well as Emacs, SQLite, and R.
+    #+caption: /etc/os-release in the Windows Ubuntu App
+    #+attr_html: :width 500px
+    [[./img/ubuntu.png]]
+
+    #+caption: /etc/os-release on Raspberry Pi
+    #+attr_html: :width 500px
+    [[./img/pios.png]]
+
+  * Here are some views of the lab during installation. The last
+    picture show Pi no. 12 attached to the front reception desktop PC
+    so that I can present from the front.
+    #+caption: Lab views during and after installation
+    #+attr_html: :width 500px
+    [[./img/lab.png]]
+  
+  * FAQ: should you upgrade my Operating System (Windows or Mac) when
+    you're asked to do so? (Question for discussion - interested what
+    y'all think, and what your experiences are).
+
 * Glossary
 
   | WHAT            | DEFINITION                               | PURPOSE                     |
@@ -347,7 +389,10 @@
   * <<sql>> Computerphile (Jun 15, 2016). Running an SQL Injection
     Attack - Computerphile [video]. [[https://youtu.be/ciNHn38EyRc][URL: youtu.be/ciNHn38EyRc]].
   * Grubb (2021). How Cybersecurity Really Works. NoStarch Press.
-  * <<intel>> Intel (n.d.). What is Clock Speed? [website]. [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][URL: intel.com.]]
+  * <<intel>> Intel (n.d.). What is Clock Speed? [website]. [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][URL:
+    intel.com.]]
+  * <<noobs>> Raspberry Pi Foundation (n.d.). Installing Raspbian with
+    NOOBS [website]. [[https://projects.raspberrypi.org/en/projects/noobs-install][URL: projects.raspberrypi.org]].
   * OccupyTheWeb (2018). Linux Basics for Hackers. NoStarch Press.
   * Parisi (14 May 2002). Complex Systems: a Physicist's Viewpoint
     [preprint]. [[https://arxiv.org/abs/cond-mat/0205297][URL: arxiv.org.]]

@@ -290,7 +290,7 @@
 
 * w3s5 (01/25/22)
 
-** Captain's Log Star Date 99667.82
+  Captain's Log Star Date 99667.82
 
    * [[https://www.stoacademy.com/tools/stardate.php][Star Date Calculator]]
 
@@ -306,7 +306,9 @@
 
    * ~bash(1)~ shell program - [[https://linux.die.net/man/1/bash][Unix manual page]]
 
-* w3s6 (01/27/22)
+* w3s6 (01/27/22) 
+
+  Captain's Log Stardate 99672.08  
 
   * Assembly: last night, all the Pis were built with an improvised,
     family-based assembly line. Here is [[https://drive.google.com/drive/folders/1K8IguOpVoboFfX1r1pbncAHq3kP0TEtg?usp=sharing][the complete process]] from

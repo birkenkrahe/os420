@@ -292,23 +292,23 @@
 
   Captain's Log Star Date 99667.82
 
-   * [[https://www.stoacademy.com/tools/stardate.php][Star Date Calculator]]
+  * [[https://www.stoacademy.com/tools/stardate.php][Star Date Calculator]]
 
-   * [[https://ish.app/][Linux for iOS devices]]
+  * [[https://ish.app/][Linux for iOS devices]]
 
-   * [[https://termux.com/][Termux: Linux for Android]] (get it via FDroid, not Google Play)
+  * [[https://termux.com/][Termux: Linux for Android]] (get it via FDroid, not Google Play)
 
-   * [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][What is CPU Clock Speed?]] ([[intel][Intel]])
+  * [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][What is CPU Clock Speed?]] ([[intel][Intel]])
 
-   * [[https://youtu.be/ciNHn38EyRc][SQL injection]] ([[sql][Computerphile, 2016]])
+  * [[https://youtu.be/ciNHn38EyRc][SQL injection]] ([[sql][Computerphile, 2016]])
 
-   * Online IDE: [[https://replit.com/][repl.it (replit.com)]] - REPL = Read-Eval-Print-Loop
+  * Online IDE: [[https://replit.com/][repl.it (replit.com)]] - REPL = Read-Eval-Print-Loop
 
-   * ~bash(1)~ shell program - [[https://linux.die.net/man/1/bash][Unix manual page]]
+  * ~bash(1)~ shell program - [[https://linux.die.net/man/1/bash][Unix manual page]]
 
-* w3s6 (01/27/22) 
+* w3s6 (01/27/22)
 
-  Captain's Log Stardate 99672.08  
+  Captain's Log Stardate 99672.08
 
   * Assembly: last night, all the Pis were built with an improvised,
     family-based assembly line. Here is [[https://drive.google.com/drive/folders/1K8IguOpVoboFfX1r1pbncAHq3kP0TEtg?usp=sharing][the complete process]] from
@@ -317,7 +317,7 @@
     #+caption: assembly of the CanaKit Raspberry Pi for Dummies
     #+attr_html: :width 500px
     [[./img/assembly.png]]
-  
+
   * NOOBS stands for "New Out Of Box Software" - an SD card-based
     installer for Pi. The Raspberry Pi Foundation now recommends to
     use an imager instead ([[https://www.raspberrypi.com/documentation/computers/getting-started.html][Source]]).
@@ -348,7 +348,7 @@
     #+caption: NOOBS-based installation of Raspbian Linux "Buster"
     #+attr_html: :width 500px
     [[./img/install.png]]
-  
+
   * I installed the OS ([[https://en.wikipedia.org/wiki/Raspberry_Pi_OS][Raspbian OS "Buster"]] - which you can find out
     with the command ~cat /etc/os-release~) on 10 of the 12 Pi's, as
     well as Emacs, SQLite, and R.
@@ -366,10 +366,14 @@
     #+caption: Lab views during and after installation
     #+attr_html: :width 500px
     [[./img/lab.png]]
-  
+
   * FAQ: should you upgrade my Operating System (Windows or Mac) when
     you're asked to do so? (Question for discussion - interested what
     y'all think, and what your experiences are).
+
+* w4s7 (02/02/22)
+
+  * [[https://lyon.on.worldcat.org/search?queryString=raspberry+Pi][Raspberry Pi Ebooks in the Mabee-Simpson library]]
 
 * Glossary
 

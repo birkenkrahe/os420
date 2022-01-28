@@ -480,6 +480,10 @@
 
    * [ ] Learn to manipulate files and folders (Org notes)
 
+* w3s7 (01/28/22)
+
+    * [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem][Fixing the .emacs problem]]
+
 ** TODO Pi: hardware and history
 ** TODO Review assignment
 ** TODO Pi Practice

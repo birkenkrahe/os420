@@ -480,7 +480,8 @@
 
    * [ ] Learn to manipulate files and folders (Org notes)
 
-** Review assignment
-
+** TODO Pi: hardware and history
+** TODO Review assignment
+** TODO Pi Practice
 ** What's next
 

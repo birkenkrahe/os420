@@ -485,6 +485,9 @@
     * [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem][Fixing the .emacs problem]]
 
 ** TODO Pi: hardware and history
+
+   * [[https://lyon.on.worldcat.org/search?queryString=raspberry+Pi][Raspberry Pi Ebooks in the Mabee-Simpson library]]
+   
 ** TODO Review assignment
 ** TODO Pi Practice
 ** What's next

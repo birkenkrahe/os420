@@ -1,6 +1,6 @@
 #+TITLE:Agenda
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE:Agenda DB330 Database Theory and Applications
+#+SUBTITLE:Agenda OS420 Operating Systems CSC 420
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
 * w1s1 (01/11/22)
@@ -461,18 +461,17 @@
    * Explore Linux on the command line
 
 * w4s7 (02/01/22)
-
 ** Overview
 
-   | HOW         | WHAT                                           |
-   |-------------+------------------------------------------------|
-   | Review      | Quiz 3: file and folders / Installing Raspbian |
-   |-------------+------------------------------------------------|
-   | Lecture     | Raspberry Pi - the hardware & the history      |
-   | FAQ         | Should you upgrade your Operating System?      |
-   |-------------+------------------------------------------------|
-   | Pi Practice | What is the Shell?                             |
-   |             | Manipulating files and folders                 |
+   | HOW         | WHAT                                               |
+   |-------------+----------------------------------------------------|
+   | Review      | Quiz 3: file and folders / Installing Raspbian     |
+   |-------------+----------------------------------------------------|
+   | Lecture     | Raspberry Pi - the hardware & the history          |
+   | FAQ         | Should you upgrade your Operating System?          |
+   |-------------+----------------------------------------------------|
+   | Pi Practice | Understanding the shell                            |
+   |             | Understanding and navigating the file system       |
 
 ** Objectives
 
@@ -482,22 +481,146 @@
 
    * [ ] Understand the shell(s) - Unix man pages
 
-   * [ ] Learn to manipulate files and folders
+   * [ ] Understand the Linux file tree
+
+** Setting up the Linux boxes (almost every session)
+
+   This is something you can do as soon as you arrive:
+
+   * Take out the [Raspberry] Pi
+   * Connect the HDMI from the KVM switch to the Pi
+   * Plug in the power charger under the desk
+   * Connect the mini-USB of the power charger to the Pi
+   * Press the button on the KVM switch (color changes to green)
+   * The system should boot straight to console with autologin as user
+     ~pi~
+
+   The Ethernet cable is not usually needed except for installations
+   and for updates and upgrades.
+
+   For the Pi400, the setup is slightly different because the Pi4 has
+   a mini-HDMI connector.
 
 ** Understanding the shell
 
    #+begin_quote
    "Typing commands instead of clicking and dragging may seem clumsy
    at first, but as you will see, once you start spelling out what you
-   want the computer to do, you can combine old commands to create new
-   ones and automate repetitive operations with just a few
-   keystrokes."
+   want the computer to do, you can *combine* old commands to create
+   new ones and *automate* repetitive operations with just a few
+   keystrokes." (Shotts, 2019)
    #+end_quote
 
-   * The shell is just another program to pass commands to the OS
+   * The shell is just another program to pass keyboard commands to
+     the OS
 
-   * Absolute vs. relative path
-   
+   * On the desktop GUI, the shell is emulated (an X Windows program
+     connects to it and interpretes key strokes, just like ~eshell~ on
+     Emacs)
+
+   * The original shell is the Bourne Shell (~/bin/shell~).
+
+   * Linux uses an enhanced Bourne Shell, the Bourne-Again SHell
+     ~bash~.
+
+   * Look up the man page for ~bash~ with the command ~man bash~[fn:1].
+
+   * To get out, press ~q~
+
+   * There are many other shells, including: ~ksh~ (Korn shell), ~csh~ (C shell),
+     ~zsh~ (MacOS shell).
+
+   * Different shells differ in editing styles (command line editing),
+     scripting abilities (e.g. closer to C), and process management
+     functions (what you can do with CPU processes).
+
+   * Emacs commands are Unix commands: ~C-a~, ~C-e~ etc. all work
+
+   * Some other shell commands to try:
+     - ~history~ keeps the last 1000 commands or so. Commands are
+       numbered. How can you repeat a command?
+     - ~date~ and ~cal~ time functions
+     - ~df~ and ~df -H~ (for humans) show the free disk space
+     - ~free~ and ~free -h~ (for humans) show the free memory
+     - ~echo~ repeats back what you type - except when you use
+       variables as arguments:
+   #+begin_example
+   $ echo $PS1 # prompt path name
+   $ echo $PS2 # prompt for inner shell (like SQLite or R)
+   $ marcus = "me" # defining a variable
+   $ echo marcus # this just returns the string "marcus"
+   $ echo $marcus # returns "me"
+   #+end_example
+
+   * A terminal shell session is ended with the ~exit~ command.
+
+** Unix manual pages
+
+   * Man pages are split into eight numbered sections:
+
+   | Section | Description                                                      |
+   |---------+------------------------------------------------------------------|
+   |       1 | General commands                                                 |
+   |       2 | System calls                                                     |
+   |       3 | Library functions, covering in particular the C standard library |
+   |       4 | Special files (usually devices, those found in /dev) and drivers |
+   |       5 | File formats and conventions                                     |
+   |       6 | Games and screensavers                                           |
+   |       7 | Miscellaneous                                                    |
+   |       8 | System administration commands and daemons                       |
+
+   #+begin_quote
+   Example: look for the man page of ~sshd~, the OpenSSH daemon. What
+   does it do? ([[https://bash.cyberciti.biz/guide/Daemons#List_of_service_daemons_for_Linux_and_Unix-like_systems][Source]])
+   #+end_quote
+
+** Navigation and the file tree
+
+   * Files are organized in a hierarchical directory structure[fn:4]
+
+   * Imagine you stand somewhere inside an upside down tree:
+     - the ~pwd~ command tells you were you are
+     - above you (towards the root) are /parent directories/
+     - below you (away from the root) are /child directories/
+     - At the top is the /root directory/
+
+   * To see the tree visualized, install the package as super user:
+     #+begin_example
+     $ sudo apt install tree
+     $ tree
+     #+end_example
+
+   * To list files, use ~ls~. It has many useful options. I usually
+     use ~ls -la~ to get a long, complete listing. This is also the
+     standard ~Dired~ setting in Emacs.
+
+   * Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
+
+   * Which command would show the top directories of the OS?[fn:5]
+
+   * To create an empty file, use ~touch~.
+
+   * Create a file from the command line with ~touch~.
+
+   * Filenames are character-sensitive.
+
+   * Don't embed spaces in file names, replace them by ~_~
+
+   * Linux has no concept of file extensions - though many
+     applications do (like Emacs, to identify a major mode like
+     Org-mode)
+
+   * Hidden files (often for configuration like ~.emacs~) remain
+     hidden unless you invoke the ~-a~ option of ~ls~
+
+** Unplugging the Pi (almost every session)
+
+   * Shut down the Pi with ~sudo shutdown now~ on the console
+   * Unplug the power mini-USB
+   * Unplug the other cables
+   * Press the button on the KVM switch to return to Windows
+   * Sign out of Windows if necessary
+
 * w4s8 (02/03/22)
 ** Overview
 
@@ -512,7 +635,7 @@
 
    * [ ] Practice
 
-     ** TODO Pi - hardware & history
+** TODO Pi - hardware & history
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
    #+attr_html: :width 500px
@@ -528,3 +651,17 @@
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
     [blog]. [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][URL: community.element14.com]].
+  * Shotts (2019). The Linux Command Line (2e). NoStarch Press.
+
+* Footnotes
+
+[fn:5]Answer: ~ls /~ - list the root directory. 
+
+[fn:4]Windows likes to call directories 'folders' - another
+unnecessary dumbing down. A folder is just a container, but a
+directory (like the "telephone directory") has a data structure, an
+index, labels, and serves to search and find. Don't say "folder".
+
+[fn:1]Unix manual pages are formatted with ~troff~, the Unix
+"typsetter roff", a document processing system. "roff" stands for
+"I'll run off a document".

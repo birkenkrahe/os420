@@ -470,16 +470,15 @@
    | Lecture     | Raspberry Pi - the hardware & the history          |
    | FAQ         | Should you upgrade your Operating System?          |
    |-------------+----------------------------------------------------|
-   | Pi Practice | Understanding the shell                            |
-   |             | Understanding and navigating the file system       |
+   | Pi Practice | Understanding the shell and Unix man pages         |
 
 ** Objectives
 
-   * [ ] Review Introduction to the shell - Files and folders (Quiz 3)
+   * [X] Review Introduction to the shell - Files and folders (Quiz 3)
 
-   * [ ] Getting OS release information
+   * [X] Getting OS release information
 
-   * [ ] Understand the shell(s) - Unix man pages
+   * [X] Understand the shell(s) - Unix man pages
 
    * [ ] Understand the Linux file tree
 
@@ -574,6 +573,31 @@
    does it do? ([[https://bash.cyberciti.biz/guide/Daemons#List_of_service_daemons_for_Linux_and_Unix-like_systems][Source]])
    #+end_quote
 
+** Unplugging the Pi (almost every session)
+
+   * Shut down the Pi with ~sudo shutdown now~ on the console
+   * Unplug the power mini-USB
+   * Unplug the other cables
+   * Press the button on the KVM switch to return to Windows
+   * Sign out of Windows if necessary
+
+* w4s8 (02/03/22)
+** Overview
+
+   | HOW      | WHAT                                         |
+   |----------+----------------------------------------------|
+   | Practice | Understanding and navigating the file system |
+   |          | Manipulate files and folders                 |
+   | Lecture  | Raspberry Pi - the hardware & the history    |
+
+** Objectives
+
+   * [ ] Raspberry Pi: hardware and history
+
+   * [ ] Understand navigation and the Linux file tree
+
+   * [ ] File and folder manipulation
+
 ** Navigation and the file tree
 
    * Files are organized in a hierarchical directory structure[fn:4]
@@ -612,29 +636,6 @@
 
    * Hidden files (often for configuration like ~.emacs~) remain
      hidden unless you invoke the ~-a~ option of ~ls~
-
-** Unplugging the Pi (almost every session)
-
-   * Shut down the Pi with ~sudo shutdown now~ on the console
-   * Unplug the power mini-USB
-   * Unplug the other cables
-   * Press the button on the KVM switch to return to Windows
-   * Sign out of Windows if necessary
-
-* w4s8 (02/03/22)
-** Overview
-
-   | HOW         | WHAT                                      |
-   |-------------+-------------------------------------------|
-   | Lecture     | Raspberry Pi - the hardware & the history |
-   | Practice    |                                           |
-
-** Objectives
-
-   * [ ] Raspberry Pi: hardware and history
-
-   * [ ] Practice
-
 ** TODO Pi - hardware & history
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)

@@ -309,11 +309,11 @@
 
 *** OS Timeline
 
-    | Early era        | OS are just libraries with (human) batch |
-    | Mainframe era    | Protection through the system handler    |
-    | Minicomputer era | Interrupt-based memory management        |
-    | PC era           | DOS attacks and infinite MacOS loops     |
-    | Modern era       | Linux and the return to sanity           |
+    | Early era        | OS are just libraries with (human) batch operators |
+    | Mainframe era    | Protection through the system handler              |
+    | Minicomputer era | Interrupt-based memory management                  |
+    | PC era           | DOS attacks and infinite MacOS loops               |
+    | Modern era       | Linux and the return to sanity                     |
 
     #+caption: Unix the white knight of Operating Systems
     #+attr_html: :width 200px
@@ -478,12 +478,26 @@
 
    * [ ] Review Introduction to the shell - Files and folders (Quiz 3)
 
+   * [ ] Getting OS release information
+
    * [ ] Understand the shell(s) - Unix man pages
 
-   * [ ] Learn to manipulate files and folders (Org notes)
+   * [ ] Learn to manipulate files and folders
 
-** TODO Review assignment
+** Understanding the shell
 
+   #+begin_quote
+   "Typing commands instead of clicking and dragging may seem clumsy
+   at first, but as you will see, once you start spelling out what you
+   want the computer to do, you can combine old commands to create new
+   ones and automate repetitive operations with just a few
+   keystrokes."
+   #+end_quote
+
+   * The shell is just another program to pass commands to the OS
+
+   * Absolute vs. relative path
+   
 * w4s8 (02/03/22)
 ** Overview
 

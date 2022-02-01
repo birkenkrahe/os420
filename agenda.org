@@ -460,36 +460,45 @@
    * Review first DataCamp assignment
    * Explore Linux on the command line
 
-* w4s7 (02/02/22)
+* w4s7 (02/01/22)
 
-  * [[file:~/Documents/GitHub/org/FAQ.org::Fixing the .emacs problem][Fixing the .emacs problem]]
+** Overview
 
+   | HOW         | WHAT                                           |
+   |-------------+------------------------------------------------|
+   | Review      | Quiz 3: file and folders / Installing Raspbian |
+   |-------------+------------------------------------------------|
+   | Lecture     | Raspberry Pi - the hardware & the history      |
+   | FAQ         | Should you upgrade your Operating System?      |
+   |-------------+------------------------------------------------|
+   | Pi Practice | What is the Shell?                             |
+   |             | Manipulating files and folders                 |
+
+** Objectives
+
+   * [ ] Review Introduction to the shell - Files and folders (Quiz 3)
+
+   * [ ] Understand the shell(s) - Unix man pages
+
+   * [ ] Learn to manipulate files and folders (Org notes)
+
+** TODO Review assignment
+
+* w4s8 (02/03/22)
 ** Overview
 
    | HOW         | WHAT                                      |
    |-------------+-------------------------------------------|
    | Lecture     | Raspberry Pi - the hardware & the history |
-   | FAQ         | Should you upgrade your Operating System? |
-   |-------------+-------------------------------------------|
-   | Review      | DataCamp assignment 1                     |
-   |-------------+-------------------------------------------|
-   | Pi Practice | Manipulating files and folders            |
+   | Practice    |                                           |
 
 ** Objectives
 
-   * [ ] Review Introduction to the shell - Files and folders
-
    * [ ] Raspberry Pi: hardware and history
 
-   * [ ] Learn to manipulate files and folders (Org notes)
+   * [ ] Practice
 
-** Pi - hardware & history
-
-   #+caption: Raspberry Pi 4 Board (Source: raspberryptips)
-   #+attr_html: :width 500px
-   [[./img/piboard.png]]
-
-** TODO Pi - hardware & history
+     ** TODO Pi - hardware & history
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
    #+attr_html: :width 500px
@@ -500,10 +509,6 @@
    [[./img/pimodels.png]]
 
    * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
-
-** TODO Review assignment
-** TODO Pi Practice
-** What's next
 
 * References
 

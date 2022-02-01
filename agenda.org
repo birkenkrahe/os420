@@ -489,6 +489,7 @@
 
    * Take out the [Raspberry] Pi
    * Connect the HDMI from the KVM switch to the Pi
+   * Connect the USB from the KVM switch to the Pi (any USB port)
    * Plug in the power charger under the desk
    * Connect the mini-USB of the power charger to the Pi
    * Press the button on the KVM switch (color changes to green)

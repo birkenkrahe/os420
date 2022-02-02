@@ -7,5 +7,14 @@
 
   This is a Frequently Asked Questions (FAQ) file for this course. For
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
-* TODO Running a shell inside Emacs
-  DEADLINE: <2022-01-25 Tue>
+* Pi upgrade takes forever because of ~apt-listchanges~
+
+  Every once in a while, one of the many Pi's that I have installed
+  for use in the class hangs after trying to upgrade with ~sudo apt
+  upgrade -y~. The solution to this is to abort (~C-c~) and remove the
+  faulty package directly with:
+  #+begin_example
+   sudo apt-get remove apt-listchanges
+  #+end_example
+  Now restart the upgrading operation and it should run smoothly to
+  the end.

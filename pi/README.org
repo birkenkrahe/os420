@@ -147,4 +147,8 @@
    * [[https://www.emacswiki.org/emacs/Tramp_on_Windows][EmacsWiki Tramp on Windows]]
    * [[https://youtu.be/Iqh50fgbIVk][Using Emacs - 25 tramp]] (video)
      
-* NEXT Pi as Backup Server
+* NEXT Controlling USB webcam with bash or python  
+
+  * [[https://raspberrypi-guide.github.io/electronics/using-usb-webcams][guide]]
+  
+* SOMEDAY Pi as Backup Server

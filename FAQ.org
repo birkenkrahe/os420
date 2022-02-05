@@ -9,27 +9,32 @@
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
 * How to connect your Pi to GDrive
 
-  Sources: rclone.org, [[klauser][Klauser 2019]] (modified)
+  Sources: [[https://rclone.org/drive/][rclone.org/drive]], [[klauser][Klauser 2019]] (modified)
 
   1) Install rclone on Raspbian
      #+begin_example
      $ sudo apt-get install rclone
      #+end_example
-  2) Change file permissions of ~$HOME/.config/rclone~ to ~rwx~ for owner only
+  2) Change file permissions of ~$HOME/.config/rclone~ to ~rwx~ for
+     owner only
      #+begin_example
      $ chmod 0700 ./.config/rclone  # change permissions
      $ ls -la ./.config/rclone      # check - you should see drwx------
      #+end_example
-  3) Log into Google and go to the [[https://console.developers.google.com/][Google Developer Cloud]] platform
-  4) Create project on the Google Developer Console[fn:1]
-     #+caption: Google Developer Cloud Dashboard view
-     #+attr_html: :width 500px
-     [[./img/gdrive.png]]
-  5) Click on ~Go to APIs overview~
-  6) Click on ~Enable APIs and Services~
-  7) Search for ~Google Drive API~ and select it
-  8) 
+  3) Follow the detailed instructions in [[https://rclone.org/drive/][rclone.org/drive]] until you
+     see the ~Success!~ web page after connecting rclone to GDrive
+  
+  #+begin_quote
+  "Note that rclone runs a webserver on your local machine to collect
+  the token as returned from Google if you use auto config mode. This
+  only runs from the moment it opens your browser to the moment you
+  get back the verification code. This is on http://127.0.0.1:53682/
+  and this it may require you to unblock it temporarily if you are
+  running a host firewall, or use manual mode."
+  #+end_quote
 
+  The access information is stored in
+  ~$HOME/.config/rclone/rclone.conf~.
 
 * Pi upgrade takes forever because of ~apt-listchanges~
 
@@ -51,7 +56,12 @@
 
 * Footnotes
 
-[fn:1]Cool side effect: you get a free Linux terminal from Google. Check it out:
+[fn:1]Using my private GMail account, I had to give my billing details
+to do this. Developers usually create web services in the cloud that
+incur costs based on traffic. I chose the ~Free trial~, however, which
+comes with a $300 free credit. 
+
+[fn:2]Cool side effect: you get a free Linux terminal from Google. Check it out:
 #+caption: Google Developer Cloud Linux terminal
 #+attr_html: :width 500px
 [[./img/shell.png]]

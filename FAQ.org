@@ -7,6 +7,30 @@
 
   This is a Frequently Asked Questions (FAQ) file for this course. For
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
+* How to connect your Pi to GDrive
+
+  Sources: rclone.org, [[klauser][Klauser 2019]] (modified)
+
+  1) Install rclone on Raspbian
+     #+begin_example
+     $ sudo apt-get install rclone
+     #+end_example
+  2) Change file permissions of ~$HOME/.config/rclone~ to ~rwx~ for owner only
+     #+begin_example
+     $ chmod 0700 ./.config/rclone  # change permissions
+     $ ls -la ./.config/rclone      # check - you should see drwx------
+     #+end_example
+  3) Log into Google and go to the [[https://console.developers.google.com/][Google Developer Cloud]] platform
+  4) Create project on the Google Developer Console[fn:1]
+     #+caption: Google Developer Cloud Dashboard view
+     #+attr_html: :width 500px
+     [[./img/gdrive.png]]
+  5) Click on ~Go to APIs overview~
+  6) Click on ~Enable APIs and Services~
+  7) Search for ~Google Drive API~ and select it
+  8) 
+
+
 * Pi upgrade takes forever because of ~apt-listchanges~
 
   Every once in a while, one of the many Pi's that I have installed
@@ -18,3 +42,16 @@
   #+end_example
   Now restart the upgrading operation and it should run smoothly to
   the end.
+
+
+* References
+
+  * <<klauser>> Klauser (May 13, 2019). Mounting Google Drive on
+    Raspberry Pi. [[https://medium.com/@artur.klauser/mounting-google-drive-on-raspberry-pi-f5002c7095c2][URL: medium.com]].
+
+* Footnotes
+
+[fn:1]Cool side effect: you get a free Linux terminal from Google. Check it out:
+#+caption: Google Developer Cloud Linux terminal
+#+attr_html: :width 500px
+[[./img/shell.png]]

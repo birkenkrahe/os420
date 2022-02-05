@@ -585,19 +585,25 @@
 * w4s8 (02/03/22)
 ** Overview
 
-   | HOW      | WHAT                                         |
-   |----------+----------------------------------------------|
-   | Practice | Understanding and navigating the file system |
-   |          | Manipulate files and folders                 |
-   | Lecture  | Raspberry Pi - the hardware & the history    |
+   | HOW          | WHAT                                         |
+   |--------------+----------------------------------------------|
+   | Setting up   |                                              |
+   | Review       | Shell command line warm-up exercise          |
+   |--------------+----------------------------------------------|
+   | Practice     | Understanding and navigating the file system |
+   |              | Manipulate files and folders                 |
+   |--------------+----------------------------------------------|
+   | Lecture/demo | Raspberry Pi - the hardware & the history    |
 
 ** Objectives
 
-   * [ ] Raspberry Pi: hardware and history
+   * [ ] Know Raspberry Pi: hardware and history
 
    * [ ] Understand navigation and the Linux file tree
 
    * [ ] File and folder manipulation
+
+   * [ ] Understand GPIOs and controlling them
 
 ** Navigation and the file tree
 

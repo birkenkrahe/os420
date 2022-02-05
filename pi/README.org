@@ -3,7 +3,7 @@
 #+SUBTITLE:Raspberry Pi Notes
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* Using ~sysfs~ to access the GPIO hardware
+* General Purpose Input Output (GPIO)
 ** GPIO pins
 
    Along one side of the Pi board, you find a row of 40 GPIO ("General
@@ -11,6 +11,7 @@
    output pin.
 
 ** File system view
+
    In order to use the GPIO ports (software interfaces to the pins),
    you need to be a member of the ~gpio~ group. Look at
    ~/sys/class/gpio~[fn:1], and you can see that all files are owned by
@@ -24,6 +25,8 @@
    locations - ~soc~ is the "System On a Chip" that contains the CPU
    and the graphic chip.
 
+   Source: [[tranter1][Tranter (2019)]]
+   
 ** Graphic layout
    To see a graphic layout, use the command ~pinout~. This is a a
    Python tool that belongs to the [[https://gpiozero.readthedocs.io/en/stable/][GPIO Zero]] library.
@@ -98,7 +101,7 @@
    Abort the command with ~C-g~. The ~toggle~ command is necessary to
    switch the activated LED off again.
 
-   Source: [[sunfounder][SunFounder (2021)]] and [[tranter][Tranter (2019)]]
+   Source: [[sunfounder][SunFounder (2021)]] and [[tranter2][Tranter (2019)]]
 
 * My first Pi
 
@@ -250,8 +253,10 @@
 
 * SOMEDAY Pi as Backup Server
 * References
-  * <<tranter>> Tranter (July 10, 2019). GPIO Programming: Using the sysfs
+  * <<tranter1>> Tranter (July 10, 2019). GPIO Programming: Using the sysfs
     Interface. [[https://www.ics.com/blog/gpio-programming-using-sysfs-interface][URL: ics.com]].
+  * <<tranter2>> Tranter (August 14, 2019). How to Control GPIO
+    Hardware from C or C++. [[https://www.ics.com/blog/how-control-gpio-hardware-c-or-c][URL: ics.com]].
   * <<soren>> Soren (January 11, 2018). Making a LED blink using the Rasperry Pi
     and Python [blog]. [[https://raspberrypihq.com/making-a-led-blink-using-the-raspberry-pi-and-python/][URL: raspberrypihq.com]].
   * <<sunfounder>> SunFounder (2021). Blinking LED [website]. [[https://docs.sunfounder.com/projects/raphael-kit/en/latest/1.1.1_blinking_led_c.html][URL:

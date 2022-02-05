@@ -410,6 +410,7 @@
   * Inspiring video (11 min): [[https://youtu.be/ZDfhcA0SCiM][Raspberry Pi Projects]] ([[tjfree][TJ Free, 2020]]).
 
   * Library: [[https://lyon.on.worldcat.org/search?queryString=raspberry+Pi][Raspberry Pi Ebooks in the Mabee-Simpson library]]
+
 * Glossary
 
   | WHAT            | DEFINITION                               | PURPOSE                     |

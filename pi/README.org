@@ -103,6 +103,10 @@
 
    Source: [[sunfounder][SunFounder (2021)]] and [[tranter2][Tranter (2019)]]
 
+** IoT with Pi
+
+   See e.g. [[leechang][Lee and Chang (2021)]], or [[fairhead][Fairhead (2016)]].
+
 * My first Pi
 
   The hippie case is alluding to my checquered past.
@@ -253,6 +257,10 @@
 
 * SOMEDAY Pi as Backup Server
 * References
+  * <<fairhead>> Fairhead (2016). Raspberry Pi - IoT in C. I/O Press |
+    Programmers Library. [[https://www.i-programmer.info/book-watch-archive/10163-raspberry-pi-iot-in-c-i-o-press.html][URL: i-programmer.info]].
+  * <<leechang>> Lee and Chang (June 14, 2021). Introduction to IoT
+    Using the Raspberry Pi [article]. [[https://www.codemag.com/article/1607071/Introduction-to-IoT-Using-the-Raspberry-Pi][URL: codemag.com]].
   * <<tranter1>> Tranter (July 10, 2019). GPIO Programming: Using the sysfs
     Interface. [[https://www.ics.com/blog/gpio-programming-using-sysfs-interface][URL: ics.com]].
   * <<tranter2>> Tranter (August 14, 2019). How to Control GPIO

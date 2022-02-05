@@ -603,10 +603,12 @@
 
    * [ ] File and folder manipulation
 
-   * [ ] Understand GPIOs and controlling them
+   * [ ] Understand GPIOs and how to see and control them
 
 ** Navigation and the file tree
 
+   See also: DataCamp chapter
+   
    * Files are organized in a hierarchical directory structure[fn:4]
 
    * Imagine you stand somewhere inside an upside down tree:
@@ -643,6 +645,11 @@
 
    * Hidden files (often for configuration like ~.emacs~) remain
      hidden unless you invoke the ~-a~ option of ~ls~
+
+** TODO File and folder manipulation
+
+   See also: DataCamp chapter
+   
 ** Pi - hardware & history
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
@@ -655,8 +662,12 @@
 
    * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
 
-   * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] (gh)
-     
+   * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
+
+** What's next
+
+   * 
+   
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi

@@ -9,7 +9,7 @@
   the FAQs across courses, see the [[https://github.com/birkenkrahe/org][org repo]].
 * How to connect your Pi to GDrive
 
-  Sources: [[https://rclone.org/drive/][rclone.org/drive]], [[klauser][Klauser 2019]] (modified)
+  Sources: [[https://rclone.org/drive/][rclone.org/drive]].
 
   1) Install rclone on Raspbian
      #+begin_example
@@ -23,6 +23,15 @@
      #+end_example
   3) Follow the detailed instructions in [[https://rclone.org/drive/][rclone.org/drive]] until you
      see the ~Success!~ web page after connecting rclone to GDrive
+
+  #+caption: Selecting GDrive account for rclone
+  #+attr_html: :width 600px
+  [[./img/rclone1.png]]
+
+  #+caption: Give rclone permission to access GDrive
+  #+attr_html: :width 600px
+  [[./img/rclone2.png]]
+
 
   #+begin_quote
   "Note that rclone runs a webserver on your local machine to collect
@@ -41,7 +50,7 @@
   method]]:~ ~C-x d RET /rclone:gdrive:/~.
 
   #+caption: GDrive via rclone in Emacs
-  #+attr_html: :width 500px
+  #+attr_html: :width 600px
   [[./img/rclone.png]]
 
 * Pi upgrade takes forever because of ~apt-listchanges~

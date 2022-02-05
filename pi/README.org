@@ -3,9 +3,110 @@
 #+SUBTITLE:Raspberry Pi Notes
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+* Using ~sysfs~ to access the GPIO hardware
+** GPIO pins
 
-#+attr_html: :width 500px
-[[./img/pi2box.jpg]]
+   Along one side of the Pi board, you find a row of 40 GPIO ("General
+   Purpose Input Output") pins, which can be designated as an input or
+   output pin.
+
+** File system view
+   In order to use the GPIO ports (software interfaces to the pins),
+   you need to be a member of the ~gpio~ group. Look at
+   ~/sys/class/gpio~[fn:1], and you can see that all files are owned by
+   ~root~. To address pins, ~export~ and ~unexport~ are used.
+
+   #+caption: sysfs pseudo filesystem /sys/class/gpio
+   #+attr_html: :width 600px
+   [[./img/gpiodir.png]]
+
+   The two entries in green are symbolic links that point at device
+   locations - ~soc~ is the "System On a Chip" that contains the CPU
+   and the graphic chip.
+
+** Graphic layout
+   To see a graphic layout, use the command ~pinout~. This is a a
+   Python tool that belongs to the [[https://gpiozero.readthedocs.io/en/stable/][GPIO Zero]] library.
+
+   #+caption: sysfs pseudo filesystem /sys/class/gpio
+   #+attr_html: :width 600px
+   [[./img/pinout.png]]
+
+** "Blinky" Python program
+
+   Loading ~gpiozero~ enables you to run the basic [[blinky]] program - a
+   LED connected to pin no. 17 will blink on and off repeatedly[fn:2].
+
+   You can start/stop the program below with ~C-c C-c~ / ~C-g~.
+
+   #+name blinky
+   #+begin_src python :results none
+     from gpiozero import LED
+     from time import sleep
+
+     led = LED(18)
+
+     while True:
+         led.on()
+         sleep(1)
+         led.off()
+         sleep(1)
+   #+end_src
+
+   #+caption: "blinky" in action
+   #+attr_html: :width 600px
+   [[./img/blinky.jpg]]
+
+** Viewing GPIO pins with C
+
+   WiringPi is a C language GPIO library. To install it and test it
+   that you have version 2.5.2:
+
+   #+begin_example
+   $ wget https://project-downloads.drogon.net/wiringpi-latest.deb
+   $ sudo dpkg -i wiringpi-latest.deb
+   $ gpio -v
+   #+end_example
+
+   The output of the version check also shows the Pi model and
+   confirms GPIO access. ~M-x man RET gpio~ opens the UNIX man page.
+
+   ~gpio readall~ reads and displays all GPIO pins with a
+   representation of the pin numbers and names:
+
+   #+caption: "blinky" in action
+   #+attr_html: :width 600px
+   [[./img/readall.png]]
+
+   Here you can see that the [physical] GPIO pin no. 12 is addressed by
+   the CPU [BCM] as no. 18.
+
+** Commandline "blinky"
+
+   Using ~gpio~, we can make the LED blink by using the pin number:
+
+   #+begin_src bash :results none
+     gpio -g blink 18 # use BCM GPIO pin number
+     gpio -g toggle 18 # switch the value on/off
+   #+end_src
+
+   #+begin_src bash :results none
+     gpio -1 blink 12  # use physical GPIO pin number
+     gpio -1 toggle 12 # switch the value on/off
+   #+end_src
+
+   Abort the command with ~C-g~. The ~toggle~ command is necessary to
+   switch the activated LED off again.
+
+   Source: [[sunfounder][SunFounder (2021)]] and [[tranter][Tranter (2019)]]
+
+* My first Pi
+
+  The hippie case is alluding to my checquered past.
+
+  #+attr_html: :width 500px
+  [[./img/pi2box.jpg]]
+
 * Rasperry Pi 2 WiFi networking  <2022-01-05 Wed>
 **  Problem
    WiFi dongle present (and powered - check with ~iwconfig
@@ -146,9 +247,20 @@
 ** Source:
    * [[https://www.emacswiki.org/emacs/Tramp_on_Windows][EmacsWiki Tramp on Windows]]
    * [[https://youtu.be/Iqh50fgbIVk][Using Emacs - 25 tramp]] (video)
-     
-* NEXT Controlling USB webcam with bash or python  
 
-  * [[https://raspberrypi-guide.github.io/electronics/using-usb-webcams][guide]]
-  
 * SOMEDAY Pi as Backup Server
+* References
+  * <<tranter>> Tranter (July 10, 2019). GPIO Programming: Using the sysfs
+    Interface. [[https://www.ics.com/blog/gpio-programming-using-sysfs-interface][URL: ics.com]].
+  * <<soren>> Soren (January 11, 2018). Making a LED blink using the Rasperry Pi
+    and Python [blog]. [[https://raspberrypihq.com/making-a-led-blink-using-the-raspberry-pi-and-python/][URL: raspberrypihq.com]].
+  * <<sunfounder>> SunFounder (2021). Blinking LED [website]. [[https://docs.sunfounder.com/projects/raphael-kit/en/latest/1.1.1_blinking_led_c.html][URL:
+    docs.sunfounder.com]].
+* Footnotes
+
+[fn:2] You need to set the LED up using a breadboard, a resistor, and
+jumper wires ([[https://raspberrypihq.com/making-a-led-blink-using-the-raspberry-pi-and-python/][see here]]).
+
+[fn:1] The kernel program that enables this view is [[https://man7.org/linux/man-pages/man5/sysfs.5.html][~sysfs(5)~]]. It is
+a pseudo filesystem that allows export of kernel objects to the user
+space where they can be viewed and manipulated.

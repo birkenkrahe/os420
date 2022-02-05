@@ -607,7 +607,7 @@
 
 ** Navigation and the file tree
 
-   See also: DataCamp chapter
+   See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp chapter]]
    
    * Files are organized in a hierarchical directory structure[fn:4]
 
@@ -648,7 +648,7 @@
 
 ** TODO File and folder manipulation
 
-   See also: DataCamp chapter
+   See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp chapter]]
    
 ** Pi - hardware & history
 

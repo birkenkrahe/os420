@@ -643,7 +643,7 @@
 
    * Hidden files (often for configuration like ~.emacs~) remain
      hidden unless you invoke the ~-a~ option of ~ls~
-** TODO Pi - hardware & history
+** Pi - hardware & history
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
    #+attr_html: :width 500px
@@ -655,6 +655,8 @@
 
    * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
 
+   * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] (gh)
+     
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi

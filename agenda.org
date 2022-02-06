@@ -623,6 +623,10 @@
      $ tree
      #+end_example
 
+     #+caption: Linux tree command (screenshot)
+     #+attr_html: :width 500px
+     [[./img/tree.png]]
+   
    * To list files, use ~ls~. It has many useful options. I usually
      use ~ls -la~ to get a long, complete listing. This is also the
      standard ~Dired~ setting in Emacs.

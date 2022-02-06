@@ -588,7 +588,7 @@
    | HOW       | WHAT                                            |
    |-----------+-------------------------------------------------|
    | Setup     | USB/HDMI > power > switch > startx              |
-   | Review    | Shell command line warm-up exercise             |
+   | Review    | Shell warm-up exercise                          |
    |-----------+-------------------------------------------------|
    | Practice  | Navigating the file system (DataCamp)           |
    |           | Manipulate files and folders (DataCamp)         |
@@ -604,6 +604,11 @@
    * [ ] File and folder manipulation
 
    * [ ] Understand test rules and content
+
+** Shell warm-up exercise
+
+   * make 4 copies of sample.txt
+   * 
 
 ** Manipulating files and directories
 
@@ -654,7 +659,8 @@
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp chapter]]
 
-   * Viewing commands: ~cat~, ~more~, ~less~[fn:6]
+   * Viewing commands: ~cat~, ~more~, ~less~[fn:6].
+
    
 ** Test info
 
@@ -748,7 +754,8 @@
 
 * Footnotes
 
-[fn:6]~less~ is faster than ~more~ because it does not load the entire  
+[fn:6]~less~ is faster than ~more~ because it does not load the entire
+file before displaying it.
 
 [fn:5]Answer: ~ls /~ - list the root directory. 
 

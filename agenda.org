@@ -627,19 +627,22 @@
 
 ** Shell warm-up exercise
 
-   Complete the exercise on the command line (10 min):
+   Complete the exercise on the command line (15 min):
 
-   * go to your ~$home~ directory, ~/home/pi~
-   * use ~wget~ to fetch the file ~sample.txt~ from ~os420~ in GitHub
-   * make a sub directory titled ~practice~ in ~$home~
-   * change directory to ~/home/pi/practice~
-   * verify that you're there
-   * move ~sample.txt~ to your current directory
-   * make 2 copies of ~sample.txt~
-   * name them ~sample_1~ and ~sample_2~
-   * view both files using ~less~
-   * leave ~less~
+  | Go to your ~$home~ directory, ~/home/pi~                         |
+  | Use ~wget~ to fetch the file ~sample.txt~ from ~os420~ in GitHub |
+  | Display first line of ~sample.txt~                               |
+  | Make a sub directory titled ~practice~ in ~$home~                |
+  | Change directory to ~/home/pi/practice~                          |
+  | Verify that you are where you want to be                         |
+  | Move ~sample.txt~ to your current directory as ~sample_1.txt~    |
+  | Make a copy of ~sample_1.txt~ and name it ~sample_2.txt~         |
+  | Ascertain that the files are indeed identical by using ~diff~    |
+  | View both files together using ~less~                            |
+  | Inside ~less~, move between the two files                        |
+  | Leave ~less~                                                     |
 
+   [[file:~/GitHub/admin/spring22/os420/assignments.org::Shell warm-up classroom assignment - solution][Solution]] / Video
 
 ** Manipulating files and directories
 

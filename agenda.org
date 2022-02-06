@@ -582,30 +582,28 @@
    * Press the button on the KVM switch to return to Windows
    * Sign out of Windows if necessary
 
-* w4s8 (02/03/22)
+* w4s8 (02/08/22)
 ** Overview
 
-   | HOW          | WHAT                                         |
-   |--------------+----------------------------------------------|
-   | Setting up   | Connect cable > power > switch > startx      |
-   | Review       | Shell command line warm-up exercise          |
-   |--------------+----------------------------------------------|
-   | Practice     | Understanding and navigating the file system |
-   |              | Manipulate files and folders                 |
-   |--------------+----------------------------------------------|
-   | Lecture/demo | Raspberry Pi - the hardware & the history    |
-   |--------------+----------------------------------------------|
-   | Test info    | Test on Thursday, Feb 10 at 10:00 AM         |
+   | HOW       | WHAT                                            |
+   |-----------+-------------------------------------------------|
+   | Setup     | USB/HDMI > power > switch > startx              |
+   | Review    | Shell command line warm-up exercise             |
+   |-----------+-------------------------------------------------|
+   | Practice  | Navigating the file system (DataCamp)           |
+   |           | Manipulate files and folders (DataCamp)         |
+   |-----------+-------------------------------------------------|
+   | Shutdown  | ~sudo shutdown now~ > USB/HDMI > Power > switch |
+   |-----------+-------------------------------------------------|
+   | Test info | Test on Thursday, Feb 10 at 10.00-10.45 AM      |
 
 ** Objectives
-
-   * [ ] Know Raspberry Pi: hardware and history
 
    * [ ] Understand navigation and the Linux file tree
 
    * [ ] File and folder manipulation
 
-   * [ ] Understand GPIOs and how to see and control them
+   * [ ] Understand test rules and content
 
 ** Navigation and the file tree
 
@@ -652,7 +650,63 @@
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp chapter]]
    
-** Pi - hardware & history
+** Test info
+
+   * Online in Schoology
+   * Quiz 1-3 are not visible during the test
+   * The 10 hardest questions of quiz 1-3
+   * 10 brand new questions
+   * Maximum time = 45 min
+   
+** What's next
+
+   * Raspberry Pi history & hardware 
+   * Test 1, Thursday 10 February 2022, 10:00-10:45
+   
+* w4s9 (02/10/22)
+** Overview
+
+   | HOW          | WHAT                                        |
+   |--------------+---------------------------------------------|
+   | Lecture/demo | Raspberry Pi - the hardware & the history 1 |
+   |--------------+---------------------------------------------|
+   | Test 1       | 10:00-10:45 AM                              |
+
+** Objectives
+
+   * [ ] Know Raspberry Pi: history & hardware
+
+   * [ ] Understand GPIOs and how to see and control them
+
+** TODO Raspberry Pi hardware & history: history
+
+   * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
+
+** What's next
+
+   * Raspberry Pi hardware - GPIO pins and how to control them
+   
+* w5s10 (02/15/22)
+** Overview
+
+   | HOW             | WHAT                                            |
+   |-----------------+-------------------------------------------------|
+   | Setup           | USB/HDMI > Power > Switch > ~startx~            |
+   |-----------------+-------------------------------------------------|
+   | Lecture/demo    | Raspberry Pi - the hardware & the history 2     |
+   |-----------------+-------------------------------------------------|
+   | Review/Practice | Combining shell tools (DataCamp)                |
+   |-----------------+-------------------------------------------------|
+   | Shutdown        | ~sudo shutdown now~ > USB/HDMI > Power > switch |
+
+** Objectives
+
+   * [ ] Know Raspberry Pi: hardware and history part 2
+
+   * [ ] Understand GPIOs and how to see and control them
+
+** TODO Combining shell tools
+** Pi - hardware & history: hardware
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
    #+attr_html: :width 500px

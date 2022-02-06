@@ -26,7 +26,7 @@
    and the graphic chip.
 
    Source: [[tranter1][Tranter (2019)]]
-   
+
 ** Graphic layout
    To see a graphic layout, use the command ~pinout~. This is a a
    Python tool that belongs to the [[https://gpiozero.readthedocs.io/en/stable/][GPIO Zero]] library.
@@ -106,6 +106,20 @@
 ** IoT with Pi
 
    See e.g. [[leechang][Lee and Chang (2021)]], or [[fairhead][Fairhead (2016)]].
+
+* Raspberry Pi History
+
+  #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+  #+attr_html: :width 500px
+  [[./img/piboard.png]]
+
+  #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+  #+attr_html: :width 500px
+  [[./img/pimodels.png]]
+
+  * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
+
+  * [[https://raspberrytips.com/which-raspberry-pi-os-is-running/][Identify your OS]] (~cat /etc/os-release)
 
 * My first Pi
 

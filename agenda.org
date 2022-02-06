@@ -80,7 +80,7 @@
      * Upload assignments (esp. Emacs Org-files)
      * Discussion
      * Wiki for collaboration
-     * Complements Schoology[fn:2]
+     * Complements Schoology[fn:1]
 
 **** What will you have to do?
 
@@ -120,7 +120,7 @@
      * You can participate in [[https://github.com/birkenkrahe/cc100/discussions][discussions]] (sometimes I will make you)
      * You can add to the [[https://github.com/birkenkrahe/cc100/wiki][wiki]] (e.g. comments and links to interesting
        resources)
-     * You can install the [[https://github.com/mobile][mobile app]] on your smartphone[fn:3]
+     * You can install the [[https://github.com/mobile][mobile app]] on your smartphone[fn:2]
      * You can use it as a platform for [[https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects][projects]] or [[https://github.com/features/codespaces][coding]]
      * You can download the [[https://desktop.github.com/][desktop client]] to manage repos on your PC
        (see image below).
@@ -535,7 +535,7 @@
    * Linux uses an enhanced Bourne Shell, the Bourne-Again SHell
      ~bash~.
 
-   * Look up the man page for ~bash~ with the command ~man bash~ [fn:1].
+   * Look up the man page for ~bash~ with the command ~man bash~ [fn:3].
 
    * To get out, press ~q~
 
@@ -617,20 +617,29 @@
 
    * [ ] Understand test rules and content
 
+** Shell command structure
+
+   * The structure of all shell commands: [cmd] [options] [arguments]
+   * There are short options (e.g. ~-l~) and long options (e.g. ~--reverse~)
+     #+caption: long time listing of Org-files (and reversion)
+     #+attr_html: :width 600px
+     [[./img/struct.png]]
+
 ** Shell warm-up exercise
 
-   Complete the exercise on the command line:
+   Complete the exercise on the command line (10 min):
 
    * go to your ~$home~ directory, ~/home/pi~
-   * use ~wget~ to fetch the file ~https://github.com/birkenkrahe/os420/sample.txt
-   * make a sub directory titled ~practice~
-   * change to ~/home/pi/practice~
-   * verify that you're there with ~pwd~
+   * use ~wget~ to fetch the file ~sample.txt~ from ~os420~ in GitHub
+   * make a sub directory titled ~practice~ in ~$home~
+   * change directory to ~/home/pi/practice~
+   * verify that you're there
    * move ~sample.txt~ to your current directory
-   * make
+   * make 2 copies of ~sample.txt~
+   * name them ~sample_1~ and ~sample_2~
+   * view both files using ~less~
+   * leave ~less~
 
-   make 4 copies of sample.txt
-   *
 
 ** Manipulating files and directories
 
@@ -643,8 +652,11 @@
      - above you (towards the root) are /parent directories/
      - below you (away from the root) are /child directories/
      - At the top is the /root directory/
+       #+caption: upside down tree
+       #+attr_html: :width 500px
+       [[./img/tree.jpeg]]
 
-   * To see the tree visualized, install the package as super user:
+   * [X] To see the tree visualized, install the package as super user:
      #+begin_example
      $ sudo apt install tree
      $ tree
@@ -658,13 +670,13 @@
      use ~ls -la~ to get a long, complete listing. This is also the
      standard ~Dired~ setting in Emacs.
 
-   * Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
+   * [X] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
 
-   * Which command would show the top directories of the OS?[fn:5]
+   * [X] Which command would show the top directories of the OS?[fn:5]
 
-   * To create an empty file, use ~touch~.
+   * To create an empty file, use ~touch~
 
-   * Create a file from the command line with ~touch~.
+   * [X] Create a file from the command line with ~touch~.
 
    * Filenames are character-sensitive.
 
@@ -783,13 +795,16 @@
 [fn:6]~less~ is faster than ~more~ because it does not load the entire
 file before displaying it.
 
-[fn:5]Answer: ~ls /~ - list the root directory.
+[fn:5]Answer: ~ls /~ lists the root directory, because ~/~ is root's
+home. The particular ordering and naming of these directories is up to
+the Linux OS file administrator, but there are certain style rules
+that are usually obeyed by every professional.
 
 [fn:4]Windows likes to call directories 'folders' - another
 unnecessary dumbing down. A folder is just a container, but a
 directory (like the "telephone directory") has a data structure, an
 index, labels, and serves to search and find. Don't say "folder".
 
-[fn:1]Unix manual pages are formatted with ~troff~, the Unix
+[fn:3]Unix manual pages are formatted with ~troff~, the Unix
 "typsetter roff", a document processing system. "roff" stands for
 "I'll run off a document".

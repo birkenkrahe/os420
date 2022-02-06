@@ -401,7 +401,7 @@
 
   * ~/~ is the root directory, ~$HOME~ of the user ~root~ (super-user)
   
-* NEXT w4s8 (02/03/22)
+* NEXT w4s8 (02/08/22)
 
   * *FAQ:* should you upgrade my Operating System (Windows or Mac)
     when you're asked to do so? (Question for discussion -
@@ -413,6 +413,25 @@
   * Inspiring video (11 min): [[https://youtu.be/ZDfhcA0SCiM][Raspberry Pi Projects]] ([[tjfree][TJ Free, 2020]]).
 
   * Library: [[https://lyon.on.worldcat.org/search?queryString=raspberry+Pi][Raspberry Pi Ebooks in the Mabee-Simpson library]]
+
+** Captain's Log
+
+*** Shell warm-up exercise
+
+    Complete the exercise on the command line (10 min):
+
+    * go to your ~$home~ directory, ~/home/pi~
+    * use ~wget~ to fetch the file ~sample.txt~ from ~os420~ in GitHub
+    * make a sub directory titled ~practice~ in ~$home~
+    * change directory to ~/home/pi/practice~
+    * verify that you're there
+    * move ~sample.txt~ to your current directory
+    * make 2 copies of ~sample.txt~
+    * name them ~sample_1~ and ~sample_2~
+    * view both files using ~less~
+    * leave ~less~
+ 
+
 
 * Glossary
 

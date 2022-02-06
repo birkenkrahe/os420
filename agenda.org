@@ -1,9 +1,20 @@
-#+TITLE:Agenda
+#+TITLE:OS Agenda
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Agenda OS420 Operating Systems CSC 420
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* w1s1 (01/11/22)
+* README
+
+  This file contains the agenda overview (what I had planned), the
+  objectives (what we managed to do) and (much of the) content of each
+  taught session of the course. I want to avoid splitting the content
+  up over many files - so that you have to navigate as little as
+  possible (like a book)!
+
+  The companion file to this file, less structured and with the
+  captain's log, is the [[./notes.org][notes.org]] file.
+
+* Welcome to the course - w1s1 (01/11/22)
 
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
@@ -145,7 +156,7 @@
    * Everything else => followup notes (GitHub)
    * +See you (hopefully) Thursday in class! (Lyon 104)+
 
-* w1s2 (01/13/22)
+* GitHub, GNU Emacs installation - w1s2 (01/13/22)
 ** Overview
 
    | HOW      | WHAT                                          |
@@ -168,7 +179,7 @@
 
    * [ ] Make GNU Emacs work for you
 
-* w2s3 (01/18/22)
+* Interrupts, basic I/O - w2s3 (01/18/22)
 ** Overview
 
    | HOW          | WHAT                                                |
@@ -199,7 +210,8 @@
    * Computer system architecture
    * Getting started with Pi
 
-* w2s4 (01/20/22)
+* OS tasks, virtualization, GNU Emacs - w2s4 (01/20/22)
+
 ** Overview
 
    | HOW      | WHAT                                    |
@@ -227,7 +239,7 @@
    * Complete quiz 2 online *before class*
    * Will do 5 min review in class together
 
-* w3s5 (01/25/22)
+* OS foundations, Eshell - w3s5 (01/25/22)
 ** Overview
 
    | HOW        | WHAT                                         |
@@ -380,7 +392,7 @@
    * Fix ~.emacs~ issue on desktop computers
    * Getting started with Pi: bootloading Raspbian Linux
 
-* w3s6 (01/27/22)
+* Shell scripts, Raspberry Pi setup - w3s6 (01/27/22)
 ** Overview
 
    | HOW      | WHAT                                            |
@@ -460,7 +472,7 @@
    * Review first DataCamp assignment
    * Explore Linux on the command line
 
-* w4s7 (02/01/22)
+* Linux shell, UNIX man pages - w4s7 (02/01/22)
 ** Overview
 
    | HOW         | WHAT                                               |
@@ -582,7 +594,7 @@
    * Press the button on the KVM switch to return to Windows
    * Sign out of Windows if necessary
 
-* w4s8 (02/08/22)
+* NEXT w4s8 (02/08/22)
 ** Overview
 
    | HOW       | WHAT                                            |
@@ -615,15 +627,15 @@
    * change to ~/home/pi/practice~
    * verify that you're there with ~pwd~
    * move ~sample.txt~ to your current directory
-   * make 
+   * make
 
-make 4 copies of sample.txt
-   * 
+   make 4 copies of sample.txt
+   *
 
 ** Manipulating files and directories
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp chapter]]
-   
+
    * Files are organized in a hierarchical directory structure[fn:4]
 
    * Imagine you stand somewhere inside an upside down tree:
@@ -641,7 +653,7 @@ make 4 copies of sample.txt
      #+caption: Linux tree command (screenshot)
      #+attr_html: :width 500px
      [[./img/tree.png]]
-   
+
    * To list files, use ~ls~. It has many useful options. I usually
      use ~ls -la~ to get a long, complete listing. This is also the
      standard ~Dired~ setting in Emacs.
@@ -666,12 +678,13 @@ make 4 copies of sample.txt
      hidden unless you invoke the ~-a~ option of ~ls~
 
 ** TODO Manipulating data
+   DEADLINE: <2022-02-08 Tue>
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp chapter]]
 
    * Viewing commands: ~cat~, ~more~, ~less~[fn:6].
 
-   
+
 ** Test info
 
    * Online in Schoology
@@ -679,13 +692,13 @@ make 4 copies of sample.txt
    * The 10 hardest questions of quiz 1-3 (< 50%)
    * 10 brand new questions
    * Maximum time = 45 min
-   
+
 ** What's next
 
-   * Raspberry Pi history & hardware 
+   * Raspberry Pi history & hardware
    * Test 1, Thursday 10 February 2022, 10:00-10:45
-   
-* w4s9 (02/10/22)
+
+* TODO w4s9 (02/10/22)
 ** Overview
 
    | HOW          | WHAT                                        |
@@ -701,14 +714,15 @@ make 4 copies of sample.txt
    * [ ] Understand GPIOs and how to see and control them
 
 ** TODO Raspberry Pi hardware & history: history
+   DEADLINE: <2022-02-08 Tue>
 
    * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
 
 ** What's next
 
    * Raspberry Pi hardware - GPIO pins and how to control them
-   
-* w5s10 (02/15/22)
+
+* TODO w5s10 (02/15/22)
 ** Overview
 
    | HOW             | WHAT                                            |
@@ -728,6 +742,8 @@ make 4 copies of sample.txt
    * [ ] Understand GPIOs and how to see and control them
 
 ** TODO Combining shell tools
+   DEADLINE: <2022-02-15 Tue>
+
 ** Pi - hardware & history: hardware
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
@@ -751,11 +767,11 @@ make 4 copies of sample.txt
    * An essay question
    * Time = 45 min
    * You can leave at any time
-   
+
 ** What's next
 
    * Test 1, Thursday 10 February 2022, 10:00-10:45
-   
+
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
@@ -767,7 +783,7 @@ make 4 copies of sample.txt
 [fn:6]~less~ is faster than ~more~ because it does not load the entire
 file before displaying it.
 
-[fn:5]Answer: ~ls /~ - list the root directory. 
+[fn:5]Answer: ~ls /~ - list the root directory.
 
 [fn:4]Windows likes to call directories 'folders' - another
 unnecessary dumbing down. A folder is just a container, but a

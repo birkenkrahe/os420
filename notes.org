@@ -1,9 +1,9 @@
-#+TITLE:Followup
+#+TITLE:OS Class notes
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Followup for CSC420 Operating Systems Spring 2022
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
-* What is this?
+* README
 
   Instead of bugging you with emails, I opt to summarize my course
   observations regarding content, process, in this file. These often
@@ -16,7 +16,10 @@
 
   You find the whiteboard photos [[https://drive.google.com/drive/folders/1A5gp0fIiVz126IbU9VKBKejF8xyNKQLW?usp=sharing][here in GDrive]].
 
-* w1s1 (01/11/22)
+  The companion file to this file, with the agenda and much of the
+  course content, is the [[./agenda.org][agenda.org]] file.
+
+* Welcome to the course - w1s1 (01/11/22)
 ** Homework (by Thursday 13-Jan)
 
    * [[https://github.com/][Register with GitHub]] (5 min)
@@ -71,7 +74,7 @@
 
      [[./img/tramp.gif]]
 
-* w1s2 (01/13/22)
+* GitHub, GNU Emacs installation - w1s2 (01/13/22)
 ** GitHub assignment/DataCamp
 
    * DataCamp: You should all be in your courses now.
@@ -139,7 +142,7 @@
    * GNU Emacs v27 Windows installation: you need the
      ~emacs-27.1-x86_64-installer.exe~ [[http://gnu.freemirror.org/gnu/emacs/windows/emacs-27/][from this page]].
 
-* w2s3 (01/18/22)
+* Interrupts, basic I/O - w2s3 (01/18/22)
 ** Quiz 1
 
 
@@ -246,7 +249,7 @@
       be attached to a file using the ~mknod~ - then the device can be
       addressed/configured etc. using that file.
 
-* w2s4 (01/20/22)
+* OS tasks, virtualization, GNU Emacs - w2s4 (01/20/22)
 ** What does the OS manage? (With Linux examples)
 
    * Task / process management (ps -a)
@@ -288,7 +291,7 @@
      - virtualisation (memory mgmt)
    * ~sudo~ is the Linux command for mode-bit = 0 ("kernel mode")
 
-* w3s5 (01/25/22)
+* OS foundations, Eshell - w3s5 (01/25/22)
 
   Captain's Log Star Date 99667.82
 
@@ -306,7 +309,7 @@
 
   * ~bash(1)~ shell program - [[https://linux.die.net/man/1/bash][Unix manual page]]
 
-* w3s6 (01/27/22)
+* Shell scripts, Raspberry Pi setup - w3s6 (01/27/22)
 
   Captain's Log Stardate 99672.08
 
@@ -356,7 +359,7 @@
     #+attr_html: :width 500px
     [[./img/lab.png]]
 
-* w4s7 (02/01/22)
+* Linux shell, UNIX man pages - w4s7 (02/01/22)
 ** Captain's Log Stardate 99687.04
 
   * I installed the OS ([[https://en.wikipedia.org/wiki/Raspberry_Pi_OS][Raspbian OS "Buster"]] - which you can find
@@ -398,7 +401,7 @@
 
   * ~/~ is the root directory, ~$HOME~ of the user ~root~ (super-user)
   
-* w4s8 (02/03/22)
+* NEXT w4s8 (02/03/22)
 
   * *FAQ:* should you upgrade my Operating System (Windows or Mac)
     when you're asked to do so? (Question for discussion -

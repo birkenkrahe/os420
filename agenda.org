@@ -605,7 +605,7 @@
 
    * [ ] Understand test rules and content
 
-** Navigation and the file tree
+** Manipulating files and directories
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp chapter]]
    
@@ -650,9 +650,11 @@
    * Hidden files (often for configuration like ~.emacs~) remain
      hidden unless you invoke the ~-a~ option of ~ls~
 
-** TODO File and folder manipulation
+** TODO Manipulating data
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp chapter]]
+
+   * Viewing commands: ~cat~, ~more~, ~less~[fn:6]
    
 ** Test info
 
@@ -745,6 +747,8 @@
   * Shotts (2019). The Linux Command Line (2e). NoStarch Press.
 
 * Footnotes
+
+[fn:6]~less~ is faster than ~more~ because it does not load the entire  
 
 [fn:5]Answer: ~ls /~ - list the root directory. 
 

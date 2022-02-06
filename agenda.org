@@ -607,7 +607,17 @@
 
 ** Shell warm-up exercise
 
-   * make 4 copies of sample.txt
+   Complete the exercise on the command line:
+
+   * go to your ~$home~ directory, ~/home/pi~
+   * use ~wget~ to fetch the file ~https://github.com/birkenkrahe/os420/sample.txt
+   * make a sub directory titled ~practice~
+   * change to ~/home/pi/practice~
+   * verify that you're there with ~pwd~
+   * move ~sample.txt~ to your current directory
+   * make 
+
+make 4 copies of sample.txt
    * 
 
 ** Manipulating files and directories

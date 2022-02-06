@@ -587,13 +587,15 @@
 
    | HOW          | WHAT                                         |
    |--------------+----------------------------------------------|
-   | Setting up   |                                              |
+   | Setting up   | Connect cable > power > switch > startx      |
    | Review       | Shell command line warm-up exercise          |
    |--------------+----------------------------------------------|
    | Practice     | Understanding and navigating the file system |
    |              | Manipulate files and folders                 |
    |--------------+----------------------------------------------|
    | Lecture/demo | Raspberry Pi - the hardware & the history    |
+   |--------------+----------------------------------------------|
+   | Test info    | Test on Thursday, Feb 10 at 10:00 AM         |
 
 ** Objectives
 
@@ -664,9 +666,19 @@
 
    * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
 
+** Test info
+
+   * Online in Schoology
+   * Quizzes 1-3 are unpublished during the test
+   * 5 easy questions (1 new)
+   * 5 hard questions (1 new)
+   * An essay question
+   * Time = 45 min
+   * You can leave at any time
+   
 ** What's next
 
-   * 
+   * Test 1, Thursday 10 February 2022, 10:00-10:45
    
 * References
 

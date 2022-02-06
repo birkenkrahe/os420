@@ -523,7 +523,7 @@
    * Linux uses an enhanced Bourne Shell, the Bourne-Again SHell
      ~bash~.
 
-   * Look up the man page for ~bash~ with the command ~man bash~[fn:1].
+   * Look up the man page for ~bash~ with the command ~man bash~ [fn:1].
 
    * To get out, press ~q~
 
@@ -654,7 +654,7 @@
 
    * Online in Schoology
    * Quiz 1-3 are not visible during the test
-   * The 10 hardest questions of quiz 1-3
+   * The 10 hardest questions of quiz 1-3 (< 50%)
    * 10 brand new questions
    * Maximum time = 45 min
    

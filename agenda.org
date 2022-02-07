@@ -608,8 +608,12 @@
    | Shutdown  | ~sudo shutdown now~ > USB/HDMI > Power > switch |
    |-----------+-------------------------------------------------|
    | Test info | Test on Thursday, Feb 10 at 10.00-10.45 AM      |
+   |-----------+-------------------------------------------------|
+   | Poll      | [[./notes.org::FAQ][Should you update your operating system?]]        |
 
 ** Objectives
+
+   * [ ] Discussion: should you upgrade your OS?
 
    * [ ] Understand navigation and the Linux file tree
 

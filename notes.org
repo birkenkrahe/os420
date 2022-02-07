@@ -362,50 +362,77 @@
 * Linux shell, UNIX man pages - w4s7 (02/01/22)
 ** Captain's Log Stardate 99687.04
 
-  * I installed the OS ([[https://en.wikipedia.org/wiki/Raspberry_Pi_OS][Raspbian OS "Buster"]] - which you can find
-    out with the command ~cat /etc/os-release~) on 10 of the 12
-    Pi's, as well as Emacs, SQLite, and R.
+   * I installed the OS ([[https://en.wikipedia.org/wiki/Raspberry_Pi_OS][Raspbian OS "Buster"]] - which you can find
+     out with the command ~cat /etc/os-release~) on 10 of the 12
+     Pi's, as well as Emacs, SQLite, and R.
 
-    #+caption: /etc/os-release in the Windows Ubuntu App
-    #+attr_html: :width 500px
-    [[./img/ubuntu.png]]
+     #+caption: /etc/os-release in the Windows Ubuntu App
+     #+attr_html: :width 500px
+     [[./img/ubuntu.png]]
 
-    #+caption: /etc/os-release on Raspberry Pi
-    #+attr_html: :width 500px
-    [[./img/pios.png]]
+     #+caption: /etc/os-release on Raspberry Pi
+     #+attr_html: :width 500px
+     [[./img/pios.png]]
 
-  * UNIX man pages example: [[https://www.gnu.org/software/coreutils/manual/html_node/mv-invocation.html#mv-invocation][GNU manual page for ~mv~]]
+   * UNIX man pages example: [[https://www.gnu.org/software/coreutils/manual/html_node/mv-invocation.html#mv-invocation][GNU manual page for ~mv~]]
 
-  * To start the Desktop GUI on the Pi: enter ~startx~ in the terminal
+   * To start the Desktop GUI on the Pi: enter ~startx~ in the terminal
 
-  * Popular Linux distros:
-    - Kali (cybersecurity / hack functionality)
-    - Trisquel9 (by GNU project, politically clean)
-    - Pop!_OS (popular for gamers)
-    - Ubuntu (extra popular, also App on Windows)
-    - Arch (minimal Linux for budding experts)
-    - Manjaro (available via Raspberry Pi Imager) based on Arch Linux
-    - ...and many more - see [[https://linuxhint.com/best-linux-distros-2022/][Best Linux Distros for 2022]]
-      ([[distro][Tirthakar, 2021]]) for fanboys/fangirls.
+   * Popular Linux distros:
+     - Kali (cybersecurity / hack functionality)
+     - Trisquel9 (by GNU project, politically clean)
+     - Pop!_OS (popular for gamers)
+     - Ubuntu (extra popular, also App on Windows)
+     - Arch (minimal Linux for budding experts)
+     - Manjaro (available via Raspberry Pi Imager) based on Arch Linux
+     - ...and many more - see [[https://linuxhint.com/best-linux-distros-2022/][Best Linux Distros for 2022]]
+       ([[distro][Tirthakar, 2021]]) for fanboys/fangirls.
 
-  * Then there are the great architectures - Debian, SUSE etc. - more
-    about that when we talk about the history of Raspbian Linux for Pi.
+   * Then there are the great architectures - Debian, SUSE etc. - more
+     about that when we talk about the history of Raspbian Linux for Pi.
 
-  * Install commands with the ~apt~ package manager program:
-    #+begin_example
-    $ sudo apt install [package]
-    #+end_example
-    E.g. for ~tree~ as ~[package]~.
+   * Install commands with the ~apt~ package manager program:
+     #+begin_example
+     $ sudo apt install [package]
+     #+end_example
+     E.g. for ~tree~ as ~[package]~.
 
-  * ~whoami~ returns the current user
+   * ~whoami~ returns the current user
 
-  * ~/~ is the root directory, ~$HOME~ of the user ~root~ (super-user)
-  
+   * ~/~ is the root directory, ~$HOME~ of the user ~root~ (super-user)
+
 * NEXT w4s8 (02/08/22)
 
-  * *FAQ:* should you upgrade my Operating System (Windows or Mac)
+  * <<FAQ>> should you upgrade my Operating System (Windows or Mac)
     when you're asked to do so? (Question for discussion -
     interested what y'all think, and what your experiences are).
+
+  * Feb 5, 2022: "[[https://www.techradar.com/news/microsoft-could-be-on-the-verge-of-forcibly-upgrading-windows-10-on-your-computer][Microsoft could be on the verge of forcibly
+    upgrading Windows 10 on your computer]]"
+  #+begin_quote
+  "On May 10, in three short months, anyone who is still running this
+  particular version of Windows 10 will no longer qualify for support
+  from Microsoft. And this is why Microsoft is planning to forcibly
+  update people to a supported edition of the operating system."
+  ([[techradar][Wycislik-Wilson]])
+  #+end_quote
+
+  * Related: updates and upgrades on Linux[fn:3]. Do this now:
+    #+begin_example
+    sudo apt update -y
+    sudo apt upgrade -y
+    sudo apt autoremove -y
+    #+end_example
+
+  * [[https://www.raspberrypi.com/news/raspberry-pi-os-debian-bullseye/][What about Rasbian Linux releases?]] ([[long][Long, 2021]]).
+  #+begin_quote
+   "Every two years, Debian Linux, on which Raspberry Pi OS is based,
+   gets a major version upgrade. Debian ‘buster’ has been the basis of
+   Raspberry Pi OS since its release in 2019, and Debian ‘bullseye’
+   was released in August. (As some of you may know, Debian name their
+   versions after characters in Disney/Pixar’s Toy Story films –
+   Bullseye was Woody’s horse in Toy Story 2.)"
+  #+end_quote
 
   * Raspberry Pi documentation - e.g. on [[https://www.raspberrypi.com/documentation/computers/using_linux.html][terminal/Linux commands]], or
     on the [[https://www.raspberrypi.com/documentation/computers/os.html][Raspbian Operating System]].
@@ -438,6 +465,8 @@
   * Grubb (2021). How Cybersecurity Really Works. NoStarch Press.
   * <<intel>> Intel (n.d.). What is Clock Speed? [website]. [[https://www.intel.com/content/www/us/en/gaming/resources/cpu-clock-speed.html][URL:
     intel.com.]]
+  * <<long>> Long (8th Nov 2021). Bullseye - the new version of
+    Raspberry Pi OS [blog]. [[https://www.raspberrypi.com/news/raspberry-pi-os-debian-bullseye/][URL: raspberrypi.com]].
   * <<noobs>> Raspberry Pi Foundation (n.d.). Installing Raspbian with
     NOOBS [website]. [[https://projects.raspberrypi.org/en/projects/noobs-install][URL: projects.raspberrypi.org]].
   * OccupyTheWeb (2018). Linux Basics for Hackers. NoStarch Press.
@@ -449,14 +478,25 @@
     Development [website]. [[https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os][URL: www.apriorit.com]].
   * Simma (2004). Parallel Computing on APE Systems [website]. [[https://www-zeuthen.desy.de/apewww/APE/software/asm/anext/][URL:
     www-zeuthen.desy.de.]]
+  * <<techradar>> Wycislik-Wilson (5 Feb 2022). Microsoft could be on
+    the verge of forcibly upgrading Windows 10 on your computer
+    [blog]. [[https://www.techradar.com/news/microsoft-could-be-on-the-verge-of-forcibly-upgrading-windows-10-on-your-computer][URL: techradar.com]].
   * The Computer Chronicles (Nov 8, 2012). Operating Systems
     (1984). [[https://youtu.be/V5S8kFvXpo4][URL: youtu.be/V5S8kFvXpo4.]]
   * <<distro>> Tirthakar (2021). Best Linux Distros for 2022
     [blog]. [[https://linuxhint.com/best-linux-distros-2022/][URL: linuxhint.com]].
   * <<tjfree>> TJ Free (Mar 13, 2020). Raspberry Pi Projects
     [video]. [[https://youtu.be/ZDfhcA0SCiM][URL: youtu.be/ZDfhcA0SCiM]].
+  * Ubuntu (2022). The Ubuntu lifecycle and release cadence
+    [website]. [[https://ubuntu.com/about/release-cycle][URL: ubuntu.com]].
   * xkcd (n.d.). A webcomic [website]. [[https://xkcd.com/][URL: xkcd.com]].
 * Footnotes
+
+[fn:3]Many Linux distros have LTS (Long Term Support) versions,
+e.g. Ubuntu.
+#+caption: Ubuntu Long Term support and interim releases (Source: Ubuntu)
+#+attr_html: :width 700px
+[[./img/lts.png]]
 
 [fn:2]Word origin: /arbitrari/ (Latin) = to resolve a dispute [because
 on a computer many different parties compete for available resources]

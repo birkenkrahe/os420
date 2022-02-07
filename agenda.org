@@ -619,11 +619,18 @@
 
 ** Shell command structure
 
-   * The structure of all shell commands: [cmd] [options] [arguments]
+   * The structure of all shell commands: [cmd] -[options] [arguments]
+   * There must be > 1 space between all elements
+   * There must not be a space between the option and the dash
+   * Many commands have an ~-v~ option that provides you with
+     information at run-time 
    * There are short options (e.g. ~-l~) and long options (e.g. ~--reverse~)
      #+caption: long time listing of Org-files (and reversion)
      #+attr_html: :width 600px
      [[./img/struct.png]]
+   * Another useful long option for the ~emacs~ command that starts
+     GNU Emacs is ~--chdir=[dirname]~ where ~[dirname]~ is the name of
+     the folder where you want Emacs to "wake up"
 
 ** Shell warm-up exercise
 

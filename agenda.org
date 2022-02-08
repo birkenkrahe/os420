@@ -535,9 +535,9 @@
    * Linux uses an enhanced Bourne Shell, the Bourne-Again SHell
      ~bash~.
 
-   * Look up the man page for ~bash~ with the command ~man bash~ [fn:3].
+   * [X] Look up the man page for ~bash~ with the command ~man bash~ [fn:3].
 
-   * To get out, press ~q~
+   * [X] To get out, press ~q~
 
    * There are many other shells, including: ~ksh~ (Korn shell), ~csh~ (C shell),
      ~zsh~ (MacOS shell).
@@ -548,23 +548,25 @@
 
    * Emacs commands are Unix commands: ~C-a~, ~C-e~ etc. all work
 
-   * Some other shell commands to try:
-     - ~history~ keeps the last 1000 commands or so. Commands are
+   * Some other shell commands to try now:
+     - [X] ~history~ keeps the last 1000 commands or so. Commands are
        numbered. How can you repeat a command?
-     - ~date~ and ~cal~ time functions
-     - ~df~ and ~df -H~ (for humans) show the free disk space
-     - ~free~ and ~free -h~ (for humans) show the free memory
-     - ~echo~ repeats back what you type - except when you use
+     - [X] ~date~ and ~cal~ time functions
+     - [X] ~df~ and ~df -H~ (for humans) show the free disk space
+     - [X] ~free~ and ~free -h~ (for humans) show the free memory
+     - [X] ~echo~ repeats back what you type - except when you use
        variables as arguments:
-   #+begin_example
-   $ echo $PS1 # prompt path name
-   $ echo $PS2 # prompt for inner shell (like SQLite or R)
-   $ marcus = "me" # defining a variable
-   $ echo marcus # this just returns the string "marcus"
-   $ echo $marcus # returns "me"
-   #+end_example
+       #+begin_example
+       $ echo $PS1 # prompt path name
+       $ echo $PS2 # prompt for inner shell (like SQLite or R)
+       $ marcus = "me" # defining a variable
+       $ echo marcus # this just returns the string "marcus"
+       $ echo $marcus # returns "me"
+       #+end_example
 
    * A terminal shell session is ended with the ~exit~ command.
+
+   * [X] End your terminal session!
 
 ** Unix manual pages
 
@@ -594,35 +596,46 @@
    * Press the button on the KVM switch to return to Windows
    * Sign out of Windows if necessary
 
-* NEXT w4s8 (02/08/22)
+* w4s8 (02/08/22)
 ** Overview
 
-   | HOW       | WHAT                                            |
-   |-----------+-------------------------------------------------|
-   | Test info | Test on Thursday, Feb 10 at 10.00-10.45 AM      |
-   |-----------+-------------------------------------------------|
-   | Setup     | USB/HDMI > power > switch > startx              |
-   | Review    | Shell warm-up exercise                          |
-   |-----------+-------------------------------------------------|
-   | Practice  | Navigating the file system ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp]])           |
-   |           | Manipulate files and folders ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp]])         |
-   |           | Start an [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]] ~bash.org~        |
-   |-----------+-------------------------------------------------|
-   | Shutdown  | ~sudo shutdown now~ > USB/HDMI > Power > switch |
-   |-----------+-------------------------------------------------|
-   | Poll      | [[./notes.org::FAQ][Should you update your operating system?]]        |
+   |---------------+-------------------------------------------------|
+   | HOW           | WHAT                                            |
+   |---------------+-------------------------------------------------|
+   | Test info     | Test on Thursday, Feb 10 at 10.00-10.45 AM      |
+   |---------------+-------------------------------------------------|
+   | Setup         | USB/HDMI > power > switch > ~startx~            |
+   | Review        | Shell warm-up exercise (15 min)                 |
+   |---------------+-------------------------------------------------|
+   | *Poll* ([[https://fast-poll.com/poll/03463336][vote]]) | [[./notes.org::FAQ][Should you update your operating system?]]        |
+   |---------------+-------------------------------------------------|
+   | Practice      | ~sudo apt update -y~      [update OS]           |
+   |               | ~sudo apt upgrade -y~     [upgrade OS]          |
+   |               | ~sudo apt autoremove -y~  [remove old OS]       |
+   |---------------+-------------------------------------------------|
+   | Practice      | Navigating the file system ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp]])           |
+   |               | Manipulate files and folders ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp]])         |
+   |               | Start an [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]] ~bash.org~        |
+   |---------------+-------------------------------------------------|
+   | Shutdown      | ~sudo shutdown now~ > USB/HDMI > Power > switch |
+   |---------------+-------------------------------------------------|
+
+   * Poll vote link: https://fast-poll.com/poll/03463336
+   * Poll results link: https://fast-poll.com/poll/results/03463336
 
 ** Objectives
 
-   * [ ] Understand test rules and content
+   1) [ ] Poll/Discussion: should you upgrade your OS?
 
-   * [ ] Start an interactive Org-mode notebook
+   2) [ ] Understand Thursday test rules and content
 
-   * [ ] Discussion: should you upgrade your OS?
+   3) [ ] Review shell command structure
 
-   * [ ] Understand navigation and the Linux file tree
+   4) [ ] Start an interactive Org-mode notebook
 
-   * [ ] File and folder manipulation
+   5) [ ] Understand navigation and the Linux file tree
+
+   6) [ ] Understand how to manipulate data using the shell
 
 ** Test info
 
@@ -632,7 +645,7 @@
    * 10 brand new questions
    * Maximum time = 45 min
 
-** Shell command structure
+** Review: shell command structure
 
    * The structure of all shell commands: [cmd] -[options] [arguments]
 
@@ -641,7 +654,7 @@
    * There must not be a space between the option and the dash
 
    * Many commands have an ~-v~ option that provides you with
-     information at run-time 
+     information at run-time
 
    * There are short options (e.g. ~-l~) and long options (e.g. ~--reverse~)
      #+caption: long time listing of Org-files (and reversion)
@@ -656,22 +669,22 @@
 
    Complete the exercise on the command line (15 min):
 
-  | Go to your ~$home~ directory, ~/home/pi~                      |
-  | Use ~wget~ to get ~sample.txt~ from ~os420~ in GitHub[fn:4]   |
-  | Display first line of ~sample.txt~                            |
-  | Make a sub directory titled ~practice~ in ~$home~             |
-  | Change directory to ~/home/pi/practice~                       |
-  | Verify that you are where you want to be                      |
-  | Move ~sample.txt~ to your current directory as ~sample_1.txt~ |
-  | Make a copy of ~sample_1.txt~ and name it ~sample_2.txt~      |
-  | Ascertain that the files are indeed identical by using ~diff~ |
-  | View both files together using ~less~                         |
-  | Inside ~less~, move between the two files                     |
-  | Leave ~less~                                                  |
+   | Go to your ~$home~ directory, ~/home/pi~                      |
+   | Use ~wget~ to get ~sample.txt~ from ~os420~ in GitHub[fn:4]   |
+   | Display first line of ~sample.txt~                            |
+   | Make a sub directory titled ~practice~ in ~$home~             |
+   | Change directory to ~/home/pi/practice~                       |
+   | Verify that you are where you want to be                      |
+   | Move ~sample.txt~ to your current directory as ~sample_1.txt~ |
+   | Make a copy of ~sample_1.txt~ and name it ~sample_2.txt~      |
+   | Ascertain that the files are indeed identical by using ~diff~ |
+   | View both files together using ~less~                         |
+   | Inside ~less~, move between the two files                     |
+   | Leave ~less~                                                  |
 
-  * Solution in the [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]
-  * Will make a solution screencast, too
- 
+   * Solution in the [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]
+   * Will make a solution screencast, too
+
 ** Manipulating files and directories
 
    * Files are organized in a hierarchical directory structure[fn:5]
@@ -685,7 +698,7 @@
        #+attr_html: :width 500px
        [[./img/tree.jpeg]]
 
-   * [X] To see the tree visualized, install the package as super user:
+   * [ ] To see the tree visualized, install the package as super user:
      #+begin_example
      $ sudo apt install tree
      $ tree
@@ -699,13 +712,13 @@
      use ~ls -la~ to get a long, complete listing. This is also the
      standard ~Dired~ setting in Emacs.
 
-   * [X] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
+   * [ ] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
 
-   * [X] Which command would show the top directories of the OS?[fn:6]
+   * [ ] Which command would show the top directories of the OS?[fn:6]
 
    * To create an empty file, use ~touch~
 
-   * [X] Create a file from the command line with ~touch~.
+   * [ ] Create a file from the command line with ~touch~.
 
    * Filenames are character-sensitive.
 
@@ -721,8 +734,8 @@
 ** TODO Manipulating data
    DEADLINE: <2022-02-08 Tue>
 
-  Let's begin working inside the [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]!
-      
+   Let's begin working inside the [[file:~/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]!
+
 ** What's next
 
    * Raspberry Pi history & hardware
@@ -733,13 +746,13 @@
 
    | HOW          | WHAT                                        |
    |--------------+---------------------------------------------|
-   | Lecture/demo | Raspberry Pi - the hardware & the history 1 |
+   | Lecture/demo | Raspberry Pi - the hardware & the history 2 |
    |--------------+---------------------------------------------|
    | Test 1       | 10:00-10:45 AM                              |
 
 ** Objectives
 
-   * [ ] Know Raspberry Pi: history & hardware
+   * [ ] Know Raspberry Pi: history & hardware (part 2)
 
    * [ ] Understand GPIOs and how to see and control them
 
@@ -771,9 +784,6 @@
 
    * [ ] Understand GPIOs and how to see and control them
 
-** TODO Combining shell tools
-   DEADLINE: <2022-02-15 Tue>
-
 ** Pi - hardware & history: hardware
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
@@ -788,15 +798,8 @@
 
    * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
 
-** Test info
-
-   * Online in Schoology
-   * Quizzes 1-3 are unpublished during the test
-   * 5 easy questions (1 new)
-   * 5 hard questions (1 new)
-   * An essay question
-   * Time = 45 min
-   * You can leave at any time
+** TODO Combining shell tools
+   DEADLINE: <2022-02-15 Tue>
 
 ** What's next
 

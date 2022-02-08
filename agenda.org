@@ -689,7 +689,7 @@
    * Solution in the [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]
    * Will make a solution screencast, too
 
-** The Linux File System ("Everything is a file")
+** THE LINUX FILE SYSTEM ("EVERYTHING IS A FILE")
 
    * Open a terminal and look at the file system
      #+name: file system

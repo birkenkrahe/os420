@@ -433,7 +433,7 @@
    versions after characters in Disney/Pixar’s Toy Story films –
    Bullseye was Woody’s horse in Toy Story 2.)"
   #+end_quote
-
+  
   * Raspberry Pi documentation - e.g. on [[https://www.raspberrypi.com/documentation/computers/using_linux.html][terminal/Linux commands]], or
     on the [[https://www.raspberrypi.com/documentation/computers/os.html][Raspbian Operating System]].
 

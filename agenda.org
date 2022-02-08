@@ -621,6 +621,14 @@
 
    * [ ] Understand test rules and content
 
+** Test info
+
+   * Online in Schoology
+   * Quiz 1-3 are not visible during the test
+   * The 10 hardest questions of quiz 1-3 (< 50%)
+   * 10 brand new questions
+   * Maximum time = 45 min
+
 ** Shell command structure
 
    * The structure of all shell commands: [cmd] -[options] [arguments]
@@ -640,18 +648,18 @@
 
    Complete the exercise on the command line (15 min):
 
-  | Go to your ~$home~ directory, ~/home/pi~                         |
-  | Use ~wget~ to fetch the file ~sample.txt~ from ~os420~ in GitHub |
-  | Display first line of ~sample.txt~                               |
-  | Make a sub directory titled ~practice~ in ~$home~                |
-  | Change directory to ~/home/pi/practice~                          |
-  | Verify that you are where you want to be                         |
-  | Move ~sample.txt~ to your current directory as ~sample_1.txt~    |
-  | Make a copy of ~sample_1.txt~ and name it ~sample_2.txt~         |
-  | Ascertain that the files are indeed identical by using ~diff~    |
-  | View both files together using ~less~                            |
-  | Inside ~less~, move between the two files                        |
-  | Leave ~less~                                                     |
+  | Go to your ~$home~ directory, ~/home/pi~                      |
+  | Use ~wget~ to get ~sample.txt~ from ~os420~ in GitHub[fn:4]   |
+  | Display first line of ~sample.txt~                            |
+  | Make a sub directory titled ~practice~ in ~$home~             |
+  | Change directory to ~/home/pi/practice~                       |
+  | Verify that you are where you want to be                      |
+  | Move ~sample.txt~ to your current directory as ~sample_1.txt~ |
+  | Make a copy of ~sample_1.txt~ and name it ~sample_2.txt~      |
+  | Ascertain that the files are indeed identical by using ~diff~ |
+  | View both files together using ~less~                         |
+  | Inside ~less~, move between the two files                     |
+  | Leave ~less~                                                  |
 
    [[file:~/GitHub/admin/spring22/os420/assignments.org::Shell warm-up classroom assignment - solution][Solution]] / Video
 
@@ -659,7 +667,7 @@
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp chapter]]
 
-   * Files are organized in a hierarchical directory structure[fn:4]
+   * Files are organized in a hierarchical directory structure[fn:5]
 
    * Imagine you stand somewhere inside an upside down tree:
      - the ~pwd~ command tells you were you are
@@ -686,7 +694,7 @@
 
    * [X] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
 
-   * [X] Which command would show the top directories of the OS?[fn:5]
+   * [X] Which command would show the top directories of the OS?[fn:6]
 
    * To create an empty file, use ~touch~
 
@@ -708,16 +716,10 @@
 
    See also: [[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp chapter]]
 
-   * Viewing commands: ~cat~, ~more~, ~less~[fn:6].
+   * Viewing commands: ~cat~, ~more~, ~less~[fn:7].
+     
+     
 
-
-** Test info
-
-   * Online in Schoology
-   * Quiz 1-3 are not visible during the test
-   * The 10 hardest questions of quiz 1-3 (< 50%)
-   * 10 brand new questions
-   * Maximum time = 45 min
 
 ** What's next
 
@@ -806,15 +808,22 @@
 
 * Footnotes
 
-[fn:6]~less~ is faster than ~more~ because it does not load the entire
+[fn:4]An alternative (that takes much longer, because many files have
+to be downloaded, and the Pi 3B+ isn't the strongest networker) is to
+clone the entire ~os420~ repository with the command:
+#+begin_example
+  $ git clone https://github.com/birkenkrahe/os420
+#+end_example
+
+[fn:7]~less~ is faster than ~more~ because it does not load the entire
 file before displaying it.
 
-[fn:5]Answer: ~ls /~ lists the root directory, because ~/~ is root's
+[fn:6]Answer: ~ls /~ lists the root directory, because ~/~ is root's
 home. The particular ordering and naming of these directories is up to
 the Linux OS file administrator, but there are certain style rules
 that are usually obeyed by every professional.
 
-[fn:4]Windows likes to call directories 'folders' - another
+[fn:5]Windows likes to call directories 'folders' - another
 unnecessary dumbing down. A folder is just a container, but a
 directory (like the "telephone directory") has a data structure, an
 index, labels, and serves to search and find. Don't say "folder".

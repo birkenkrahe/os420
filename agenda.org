@@ -697,29 +697,32 @@
        ls -lF /
      #+end_src
 
-   | DIRECTORY     | CONTENT                                                |
-   |---------------+--------------------------------------------------------|
-   | ~/~           | Root directory where everything begins                 |
-   | ~/bin~        | Executable binaries for the OS to boot and run         |
-   | ~/boot~       | Linux kernel, initial RAM disk image to boot           |
-   | ~/dev~        | List for kernel with all known devices                 |
-   | ~/etc~        | System configuration files (e.g. ~/etc/passwd~)        |
-   | ~/home~       | Directory for user directories (e.g. ~/home/pi~)       |
-   | ~/lib~        | Shared library files (like Windows DLLs)               |
-   | ~/lost+found~ | Panic room for each formatted disk partition           |
-   | ~/media~      | Mount points for removable media (e.g. USB stick)      |
-   | ~/mnt~        | Mount points for manually mounted removable media      |
-   | ~/opt~        | Optional commercial software                           |
-   | ~/proc~       | Virtual FS for the kernel (e.g. ~/proc/cpuinfo~)       |
-   | ~/root~       | ~$HOME~ directory of the ~root~ super-user             |
-   | ~/sbin~       | System binaries for system tasks (~sudo shutdown~)     |
-   | ~/tmp~        | Holding bay for temp files, emptied at reboot          |
-   | ~/usr~        | Programs and support files for regular users           |
-   | ~/usr/bin~    | Executable programs of the distro (e.g. ~cat~)         |
-   | ~/usr/lib~    | Shared libraries for ~/usr/bin~ programs               |
-   | ~/usr/local~  | Programs not included in your distro                   |
-   | ~/usr/sbin~   | More system administration programs                    |
-   | ~/usr/share~  | Shared data for  ~/usr/bin~ programs (e.g. sound files) |
+   | DIRECTORY        | CONTENT                                                 |
+   |------------------+---------------------------------------------------------|
+   | ~/~              | Root directory where everything begins                  |
+   | ~/bin~           | Executable binaries for the OS to boot and run          |
+   | ~/boot~          | Linux kernel, initial RAM disk image to boot            |
+   | ~/dev~           | List for kernel with all known devices                  |
+   | ~/etc~           | System configuration files (e.g. ~/etc/passwd~)         |
+   | ~/home~          | Directory for user directories (e.g. ~/home/pi~)        |
+   | ~/lib~           | Shared library files (like Windows DLLs)                |
+   | ~/lost+found~    | Panic room for each formatted disk partition            |
+   | ~/media~         | Mount points for removable media (e.g. USB stick)       |
+   | ~/mnt~           | Mount points for manually mounted removable media       |
+   | ~/opt~           | Optional commercial software                            |
+   | ~/proc~          | Virtual FS for the kernel (e.g. ~/proc/cpuinfo~)        |
+   | ~/root~          | ~$HOME~ directory of the ~root~ super-user              |
+   | ~/sbin~          | System binaries for system tasks (~sudo shutdown~)      |
+   | ~/tmp~           | Holding bay for temp files, emptied at reboot           |
+   | ~/usr~           | Programs and support files for regular users            |
+   | ~/usr/bin~       | Executable programs of the distro (e.g. ~cat~)          |
+   | ~/usr/lib~       | Shared libraries for ~/usr/bin~ programs                |
+   | ~/usr/local~     | Programs not included in your distro                    |
+   | ~/usr/sbin~      | More system administration programs                     |
+   | ~/usr/share~     | Shared data for  ~/usr/bin~ programs (e.g. sound files) |
+   | ~/usr/share/doc~ | Man pages and other package documentation               |
+   | ~/var~           | Databases, spool files, user mail (volatile files)      |
+   | ~/var/log~       | Records of system activity (e.g. /var/log/syslog) |
 
 ** Manipulating files and directories
 

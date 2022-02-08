@@ -1,0 +1,156 @@
+#+TITLE:bash(1) practice
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:bash(1) practice for CSC420 Operating Systems Spring 2022 Lyon College
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:bash :results output
+* README
+
+  * This file accompanies lectures on the shell and ~bash(1)~. To gain
+    practice, you should type along in your own Org-mode file. You
+    have to have Emacs and my ~.emacs~ file installed on your PC or
+    the Pi you're working with.
+
+  * To make this easier, use the auto expansion (~<s~). This will only
+    work if you have my ~.emacs~ file ([[https://tinyurl.com/lyonemacs][from GDrive]]) installed.
+
+  * Add the following two lines at the top of your file, and activate
+    each line with ~C-c C-c~ (this is confirmed in the echo area as
+    ~Local setup has been refreshed~)):
+    #+begin_example
+    #+PROPERTY: header-args:bash :results output
+    #+end_example
+
+  * Remember that ~C-M-\~ inside a code block indents syntactically
+    (on Windows, this may only work if you have a marked region - set
+    the mark with ~C-SPC~).
+
+* Try it
+
+  * In [[which]], you no longer need to specify header arguments already
+    provided in the meta data as ~PROPERTY~.
+    #+name: which
+    #+begin_src bash
+      which bash
+    #+end_src
+
+  * Let's do the [[hello world program]] that we wrote as ~hello.sh~ already.
+    #+name: hello world program
+    #+begin_src bash
+      echo hello world
+    #+end_src
+
+* Shell warm-up classroom assignment
+
+  1) [ ] Ask yourself: where am I?
+     #+name: pwd
+     #+begin_src bash
+       pwd
+     #+end_src
+
+  2) [ ] Go to your home directory
+     #+name: cd
+     #+begin_src bash
+       cd $HOME
+       pwd
+     #+end_src
+
+  3) [ ] Fetch ~sample.txt~ from GitHub ([[https://raw.githubusercontent.com/birkenkrahe/os420/main/sample.txt][URL]])
+     #+name: wget
+     #+begin_src bash
+       cd $home
+       wget https://raw.githubusercontent.com/birkenkrahe/os420/main/sample.txt
+       ls -lH sample.txt
+     #+end_src
+
+  4) [ ] Display first line of ~sample.txt~ - what does the option ~-v~ do?
+     #+name: head
+     #+begin_src bash
+       head -v --lines=1 sample.txt
+     #+end_src
+
+  5) [ ] Make subdirectory ~practice~ in ~$home~
+     #+name: mkdir
+     #+begin_src bash
+       cd $home
+       mkdir -v practice
+       ls -ld practice
+     #+end_src
+
+  6) [ ] Change to ~/home/pi/practice
+     #+begin_src bash
+       cd /home/pi/practice
+       pwd
+     #+end_src
+
+  7) [ ] Move ~sample.txt~ as ~sample._1.txt~ to current directory
+     #+name: mv
+     #+begin_src bash
+       cd $HOME/practice
+       mv -v ../sample.txt sample_1.txt
+       ls -lH sample*
+     #+end_src
+
+  8) [ ] Make copy of ~sample_1.txt~ and name it ~sample_2.txt~
+     #+name: cp
+     #+begin_src bash
+       cd $HOME/practice
+       cp -v sample_1.txt sample_2.txt
+       ls -lH sample*
+     #+end_src
+
+  9) [ ] Ascertain that copied files are identical
+     #+name: diff
+     #+begin_src bash
+       cd $HOME/practice
+       diff -s sample_1.txt sample_2.txt
+     #+end_src
+
+  10) [ ] View both files together using ~less~ and navigate between the
+      displayed files with ~:p~ and ~:n~. Leave ~less~ with ~:q~
+      #+name: less
+      #+begin_src bash :results silent
+        less sample_1.txt sample_2.txt
+      #+end_src
+
+** Summary - solution on the shell and in Emacs
+
+   Complete the exercise on the command line (15 min):
+
+   | TASK                                                             | TERMINAL                            | EMACS[fn:1]          |
+   |------------------------------------------------------------------+-------------------------------------+----------------------|
+   | Go to your ~$home~ directory, ~/home/pi~                         | ~cd $home~                          | ~C-x d ~ RET~        |
+   | Use ~wget~ to fetch the file ~sample.txt~ from ~os420~ in GitHub | ~wget URL~[fn:2]                    | ~M-x eww URL~        |
+   | Display first line of ~sample.txt~                               | ~head --lines=1 sample.txt~         | ~C-x C-f sample.txt~ |
+   | Make a sub directory titled ~practice~ in ~$home~                | ~mkdir practice~                    | ~+ practice RET~     |
+   | Change directory to ~/home/pi/practice~                          | ~cd practice~                       | ~RET~                |
+   | Verify that you are where you want to be                         | ~pwd~                               |                      |
+   | Move ~sample.txt~ to your current directory as ~sample_1.txt~    | ~mv ../sample.txt sample_1.txt~     | ~R RET~              |
+   | Make a copy of ~sample_1.txt~ and name it ~sample_2.txt~         | ~cp sample.txt sample_1~            | ~C sample_2.txt~     |
+   | Ascertain that the files are indeed identical by using ~diff~    | ~diff -s sample_1.txt sample_2.txt~ | ~= sample_2.txt~     |
+   | View both files together using ~less~                            | ~less sample_1.txt sample_2.txt~    |                      |
+   | Inside ~less~, move between the two files                        | ~:p~ and ~:n~                       |                      |
+   | Leave ~less~                                                     | ~:q~                                |                      |
+
+* Manipulating data
+
+  * [ ] Viewing commands: ~cat~, ~more~, ~less~[fn:3].
+    #name+
+    #+begin_src bash
+      which cat
+      which more
+      which less
+    #+end_src
+
+    #+RESULTS:
+    : /usr/bin/cat
+    : /usr/bin/more
+    : /usr/bin/less
+
+* Footnotes
+[fn:3]~less~ is faster than ~more~ because it does not load the entire
+file before displaying it.
+
+[fn:2]URL:  https://raw.githubusercontent.com/birkenkrahe/os420/main/sample.txt
+
+[fn:1]Dired shows the files. Showing both files at once requires two buffers.

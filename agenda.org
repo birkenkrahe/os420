@@ -613,6 +613,8 @@
    |               | ~sudo apt upgrade -y~     [upgrade OS]          |
    |               | ~sudo apt autoremove -y~  [remove old OS]       |
    |---------------+-------------------------------------------------|
+   | Lecture       | The Linux File System ("Everything is a file")  |
+   |---------------+-------------------------------------------------|
    | Practice      | Navigating the file system ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp]])           |
    |               | Manipulate files and folders ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp]])         |
    |               | Start an [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]] ~bash.org~        |
@@ -631,11 +633,13 @@
 
    3) [ ] Review shell command structure
 
-   4) [ ] Start an interactive Org-mode notebook
+   4) [ ] Understand the Linux file system structure and content
 
-   5) [ ] Understand navigation and the Linux file tree
+   5) [ ] Start an interactive Org-mode notebook
 
-   6) [ ] Understand how to manipulate data using the shell
+   6) [ ] Understand navigation and the Linux file tree
+
+   7) [ ] Understand how to manipulate data using the shell
 
 ** Test info
 
@@ -684,6 +688,38 @@
 
    * Solution in the [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]
    * Will make a solution screencast, too
+
+** The Linux File System ("Everything is a file")
+
+   * Open a terminal and look at the file system
+     #+name: file system
+     #+begin_src bash
+       ls -lF /
+     #+end_src
+
+   | DIRECTORY     | CONTENT                                                |
+   |---------------+--------------------------------------------------------|
+   | ~/~           | Root directory where everything begins                 |
+   | ~/bin~        | Executable binaries for the OS to boot and run         |
+   | ~/boot~       | Linux kernel, initial RAM disk image to boot           |
+   | ~/dev~        | List for kernel with all known devices                 |
+   | ~/etc~        | System configuration files (e.g. ~/etc/passwd~)        |
+   | ~/home~       | Directory for user directories (e.g. ~/home/pi~)       |
+   | ~/lib~        | Shared library files (like Windows DLLs)               |
+   | ~/lost+found~ | Panic room for each formatted disk partition           |
+   | ~/media~      | Mount points for removable media (e.g. USB stick)      |
+   | ~/mnt~        | Mount points for manually mounted removable media      |
+   | ~/opt~        | Optional commercial software                           |
+   | ~/proc~       | Virtual FS for the kernel (e.g. ~/proc/cpuinfo~)       |
+   | ~/root~       | ~$HOME~ directory of the ~root~ super-user             |
+   | ~/sbin~       | System binaries for system tasks (~sudo shutdown~)     |
+   | ~/tmp~        | Holding bay for temp files, emptied at reboot          |
+   | ~/usr~        | Programs and support files for regular users           |
+   | ~/usr/bin~    | Executable programs of the distro (e.g. ~cat~)         |
+   | ~/usr/lib~    | Shared libraries for ~/usr/bin~ programs               |
+   | ~/usr/local~  | Programs not included in your distro                   |
+   | ~/usr/sbin~   | More system administration programs                    |
+   | ~/usr/share~  | Shared data for  ~/usr/bin~ programs (e.g. sound files) |
 
 ** Manipulating files and directories
 
@@ -756,8 +792,7 @@
 
    * [ ] Understand GPIOs and how to see and control them
 
-** TODO Raspberry Pi hardware & history: history
-   DEADLINE: <2022-02-08 Tue>
+** Raspberry Pi hardware & history: history
 
    * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
 

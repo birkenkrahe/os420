@@ -50,7 +50,7 @@
    #+attr_html: :width 600px
    [[./img/homework.png]]
 
-   * GitHub Hello World Exercise ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][Info: FAQ]])
+   * GitHub Hello World Exercise ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org][Info: FAQ]])
    * DataCamp platform registration ([[https://lyon.schoology.com/course/5516220833/materials][Link: Schoology]])
    * GNU Emacs installation ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][Info: FAQ]])
 
@@ -80,14 +80,14 @@
      * Upload assignments (esp. Emacs Org-files)
      * Discussion
      * Wiki for collaboration
-     * Complements Schoology[fn:1]
+     * Complements Schoology
 
 **** What will you have to do?
 
      * [[https://github.com][Sign up with GitHub]] - use Lyon Email
      * Pick an available username *using your own first and last name*,
        e.g. ~MarcusBirkenkrahe~, or ~DonaldTrump~
-     * [[https://docs.github.com/en/get-started/quickstart/hello-world][Complete the "Hello World" exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.md#completing-the-github-hello-world-exercise][FAQ]])
+     * Complete GitHub Hello World exercise (see FAQ)
      * Give me your GitHub username so that I can add you as a
        collaborator to my private ~os420~ repository
      * [[https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#creating-an-issue-from-a-repository][Create an issue]] from the [[https://github.com/birkenkrahe/cc100/issues][~os420~ repository]] like in the example
@@ -120,7 +120,7 @@
      * You can participate in [[https://github.com/birkenkrahe/cc100/discussions][discussions]] (sometimes I will make you)
      * You can add to the [[https://github.com/birkenkrahe/cc100/wiki][wiki]] (e.g. comments and links to interesting
        resources)
-     * You can install the [[https://github.com/mobile][mobile app]] on your smartphone[fn:2]
+     * You can install the [[https://github.com/mobile][mobile app]] on your smartphone
      * You can use it as a platform for [[https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects][projects]] or [[https://github.com/features/codespaces][coding]]
      * You can download the [[https://desktop.github.com/][desktop client]] to manage repos on your PC
        (see image below).
@@ -161,9 +161,9 @@
 
    | HOW      | WHAT                                          |
    |----------+-----------------------------------------------|
-   | Review   | [[file:~/Documents/GitHub/org/FAQ.org::Completing the GitHub "hello world" exercise][GitHub Hello World exercise]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#completing-the-github-hello-world-exercise][FAQ]])             |
+   | Review   |GitHub Hello World exercise (FAQ)
    | Lecture  | What operating systems do                     |
-   | Practice | [[file:~/Documents/GitHub/org/FAQ.org:: How to install Emacs (+ESS) under Windows and MacOS][Install GNU Emacs]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][FAQ]])                       |
+   | Practice | [[file:~/Documents/GitHub/org/FAQ.org][Install GNU Emacs]] ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-install-emacs-ess-under-windows-and-macos][FAQ]])                       |
    | Demo     | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                             |
    | Self     | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]] |
 
@@ -190,7 +190,7 @@
    | Demo         | [[https://www.gnu.org/software/emacs/tour/][Emacs guided tour]]                                   |
    | Self         | [[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][Work through the Emacs onboard tutorial (18p)]]       |
 
-   /Nachtrag: watch [[file:followup.org::Lecture on OS foundations][History of Databases]] and The Computer Chronicles/
+   /Nachtrag: watch [[file:notes.org::Lecture on OS foundations][History of Databases]] and The Computer Chronicles/
 
 ** Objectives
 
@@ -211,13 +211,12 @@
    * Getting started with Pi
 
 * OS tasks, virtualization, GNU Emacs - w2s4 (01/20/22)
-
 ** Overview
 
    | HOW      | WHAT                                    |
    |----------+-----------------------------------------|
    | Lecture  | Storage structure & OS management tasks |
-   | Practice | [[file:~/Documents/GitHub/org/emacs/emacs.org::GNU Emacs][Emacs guided tour]] ([[https://www.gnu.org/software/emacs/tour/][tour]])([[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][tutorial]])      |
+   | Practice | [[file:~/Documents/GitHub/org/emacs/emacs.org][Emacs guided tour]] ([[https://www.gnu.org/software/emacs/tour/][tour]])([[https://www.stolaf.edu/people/humke/UNIX/emacs-tutorial.html][tutorial]])      |
 
 ** Objectives
 
@@ -245,7 +244,7 @@
    | HOW        | WHAT                                         |
    |------------+----------------------------------------------|
    | Summary    | Foundations of Operating Systems (10 tenets) |
-   | Preview    | DataCamp course "[[https://app.datacamp.com/learn/courses/introduction-to-shell][Introduction to Shell]]"      |
+   | Preview    | DataCamp course "Introduction to Shell"
    |------------+----------------------------------------------|
    | Practice   | Open three shells inside Emacs               |
    | [[https://lyon.schoology.com/assignment/5603304144/info][Assignment]] | Create ~hello world~ shell program in Emacs  |
@@ -398,7 +397,7 @@
    | HOW      | WHAT                                            |
    |----------+-------------------------------------------------|
    | Review   | ~hello.sh~ [[https://lyon.schoology.com/assignment/5603304144/info][assignment]]                           |
-   | Fix      | ~.emacs~ issue (https://tinyurl.com/lyonemacs   |
+   | Fix      | ~.emacs~ issue ([[https://tinyurl.com/lyonemacs]])  |
    |          | Find the file on the lab desktop                |
    |          | Put it into the ~$HOME~ directory               |
    |          | Restart Emacs                                   |
@@ -596,7 +595,7 @@
    * Press the button on the KVM switch to return to Windows
    * Sign out of Windows if necessary
 
-* w4s8 (02/08/22)
+* Shell commands, Linux file tree - w4s8 (02/08/22)
 ** Overview
 
    |---------------+-------------------------------------------------|
@@ -617,27 +616,24 @@
    |---------------+-------------------------------------------------|
    | Practice      | Navigating the file system ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-files-and-directories?ex=1][DataCamp]])           |
    |               | Manipulate files and folders ([[https://campus.datacamp.com/courses/introduction-to-shell/manipulating-data?ex=1][DataCamp]])         |
-   |               | Start an [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]] ~bash.org~        |
+   |               | Start an [[file:~/Documents/GitHub/admin/spring22/os420/bash.org][interactive notebook]] ~bash.org~        |
    |---------------+-------------------------------------------------|
    | Shutdown      | ~sudo shutdown now~ > USB/HDMI > Power > switch |
    |---------------+-------------------------------------------------|
 
-   * Poll vote link: https://fast-poll.com/poll/03463336
-   * Poll results link: https://fast-poll.com/poll/results/03463336
-
 ** Objectives
 
-   1) [ ] Poll/Discussion: should you upgrade your OS?
+   1) [X] Poll/Discussion: should you upgrade your OS?
 
-   2) [ ] Understand Thursday test rules and content
+   2) [X] Understand Thursday test rules and content
 
-   3) [ ] Review shell command structure
+   3) [X] Review shell command structure
 
-   4) [ ] Understand the Linux file system structure and content
+   4) [X] Understand the Linux file system structure and content
 
-   5) [ ] Start an interactive Org-mode notebook
+   5) [X] Understand navigation and the Linux file tree
 
-   6) [ ] Understand navigation and the Linux file tree
+   6) [ ] Start an interactive Org-mode notebook
 
    7) [ ] Understand how to manipulate data using the shell
 
@@ -686,7 +682,7 @@
    | Inside ~less~, move between the two files                     |
    | Leave ~less~                                                  |
 
-   * Solution in the [[file:~/Documents/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]
+   * Solution in the [[file:~/Documents/GitHub/admin/spring22/os420/bash.org][interactive notebook]]
    * Will make a solution screencast, too
 
 ** THE LINUX FILE SYSTEM ("EVERYTHING IS A FILE")
@@ -724,7 +720,29 @@
    | ~/var~           | Databases, spool files, user mail (volatile files)      |
    | ~/var/log~       | Records of system activity (e.g. /var/log/syslog) |
 
-** Manipulating files and directories
+** What's next
+
+   * Test 1, Thursday 10 February 2022, 10:00-10:45
+   * Manipulating files and data
+   * Raspberry Pi history & hardware
+   * New DataCamp assignment due Feb 15 ("[[https://campus.datacamp.com/courses/introduction-to-shell/combining-tools?ex=1][Combining tools]]"))
+
+* NEXT w4s9 (02/10/22)
+** Overview
+
+   | HOW          | WHAT                                        |
+   |--------------+---------------------------------------------|
+   | Lecture/demo | Raspberry Pi - the hardware & the history 2 |
+   |--------------+---------------------------------------------|
+   | Test 1       | 10:00-10:45 AM                              |
+
+** Objectives
+
+   * [ ] Know Raspberry Pi: history & hardware (part 2)
+
+   * [ ] Understand GPIOs and how to see and control them
+
+* Manipulating files and directories
 
    * Files are organized in a hierarchical directory structure[fn:5]
 
@@ -770,34 +788,10 @@
    * Hidden files (often for configuration like ~.emacs~) remain
      hidden unless you invoke the ~-a~ option of ~ls~
 
-** TODO Manipulating data
-   DEADLINE: <2022-02-08 Tue>
+** IN PROGRESS Manipulating data
+   DEADLINE: <2022-02-10 Thu>
 
-   Let's begin working inside the [[file:~/GitHub/admin/spring22/os420/bash.org::README][interactive notebook]]!
-
-** What's next
-
-   * Raspberry Pi history & hardware
-   * Test 1, Thursday 10 February 2022, 10:00-10:45
-
-* TODO w4s9 (02/10/22)
-** Overview
-
-   | HOW          | WHAT                                        |
-   |--------------+---------------------------------------------|
-   | Lecture/demo | Raspberry Pi - the hardware & the history 2 |
-   |--------------+---------------------------------------------|
-   | Test 1       | 10:00-10:45 AM                              |
-
-** Objectives
-
-   * [ ] Know Raspberry Pi: history & hardware (part 2)
-
-   * [ ] Understand GPIOs and how to see and control them
-
-** Raspberry Pi hardware & history: history
-
-   * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
+   Let's begin working inside the [[file:~/GitHub/admin/spring22/os420/bash.org][interactive notebook]]!
 
 ** What's next
 
@@ -822,7 +816,9 @@
 
    * [ ] Understand GPIOs and how to see and control them
 
-** Pi - hardware & history: hardware
+** Raspberry Pi - hardware & history: hardware
+
+  * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
 
    #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
    #+attr_html: :width 500px

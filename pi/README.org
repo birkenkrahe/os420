@@ -7,7 +7,7 @@
 
   The hippie case is alluding to my checquered past.
 
-  #+attr_html: :width 500px
+  #+attr_html: :width 200px
   [[./img/pi2box.jpg]]
 
 * Raspberry Pi History
@@ -50,10 +50,16 @@
 
    * Last addition Raspberry Pi Pico = Microcontroller
 
-   * Post-pandemic chip-drought: new focus on software
-     
-     
+   #+caption: Raspberry Pi Pico Microcontroller
+   #+attr_html: :width 500px
+   [[./img/pico.jpg]]
 
+   * Post-pandemic chip-drought: new focus on software
+     (e.g. virtualisation, parallelization etc.)
+
+   
+     
+     
 * General Purpose Input Output (GPIO)
 ** GPIO pins
 

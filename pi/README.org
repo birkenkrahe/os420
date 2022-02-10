@@ -3,6 +3,13 @@
 #+SUBTITLE:Raspberry Pi Notes
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+* My first Pi
+
+  The hippie case is alluding to my checquered past.
+
+  #+attr_html: :width 500px
+  [[./img/pi2box.jpg]]
+
 * Raspberry Pi History
 
   #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
@@ -120,13 +127,6 @@
 ** IoT with Pi
 
    See e.g. [[leechang][Lee and Chang (2021)]], or [[fairhead][Fairhead (2016)]].
-
-* My first Pi
-
-  The hippie case is alluding to my checquered past.
-
-  #+attr_html: :width 500px
-  [[./img/pi2box.jpg]]
 
 * Rasperry Pi 2 WiFi networking  <2022-01-05 Wed>
 **  Problem

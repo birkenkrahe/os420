@@ -16,13 +16,43 @@
   #+attr_html: :width 500px
   [[./img/piboard.png]]
 
-  #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+  #+caption: Raspberry Pi Types until 2019 (Source: raspberryptips.com)
   #+attr_html: :width 500px
   [[./img/pimodels.png]]
 
   * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
 
   * [[https://raspberrytips.com/which-raspberry-pi-os-is-running/][Identify your OS]] (~cat /etc/os-release)
+
+** Historical bits
+
+   #+caption: Union Jack
+   #+attr_html: :width 500px
+   [[./img/jack.jpg]]
+   
+   * Eben Upton (U Cambridge) started the project in 2006
+
+   * First commercial Raspberry Pi released in 2012 ($35)
+
+   * Name: "Blow a raspberry" + Python instruction
+
+   * ARM (Advanced RISC [Reduced Instruction Set Computer] Machines)
+
+   #+caption: Raspberry Pi Types 2015-2021 (Source: raspberryptips.com)
+   #+attr_html: :width 500px
+   [[./img/pitypes.png]]
+
+   * Pi 400 comes with pre-loaded retro games
+
+   #+caption: Raspberry Pi 400 as Amiga (Source: RPi projects)
+   #+attr_html: :width 500px
+   [[./img/retro.jpg]]
+
+   * Last addition Raspberry Pi Pico = Microcontroller
+
+   * Post-pandemic chip-drought: new focus on software
+     
+     
 
 * General Purpose Input Output (GPIO)
 ** GPIO pins

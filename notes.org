@@ -409,13 +409,13 @@
 
   * Feb 5, 2022: "[[https://www.techradar.com/news/microsoft-could-be-on-the-verge-of-forcibly-upgrading-windows-10-on-your-computer][Microsoft could be on the verge of forcibly
     upgrading Windows 10 on your computer]]"
-  #+begin_quote
-  "On May 10, in three short months, anyone who is still running this
-  particular version of Windows 10 will no longer qualify for support
-  from Microsoft. And this is why Microsoft is planning to forcibly
-  update people to a supported edition of the operating system."
-  ([[techradar][Wycislik-Wilson]])
-  #+end_quote
+    #+begin_quote
+    "On May 10, in three short months, anyone who is still running this
+    particular version of Windows 10 will no longer qualify for support
+    from Microsoft. And this is why Microsoft is planning to forcibly
+    update people to a supported edition of the operating system."
+    ([[techradar][Wycislik-Wilson]])
+    #+end_quote
 
   * Related: updates and upgrades on Linux[fn:3]. Do this now:
     #+begin_example
@@ -425,15 +425,15 @@
     #+end_example
 
   * [[https://www.raspberrypi.com/news/raspberry-pi-os-debian-bullseye/][What about Rasbian Linux releases?]] ([[long][Long, 2021]]).
-  #+begin_quote
-   "Every two years, Debian Linux, on which Raspberry Pi OS is based,
-   gets a major version upgrade. Debian ‘buster’ has been the basis of
-   Raspberry Pi OS since its release in 2019, and Debian ‘bullseye’
-   was released in August. (As some of you may know, Debian name their
-   versions after characters in Disney/Pixar’s Toy Story films –
-   Bullseye was Woody’s horse in Toy Story 2.)"
-  #+end_quote
-  
+    #+begin_quote
+    "Every two years, Debian Linux, on which Raspberry Pi OS is based,
+    gets a major version upgrade. Debian ‘buster’ has been the basis of
+    Raspberry Pi OS since its release in 2019, and Debian ‘bullseye’
+    was released in August. (As some of you may know, Debian name their
+    versions after characters in Disney/Pixar’s Toy Story films –
+    Bullseye was Woody’s horse in Toy Story 2.)"
+    #+end_quote
+
   * Raspberry Pi documentation - e.g. on [[https://www.raspberrypi.com/documentation/computers/using_linux.html][terminal/Linux commands]], or
     on the [[https://www.raspberrypi.com/documentation/computers/os.html][Raspbian Operating System]].
 

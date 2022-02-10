@@ -441,9 +441,7 @@
 
   * Library: [[https://lyon.on.worldcat.org/search?queryString=raspberry+Pi][Raspberry Pi Ebooks in the Mabee-Simpson library]]
 
-** Captain's Log Stardate
-
-* Glossary
+** * Glossary
 
   | WHAT            | DEFINITION                               | PURPOSE                     |
   |-----------------+------------------------------------------+-----------------------------|

@@ -3,6 +3,20 @@
 #+SUBTITLE:Raspberry Pi Notes
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+* Raspberry Pi History
+
+  #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+  #+attr_html: :width 500px
+  [[./img/piboard.png]]
+
+  #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+  #+attr_html: :width 500px
+  [[./img/pimodels.png]]
+
+  * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
+
+  * [[https://raspberrytips.com/which-raspberry-pi-os-is-running/][Identify your OS]] (~cat /etc/os-release)
+
 * General Purpose Input Output (GPIO)
 ** GPIO pins
 
@@ -106,20 +120,6 @@
 ** IoT with Pi
 
    See e.g. [[leechang][Lee and Chang (2021)]], or [[fairhead][Fairhead (2016)]].
-
-* Raspberry Pi History
-
-  #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
-  #+attr_html: :width 500px
-  [[./img/piboard.png]]
-
-  #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
-  #+attr_html: :width 500px
-  [[./img/pimodels.png]]
-
-  * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
-
-  * [[https://raspberrytips.com/which-raspberry-pi-os-is-running/][Identify your OS]] (~cat /etc/os-release)
 
 * My first Pi
 

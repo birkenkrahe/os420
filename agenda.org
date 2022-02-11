@@ -26,15 +26,16 @@
 
 ** Aspirations and ambitions (DS program 2021-2023)
 
-   | CLASS                                 | CODE    | TERM        | Topics                              |
-   |---------------------------------------+---------+-------------+-------------------------------------|
-   | Data Science Tools and Methods        | DSC 101 | Fall 2021   | R, Basic EDA, Base R                |
-   | Introduction to Advanced Data Science | DSC 205 | Spring 2022 | R, Advanced EDA, Tidyverse          |
-   | Database Theory and Applications      | CSC 330 | Spring 2022 | SQL, SQLite                         |
-   | Operating Systems                     | CSC 420 | Spring 2022 | Bash, awk, sed, regular expressions |
-   | Data Visualization                    | DSC 302 | Fall 2022   | D3, Processing, Javascript, Bokeh   |
-   | Machine Learning                      | DSC 305 | Spring 2023 | Predictive algorithms, neural nets  |
-   | Digital Humanities                    | CSC 105 | Spring 2023 | Data science applications           |
+   | CLASS                                 | CODE            | TERM        | Topics                              |
+   |---------------------------------------+-----------------+-------------+-------------------------------------|
+   | Data Science Tools and Methods        | DSC 101         | Fall 2021   | R, Basic EDA, Base R                |
+   | Introduction to Advanced Data Science | DSC 205         | Spring 2022 | R, Advanced EDA, Tidyverse          |
+   | Database Theory and Applications      | CSC 330         | Spring 2022 | SQL, SQLite                         |
+   | Operating Systems                     | CSC 420         | Spring 2022 | Bash, awk, sed, regular expressions |
+   | Applied Math for Data Science         | DSC 482/MTH 360 | Fall 2022   | Probability, Statistics + R         |
+   | Data Visualization                    | DSC 302         | Fall 2022   | D3, Processing, Javascript, Bokeh   |
+   | Machine Learning                      | DSC 305         | Spring 2023 | Predictive algorithms, neural nets  |
+   | Digital Humanities                    | CSC 105         | Spring 2023 | Data science applications           |
 
 ** Introduction to the course & the lecturer
 
@@ -738,7 +739,8 @@
 
 ** Objectives
 
-   * [ ] Know Raspberry Pi: history & hardware (part 1)
+   * [X] Know Raspberry Pi: history & hardware (part 1)
+   * [X] Complete test 1 (online)
 
 * TODO w5s10 (02/15/22)
 ** Overview

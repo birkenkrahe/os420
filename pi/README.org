@@ -54,11 +54,11 @@
    #+attr_html: :width 500px
    [[./img/pico.jpg]]
 
-   * Post-pandemic chip-drought: new focus on software
+   * Post-pandemic chip-drought: new focus on software ([[hughes][Hughes, 2021]]).
      (e.g. virtualisation, parallelization etc.)
 
-   
-     
+   * More information: [[https://www.raspberrypi.com/documentation/][Raspberry Pi documentation]], [[https://linuxhint.com/raspberry-pi-history/][Raspberry Pi
+     History]] ([[dass][Dass, 2021]])
      
 * General Purpose Input Output (GPIO)
 ** GPIO pins
@@ -307,8 +307,13 @@
 
 * SOMEDAY Pi as Backup Server
 * References
+  * <<dass>> Dass (2021). Raspberry Pi History [blog]. [[https://linuxhint.com/raspberry-pi-history/][URL:
+    linuxhint.com]].
   * <<fairhead>> Fairhead (2016). Raspberry Pi - IoT in C. I/O Press |
     Programmers Library. [[https://www.i-programmer.info/book-watch-archive/10163-raspberry-pi-iot-in-c-i-o-press.html][URL: i-programmer.info]].
+  * <<hughes>> Hughes (May 27, 2021). Raspberry Pi: After launching
+    five devices in less than a year, here’s what they’re doing next
+    [blog]. [[https://www.techrepublic.com/article/raspberry-pi-after-launching-five-devices-in-less-than-a-year-heres-what-theyre-doing-next/][URL: www.techrepublic.com.]]
   * <<leechang>> Lee and Chang (June 14, 2021). Introduction to IoT
     Using the Raspberry Pi [article]. [[https://www.codemag.com/article/1607071/Introduction-to-IoT-Using-the-Raspberry-Pi][URL: codemag.com]].
   * <<tranter1>> Tranter (July 10, 2019). GPIO Programming: Using the sysfs

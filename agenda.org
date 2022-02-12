@@ -712,7 +712,7 @@
    | ~/sbin~          | System binaries for system tasks (~sudo shutdown~)      |
    | ~/tmp~           | Holding bay for temp files, emptied at reboot           |
    | ~/usr~           | Programs and support files for regular users            |
-   | ~/usr/bin~       | Executable programs of the distro (e.g. ~cat~)          |
+   | ~/usr/bin~       | Executable programs of the distro[fn:1] (e.g. ~cat~)          |
    | ~/usr/lib~       | Shared libraries for ~/usr/bin~ programs                |
    | ~/usr/local~     | Programs not included in your distro                    |
    | ~/usr/sbin~      | More system administration programs                     |
@@ -842,8 +842,14 @@
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
     [blog]. [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][URL: community.element14.com]].
   * Shotts (2019). The Linux Command Line (2e). NoStarch Press.
+  * Vaughan-Nichols (9 Feb 2022). Best desktop Linux for pros 2022:
+    Our top 5 choices [blog]. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/][URL: www.zdnet.com.]]
 
 * Footnotes
+
+[fn:1]A "distro" is a Linux distribution, like Ubuntu or Raspbian, or
+Kali. Distro design and distro news bind a lot of fanboy energy, see
+e.g. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/]["Best desktop Linux for pros 2022"]] ([[distro][Vaughan-Nichols, 2022]]).
 
 [fn:4]An alternative (that takes much longer, because many files have
 to be downloaded, and the Pi 3B+ isn't the strongest networker) is to

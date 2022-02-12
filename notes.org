@@ -443,15 +443,16 @@
 
 ** * Glossary
 
-  | WHAT            | DEFINITION                               | PURPOSE                     |
-  |-----------------+------------------------------------------+-----------------------------|
-  | Motherboard (h) | CPU + controllers + system bus + memory  | Connect with I/O devices    |
-  | Bootloader (p)  | Computer startup sequence                | Find and load OS            |
-  | ROM/EPROM (h)   | [Erasable Programmable] Read-Only-Memory | Permanent firmware          |
-  | CMOS (h)        | Complementary Metal-Oxide Semiconductor  | BIOS memory                 |
-  | BIOS (s)        | [Basic Input Output System]              | Identify/configure hardware |
-  | BPMN            | Business Process Model and Notation      | Process diagram language    |
-  | sudo            | Linux shell command                      | Super user privileges       |
+  | WHAT            | DEFINITION                                 | PURPOSE                     |
+  |-----------------+--------------------------------------------+-----------------------------|
+  | Motherboard (h) | CPU + controllers + system bus + memory    | Connect with I/O devices    |
+  | Bootloader (p)  | Computer startup sequence                  | Find and load OS            |
+  | ROM/EPROM (h)   | [Erasable Programmable] Read-Only-Memory   | Permanent firmware          |
+  | CMOS (h)        | Complementary Metal-Oxide Semiconductor    | BIOS memory                 |
+  | BIOS (s)        | [Basic Input Output System]                | Identify/configure hardware |
+  | BPMN            | Business Process Model and Notation        | Process diagram language    |
+  | sudo            | Linux shell command                        | Super user privileges       |
+  | distro          | Linux distribution (e.g. Ubuntu, Raspbian) |                             |
 
   Legend: h=hardware, p=process, s=software
 

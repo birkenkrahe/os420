@@ -743,6 +743,11 @@
    * [X] Complete test 1 (online)
 
 * TODO w5s10 (02/15/22)
+** Test 1 review
+
+   #+caption: Test 1 results
+   [[./img/test_1_stats.png]]
+
 ** Overview
 
    | HOW             | WHAT                                                 |
@@ -763,49 +768,49 @@
 
 ** Manipulating files and directories
 
-    * Files are organized in a hierarchical directory structure[fn:5]
+   * Files are organized in a hierarchical directory structure[fn:5]
 
-    * Imagine you stand somewhere inside an upside down tree:
-      - the ~pwd~ command tells you were you are
-      - above you (towards the root) are /parent directories/
-      - below you (away from the root) are /child directories/
-      - At the top is the /root directory/
-	#+caption: upside down tree
-	#+attr_html: :width 500px
-	[[./img/tree.jpeg]]
+   * Imagine you stand somewhere inside an upside down tree:
+     - the ~pwd~ command tells you were you are
+     - above you (towards the root) are /parent directories/
+     - below you (away from the root) are /child directories/
+     - At the top is the /root directory/
+       #+caption: upside down tree
+       #+attr_html: :width 500px
+       [[./img/tree.jpeg]]
 
-    * [ ] To see the tree visualized, install the package as super user:
-      #+begin_example
-      $ sudo apt install tree
-      $ tree
-      #+end_example
+   * [ ] To see the tree visualized, install the package as super user:
+     #+begin_example
+     $ sudo apt install tree
+     $ tree
+     #+end_example
 
-      #+caption: Linux tree command (screenshot)
-      #+attr_html: :width 500px
-      [[./img/tree.png]]
+     #+caption: Linux tree command (screenshot)
+     #+attr_html: :width 500px
+     [[./img/tree.png]]
 
-    * To list files, use ~ls~. It has many useful options. I usually
-      use ~ls -la~ to get a long, complete listing. This is also the
-      standard ~Dired~ setting in Emacs.
+   * To list files, use ~ls~. It has many useful options. I usually
+     use ~ls -la~ to get a long, complete listing. This is also the
+     standard ~Dired~ setting in Emacs.
 
-    * [ ] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
+   * [ ] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
 
-    * [ ] Which command would show the top directories of the OS?[fn:6]
+   * [ ] Which command would show the top directories of the OS?[fn:6]
 
-    * To create an empty file, use ~touch~
+   * To create an empty file, use ~touch~
 
-    * [ ] Create a file from the command line with ~touch~.
+   * [ ] Create a file from the command line with ~touch~.
 
-    * Filenames are character-sensitive.
+   * Filenames are character-sensitive.
 
-    * Don't embed spaces in file names, replace them by ~_~
+   * Don't embed spaces in file names, replace them by ~_~
 
-    * Linux has no concept of file extensions - though many
-      applications do (like Emacs, to identify a major mode like
-      Org-mode)
+   * Linux has no concept of file extensions - though many
+     applications do (like Emacs, to identify a major mode like
+     Org-mode)
 
-    * Hidden files (often for configuration like ~.emacs~) remain
-      hidden unless you invoke the ~-a~ option of ~ls~
+   * Hidden files (often for configuration like ~.emacs~) remain
+     hidden unless you invoke the ~-a~ option of ~ls~
 
 ** IN PROGRESS Manipulating data
    DEADLINE: <2022-02-10 Thu>
@@ -814,21 +819,21 @@
 
 ** Raspberry Pi - hardware & history: hardware
 
-  * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
+   * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
 
-  * Which other devices have an Arm processor?
+   * Which other devices have an Arm processor?
 
-   #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
-   #+attr_html: :width 500px
-   [[./img/piboard.png]]
+     #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+     #+attr_html: :width 500px
+     [[./img/piboard.png]]
 
-   #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
-   #+attr_html: :width 500px
-   [[./img/pimodels.png]]
+     #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+     #+attr_html: :width 500px
+     [[./img/pimodels.png]]
 
-    * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
+     * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
 
-    * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
+     * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
 
 ** TODO Combining shell tools
    DEADLINE: <2022-02-15 Tue>

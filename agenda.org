@@ -820,8 +820,8 @@
 
 ** Analysis - feedback and action points
 
-   * Test 1 can now be played an unlimited number of times. I have
-     added feedback to all new questions.
+   * Test 1 can now be played an unlimited number of times. I will add
+     feedback to all new questions today.
 
    * What surprised me most was that many of you did not use the
      available time. However, I have not (yet) been able to correlate

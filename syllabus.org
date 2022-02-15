@@ -74,7 +74,7 @@
    |---------------+----------------------+--------|
    | Every session | Class assignments    |    10% |
    | Monthly       | Tests                |    30% |
-   | Weekly        | DataCamp assignments |    30% |
+   | Bi-/Weekly    | DataCamp assignments |    30% |
    | End of term   | Final exam           |    30% |
 
    You should be able to see your current grade at any time using the

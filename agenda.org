@@ -596,7 +596,7 @@
    * Press the button on the KVM switch to return to Windows
    * Sign out of Windows if necessary
 
-* Shell commands, Linux file tree - w4s8 (02/08/22)
+* Shell commands, Linux file tree - w5s8 (02/08/22)
 ** Overview
 
    |---------------+-------------------------------------------------|
@@ -728,7 +728,7 @@
    * Manipulating files and data
    * New DataCamp assignment due Feb 15 ("[[https://campus.datacamp.com/courses/introduction-to-shell/combining-tools?ex=1][Combining tools]]"))
 
-* Raspberry Pi history and hardware - w4s9 (02/10/22)
+* Raspberry Pi history and hardware - w5s9 (02/10/22)
 ** Overview
 
    | HOW          | WHAT                                        |
@@ -742,12 +742,114 @@
    * [X] Know Raspberry Pi: history & hardware (part 1)
    * [X] Complete test 1 (online)
 
-* TODO w5s10 (02/15/22)
-** Test 1 review
+* Test review - w6s10 (02/15/22)
+** News
 
-   #+caption: Test 1 results
-   [[./img/test_1_stats.png]]
+   * Eliminated some DataCamp assignments (bash scripting)
+   * Matthew Stewart, Stone Ward (Fri 18 Feb 3-3.50 PM) via Google Meet
 
+** Objectives
+
+   * [ ] Understand test results
+   * [ ] Know what to do different next time
+   * [ ] Discuss selected questions and answers
+
+** Test results - stats and plots
+
+   * The results are nothing to write home about - though > 50% means
+     that the class passed (on average).
+     #+caption: Test 1 results (Schoology)
+     #+attr_html: :width 500px
+     [[./img/test_1_stats.png]]
+
+   * I am an obsessive fact-checker. When checking the stats with R, I
+     find slightly different results:
+     #+name: test 1 results
+     #+begin_src R :exports both :session :results output
+       results <- c(12.13,13.87,12.28,13.9,9.88,8.62,14.67,
+                    13.27,10.48,17.33,9.67,13.07,15.67,16.75,
+                    17.27,12.8,15.93,14.33,12.73,12.38,14.53,11.7)
+       length(results)
+       sd(results)
+       summary(results)
+     #+end_src
+
+     #+RESULTS: test 1 results
+     :
+     : [1] 22
+     :
+     : [1] 2.41746
+     :
+     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+     :    8.62   12.17   13.17   13.33   14.63   17.33
+
+   * Let's make some plots: histogram, boxplot and density plot. I'd
+     like the histogram and the density plot (a smoothened histogram)
+     to peak more to the right, and for the boxplot to be smaller and
+     higher up.
+     #+name: histogram
+     #+begin_src R :exports both :session :results output graphics file :file ./img/test1hist.png
+       hist(results, main="Histogram of test 1 results, CSC 330 Spring 2022")
+     #+end_src
+
+     #+RESULTS: histogram
+     [[file:./img/test1hist.png]]
+
+     #+name: boxplot
+     #+begin_src R :exports both :session :results output graphics file :file ./img/test1box.png
+       boxplot(results, main="Test 1 results, CSC 330 Spring 2022")
+     #+end_src
+
+     #+RESULTS: boxplot
+     [[file:./img/test1box.png]]
+
+     #+name: density
+     #+begin_src R :exports both :session :results output graphics file :file ./img/test1density.png
+       ave <- mean(results)
+       d <- density(results)
+       plot(d, col="steelblue",main="Test 1 Results CSC 330 Spring 2022")
+       abline(v=ave,col="red")
+     #+end_src
+
+     #+RESULTS: density
+     [[file:./img/test1density.png]]
+
+** Analysis - feedback and action points
+
+   * Test 1 can now be played an unlimited number of times. I have
+     added feedback to all new questions.
+
+   * What surprised me most was that many of you did not use the
+     available time. However, I have not (yet) been able to correlate
+     test time and test success.
+
+   * See also: [[https://github.com/birkenkrahe/org/blob/master/diary.org#i-can-teach-it-to-you-but-i-cannot-learn-it-for-you]["I can teach it to you but I cannot learn it for you"]]
+
+   * Questions:
+     - How did you study for this test?
+     - If you didn't perform well, what will you change?
+     - What can I do to help you help yourself?
+
+   * Changes to be applied in future quizzes/tests:
+     - Fewer multiple choices (max. 4)
+     - Announce if a question has > 1 answer (and/or how many)
+
+   #+caption: Feynman (via Twitter)
+   #+attr_html: :width 500px
+   [[./img/feynman.png]]
+
+** Test questions and answers
+
+   * We go through all questions together
+   * Everybody can contribute an answer
+   * Write down questions and ask them now!
+
+** This week
+
+   * Test review
+   * Raspberry Pi Hardware - GPIO pins
+
+* GPIO pins - w6s11 (02/17/22)
 ** Overview
 
    | HOW             | WHAT                                                 |

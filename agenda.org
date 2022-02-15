@@ -770,22 +770,22 @@
      find slightly different results:
      #+name: test 1 results
      #+begin_src R :exports both :session :results output
-       results <- c(12.13,13.87,12.28,13.9,9.88,8.62,14.67,
-                    13.27,10.48,17.33,9.67,13.07,15.67,16.75,
-                    17.27,12.8,15.93,14.33,12.73,12.38,14.53,11.7)
+       results <- c(11.88,13.92,12.43,13.6,9.93,8.67,14.87,
+                    14.87,13.02,10.58,17.08,9.72,12.77,15.42,16.5,
+                    17.02,13,16.13,14.03,12.93,12.43,14.73,11.9)
        length(results)
        sd(results)
        summary(results)
      #+end_src
 
      #+RESULTS: test 1 results
-     :
-     : [1] 22
-     :
-     : [1] 2.41746
-     :
-     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
-     :    8.62   12.17   13.17   13.33   14.63   17.33
+     : 
+     : [1] 23
+     : 
+     : [1] 2.314336
+     : 
+     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     :    8.67   12.16   13.02   13.37   14.87   17.08
 
    * Let's make some plots: histogram, boxplot and density plot. I'd
      like the histogram and the density plot (a smoothened histogram)

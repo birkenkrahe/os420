@@ -837,6 +837,7 @@
    * Changes to be applied in future quizzes/tests:
      - Fewer multiple choices (max. 4)
      - Announce if a question has > 1 answer (and/or how many)
+     - Try and schedule tests for different classes on different days
 
    #+caption: Feynman (via Twitter)
    #+attr_html: :width 500px

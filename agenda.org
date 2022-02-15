@@ -742,17 +742,21 @@
    * [X] Know Raspberry Pi: history & hardware (part 1)
    * [X] Complete test 1 (online)
 
-* Test review - w6s10 (02/15/22)
+* Review of test 1 - w6s10 (02/15/22)
 ** News
 
-   * Eliminated some DataCamp assignments (bash scripting)
-   * Matthew Stewart, Stone Ward (Fri 18 Feb 3-3.50 PM) via Google Meet
+   * *Eliminated* some DataCamp assignments (bash scripting) because
+     otherwise we'll get too far out of step with the course content
+     
+   * *Join us* for a talk by Matthew Stewart, Stone Ward (Fri 18 Feb
+     3-3.50 PM) via Google Meet
 
 ** Objectives
 
    * [ ] Understand test results
    * [ ] Know what to do different next time
-   * [ ] Discuss selected questions and answers
+   * [ ] Discuss all questions and answers
+   * [ ] Share your views & suggestions
 
 ** Test results - stats and plots
 

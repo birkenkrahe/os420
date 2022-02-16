@@ -753,10 +753,10 @@
 
 ** Objectives
 
-   * [ ] Understand test results
-   * [ ] Know what to do different next time
-   * [ ] Discuss all questions and answers
-   * [ ] Share your views & suggestions
+   * [X] Understand test results
+   * [X] Know what to do different next time
+   * [X] Discuss all questions and answers
+   * [X] Share your views & suggestions
 
 ** Test results - stats and plots
 

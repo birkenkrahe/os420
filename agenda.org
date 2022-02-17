@@ -886,9 +886,9 @@
 
 ** Objectives
 
-   * [ ] Know Raspberry Pi: hardware and history part 2
+   * [X] Know Raspberry Pi: hardware and history part 2
 
-   * [ ] Understand GPIOs and how to see and control them
+   * [X] Understand GPIOs and how to see and control them
 
 ** What's next
 

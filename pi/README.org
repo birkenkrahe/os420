@@ -305,6 +305,8 @@
    * [[https://www.emacswiki.org/emacs/Tramp_on_Windows][EmacsWiki Tramp on Windows]]
    * [[https://youtu.be/Iqh50fgbIVk][Using Emacs - 25 tramp]] (video)
 
+* TODO Control Pi fan with Python script
+
 * SOMEDAY Pi as Backup Server
 * References
   * <<dass>> Dass (2021). Raspberry Pi History [blog]. [[https://linuxhint.com/raspberry-pi-history/][URL:
@@ -322,8 +324,7 @@
     Hardware from C or C++. [[https://www.ics.com/blog/how-control-gpio-hardware-c-or-c][URL: ics.com]].
   * <<soren>> Soren (January 11, 2018). Making a LED blink using the Rasperry Pi
     and Python [blog]. [[https://raspberrypihq.com/making-a-led-blink-using-the-raspberry-pi-and-python/][URL: raspberrypihq.com]].
-  * <<sunfounder>> SunFounder (2021). Blinking LED [website]. [[https://docs.sunfounder.com/projects/raphael-kit/en/latest/1.1.1_blinking_led_c.html][URL:
-    docs.sunfounder.com]].
+  * <<sunfounder>> SunFounder (2021). Blinking LED [website]. [[https://docs.sunfounder.com/projects/raphael-kit/en/latest/1.1.1_blinking_led_c.html][URL: docs.sunfounder.com]].
 * Footnotes
 
 [fn:4]To find that out, you can use ~locate pinout~, which will find

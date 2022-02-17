@@ -78,15 +78,16 @@
    #+attr_html: :width 600px
    [[./img/gpiodir.png]]
 
-   The two entries in green are symbolic links that point at device
-   locations - ~soc~ is the "System On a Chip" that contains the CPU
-   and the graphic chip.
+   The two entries in green are so-called *symbolic links*[fn:3] that point
+   at device locations - ~soc~ is the "System On a Chip" that contains
+   the CPU and the graphic chip.
 
    Source: [[tranter1][Tranter (2019)]]
 
 ** Graphic layout
+
    To see a graphic layout, use the command ~pinout~. This is a a
-   Python tool that belongs to the [[https://gpiozero.readthedocs.io/en/stable/][GPIO Zero]] library.
+   Python tool that belongs to the [[https://gpiozero.readthedocs.io/en/stable/][GPIO Zero]] library[fn:4].
 
    #+caption: sysfs pseudo filesystem /sys/class/gpio
    #+attr_html: :width 600px
@@ -169,7 +170,6 @@
    WiFi dongle present (and powered - check with ~iwconfig
    -a~) but ~iwconfig~ shows no network activity, and ~ping~ is not
    working (website not recognized).
-
 ** Solution
    * Edit ~/etc/network/interfaces~ with the ~nano~ editor and put in
      the code block [[wlan]]. Put in the name (~ssid~) and WPA-~password~
@@ -325,6 +325,18 @@
   * <<sunfounder>> SunFounder (2021). Blinking LED [website]. [[https://docs.sunfounder.com/projects/raphael-kit/en/latest/1.1.1_blinking_led_c.html][URL:
     docs.sunfounder.com]].
 * Footnotes
+
+[fn:4]To find that out, you can use ~locate pinout~, which will find
+all uses of ~pinout~ across your file system. If you don't have this
+command, install it (with Internet connection only).
+
+[fn:3]Symbolic links are indicated in the directory listing (~ls -l~)
+with a leading letter ~l~. Using these symlinks, one can refer to the
+same program under multiple names. Imagine if everyone uses a program
+~foo~ symlinked to the version ~foo-2.6~. If the version changes, all
+you need to do is delete the symbolic link and relink it to the new
+version ~foo-2.7~. This also allows us to keep different versions of
+~foo~ on the computer.
 
 [fn:2] You need to set the LED up using a breadboard, a resistor, and
 jumper wires ([[https://raspberrypihq.com/making-a-led-blink-using-the-raspberry-pi-and-python/][see here]]).

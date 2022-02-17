@@ -742,6 +742,23 @@
    * [X] Know Raspberry Pi: history & hardware (part 1)
    * [X] Complete test 1 (online)
 
+** Raspberry Pi - hardware & history: hardware
+
+   * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
+
+   * Which other devices have an Arm processor?
+
+     #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+     #+attr_html: :width 500px
+     [[./img/piboard.png]]
+
+     #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
+     #+attr_html: :width 500px
+     [[./img/pimodels.png]]
+
+     * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
+
+     * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
 * Review of test 1 - w6s10 (02/15/22)
 ** News
 
@@ -873,6 +890,11 @@
 
    * [ ] Understand GPIOs and how to see and control them
 
+** What's next
+
+   * Catching up with DataCamp: back to the Linux command line tools
+
+* Shell tools - w7s12 (02/22/22)
 ** Manipulating files and directories
 
    * Files are organized in a hierarchical directory structure[fn:5]
@@ -886,7 +908,7 @@
        #+attr_html: :width 500px
        [[./img/tree.jpeg]]
 
-   * [ ] To see the tree visualized, install the package as super user:
+   * [X] To see the tree visualized, install the package as super user:
      #+begin_example
      $ sudo apt install tree
      $ tree
@@ -900,9 +922,9 @@
      use ~ls -la~ to get a long, complete listing. This is also the
      standard ~Dired~ setting in Emacs.
 
-   * [ ] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
+   * [X] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
 
-   * [ ] Which command would show the top directories of the OS?[fn:6]
+   * [X] Which command would show the top directories of the OS?[fn:6]
 
    * To create an empty file, use ~touch~
 
@@ -924,30 +946,8 @@
 
    Let's begin working inside the [[file:~/GitHub/admin/spring22/os420/bash.org][interactive notebook]]!
 
-** Raspberry Pi - hardware & history: hardware
-
-   * [[file:pi/README.org::Raspberry Pi History][Raspberry Pi history]]
-
-   * Which other devices have an Arm processor?
-
-     #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
-     #+attr_html: :width 500px
-     [[./img/piboard.png]]
-
-     #+caption: Raspberry Pi 4 Board (Source: raspberryptips.com)
-     #+attr_html: :width 500px
-     [[./img/pimodels.png]]
-
-     * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
-
-     * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
-
 ** TODO Combining shell tools
    DEADLINE: <2022-02-15 Tue>
-
-** What's next
-
-   * Test 1, Thursday 10 February 2022, 10:00-10:45
 
 * References
 

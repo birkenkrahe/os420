@@ -865,7 +865,17 @@
    * We go through all questions together
    * Everybody can contribute an answer
    * Write down questions and ask them now!
-     
+
+*** Feedback for some individual questions
+
+    * "What is Booting?" - The kernel program must be in memory before
+      the BIOS (Basic IO System), which is part of the kernel, can
+      run. Then, when I/O is established, information can flow between
+      memory (RAM), non-volatile memory (disk/card) and CPU. The
+      system daemon oversees these processes.
+
+    * 
+    
 ** This week
 
    * Test review

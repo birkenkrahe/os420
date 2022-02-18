@@ -764,7 +764,7 @@
 
    * *Eliminated* some DataCamp assignments (bash scripting) because
      otherwise we'll get too far out of step with the course content
-     
+
    * *Join us* for a talk by Matthew Stewart, Stone Ward (Fri 18 Feb
      3-3.50 PM) via Google Meet
 
@@ -796,12 +796,12 @@
      #+end_src
 
      #+RESULTS: test 1 results
-     : 
+     :
      : [1] 23
-     : 
+     :
      : [1] 2.314336
-     : 
-     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+     :
+     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
      :    8.67   12.16   13.02   13.37   14.87   17.08
 
    * Let's make some plots: histogram, boxplot and density plot. I'd
@@ -874,8 +874,55 @@
       memory (RAM), non-volatile memory (disk/card) and CPU. The
       system daemon oversees these processes.
 
-    * 
-    
+    * "Sort the OS timeline" - this is a question answered in the
+      agenda file. 1) The whole thing started with OS as libraries
+      without supporting programs - the support (e.g. for switching
+      jobs) was done by humans. 2) Mainframe OS are for large
+      computers - decades before the PC - and the introduction of a
+      system handler program replaced the human operators. 3)
+      Minicomputers are dedicated to specific jobs -
+      e.g. visualization, and graph generation, or number
+      crunching. These computers (which look like large PCs -
+      workstations) already have the modern interrupt-based OS
+      architecture. 4) PCs came up in the 1980s - Microsoft and Apple
+      introduced OS (DOS/Windows and AppleOS/MacOS) that sacrificed
+      security and relability (compared to UNIX) to convenience and
+      usability. 5) Since the mid 1990s, we are slowly returning to
+      the pre-PC world - the reintroduction of UNIX via Linux, but
+      also in Windows and MacOS itself. Of course, if you can, go
+      Linux all the way, why compromise?
+
+    * "Command line prompt" analyzed:
+      1) ~pi~ is the standard user on the Raspberry Pi, belongs to the
+         ~gpio~ group and can assume ~root~ rights with ~sudo~.
+
+      2) ~@~ is the at-sign separating the user from the hostname.
+
+      3) ~raspberrypi~ is the hostname (you can get it with the
+         command ~hostname~ or ~hostname -I~ for the internet
+         address), or the name of the host = your computer.
+
+      4) ~/ is the current directory. In this case ~$HOME~.
+
+      5) ~$~ is the prompt sign for regular users, after which you
+         enter commands on the command line. For the ~root~ user, this
+         prompt changes to ~#~.
+
+      6) Operating system definition:
+
+         #+begin_quote
+         The Operating System takes PHYSICAL resources (CPU, memory, disk),
+         and VIRTUALIZES them. It handles CONCURRENT processes, and it
+         stores files PERSISTENTLY to make them SAFE in the long term.
+         #+end_quote
+
+	 Focuses on the three core characteristics of a modern OS:
+         VIRTUALIZATION (i.e. the user does not see what's happening,
+         everything seems to be in one place), CONCURRENCY (the user
+         thinks processes run simultaneously, while actually the CPU
+         runs one job at a time), and PERSISTENT storage (referring to
+         mass-storage management).
+
 ** This week
 
    * Test review

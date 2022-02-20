@@ -67,6 +67,10 @@
    Purpose Input Output") pins, which can be designated as an input or
    output pin.
 
+   The GPIO pins allow the Raspberry Pi to control and monitor the
+   outside world by connecting to electronic circuits like LEDs,
+   motors, sensors etc.
+
 ** File system view
 
    In order to use the GPIO ports (software interfaces to the pins),

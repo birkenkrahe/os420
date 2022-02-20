@@ -647,7 +647,7 @@
    * Maximum time = 45 min
 
 ** Review: shell command structure
-
+   
    * The structure of all shell commands: [cmd] -[options] [arguments]
 
    * There must be > 1 space between all elements
@@ -756,9 +756,10 @@
      #+attr_html: :width 500px
      [[./img/pimodels.png]]
 
-     * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi]] (~cat /proc/cpuinfo~)
+     * [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][Identify your model of Raspberry Pi+]] (~cat /proc/cpuinfo~)
 
      * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
+
 * Review of test 1 - w6s10 (02/15/22)
 ** News
 

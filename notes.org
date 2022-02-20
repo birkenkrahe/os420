@@ -465,7 +465,7 @@
     
   * I could not find anything about the ~locate~ command not working
     on any of your Pis, model 3 or 4. If someone finds something, let
-    me know.
+    me know!
  
 * References
   * Computer History Museum (Sep 5, 2019). History of Databases

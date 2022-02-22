@@ -1108,21 +1108,7 @@
 
 ** Practice
 
-*** Building a playground
-
-*** Creating directories
-
-*** Copying files
-
-*** Moving and renaming files
-
-*** Creating hard links
-
-*** Creating symbolic links
-
-*** Removing files and directories
-
-*** Clean up
+   You can get the Org-mode file for practice ~manipulate.org~ from GitHub.
 
 ** Next topics
 

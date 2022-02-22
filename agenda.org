@@ -3,6 +3,8 @@
 #+SUBTITLE:Agenda OS420 Operating Systems CSC 420
 #+STARTUP:overview hideblocks
 #+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:bash :exports both
+#+PROPERTY: header-args:bash :results output
 * README
 
   This file contains the agenda overview (what I had planned), the
@@ -535,7 +537,7 @@
    * Linux uses an enhanced Bourne Shell, the Bourne-Again SHell
      ~bash~.
 
-   * [X] Look up the man page for ~bash~ with the command ~man bash~ [fn:3].
+   * [X] Look up the man page for ~bash~ with the command ~man bash~ [fn:1].
 
    * [X] To get out, press ~q~
 
@@ -647,7 +649,7 @@
    * Maximum time = 45 min
 
 ** Review: shell command structure
-   
+
    * The structure of all shell commands: [cmd] -[options] [arguments]
 
    * There must be > 1 space between all elements
@@ -671,7 +673,7 @@
    Complete the exercise on the command line (15 min):
 
    | Go to your ~$home~ directory, ~/home/pi~                      |
-   | Use ~wget~ to get ~sample.txt~ from ~os420~ in GitHub[fn:4]   |
+   | Use ~wget~ to get ~sample.txt~ from ~os420~ in GitHub[fn:2]   |
    | Display first line of ~sample.txt~                            |
    | Make a sub directory titled ~practice~ in ~$home~             |
    | Change directory to ~/home/pi/practice~                       |
@@ -712,7 +714,7 @@
    | ~/sbin~          | System binaries for system tasks (~sudo shutdown~)      |
    | ~/tmp~           | Holding bay for temp files, emptied at reboot           |
    | ~/usr~           | Programs and support files for regular users            |
-   | ~/usr/bin~       | Executable programs of the distro[fn:1] (e.g. ~cat~)          |
+   | ~/usr/bin~       | Executable programs of the distro[fn:3] (e.g. ~cat~)          |
    | ~/usr/lib~       | Shared libraries for ~/usr/bin~ programs                |
    | ~/usr/local~     | Programs not included in your distro                    |
    | ~/usr/sbin~      | More system administration programs                     |
@@ -917,7 +919,7 @@
          stores files PERSISTENTLY to make them SAFE in the long term.
          #+end_quote
 
-	 Focuses on the three core characteristics of a modern OS:
+         Focuses on the three core characteristics of a modern OS:
          VIRTUALIZATION (i.e. the user does not see what's happening,
          everything seems to be in one place), CONCURRENCY (the user
          thinks processes run simultaneously, while actually the CPU
@@ -952,10 +954,34 @@
 
    * Catching up with DataCamp: back to the Linux command line tools
 
-* Shell tools - w7s12 (02/22/22)
+* Manipulating files and directories - w7s12 (02/22/22)
+** Objectives
+
+   * Review shell commands in DataCamp so far
+   * Understand wildcards
+   * Understand file links
+   * Practice file and data manipulation
+
+** Warmup exercise: what's wrong with these commands?
+
+   Situation:
+   * ~agenda.org~ is this file
+   * the directory ~testdir~ exists in this directory (~./~)
+   * ~test3~ contains the file listing of this directory
+
+   Complication: none of these commands will run! Why?
+
+   #+begin_src bash :results silent
+     head n 3 agenda.org # print top three lines to stdout
+     rm ./testdir/   # remove test
+     grep -count "org" ./test3  # search test3 for "org"
+     cat ./testdir/  # view testdir
+     ls-la  # list long info of all files
+   #+end_src
+
 ** Manipulating files and directories
 
-   * Files are organized in a hierarchical directory structure[fn:5]
+   * Files are organized in a hierarchical directory structure[fn:4]
 
    * Imagine you stand somewhere inside an upside down tree:
      - the ~pwd~ command tells you were you are
@@ -982,11 +1008,11 @@
 
    * [X] Compare ~ls~, ~ls -l~, ~ls -la~, ~ls -lF~, and ~ls -laF~
 
-   * [X] Which command would show the top directories of the OS?[fn:6]
+   * [X] Which command would show the top directories of the OS?[fn:5]
 
    * To create an empty file, use ~touch~
 
-   * [ ] Create a file from the command line with ~touch~.
+   * [X] Create a file from the command line with ~touch~.
 
    * Filenames are character-sensitive.
 
@@ -998,38 +1024,112 @@
 
    * Hidden files (often for configuration like ~.emacs~) remain
      hidden unless you invoke the ~-a~ option of ~ls~
+** Shell commands so far (DataCamp course)
 
-** IN PROGRESS Manipulating data
-   DEADLINE: <2022-02-10 Thu>
+   | COMMAND | FUNCTION                    | OPTIONS        |
+   |---------+-----------------------------+----------------|
+   | cp      | copy file                   | -iruv          |
+   | mv      | move file                   | -iuv           |
+   | mkdir   | make directory              |                |
+   | rm      | remove files or directories | -irfv          |
+   | rmdir   | remove directory            |                |
+   | ln      | link                        | -s             |
+   |---------+-----------------------------+----------------|
+   | head    | show N first lines          | -n N           |
+   | tail    | show M last lines           | -n M           |
+   | less    | view file pagewise          |                |
+   | more    | view file pagewise          |                |
+   | cat     | view file                   |                |
+   | cut     | print COLS separated by SEP | -d SEP -f COLS |
+   | paste   | merge lines of files        | -d SEP         |
+   | grep    | search pattern              | -chilnv        |
+   | history | last commands entered       |                |
+   | man     | Unix man page               |                |
+   |---------+-----------------------------+----------------|
 
-   Let's begin working inside the [[file:~/GitHub/admin/spring22/os420/bash.org][interactive notebook]]!
+** Wildcards ("[[https://tldp.org/LDP/abs/html/globbingref.html][globbing]]")
 
-** TODO Combining shell tools
-   DEADLINE: <2022-02-15 Tue>
+   * ~bash(1)~ does not recognize regular expressions - there are
+     utilities like ~sed~ and ~awk~ that interpret them
 
-* Shell commands
+   * The commands below can be tested with the ~echo~ command or with ~ls~
 
-  | COMMAND | FUNCTION                    | OPTIONS        |
-  |---------+-----------------------------+----------------|
-  | cp      | copy file                   | -iruv          |
-  | mv      | move file                   | -iuv           |
-  | mkdir   | make directory              |                |
-  | rm      | remove files or directories | -irfv          |
-  | rmdir   | remove directory            |                |
-  | ln      | link                        | -s             |
-  |---------+-----------------------------+----------------|
-  | head    | show N first lines          | -n N           |
-  | tail    | show M last lines           | -n M           |
-  | less    | view file pagewise          |                |
-  | more    | view file pagewise          |                |
-  | cat     | view file                   |                |
-  | cut     | print COLS separated by SEP | -d SEP -f COLS |
-  | paste   | merge lines of files        | -d SEP         |
-  | grep    | search pattern              | -chilnv        |
-  | history | last commands entered       |                |
-  | man     | Unix man page               |                |
-  |---------+-----------------------------+----------------|
-  
+   * Wildcards use character sets and classes, like ~:digit:~ for
+     numerals, or ~:upper~/~:lower:~ for uppercase/lowercase letters
+
+   | WILDCARD          | MEANING                           | Example                  |
+   |-------------------+-----------------------------------+--------------------------|
+   | ~*~               | Matches any characters            | ~*.org~                  |
+   | ~?~               | Matches any single character      | ~?????.org~              |
+   | ~[char]~          | Match any character in [char]     | ~[ba]*.*~                |
+   |                   |                                   | ~ls FILE[0-9][0-9][0-9]~ |
+   | ~[!char]~         | Match any character not in [char] | ~[~[!ba]*.*~             |
+   | ~\[\[:class:\]\]~ | Match any character in class      | ~\[\[:upper:\]\]*.org~   |
+   |                   |                                   | ~\[\[:!digit:\]\]*~      |
+
+   * Wildcards can be used with any commands that accepts file name
+     arguments
+
+   * Powerful in connection with pattern search cmds like ~grep~
+
+   * Many wildcards have found their way into graphical user interfaces, too[fn:6]
+
+   * The SQL injection hack is based on wildcards - the openess of
+     Linux can be detrimental if system administrators are too lax
+
+** Links
+
+   * The ~ln~ command creates hard or symbolic (soft) links (symlinks)
+
+     #+begin_example
+     ln file link  # create hard link from file
+     ln -s item link # create soft link from item
+     #+end_example
+
+*** Hard links
+
+    * A hard link creates an additional directory entry for a file
+
+    * A hard link cannot leave its (physical) file system
+
+    * A hard link is indistinguishable from the file itself
+
+*** Soft (sym) links
+
+    * A symlink contains a text pointer to the reference file or directory
+
+    * Operates like a Windows OS shortcut
+
+    * If you write to the symbolic link of a file, the file is written to
+
+    * When you delete the link, the file is untouched
+
+    * If the file is deleted first, the link is said to be broken
+
+** Practice
+
+*** Building a playground
+
+*** Creating directories
+
+*** Copying files
+
+*** Moving and renaming files
+
+*** Creating hard links
+
+*** Creating symbolic links
+
+*** Removing files and directories
+
+*** Clean up
+
+** Next topics
+
+   * Redirection
+   * Permissions
+   * Processes
+
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
@@ -1040,27 +1140,30 @@
 
 * Footnotes
 
-[fn:1]A "distro" is a Linux distribution, like Ubuntu or Raspbian, or
+[fn:6]I have not tried this but I would have thought that the Google
+search bar permits use of wildcards.
+
+[fn:5]Answer: ~ls /~ lists the root directory, because ~/~ is root's
+home. The particular ordering and naming of these directories is up to
+the Linux OS file administrator, but there are certain style rules
+that are usually obeyed by every professional.
+
+[fn:4]Windows likes to call directories 'folders' - another
+unnecessary dumbing down. A folder is just a container, but a
+directory (like the "telephone directory") has a data structure, an
+index, labels, and serves to search and find. Don't say "folder".
+
+[fn:3]A "distro" is a Linux distribution, like Ubuntu or Raspbian, or
 Kali. Distro design and distro news bind a lot of fanboy energy, see
 e.g. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/]["Best desktop Linux for pros 2022"]] ([[distro][Vaughan-Nichols, 2022]]).
 
-[fn:4]An alternative (that takes much longer, because many files have
+[fn:2]An alternative (that takes much longer, because many files have
 to be downloaded, and the Pi 3B+ isn't the strongest networker) is to
 clone the entire ~os420~ repository with the command:
 #+begin_example
   $ git clone https://github.com/birkenkrahe/os420
 #+end_example
 
-[fn:6]Answer: ~ls /~ lists the root directory, because ~/~ is root's
-home. The particular ordering and naming of these directories is up to
-the Linux OS file administrator, but there are certain style rules
-that are usually obeyed by every professional.
-
-[fn:5]Windows likes to call directories 'folders' - another
-unnecessary dumbing down. A folder is just a container, but a
-directory (like the "telephone directory") has a data structure, an
-index, labels, and serves to search and find. Don't say "folder".
-
-[fn:3]Unix manual pages are formatted with ~troff~, the Unix
+[fn:1]Unix manual pages are formatted with ~troff~, the Unix
 "typsetter roff", a document processing system. "roff" stands for
 "I'll run off a document".

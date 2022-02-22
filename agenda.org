@@ -1086,13 +1086,34 @@
      ln -s item link # create soft link from item
      #+end_example
 
-*** Hard links
+*** Hard links and ~inode~
 
     * A hard link creates an additional directory entry for a file
 
     * A hard link cannot leave its (physical) file system
 
     * A hard link is indistinguishable from the file itself
+
+    * A file is made up of a *name* part and of a *content* part: when
+      creating hard links, the system assigns a chain of disk blocks
+      to an ~inode~, a unique number in the file system that you can
+      see with the listing command ~ls -i~
+
+      #+name: inode
+      #+begin_src bash
+	ls -i *.org
+      #+end_src
+
+      #+RESULTS:
+      : 388132 agenda.org
+      : 389984 bash.org
+      : 388137 bookmarks.org
+      : 388142 diary.org
+      : 388130 FAQ.org
+      : 388201 notes.org
+      : 388131 README.org
+      : 388219 schedule.org
+      : 388220 syllabus.org
 
 *** Soft (sym) links
 
@@ -1108,7 +1129,7 @@
 
 ** Practice
 
-   You can get the Org-mode file for practice ~manipulate.org~ from GitHub.
+   You can get the Org-mode file for practice [[https://github.com/birkenkrahe/os420/blob/main/practice/manipulate.org][~manipulate.org~ from GitHub]].
 
 ** Next topics
 

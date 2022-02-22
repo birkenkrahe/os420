@@ -12,27 +12,103 @@
 ** Building a playground
 
    * Change to your ~$HOME~ directory
-   * Check that ~$HOME~ is your working directory
-   * Create a directory ~playground~
+   * Print your working directory
+   * Make a directory ~playground~
+   * Switch on the verbose option
    * Check that it worked using the wildcard ~play*~
 
 ** Creating directories
 
-   * Change directory to ~playground~
-
-   #+name: make_dirs
+   * Change directory to ~playground~[fn:1]
+   * Print your working directory
+   * Make two directories ~dir1~ and ~dir2~
+   * Switch on the verbose option
+   * Check that it worked using the wildcard ~*[0-9]~
 
 ** Copying files
 
+   * Copy ~/etc/passwd~ into the current working directory
+   * Switch on the verbose option
+   * Check that it worked using the wildcard ~pass??~
+
+   -----
+
+   * Copy ~/etc/passwd~ again, with the verbose and interactive option
+   * If you reply ~y~, the file will be overwritten[fn:2]
+   * If you reply ~n~, nothing happens
+   * List the file with a timestamp to check
+   * Use the wildcard class ~pa[[ :lower: ]]~ (without whitespace)
+
 ** Moving and renaming files
+
+   * Change the name of ~passwd~ to ~fun~
+   * Switch on the verbose option
+   * Check that it worked with the wildcard ~*fun*~
+
+   -----
+
+   * Move the renamed file ~fun~ to directory ~dir1~
+   * Check that it worked with ~ls -l~
+   * Move ~fun~ from ~dir1 to ~dir2~ in one command
+   * Check that it worked with ~ls -l~
+   * Move ~fun~ back to the current working directory
+   * Check that it worked with ~ls -l~
+
+   -----
+
+   * Move file ~fun~ into ~dir1~ again
+   * Move directory ~dir1~ into ~dir2~
+   * Confirm that the file is there with ~ls -l~
+
+   -----
+
+   * Note that ~dir1~ was moved into ~dir2~ because it existed
+   * If it had not existed, ~dir1~ would have been renamed ~dir2~
+
+   * Put everthing back and confirm at the end with ~ls -l~
 
 ** Creating hard links
 
+   * Create a hard link ~fun-hard~ to ~fun~ in ~./~
+   * Create a hard link ~fun-hard~ to ~fun~ in ~dir1~
+   * Create a hard link ~fun-hard~ to ~fun~ in ~dir2~
+   * Switch on the verbose option for ~ln~
+   * Confirm with ~ls -l ./~ and with ~ls -l dir*~
+
+   -----
+
+   * The number ~4~ in the listing is the number of hard links that
+     exist for the file (including the default link)
+
+   * Show that ~fun~ and ~fun-hard~ are indeed the same files
+
 ** Creating symbolic links
+
+   * Create a symlink ~fun-sym~ to ~fun~ in ~./~
+   * Create a symlink ~fun-sym~ to ~fun~ in ~dir1~
+   * Create a symlink ~fun-sym~ to ~fun~ in ~dir2~
+   * Switch on the verbose option for ~ln~
+   * Confirm with ~ls -l ./~ and with ~ls -l dir*~
+
+   -----
+
+   * Create a symlink ~dir1-sym~ to ~dir1~ in ~./~
 
 ** Removing files and directories
 
-** Clean up
+   * Remove the hard link ~fun-hard~ in ~./~
+   * Confirm with ~ls -l~
+
+   * Remove ~fun~ and switch on verbose and interactive options
+   * Confirm with ~ls -l~
+
+   * Check that ~fun-sym~ is broken with ~less~
+
+   * Remove the symbolic links
+   * Confirm with ~ls -l~
+
+   * Remove the playground
+
 ** Command summary
 
    | COMMAND | MEANING |
@@ -41,3 +117,17 @@
    | pwd     |         |
    | mkdir   |         |
    | echo    |         |
+   | mv -v   |         |
+   | rm -vr  |         |
+   | ln -vs  |         |
+   | ls -l   |         |
+
+* Footnotes
+
+[fn:2]In Org-mode, you need to use the ~:cmdline~ header argument and
+redirect the input, in this case from a file ~y.txt~ that only
+contains the character ~y~.
+
+[fn:1]If you work with code blocks inside Emacs, you may have to
+resort to absolute filenames to make sure that you are where you want
+to be.

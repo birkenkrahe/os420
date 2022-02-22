@@ -1024,6 +1024,7 @@
 
    * Hidden files (often for configuration like ~.emacs~) remain
      hidden unless you invoke the ~-a~ option of ~ls~
+
 ** Shell commands so far (DataCamp course)
 
    | COMMAND | FUNCTION                    | OPTIONS        |

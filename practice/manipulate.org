@@ -16,18 +16,6 @@
    * Create a directory ~playground~
    * Check that it worked using the wildcard ~play*~
 
-   #+name: make_playground
-   #+begin_src bash
-     cd $HOME
-     pwd
-     mkdir playground
-     echo play*
-   #+end_src
-
-   #+RESULTS: playground
-   : /home/pi
-   : playground
-
 ** Creating directories
 
    * Change directory to ~playground~

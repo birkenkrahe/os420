@@ -460,13 +460,15 @@
 
   * The ~gpio~ "Oops - unable to determine board type ... model NN"
     issue is known and [[https://raspberrypi.stackexchange.com/questions/119541/gpio-not-working-on-raspberry-pi-4-4gb][here is a fix]]: you need to get the latest from
-    GitHub and build it. I'm going to try it this afternoon on one of
-    the Pi400's.
+    GitHub and build it.
+
+  * Here is information about a [[https://pi4j.com/1.4/pins/rpi-400.html][Java I/O library, P4J]], to access the
+    PIN numbering on the Raspberry Pi 400.
     
   * I could not find anything about the ~locate~ command not working
     on any of your Pis, model 3 or 4. If someone finds something, let
     me know!
- 
+
 * References
   * Computer History Museum (Sep 5, 2019). History of Databases
     [video]. [[https://youtu.be/KG-mqHoXOXY][URL: youtu.be/KG-mqHoXOXY]].

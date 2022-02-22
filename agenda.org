@@ -1007,6 +1007,29 @@
 ** TODO Combining shell tools
    DEADLINE: <2022-02-15 Tue>
 
+* Shell commands
+
+  | COMMAND | FUNCTION                    | OPTIONS        |
+  |---------+-----------------------------+----------------|
+  | cp      | copy file                   |                |
+  | mv      | move file                   |                |
+  | mkdir   | make directory              |                |
+  | rm      | remove files or directories | -rf            |
+  | rmdir   | remove directory            |                |
+  | ln      | link                        | -s             |
+  |---------+-----------------------------+----------------|
+  | head    | show N first lines          | -n N           |
+  | tail    | show M last lines           | -n M           |
+  | less    | view file pagewise          |                |
+  | more    | view file pagewise          |                |
+  | cat     | view file                   |                |
+  | cut     | print COLS separated by SEP | -d SEP -f COLS |
+  | paste   | merge lines of files        | -d SEP         |
+  | grep    | search pattern              | -chilnv        |
+  | history | last commands entered       |                |
+  | man     | Unix man page               |                |
+  |---------+-----------------------------+----------------|
+  
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi

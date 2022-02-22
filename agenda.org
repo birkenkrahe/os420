@@ -1011,10 +1011,10 @@
 
   | COMMAND | FUNCTION                    | OPTIONS        |
   |---------+-----------------------------+----------------|
-  | cp      | copy file                   |                |
-  | mv      | move file                   |                |
+  | cp      | copy file                   | -iruv          |
+  | mv      | move file                   | -iuv           |
   | mkdir   | make directory              |                |
-  | rm      | remove files or directories | -rf            |
+  | rm      | remove files or directories | -irfv          |
   | rmdir   | remove directory            |                |
   | ln      | link                        | -s             |
   |---------+-----------------------------+----------------|

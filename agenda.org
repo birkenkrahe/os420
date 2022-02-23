@@ -954,13 +954,13 @@
 
    * Catching up with DataCamp: back to the Linux command line tools
 
-* Manipulating files and directories - w7s12 (02/22/22)
+* Manipulating files 1 - w7s12 (02/22/22)
 ** Objectives
 
-   * Review shell commands in DataCamp so far
-   * Understand wildcards
-   * Understand file links
-   * Practice file and data manipulation
+   * [X] Review shell commands in DataCamp so far
+   * [X] Understand wildcards
+   * [X] Understand file links
+   * [X] Practice file and data manipulation
 
 ** Warmup exercise: what's wrong with these commands?
 
@@ -1044,8 +1044,11 @@
    | cut     | print COLS separated by SEP | -d SEP -f COLS |
    | paste   | merge lines of files        | -d SEP         |
    | grep    | search pattern              | -chilnv        |
-   | history | last commands entered       |                |
-   | man     | Unix man page               |                |
+   | wc      | word count                  | -cwl           |
+   | sort    | sort row data               | -nrbf          |
+   |---------+-----------------------------+----------------|
+   | history | last commands entered (!)   |                |
+   | man     | Unix man page (sect. 1-8)   |                |
    |---------+-----------------------------+----------------|
 
 ** Wildcards ("[[https://tldp.org/LDP/abs/html/globbingref.html][globbing]]")
@@ -1064,9 +1067,9 @@
    | ~?~               | Matches any single character      | ~?????.org~              |
    | ~[char]~          | Match any character in [char]     | ~[ba]*.*~                |
    |                   |                                   | ~ls FILE[0-9][0-9][0-9]~ |
-   | ~[!char]~         | Match any character not in [char] | ~[~[!ba]*.*~             |
-   | ~\[\[:class:\]\]~ | Match any character in class      | ~\[\[:upper:\]\]*.org~   |
-   |                   |                                   | ~\[\[:!digit:\]\]*~      |
+   | ~[!char]~         | Match any character not in [char] | ~[!ba]*.*~               |
+   | ~[[:class:]]~     | Match any character in class      | ~[[:upper:]]*.org~       |
+   |                   |                                   | ~[[:!digit:]]*~          |
 
    * Wildcards can be used with any commands that accepts file name
      arguments
@@ -1138,6 +1141,26 @@
    * Permissions
    * Processes
 
+* Manipulating files 2, getting more help - w7s12 (02/24/22)
+
+   * [X] Practice file and data manipulation
+   * [ ] Getting (more) help
+
+* TODO Warming up - be the shell!
+* NEXT Getting more help
+
+  | COMMAND   | MEANING |
+  |-----------+---------|
+  | ~type~    |         |
+  | ~which~   |         |
+  | ~help~    |         |
+  | ~man~     |         |
+  | ~apropos~ |         |
+  | ~info~    |         |
+  | ~whatis~  |         |
+  | ~alias~   |         |
+
+  
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
@@ -1175,3 +1198,7 @@ clone the entire ~os420~ repository with the command:
 [fn:1]Unix manual pages are formatted with ~troff~, the Unix
 "typsetter roff", a document processing system. "roff" stands for
 "I'll run off a document".
+
+
+
+

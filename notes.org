@@ -469,6 +469,18 @@
     on any of your Pis, model 3 or 4. If someone finds something, let
     me know!
 
+* Manipulating files and directories - w7s12 (02/22/22)
+
+  * I was whining about not being able to display double square
+    brackets in Emacs Org-mode because they are displayed as links
+    (and the brackets disappear). The solution is extra simple:
+    ~M-x org-toggle-link-display~.
+
+  * I talked a little about SQL injection: here is the YouTube video
+    "[[https://youtu.be/ciNHn38EyRc][Running an SQL Injection Attack]]" (again - I had already mentioned
+    it a few wweks back). It's been a while since I've seen it and by
+    now it's become a classic, it seems ([[inject][Computerphile, 2016]])
+
 * References
   * Computer History Museum (Sep 5, 2019). History of Databases
     [video]. [[https://youtu.be/KG-mqHoXOXY][URL: youtu.be/KG-mqHoXOXY]].

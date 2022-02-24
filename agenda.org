@@ -1165,10 +1165,7 @@
    | ???                    |         |         |
    | wc -l                  |         |         |
 
-*** Examples
-
-    On Windoze these work only because I have the CYGWIN bundle
-    installed, which comes with man of the most important functions.
+*** Examples (Raspbian only)
 
     #+begin_src bash
       echo "to be or not to be" > text
@@ -1186,7 +1183,7 @@
     #+RESULTS:
     : 6
 
-** TODO Getting more help
+** TODO Getting more helpg
 
    | COMMAND   | MEANING |
    |-----------+---------|

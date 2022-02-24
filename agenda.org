@@ -1046,6 +1046,7 @@
    | grep    | search pattern              | -chilnv        |
    | wc      | word count                  | -cwl           |
    | sort    | sort row data               | -nrbf          |
+   | uniq    | remove adjacent duplicates  | -c             |
    |---------+-----------------------------+----------------|
    | history | last commands entered (!)   |                |
    | man     | Unix man page (sect. 1-8)   |                |
@@ -1105,7 +1106,7 @@
 
       #+name: inode
       #+begin_src bash
-	ls -i *.org
+        ls -i *.org
       #+end_src
 
       #+RESULTS:
@@ -1143,31 +1144,63 @@
 
 * Manipulating files, getting (more) help - w7s12 (02/24/22)
 
-   * [X] Practice file and data manipulation
-   * [ ] Getting (more) help
+  * [X] Practice file and data manipulation
+  * [ ] Getting (more) help
 
-* TODO Warming up - "N'est pas une pipe"
+** TODO Warming up - "N'est pas une pipe"
 
-  #+caption: Magritte's "The Treachery of Images" (1928) 
-  #+attr_html: :width 400px
-  [[./img/pipe.jpg]]
+   #+caption: Magritte's "The Treachery of Images" (1928)
+   #+attr_html: :width 400px
+   [[./img/pipe.jpg]]
+
+   After completing the last DataCamp assignment, I got my wires
+   crossed somehow. Can you define these terms and give examples?
+
+   | TERM                   | MEANING | EXAMPLE |
+   |------------------------+---------+---------|
+   | grep -v [expr]         |         |         |
+   | :digits:               |         |         |
+   | pipeline operator      |         |         |
+   | redirection operator > |         |         |
+   | ???                    |         |         |
+   | wc -l                  |         |         |
+
+*** Examples
+
+    On Windoze these work only because I have the CYGWIN bundle
+    installed, which comes with man of the most important functions.
+
+    #+begin_src bash
+      echo "to be or not to be" > text
+      cat text
+      echo "
+    #+end_src
+
+    #+RESULTS:
 
 
+    #+begin_src bash
+      echo "to be or not to be" | wc -w
+    #+end_src
 
-* NEXT Getting more help
+    #+RESULTS:
+    : 6
 
-  | COMMAND   | MEANING |
-  |-----------+---------|
-  | ~type~    |         |
-  | ~which~   |         |
-  | ~help~    |         |
-  | ~man~     |         |
-  | ~apropos~ |         |
-  | ~info~    |         |
-  | ~whatis~  |         |
-  | ~alias~   |         |
+** TODO Getting more help
 
-  
+   | COMMAND   | MEANING |
+   |-----------+---------|
+   | ~type~    |         |
+   | ~which~   |         |
+   | ~help~    |         |
+   | ~man~     |         |
+   | ~apropos~ |         |
+   | ~info~    |         |
+   | ~whatis~  |         |
+   | ~alias~   |         |
+
+** TODO Next
+
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
@@ -1207,7 +1240,3 @@ clone the entire ~os420~ repository with the command:
 [fn:1]Unix manual pages are formatted with ~troff~, the Unix
 "typsetter roff", a document processing system. "roff" stands for
 "I'll run off a document".
-
-
-
-

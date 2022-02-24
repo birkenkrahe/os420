@@ -1166,22 +1166,26 @@
    | wc -l                  |         |         |
 
 *** Examples (Raspbian only)
+**** Redirection
 
-    #+begin_src bash
-      echo "to be or not to be" > text
-      cat text
-      echo "
-    #+end_src
+     * A string and a number are redirected from ~stdout~ to a file
+       #+name: redirection
+       #+begin_src bash
+         echo "to be or not to be" > text1
+         cat text1
 
-    #+RESULTS:
+       #+end_src
 
+       #+RESULTS: redirection
+       : to be or not to be
 
-    #+begin_src bash
-      echo "to be or not to be" | wc -w
-    #+end_src
-
-    #+RESULTS:
-    : 6
+     * In the C code block, the number 100 is first redirected to the
+       file ~input~, then it is used by Org-mode as a value to print
+       out to ~stdout~.
+       #+name: cmdline
+       #+begin_src C :cmdline < input :main yes :include <stdio.h>
+         
+       #+end_src
 
 ** TODO Getting more helpg
 

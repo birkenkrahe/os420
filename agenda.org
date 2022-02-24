@@ -954,7 +954,7 @@
 
    * Catching up with DataCamp: back to the Linux command line tools
 
-* Manipulating files 1 - w7s12 (02/22/22)
+* Wildcards and Links - w7s12 (02/22/22)
 ** Objectives
 
    * [X] Review shell commands in DataCamp so far
@@ -1061,15 +1061,15 @@
    * Wildcards use character sets and classes, like ~:digit:~ for
      numerals, or ~:upper~/~:lower:~ for uppercase/lowercase letters
 
-   | WILDCARD          | MEANING                           | Example                  |
-   |-------------------+-----------------------------------+--------------------------|
-   | ~*~               | Matches any characters            | ~*.org~                  |
-   | ~?~               | Matches any single character      | ~?????.org~              |
-   | ~[char]~          | Match any character in [char]     | ~[ba]*.*~                |
-   |                   |                                   | ~ls FILE[0-9][0-9][0-9]~ |
-   | ~[!char]~         | Match any character not in [char] | ~[!ba]*.*~               |
-   | ~[[:class:]]~     | Match any character in class      | ~[[:upper:]]*.org~       |
-   |                   |                                   | ~[[:!digit:]]*~          |
+   | WILDCARD      | MEANING                           | Example                  |
+   |---------------+-----------------------------------+--------------------------|
+   | ~*~           | Matches any characters            | ~*.org~                  |
+   | ~?~           | Matches any single character      | ~?????.org~              |
+   | ~[char]~      | Match any character in [char]     | ~[ba]*.*~                |
+   |               |                                   | ~ls FILE[0-9][0-9][0-9]~ |
+   | ~[!char]~     | Match any character not in [char] | ~[!ba]*.*~               |
+   | ~[[:class:]]~ | Match any character in class      | ~[[:upper:]]*.org~       |
+   |               |                                   | ~[[:!digit:]]*~          |
 
    * Wildcards can be used with any commands that accepts file name
      arguments
@@ -1141,12 +1141,19 @@
    * Permissions
    * Processes
 
-* Manipulating files 2, getting more help - w7s12 (02/24/22)
+* Manipulating files, getting (more) help - w7s12 (02/24/22)
 
    * [X] Practice file and data manipulation
    * [ ] Getting (more) help
 
-* TODO Warming up - be the shell!
+* TODO Warming up - "N'est pas une pipe"
+
+  #+caption: Magritte's "The Treachery of Images" (1928) 
+  #+attr_html: :width 400px
+  [[./img/pipe.jpg]]
+
+
+
 * NEXT Getting more help
 
   | COMMAND   | MEANING |
@@ -1168,6 +1175,8 @@
   * Shotts (2019). The Linux Command Line (2e). NoStarch Press.
   * Vaughan-Nichols (9 Feb 2022). Best desktop Linux for pros 2022:
     Our top 5 choices [blog]. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/][URL: www.zdnet.com.]]
+  * Wikipedia (25 Dec 2021). The Treachery of Images [website]. [[https://en.wikipedia.org/wiki/The_Treachery_of_Images][URL:
+    wikipedia.org]].
 
 * Footnotes
 

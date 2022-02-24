@@ -469,7 +469,7 @@
     on any of your Pis, model 3 or 4. If someone finds something, let
     me know!
 
-* Manipulating files and directories - w7s12 (02/22/22)
+* Wildcards and links - w7s12 (02/22/22)
 
   * I was whining about not being able to display double square
     brackets in Emacs Org-mode because they are displayed as links

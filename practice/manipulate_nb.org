@@ -5,11 +5,19 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 #+PROPERTY: header-args:bash :exports both
 #+PROPERTY: header-args:bash :results output
-* Practice
+* README
 
-  * [ ] Get this file with ~wget https://
+  * [ ] Get this file with ~wget~[fn:3]
+    #+begin_example
+    wget -O manipulate_nb.org https://tinyurl.com/03012022
+    #+end_example
   * [ ] You can ALSO get this Org-mode file for practice [[https://github.com/birkenkrahe/os420/tree/main/practice][from GitHub]].
-  * [ ] Since you're on Linux, setup and using the notebook is easy.
+  * [ ] Or you can get it from the [[https://lyon.schoology.com/course/5516220833/materials?f=572699678][Notebooks folder in Schoology]].
+  * [ ] Since you're on Linux, setup and using the notebook is easy:
+    - Run code blocks with ~C-c C-c~
+    - Add additional code blocks as you please
+    - ~bash~ in the header of the code block automatically finds
+      ~/usr/bin/bash~
 
 ** Building a playground
 
@@ -325,6 +333,10 @@
    | ls -l   |         |
 
 * Footnotes
+
+[fn:3]Unfortunately, this command downloads a HTML file. I have not
+been able to find out (yet) how to tweak ~wget~ to download the Org
+file. Perhaps one of you want to give it a try!?
 
 [fn:2]In Org-mode, you need to use the ~:cmdline~ header argument and
 redirect the input, in this case from a file ~y.txt~ that only

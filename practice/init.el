@@ -21,6 +21,7 @@
 
 ;; remove menu bar - to bring it back: M-x menu-bar-mode (toggles)
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ;; re-indenting of whole buffer according to mode
 (defun iwb ()

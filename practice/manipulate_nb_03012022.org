@@ -29,7 +29,9 @@
   #+name: mkdir_playground
   #+begin_src bash
     cd $HOME
-
+    pwd
+    mkdir -v playground
+    echo "found:" play*
   #+end_src
 
 * Creating directories
@@ -45,7 +47,9 @@
   #+name: make_dirs
   #+begin_src bash
     cd ~/playground
-
+    pwd
+    mkdir -v dir1 dir2
+    echo "found:" *[0-9]
   #+end_src
 
 * Copying files
@@ -58,7 +62,8 @@
   #+name: copy_file
   #+begin_src bash
     cd ~/playground
-
+    cp -v /etc/passwd .
+    echo "found:" pass??
   #+end_src
 
 * Moving and renaming files
@@ -71,7 +76,8 @@
   #+name: move_file
   #+begin_src bash
     cd ~/playground
-
+    mv -v passwd fun
+    echo "found:" *fun*
   #+end_src
 
   * Move the renamed file ~fun~ to directory ~dir1~
@@ -85,7 +91,12 @@
   #+name: move_file_to_dir
   #+begin_src bash
     cd ~/playground
-
+    mv -v fun dir1
+    ls -l dir1
+    mv -v dir1/fun dir2
+    ls -l dir2
+    mv -v dir2/fun .
+    ls -l .
   #+end_src
 
   * Move file ~fun~ into ~dir1~ again
@@ -96,7 +107,9 @@
   #+name: move_dir_to_dir
   #+begin_src bash
     cd ~/playground
-
+    mv -v fun dir1
+    mv -v dir1 dir2
+    ls -l dir2/dir1
   #+end_src
 
   * Note that ~dir1~ was moved into ~dir2~ because it existed
@@ -107,7 +120,9 @@
   #+name: move_back
   #+begin_src bash
     cd ~/playground
-
+    mv -v dir2/dir1 .
+    mv -v dir1/fun .
+    ls -l ~/playground
   #+end_src
 
 * Creating hard links
@@ -122,7 +137,11 @@
   #+name: hard
   #+begin_src bash
     cd ~/playground
-
+    ln -v fun fun-hard
+    ln -v fun dir1/fun-hard
+    ln -v fun dir2/fun-hard
+    ls -l .
+    ls -l dir*
   #+end_src
 
   * The number ~4~ in the listing is the number of hard links that
@@ -133,7 +152,7 @@
   #+name: inode
   #+begin_src bash
     cd ~/playground
-
+    ls -li fun*
   #+end_src
 
 * Creating symbolic links
@@ -148,7 +167,11 @@
   #+name: soft
   #+begin_src bash
     cd ~/playground
-
+    ln -vs fun fun-sym
+    ln -vs fun dir1/fun-sym
+    ln -vs fun dir2/fun-sym
+    ls -l .
+    ls -l dir*
   #+end_src
 
   * Create a symlink ~dir1-sym~ to ~dir1~ in ~./~
@@ -157,10 +180,9 @@
   #+name: soft_dir
   #+begin_src bash
     cd ~/playground
-
+    ln -vs dir1 dir1-sym
+    ls -l ./dir1*
   #+end_src
-
-  #+RESULTS: soft_dir
 
 * Removing files and directories
 

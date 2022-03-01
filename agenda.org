@@ -1142,12 +1142,16 @@
    * Permissions
    * Processes
 
-* Manipulating files, getting (more) help - w7s12 (02/24/22)
+* Manipulating files, getting (more) help - w8s13 (03/01/22)
 
-  * [X] Practice file and data manipulation
+  * [ ] Review: quiz 4-5 (comment/complain/challenge)
+  * [ ] Review: warming up exercise "N'est pas une pipe"
+  * [ ] Lecture: standard streams
+  * [ ] Practice: getting started with interactive notebooks
+  * [ ] Practice file and data manipulation 2
   * [ ] Getting (more) help
 
-** TODO Warming up - "N'est pas une pipe"
+** Warming up - "N'est pas une pipe"
 
    #+caption: Magritte's "The Treachery of Images" (1928)
    #+attr_html: :width 400px
@@ -1166,28 +1170,75 @@
    | wc -l                  |         |         |
 
 *** Examples (Raspbian only)
-**** Redirection
 
-     * A string and a number are redirected from ~stdout~ to a file
-       #+name: redirection
-       #+begin_src bash
-         echo "to be or not to be" > text1
-         cat text1
+** Standard streams
 
-       #+end_src
+   * Every Unix tool does only one thing really well
 
-       #+RESULTS: redirection
-       : to be or not to be
+   * E.g. ~grep~ filters, ~sort~ sorts, ~wc~ counts lines
 
-     * In the C code block, the number 100 is first redirected to the
-       file ~input~, then it is used by Org-mode as a value to print
-       out to ~stdout~.
-       #+name: cmdline
-       #+begin_src C :cmdline < input :main yes :include <stdio.h>
-         
-       #+end_src
+   * Power = OS manages tool communication streams
 
-** TODO Getting more helpg
+   * There are three such streams: ~stdin~, ~stdout~, ~stderr~
+
+   #+caption: stdin, stdout, stderr streams (Source: Janssens)
+   #+attr_html: :width 600px
+   [[./img/streams.png]]
+
+   * ~stdout~ and ~stderr~ are by default redirected to terminal
+
+   * E.g. ~rev~ will wait until it gets ~stdin~ (end with ~C-c C-c~
+
+   #+caption: rev reverses stdin to stdout characters
+   #+attr_html: :width 400px
+   [[./img/rev.png]]
+
+   * One command's ~stdout~ can become another command's ~stdin~
+
+   #+caption: pipe with curl and grep (Source: Janssens)
+   #+attr_html: :width 600px
+   [[./img/pipe.png]]
+   
+   * E.g. download the book "Alice's Adventures in Wonderland" by
+     Lewis Carroll and pipe it to ~grep~ for a pattern search:
+     #+begin_example
+     curl -s "https://www.gutenberg.org/files/11/11-0.txt" | grep " CHAPTER"
+     #+end_example
+
+   #+caption: piping example with curl and grep
+   #+attr_html: :width 500px
+   [[./img/alice.png]]
+     
+   * And if we want to know how many chapters there are, apply ~wc -l~
+
+   * Output redirection works with the ~>~ operator[fn:7]: you can
+     e.g. pipe the chapter list into a file.
+     #+begin_example
+     chap > chapterlist
+     #+end_example
+
+   * This presumes that you defined an alias ~chap='[cmd]'~. Try it!
+     
+   * You can also append output to a file with ~>>~
+
+   * If you want to pass a file through a command without running an
+     additional process, use ~<~. These two commands do the same
+     thing:
+     #+begin_example
+     cat sample.txt | wc -w
+     < sample.txt wc -w
+     #+end_example
+
+   * We'll deal with more complicated examples in another session!
+   
+** Next
+
+   * Redirection
+   * Permissions
+   * Processes
+
+* w8s14
+** Getting more help
 
    | COMMAND   | MEANING |
    |-----------+---------|
@@ -1199,13 +1250,12 @@
    | ~info~    |         |
    | ~whatis~  |         |
    | ~alias~   |         |
-
-** TODO Next
-
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
     [blog]. [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][URL: community.element14.com]].
+  * Janssens (2021. Data Science at the Command Line
+    (2e). O'Reilly. [[https://datascienceatthecommandline.com/][URL: datascienceatthecommandline.com]].
   * Shotts (2019). The Linux Command Line (2e). NoStarch Press.
   * Vaughan-Nichols (9 Feb 2022). Best desktop Linux for pros 2022:
     Our top 5 choices [blog]. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/][URL: www.zdnet.com.]]
@@ -1213,6 +1263,17 @@
     wikipedia.org]].
 
 * Footnotes
+
+[fn:7]In the language R, both of these are combined as ~|>~ because
+they really are the same thing:
+#+begin_src R :exports both :session :results output
+  mtcars |> head(1)
+#+end_src
+Output:
+#+begin_example
+:           mpg cyl disp  hp drat   wt  qsec vs am gear carb
+: Mazda RX4  21   6  160 110  3.9 2.62 16.46  0  1    4    4
+#+end_example
 
 [fn:6]I have not tried this but I would have thought that the Google
 search bar permits use of wildcards.

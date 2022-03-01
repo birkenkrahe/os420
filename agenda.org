@@ -1144,11 +1144,11 @@
 
 * Manipulating files, getting (more) help - w8s13 (03/01/22)
 ** Objectives
-   * [ ] Learn the language of cows
-   * [ ] Review: quiz 4-5 (comment/complain/challenge)
-   * [ ] Review: warming up exercise "N'est pas une pipe"
-   * [ ] Lecture: standard streams
-   * [ ] Practice: getting started with interactive notebooks
+
+   * [X] Review: quiz 4-5 (comment/complain/challenge)
+   * [X] Review: warming up exercise "N'est pas une pipe"
+   * [X] Lecture: standard streams
+   * [X] Practice: getting started with interactive notebooks
    * [ ] Practice file and data manipulation 2
    * [ ] Getting (more) help
 
@@ -1244,8 +1244,9 @@
 
 * w8s14
 
-  * [[file:~/Documents/GitHub/admin/spring22/os420/agenda.org::README][plan]]
-   
+      * [ ] Learn the language of cows
+      * [[file:~/Documents/GitHub/admin/spring22/os420/agenda.org::README][plan]]
+
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi

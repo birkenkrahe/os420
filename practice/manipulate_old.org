@@ -7,7 +7,8 @@
 #+PROPERTY: header-args:bash :results output
 * Practice
 
-  You can get this Org-mode file for practice from GitHub.
+  You can get this Org-mode file for practice from GitHub or from
+  Schoology.
 
 ** Building a playground
 

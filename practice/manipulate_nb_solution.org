@@ -228,7 +228,9 @@
 
   #+name: rm_playground
   #+begin_src bash
-
+    cd ~/
+    rm -vr playground
+    ls -vl 
   #+end_src
 
   * Save this file with ~C-x C-s~

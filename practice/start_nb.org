@@ -1,0 +1,90 @@
+#+TITLE:Notebook Tutorial
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:OS Practice CSC 420 Spring 2022
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:bash :exports both
+#+PROPERTY: header-args:bash :results output
+* README
+
+  1. This is an Org-mode notebook to get you started with interactive
+     notebooks for ~bash~ scripting. This is really easy in Linux, a
+     little more difficult in MacOS, and really rather painful (but
+     still works) in Windows.
+
+  2. Simply work through the sections below and follow the instructions
+     *minutely*. Let me know if anything is not working.
+
+  3. [ ] Each time you see the ~[ ]~ symbol after a bullet point or
+     number, you have something to do. When you're done, go to the top
+     of the paragraph and check it off with ~C-c C-c~ (That's two times
+     CTRL+c). Do it now if you read and understood this!
+
+  4. [ ] Since you're on Linux, setup and using the notebook is easy:
+     - Run code blocks with ~C-c C-c~
+     - Add additional code blocks as you please but ~#+name:~ them
+     - ~bash~ in the header of the code block automatically finds
+       ~/usr/bin/bash~
+     - Successful execution produces a named ~#+Results:~ section,
+       which you can delete because it can be recreated
+     - Check this task if you got it.
+
+  5. [ ] Here is a named code chunk. The name is [[whoami]] like the ~bash~
+     command that it contains. Run the code block by putting your
+     cursor anywhere on the block (boundary is OK) and type ~C-c C-c~.
+     #+name: whoami
+     #+begin_src bash
+       whoami
+     #+end_src
+
+  6. If this worked, you should see the following output below
+     [[whoami]][fn:1], and then you can check the task off. The code below
+     is not a codeblock, by the way, but only an example.
+     #+begin_example
+       #+RESULTS: codeblock
+     : pi
+     #+end_example
+
+  7. [ ] To create a code block, you can type ~<s~ followed by the
+     <TAB> key. This will expand and you only have to add ~bash~ after
+     ~#+begin_src~ to turn it into a mini shell program~
+
+  8. [ ] That's all there is to it! To test your new found powers:
+     1. create a ~bash~ code block below
+     2. name the code block ~pwd~
+     3. add the statement ~pwd~ inside the block
+     4. run the block with ~C-c C-c~
+     5. check off this task if successful.
+
+  9. [ ] To close, see how documentation and code work together in
+     Emacs. Weave this entire notebook by pressing the key sequence:
+     ~C-c C-e h o~.
+
+  10. [ ] Lastly, take a look at the meta data at the top of this
+      file. They occur in every notebook and you should copy them if
+      you created your own. I have copied them here. Let's look at
+      them one by one.
+      #+begin_example
+        #+TITLE: Notebook Tutorial
+	#+AUTHOR:Marcus Birkenkrahe
+	#+SUBTITLE:OS Practice CSC 420 Spring 2022
+	#+STARTUP:overview hideblocks
+	#+OPTIONS: toc:nil num:nil ^:nil
+	#+PROPERTY: header-args:bash :exports both
+	#+PROPERTY: header-args:bash :results output
+      #+end_example
+      - The first three lines establish title, author, subtitle
+      - The ~#+STARTUP:~ line folds sections and codeblocks upon entry
+      - The ~#+OPTIONS:~ line suppresses printing a TOC
+      - The ~#+PROPERTY:~ lines set arguments for the codeblocks
+
+  11. [ ] This should open the file as an HTML file in a browser. If it
+      worked, check it off, save this file with ~C-x C-s~ and move on to
+      bigger and better things. Otherwise let me know.
+
+* Footnotes
+
+[fn:1]This does not just look like a link, it is a link. You can click
+on it with your mouse, or follow the link with ~C-c C-o~. If you're
+reading this footnote, you can also click on the footnote label to get
+back to the text (or jump with ~C-c C-o~).

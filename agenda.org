@@ -1143,13 +1143,14 @@
    * Processes
 
 * Manipulating files, getting (more) help - w8s13 (03/01/22)
-
-  * [ ] Review: quiz 4-5 (comment/complain/challenge)
-  * [ ] Review: warming up exercise "N'est pas une pipe"
-  * [ ] Lecture: standard streams
-  * [ ] Practice: getting started with interactive notebooks
-  * [ ] Practice file and data manipulation 2
-  * [ ] Getting (more) help
+** Objectives
+   * [ ] Learn the language of cows
+   * [ ] Review: quiz 4-5 (comment/complain/challenge)
+   * [ ] Review: warming up exercise "N'est pas une pipe"
+   * [ ] Lecture: standard streams
+   * [ ] Practice: getting started with interactive notebooks
+   * [ ] Practice file and data manipulation 2
+   * [ ] Getting (more) help
 
 ** Warming up - "N'est pas une pipe"
 
@@ -1198,7 +1199,7 @@
    #+caption: pipe with curl and grep (Source: Janssens)
    #+attr_html: :width 600px
    [[./img/pipe.png]]
-   
+
    * E.g. download the book "Alice's Adventures in Wonderland" by
      Lewis Carroll and pipe it to ~grep~ for a pattern search:
      #+begin_example
@@ -1208,7 +1209,7 @@
    #+caption: piping example with curl and grep
    #+attr_html: :width 500px
    [[./img/alice.png]]
-     
+
    * And if we want to know how many chapters there are, apply ~wc -l~
 
    * Output redirection works with the ~>~ operator[fn:7]: you can
@@ -1218,7 +1219,7 @@
      #+end_example
 
    * This presumes that you defined an alias ~chap='[cmd]'~. Try it!
-     
+
    * You can also append output to a file with ~>>~
 
    * If you want to pass a file through a command without running an
@@ -1230,26 +1231,21 @@
      #+end_example
 
    * We'll deal with more complicated examples in another session!
-   
+
+   * This section is based on Janssen's "Data Science at the Command
+     Line (2nd ed)" (2021), which you can [[https://datascienceatthecommandline.com/2e/][read for free online]].
+
 ** Next
 
    * Redirection
    * Permissions
    * Processes
 
-* NEXT w8s14
-** Getting more help
 
-   | COMMAND   | MEANING |
-   |-----------+---------|
-   | ~type~    |         |
-   | ~which~   |         |
-   | ~help~    |         |
-   | ~man~     |         |
-   | ~apropos~ |         |
-   | ~info~    |         |
-   | ~whatis~  |         |
-   | ~alias~   |         |
+* w8s14
+
+  * [[file:~/Documents/GitHub/admin/spring22/os420/agenda.org::README][plan]]
+   
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi

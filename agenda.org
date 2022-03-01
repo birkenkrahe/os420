@@ -1152,6 +1152,14 @@
    * [ ] Practice file and data manipulation 2
    * [ ] Getting (more) help
 
+** Always first
+
+   * Update your system
+   #+begin_example
+     sudo apt update -y
+     sudo apt upgrade -y
+   #+end_example
+
 ** Warming up - "N'est pas une pipe"
 
    #+caption: Magritte's "The Treachery of Images" (1928)
@@ -1169,8 +1177,6 @@
    | redirection operator > |         |         |
    | ???                    |         |         |
    | wc -l                  |         |         |
-
-*** Examples (Raspbian only)
 
 ** Standard streams
 
@@ -1218,7 +1224,8 @@
      chap > chapterlist
      #+end_example
 
-   * This presumes that you defined an alias ~chap='[cmd]'~. Try it!
+   * This presumes that you defined an alias ~alias chap='[cmd]'~. Try
+     it!
 
    * You can also append output to a file with ~>>~
 

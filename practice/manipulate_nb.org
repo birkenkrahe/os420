@@ -9,13 +9,13 @@
 
   * [ ] Before working through this file, make sure you completed the
     getting started guide in ~start_nb.org~.
+
   * [ ] You can hide/open headers and codeblocks with the <TAB> key
-  * [ ] Get this file with ~wget~[fn:3]
-    #+begin_example
-    wget -O manipulate_nb.org https://tinyurl.com/03012022
-    #+end_example
-  * [ ] You can ALSO get this Org-mode file for practice [[https://github.com/birkenkrahe/os420/tree/main/practice][from GitHub]].
-  * [ ] Or you can get it from the [[https://lyon.schoology.com/course/5516220833/materials?f=572699678][Notebooks folder in Schoology]].
+
+  * You can get this file and the ~.emacs~ file from GDrive
+
+  * You can get Unix tools to do this at home on your Windows box by
+    installing Cygwin, but not all the commands will work in Windows.
 
 * Building a playground
 
@@ -171,8 +171,9 @@
   #+name: rm_hard
   #+begin_src bash
     cd ~/playground
-
   #+end_src
+
+  #+RESULTS: rm_hard
 
   * Remove ~fun~ and switch on verbose option[fn:4]
   * Confirm with ~ls -l~

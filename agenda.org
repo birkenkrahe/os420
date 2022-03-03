@@ -1142,7 +1142,7 @@
    * Permissions
    * Processes
 
-* Manipulating files, getting (more) help - w8s13 (03/01/22)
+* Standard streams, Notebook tutorial - w8s13 (03/01/22)
 ** Objectives
 
    * [X] Review: quiz 4-5 (comment/complain/challenge)
@@ -1242,12 +1242,17 @@
    * This section is based on Janssen's "Data Science at the Command
      Line (2nd ed)" (2021), which you can [[https://datascienceatthecommandline.com/2e/][read for free online]].
 
+** Getting started with interactive notebooks
+
+   * Get the files from the GDrive repository
+
+   * Work through the Notebook Tutorial (~start_nb.org~)
+   
 ** Next
 
    * Redirection
    * Permissions
    * Processes
-
 
 * w8s14
 

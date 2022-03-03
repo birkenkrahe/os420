@@ -16,7 +16,7 @@
 
   * You can get Unix tools to do this at home by installing Cygwin
 
-  * The solutions and results herein were all obtained on a Pi
+  * The solutions and results herein were all obtained in Windows
 
 * Building a playground
 
@@ -25,7 +25,7 @@
   * Make a directory ~playground~
   * Switch on the verbose option
   * Check that it worked using the wildcard ~play*~
-  * [ ] Check task group
+  * [X] Check task group
 
   #+name: mkdir_playground
   #+begin_src bash
@@ -35,6 +35,9 @@
     echo "found:" play*
   #+end_src
 
+  #+RESULTS: mkdir_playground
+  : found: playground
+
 * Creating directories
 
   * Change directory to ~playground~[fn:1] - do this in every code
@@ -43,22 +46,26 @@
   * Make two directories ~dir1~ and ~dir2~
   * Switch on the verbose option
   * Check that it worked using the wildcard ~*[0-9]~
-  * [ ] Check task group
+  * [X] Check task group
 
   #+name: make_dirs
   #+begin_src bash
-    cd ~/playground
+    cd playground
     pwd
     mkdir -v dir1 dir2
     echo "found:" *[0-9]
   #+end_src
+
+  #+RESULTS: make_dirs
+  : mkdir: created directory 'dir1'
+  : found: 100_10 FILE100 FILE1001 dir1 l_FILE100
 
 * Copying files
 
   * Copy ~/etc/passwd~ into the current working directory
   * Switch on the verbose option
   * Check that it worked using the wildcard ~pass??~
-  * [ ] Check task group
+  * [X] Check task group
 
   #+name: copy_file
   #+begin_src bash
@@ -67,12 +74,16 @@
     echo "found:" pass??
   #+end_src
 
+  #+RESULTS: copy_file
+  : '/etc/passwd' -> '.'$'\r'
+  : found: pass??
+  
 * Moving and renaming files
 
   * Change the name of ~passwd~ to ~fun~
   * Switch on the verbose option
   * Check that it worked with the wildcard ~*fun*~
-  * [ ] Check task group
+  * [X] Check task group
 
   #+name: move_file
   #+begin_src bash
@@ -81,13 +92,16 @@
     echo "found:" *fun*
   #+end_src
 
+  #+RESULTS: move_file
+  : found: *fun*
+
   * Move the renamed file ~fun~ to directory ~dir1~
   * Check that it worked with ~ls -l~
   * Move ~fun~ from ~dir1 to ~dir2~ in one command
   * Check that it worked with ~ls -l~
   * Move ~fun~ back to the current working directory
   * Check that it worked with ~ls -l~
-  * [ ] Check task group
+  * [X] Check task group
 
   #+name: move_file_to_dir
   #+begin_src bash
@@ -100,18 +114,53 @@
     ls -l .
   #+end_src
 
+  #+RESULTS: move_file_to_dir
+  #+begin_example
+  total 0
+  drwxrwxrwx 1 marcus marcus 512 Mar  2 21:07 dir1
+  total 162
+  -rwxrwxrwx 1 marcus marcus  6846 Mar  2 21:08 #windows.org#
+  -rwxrwxrwx 1 marcus marcus     0 Feb 22 07:28 100_10
+  -rwxrwxrwx 1 marcus marcus     0 Feb 22 07:28 10file
+  -rwxrwxrwx 1 marcus marcus    20 Feb 22 07:28 FILE100
+  -rwxrwxrwx 1 marcus marcus     0 Feb 22 07:28 FILE1001
+  -rwxrwxrwx 1 marcus marcus     0 Feb 22 07:28 FILE100~~
+  drwxrwxrwx 1 marcus marcus   512 Mar  2 21:09 dir2
+  -rwxrwxrwx 1 marcus marcus     0 Feb 22 07:28 l_FILE100
+  -rwxrwxrwx 1 marcus marcus  5962 Mar  2 21:04 manipulate_nb.org
+  -rwxrwxrwx 1 marcus marcus  6636 Mar  2 21:05 manipulate_nb_03082022.org
+  -rwxrwxrwx 1 marcus marcus  6913 Mar  1 06:44 manipulate_nb_03082022.org~
+  -rwxrwxrwx 1 marcus marcus  6747 Mar  2 21:05 manipulate_nb_solution.org
+  -rwxrwxrwx 1 marcus marcus  3912 Feb 28 21:00 manipulate_old.org
+  drwxrwxrwx 1 marcus marcus   512 Mar  2 21:06 playground
+  -rwxrwxrwx 1 marcus marcus   640 Feb 22 07:28 sample.txt
+  -rwxrwxrwx 1 marcus marcus   640 Feb 22 07:28 sample1.txt
+  -rwxrwxrwx 1 marcus marcus  3874 Mar  2 20:50 start_nb.org
+  -rwxrwxrwx 1 marcus marcus 95857 Feb 28 22:44 start_nb.pdf
+  drwxrwxrwx 1 marcus marcus   512 Feb 22 07:28 testdir
+  -rwxrwxrwx 1 marcus marcus  7010 Mar  2 21:07 windows.org
+  -rwxrwxrwx 1 marcus marcus  6747 Mar  2 21:05 windows.org~
+  #+end_example
+
   * Move file ~fun~ into ~dir1~ again
   * Move directory ~dir1~ into ~dir2~
   * Confirm that the file is there with ~ls -l~
   * [ ] Check task group
 
+  #+begin_quote
+  THIS COMMAND FAILS IN WINDOWS BECAUSE SOMEHOW THE DIRECTORY
+  PLAYGROUND WAS WRITTEN WITH STRANGE CHARACTERS AT THE END
+  #+end_quote
+  
   #+name: move_dir_to_dir
   #+begin_src bash
-    cd ~/playground
+    cd ~/playground*
     mv -v fun dir1
     mv -v dir1 dir2
     ls -l dir2/dir1
   #+end_src
+
+  #+RESULTS: move_dir_to_dir
 
   * Note that ~dir1~ was moved into ~dir2~ because it existed
   * If it had not existed, ~dir1~ would have been renamed ~dir2~

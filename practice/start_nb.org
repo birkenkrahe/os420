@@ -32,18 +32,16 @@
   5. [ ] Here is a named code chunk. The name is [[whoami]] like the ~bash~
      command that it contains. Run the code block by putting your
      cursor anywhere on the block (boundary is OK) and type ~C-c C-c~.
+
      #+name: whoami
      #+begin_src bash
        whoami
      #+end_src
 
-     #+begin_quote
-       NOT WORKING ON SOME PI'S: NEED TO REMOVE ORG-TEMPO / ORG-BULLETS
-     #+end_quote
-
   6. If this worked, you should see the following output below
      [[whoami]][fn:1], and then you can check the task off. The code below
      is not a codeblock, by the way, but only an example.
+     
      #+begin_example
        #+RESULTS: codeblock
      : pi
@@ -63,16 +61,12 @@
   9. [ ] To close, see how documentation and code work together in
      Emacs. Weave this entire notebook by pressing the key sequence:
      ~C-c C-e h o~.
-
-     #+begin_quote
-     (This does not work on some Pi's: emacs-htmlize is missing - get
-     it from GitHub.)
-     #+end_quote
-  
+       
   10. [ ] Lastly, take a look at the meta data at the top of this
       file. They occur in every notebook and you should copy them if
       you created your own. I have copied them here. Let's look at
       them one by one.
+      
       #+begin_example
         #+TITLE: Notebook Tutorial
 	#+AUTHOR:Marcus Birkenkrahe

@@ -1318,8 +1318,8 @@
      practice scripting with bash
 
    * replit.com uses a Nix Docker container to emulate the shell (this
-     is a fifth (and with Docker, a sixth) way to get hold of Linux
-     tools...do you remember the others?[fn:1])
+     is another way to get hold of Linux tools...do you remember the
+     others?[fn:8])
 
    * Login to your Google or GitHub account (the latter is more useful)
 
@@ -1471,6 +1471,16 @@
 
 * Footnotes
 
+[fn:8](1) Virtualbox with a Linux image; (2) Cygwin utility tool
+bundle; (3) dual boot with Linux e.g. from a USB Stick or an SD-card;
+(4) Installing the Ubuntu app from the Microsoft store. (5) eshell
+(emulated Lisp shell in Emacs), (6) replit.com (online cloud Linux),
+(7) download and install a Docker image/container. If you're serious
+about learning OS, you should give all of these a try just for fun
+(Research + analysis skills)! Also, any of these will enable you to
+practice many of the commands you learn in this course. And when a
+command does not work, you'll learn why (troubleshooting skill!).
+  
 [fn:7]In the language R, both of these are combined as ~|>~ because
 they really are the same thing:
 #+begin_src R :exports both :session :results output

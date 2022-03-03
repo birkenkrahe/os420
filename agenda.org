@@ -1169,14 +1169,14 @@
    After completing the last DataCamp assignment, I got my wires
    crossed somehow. Can you define these terms and give examples?
 
-   | TERM                   | MEANING | EXAMPLE |
-   |------------------------+---------+---------|
-   | grep -v [expr]         |         |         |
-   | :digits:               |         |         |
-   | pipeline operator      |         |         |
-   | redirection operator > |         |         |
-   | ???                    |         |         |
-   | wc -l                  |         |         |
+   | TERM                   | MEANING                                   |
+   |------------------------+-------------------------------------------|
+   | grep -v [expr]         | inverse pattern search                    |
+   | :digits:               | numerical wildcard class                  |
+   | pipeline operator      | connects stdout to stdin                  |
+   | redirection operator > | directs stdout to file                    |
+   | ???                    | wildcard for any 3 characters             |
+   | wc -l                  | count number of lines                     |
 
 ** Standard streams
 
@@ -1256,7 +1256,6 @@
 
 * w8s14
 
-      * [ ] Learn the language of cows
       * [[file:~/Documents/GitHub/admin/spring22/os420/agenda.org::README][plan]]
 
 * References

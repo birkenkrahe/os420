@@ -7,14 +7,14 @@
 #+PROPERTY: header-args:bash :results output
 * README
 
-  * [ ] Before working through this file, make sure you completed the
+  * Before working through this file, make sure you completed the
     getting started guide in ~start_nb.org~.
 
-  * [ ] You can hide/open headers and codeblocks with the <TAB> key
+  * You can hide/open headers and codeblocks with the <TAB> key
 
   * You can get this file and the ~.emacs~ file from GDrive
 
-  * You can get Unix tools to do this at home by installing Cygwin
+  * The solutions and results herein were all obtained on a Pi
 
 * Building a playground
 
@@ -23,7 +23,6 @@
   * Make a directory ~playground~
   * Switch on the verbose option
   * Check that it worked using the wildcard ~play*~
-  * [ ] Check task group
 
   #+name: mkdir_playground
   #+begin_src bash
@@ -33,6 +32,8 @@
     echo "found:" play*
   #+end_src
 
+  * [ ] Check task group
+
 * Creating directories
 
   * Change directory to ~playground~[fn:1] - do this in every code
@@ -41,7 +42,6 @@
   * Make two directories ~dir1~ and ~dir2~
   * Switch on the verbose option
   * Check that it worked using the wildcard ~*[0-9]~
-  * [ ] Check task group
 
   #+name: make_dirs
   #+begin_src bash
@@ -51,12 +51,13 @@
     echo "found:" *[0-9]
   #+end_src
 
+  * [ ] Check task group
+
 * Copying files
 
   * Copy ~/etc/passwd~ into the current working directory
   * Switch on the verbose option
   * Check that it worked using the wildcard ~pass??~
-  * [ ] Check task group
 
   #+name: copy_file
   #+begin_src bash
@@ -65,12 +66,13 @@
     echo "found:" pass??
   #+end_src
 
+  * [ ] Check task group
+
 * Moving and renaming files
 
   * Change the name of ~passwd~ to ~fun~
   * Switch on the verbose option
   * Check that it worked with the wildcard ~*fun*~
-  * [ ] Check task group
 
   #+name: move_file
   #+begin_src bash
@@ -85,7 +87,6 @@
   * Check that it worked with ~ls -l~
   * Move ~fun~ back to the current working directory
   * Check that it worked with ~ls -l~
-  * [ ] Check task group
 
   #+name: move_file_to_dir
   #+begin_src bash
@@ -101,7 +102,6 @@
   * Move file ~fun~ into ~dir1~ again
   * Move directory ~dir1~ into ~dir2~
   * Confirm that the file is there with ~ls -l~
-  * [ ] Check task group
 
   #+name: move_dir_to_dir
   #+begin_src bash
@@ -114,7 +114,6 @@
   * Note that ~dir1~ was moved into ~dir2~ because it existed
   * If it had not existed, ~dir1~ would have been renamed ~dir2~
   * Put everthing back and confirm at the end with ~ls -l~
-  * [ ] Check task group
 
   #+name: move_back
   #+begin_src bash
@@ -124,6 +123,8 @@
     ls -l ~/playground
   #+end_src
 
+  * [ ] Check task group
+
 * Creating hard links
 
   * Create a hard link ~fun-hard~ to ~fun~ in ~./~
@@ -131,7 +132,6 @@
   * Create a hard link ~fun-hard~ to ~fun~ in ~dir2~
   * Switch on the verbose option for ~ln~
   * Confirm with ~ls -l ./~ and with ~ls -l dir*~
-  * [ ] Check task group
 
   #+name: hard
   #+begin_src bash
@@ -146,13 +146,14 @@
   * The number ~4~ in the listing is the number of hard links that
     exist for the file (including the default link)
   * Show that ~fun~ and ~fun-hard~ are indeed the same files
-  * [ ] Check task group
 
   #+name: inode
   #+begin_src bash
     cd ~/playground
     ls -li fun*
   #+end_src
+
+  * [ ] Check task group
 
 * Creating symbolic links
 
@@ -161,7 +162,6 @@
   * Create a symlink ~fun-sym~ to ~fun~ in ~dir2~
   * Switch on the verbose option for ~ln~
   * Confirm with ~ls -l ./~ and with ~ls -l dir*~
-  * [ ] Check task group
 
   #+name: soft
   #+begin_src bash
@@ -174,7 +174,6 @@
   #+end_src
 
   * Create a symlink ~dir1-sym~ to ~dir1~ in ~./~
-  * [ ] Check task group
 
   #+name: soft_dir
   #+begin_src bash
@@ -183,11 +182,12 @@
     ls -l ./dir1*
   #+end_src
 
+  * [ ] Check task group
+
 * Removing files and directories
 
-  * Remove the hard link ~fun-hard~ in ~./~
+  * Remove the hard link ~fun-hard~ in ~./~ (with verbose option)
   * Confirm with ~ls -l~
-  * [ ] Check task group
 
   #+name: rm_hard
   #+begin_src bash
@@ -195,25 +195,28 @@
 
   #+end_src
 
-  * Remove ~fun~ and switch on verbose option[fn:4]
+  * Remove ~fun~ and switch on verbose option[fn:2]
   * Confirm with ~ls -l~
-  * [ ] Check task group
 
   #+name: rm_fun
-  #+begin_src bash
+  #+begin_src bash :cmdline < y
     cd ~/playground
 
   #+end_src
 
-  * [ ] Check that ~fun-sym~ is broken with ~less~ (don't do this in
-    Emacs, but change to a proper terminal). You should get:
-  #+begin_example
+  * [ ] Check that ~fun-sym~ is broken now with ~less~ (don't do this
+    in Emacs, but change to a proper terminal instead). You should
+    get:
+
+    #+begin_example
     fun-sym: No such file or directory
-  #+end_example
+    #+end_example
+
+  * [ ] Make sure that you understand what "broken symbolic link" in
+    this context means, and why ~fun-sym~ is now broken
 
   * Remove the symbolic links (switch on verbose option)
   * Confirm with ~ls -l~
-  * [ ] Check task group
 
   #+name: rm_sym
   #+begin_src bash
@@ -222,44 +225,41 @@
   #+end_src
 
   * Go ~$HOME~ and remove the playground (with verbose option)
-  * Check with ~ls -vl playground~
-  * [ ] Check task group
+  * Check with ~ls -d~
 
   #+name: rm_playground
   #+begin_src bash
+    cd $HOME
 
   #+end_src
 
+  * [ ] Check this last task group
+
   * Save this file with ~C-x C-s~
   * Kill the buffer with ~C-x k~ (confirm)
-  * [ ] Check task group
   
   You may close Emacs!
 
 * Command summary
 
-  * [ ] Complete the second column
+  * [ ] Complete the table!
 
-  | COMMAND | MEANING |
-  |---------+---------|
-  | cd      |         |
-  | pwd     |         |
-  | mkdir   |         |
-  | echo    |         |
-  | mv -v   |         |
-  | rm -vr  |         |
-  | ln -vs  |         |
-  | ls -l   |         |
+  | COMMAND | MEANING | EXAMPLE |
+  |---------+---------+---------|
+  | cd      |         |         |
+  | pwd     |         |         |
+  | mkdir   |         |         |
+  | echo    |         |         |
+  | mv -v   |         |         |
+  | rm -vr  |         |         |
+  | ln -vs  |         |         |
+  | ls -l   |         |         |
 
 * Footnotes
 
-[fn:3]Unfortunately, this command downloads a HTML file. I have not
-been able to find out (yet) how to tweak ~wget~ to download the Org
-file. Perhaps one of you want to give it a try!?
-
 [fn:2]In Org-mode, you need to use the ~:cmdline~ header argument and
-redirect the input, in this case from a file ~y.txt~ that only
-contains the character ~y~.
+redirect the input, in this case from a file ~y~ that only
+contains the character ~y~, which I created for this purpose.
 
 [fn:1]If you work with code blocks inside Emacs, you may have to
 resort to absolute filenames to make sure that you are where you want

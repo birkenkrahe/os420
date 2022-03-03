@@ -1254,7 +1254,206 @@
    * Permissions
    * Processes
 
-* w8s14
+* Mid-term speech, REPLit, redirection revisited - w8s14
+** Objectives
+
+   * [X] Notebooks stuff moved to GDrive
+   * [X] Mid-term grades improvement
+   * [X] REPL in the cloud - scripting and shell
+   * [X] Understand redirection better 1
+
+** Notebooks stuff moved to GDrive
+
+   #+caption: Replit.com startup screen
+   #+attr_html: :width 500px
+   [[./img/gdrive1.png]]
+
+** Mid-term grades improvement
+#+options: toc:nil num:nil ^:nil
+   * You can ask me personally and specifically, what to do to get
+     your grades up
+     
+   * There is no reason not to have at good grade in my class:
+     1. You can usually submit in-class assignments late
+     2. The deadlines of the DataCamp assignments are well known
+     3. The quizzes contain ample instructions and can be repeated
+     4. Class attendance + Whiteboard screenshots + GitHub info
+     5. You can always talk to me for personal support
+
+   * Hence, to improve your grade, do:
+     - Submit in-class assignments if you could not attend class
+     - Complete DataCamp assignments on time
+     - Play the quizzes until you have 100% and read the feedback
+     - Attend class + look at screenshots + files afterwards
+     - Practice your skills whenever you can
+     - When you are attending in person, really attend
+     - Ask me in or outside of class if anything is unclear
+
+   * These skills are related to successful studying, which in turn is
+     related to success in life through traditional values:
+     *discipline*, *duty*, and *diligence*. This doesn't have anything
+     to do with computer science.
+
+   * What I'm going for in my classes is what I think computer
+     scientists need more than anything else:
+
+     1. Critical thinking and analysis skills
+     2. Troubleshooting skills
+     3. Research skills
+
+     This is nicely mirrored in [[https://github.com/birkenkrahe/org/issues/19][this comment]] to the question "Why are
+     computer science degrees so math intensive when the field doesn't
+     seem to use much math at all?" on Quora.
+
+     #+caption: What's math got do to with computer science?
+     #+attr_html: :width 500px
+     [[./img/quora.png]]
+
+** ~bash~ Read-Eval-Printing-Loop in the cloud
+
+   * In a perfect world, we'd all be working on Linux boxes so that
+     you can do ~bash~ scripting at home
+
+   * In the real world, you can also use a cloud REPL to learn and
+     practice scripting with bash
+
+   * replit.com uses a Nix Docker container to emulate the shell (this
+     is a fifth (and with Docker, a sixth) way to get hold of Linux
+     tools...do you remember the others?[fn:1])
+
+   * Login to your Google or GitHub account (the latter is more useful)
+
+   * Register with Replit.com
+
+     #+caption: Replit.com startup screen
+     #+attr_html: :width 500px
+     [[./img/replit.png]]
+
+   * Once registered, you can pick among many language templates
+
+   * You can create as many REPLs as you like on a free account
+
+     #+caption: Replit.com language templates
+     #+attr_html: :width 500px
+     [[./img/replit1.png]]
+
+   * Pick Bash! Your REPLs are automatically public and shareable.
+
+   * For example, to join the bash REPL shown below, [[https://replit.com/join/dmxjiphlug-marcusbirkenkra][use this link]].
+
+     #+caption: Create a titled, shareable repl
+     #+attr_html: :width 500px
+     [[./img/replit2.png]]
+
+   * You can now run any (?) bash script in the REPL
+
+     #+caption: Run bash script in the REPL
+     #+attr_html: :width 500px
+     [[./img/replit3.png]]
+
+   * It gets better: you also have access to a shell REPL
+
+   * Open the ~Shell~ tab. Looks like this:
+
+     #+caption: Use the shell in REPL mode
+     #+attr_html: :width 500px
+     [[./img/replit4.png]]
+
+   * Perform a little shell gymnastics:
+     1. Check where you are
+     2. Check if you can get to the root
+     3. Check the operating system
+     4. What timezone is the server linked to?
+     5. Check your shell program
+     6. Go to your home directory
+     7. Make another directory and go there
+     8. Create an empty file called ~file~
+     9. Create a symbolic link called ~file-sym~
+     10. Store the symlink creation command in an alias 'symlink'
+     11. Test the alias on another file
+     12. Unalias the alias
+     13. Go back to your home directory and clean up
+     14. Bookmark your REPL before closing the application
+
+** Redirection revisited
+
+   * I/O redirection is the coolest command line feature
+
+   * Important commands include:
+     - ~cat~ to concatenate files
+     - ~sort~ to sort lines of text
+     - ~uniq~ to report or omit repeated lines
+     - ~grep~ to print lines matching a pattern
+     - ~wc~ to print file newline, word, and byte counts
+     - ~head~ to output the first part of a file
+     - ~tail~ to output the last part of a file
+     - ~tee~ to read from ~stdin~ and write to ~stdout~ and files
+
+   * ~stdin~, ~stdout~ and ~stderr~ are special files
+
+   * [X] Execute the following commands in your REPL of choice.
+
+*** Redirecting standard output
+
+    * [X] It's often useful to store results in a file. What does the
+      command in [[redirect]] do?
+
+      #+name: redirect
+      #+begin_example
+      ls -l /usr/bin > ls-output.txt
+      #+end_example
+
+    * [X] Let's look at the file from the outside first.
+
+      #+name: ls
+      #+begin_example
+      ls -l ls-output.txt
+      #+end_example
+
+    * [X] Let's look at the first and the last part of the file
+
+      #+name: headtail
+      #+begin_example
+      head ls-output.txt
+      tail ls-output.txt
+      #+end_example
+
+    * [X] We redirect again, this time using a directory that does not
+      exist. This results in an error - but why is it
+      not sent to the file instead of ~stdout~?
+
+      #+name: redirect1
+      #+begin_example
+      ls -l /bin/usr > ls-output.txt
+      #+end_example
+
+    * [X] What happened to the output file?
+
+      #+name: ls1
+      #+begin_example
+      ls -l ls-output.txt
+      #+end_example
+      
+    * [X] If you ever want to create a new empty file (without
+      ~touch~), you can use this trick:
+
+      #+name: redirect2
+      #+begin_example
+      > ls-output.txt
+      #+end_example
+
+    * [X] To append redirected output to a file instead of overwriting
+      it from the beginning, use ~>>~. Let's test this:
+
+      #+name: redirect3
+      #+begin_example
+      ls -l /usr/bin >> ls-output.txt
+      ls -l /usr/bin >> ls-output.txt
+      ls -l /usr/bin >> ls-output.txt
+      ls -l ls-output.txt
+      #+end_example
+
+* Redirection revisited 2 - w9s15
 
       * [[file:~/Documents/GitHub/admin/spring22/os420/agenda.org::README][plan]]
 

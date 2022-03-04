@@ -1454,7 +1454,11 @@
       #+end_example
 
 * Redirection revisited 2 - w9s15
+** Objectives
 
+      * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
+
+  
       * [[file:~/Documents/GitHub/admin/spring22/os420/agenda.org::README][plan]]
 
 * References

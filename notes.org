@@ -481,7 +481,43 @@
     it a few wweks back). It's been a while since I've seen it and by
     now it's become a classic, it seems ([[inject][Computerphile, 2016]])
 
+* Mid-term speech, REPLit, redirection revisited - w8s14
+  * <<Docker>> explains it well ([[https://www.docker.com/resources/what-container][docker.com]]):
+    
+    #+begin_quote
+    "A container is a standard unit of software that packages up code and
+    all its dependencies so the application runs quickly and reliably from
+    one computing environment to another."
+    #+end_quote
+
+    The concept is similar to a Java VM runtime environment: but
+    instead of just running Java, you can run pretty much anything in
+    the container. As the figure shows, the Docker separates the app
+    from the Operating System (Linux, Windows, MacOS). This is
+    convenient, because now you don't need to bother with the OS. But
+    it also stops you from learning anything about how apps interact
+    with the system itself. It's super cool if all you are about is
+    building apps, especially web apps, like replit.com. It's not so
+    cool if you're up against legacy systems (old software or
+    hardware), or if you actually like interacting with the OS (via
+    the shell), or if you want to create anything new, or if your mojo
+    is performance improvement (e.g. making algorithms or data
+    pipelines faster), because that depends on deeper knowledge. The
+    good news: everyone can install a container, and they safe
+    (actually, that's another problem...more layers, more potential
+    attack points). Here is a [[https://www.ondat.io/blog/6-problems-with-container-technology-in-the-enterprise][list of 6 issues]] ([[docker][Brandon, 2021]]).
+
+    Long story short: important concept and technology, you should try
+    it out and explore it a little, perhaps you fall in love, and in
+    the least you get another marketable skill. 
+    
+    #+caption: Containerized applications (docker.com)
+    #+attr_html: :width 500px
+    [[./img/docker.png]]
+  
 * References
+  * <<docker>> Brandon (Apr 10, 2021). 6 Problems with Container
+    Technology [blog]. [[https://www.ondat.io/blog/6-problems-with-container-technology-in-the-enterprise][URL: ondat.io]].
   * Computer History Museum (Sep 5, 2019). History of Databases
     [video]. [[https://youtu.be/KG-mqHoXOXY][URL: youtu.be/KG-mqHoXOXY]].
   * <<sql>> Computerphile (Jun 15, 2016). Running an SQL Injection

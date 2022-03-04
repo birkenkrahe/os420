@@ -1247,7 +1247,7 @@
    * Get the files from the GDrive repository
 
    * Work through the Notebook Tutorial (~start_nb.org~)
-   
+
 ** Next
 
    * Redirection
@@ -1269,10 +1269,10 @@
    [[./img/gdrive1.png]]
 
 ** Mid-term grades improvement
-#+options: toc:nil num:nil ^:nil
+   #+options: toc:nil num:nil ^:nil
    * You can ask me personally and specifically, what to do to get
      your grades up
-     
+
    * There is no reason not to have at good grade in my class:
      1. You can usually submit in-class assignments late
      2. The deadlines of the DataCamp assignments are well known
@@ -1433,7 +1433,7 @@
       #+begin_example
       ls -l ls-output.txt
       #+end_example
-      
+
     * [X] If you ever want to create a new empty file (without
       ~touch~), you can use this trick:
 
@@ -1456,10 +1456,15 @@
 * Redirection revisited 2 - w9s15
 ** Objectives
 
-      * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
+   * [ ] Improve your grade with a project
+   * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
 
-  
-      * [[file:~/Documents/GitHub/admin/spring22/os420/agenda.org::README][plan]]
+** Improve your grade with a project
+
+   If you want to improve your grade, you can talk to me about doing
+   a small, independent research project leading to a writeup in the
+   form of a notebook, or a short (10-15 min) presentation. The topic
+   must be related to the topic of this course.
 
 * References
 
@@ -1484,7 +1489,7 @@ about learning OS, you should give all of these a try just for fun
 (Research + analysis skills)! Also, any of these will enable you to
 practice many of the commands you learn in this course. And when a
 command does not work, you'll learn why (troubleshooting skill!).
-  
+
 [fn:7]In the language R, both of these are combined as ~|>~ because
 they really are the same thing:
 #+begin_src R :exports both :session :results output

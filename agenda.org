@@ -16,7 +16,7 @@
   The companion file to this file, less structured and with the
   captain's log, is the [[./notes.org][notes.org]] file.
 
-* Welcome to the course - w1s1 (01/11/22)
+* Welcome to the course - w1s1 (11-Jan)
 
   #+attr_html: :width 500px
   [[./img/fivearmies.jpg]]
@@ -159,7 +159,7 @@
    * Everything else => followup notes (GitHub)
    * +See you (hopefully) Thursday in class! (Lyon 104)+
 
-* GitHub, GNU Emacs installation - w1s2 (01/13/22)
+* GitHub, GNU Emacs installation - w1s2 (13-Jan)
 ** Overview
 
    | HOW      | WHAT                                          |
@@ -182,7 +182,7 @@
 
    * [ ] Make GNU Emacs work for you
 
-* Interrupts, basic I/O - w2s3 (01/18/22)
+* Interrupts, basic I/O - w2s3 (18-Jan)
 ** Overview
 
    | HOW          | WHAT                                                |
@@ -213,7 +213,7 @@
    * Computer system architecture
    * Getting started with Pi
 
-* OS tasks, virtualization, GNU Emacs - w2s4 (01/20/22)
+* OS tasks, virtualization, GNU Emacs - w2s4 (20-Jan)
 ** Overview
 
    | HOW      | WHAT                                    |
@@ -241,7 +241,7 @@
    * Complete quiz 2 online *before class*
    * Will do 5 min review in class together
 
-* OS foundations, Eshell - w3s5 (01/25/22)
+* OS foundations, Eshell - w3s5 (25-Jan)
 ** Overview
 
    | HOW        | WHAT                                         |
@@ -394,7 +394,7 @@
    * Fix ~.emacs~ issue on desktop computers
    * Getting started with Pi: bootloading Raspbian Linux
 
-* Shell scripts, Raspberry Pi setup - w3s6 (01/27/22)
+* Shell scripts, Raspberry Pi setup - w3s6 (27-Jan)
 ** Overview
 
    | HOW      | WHAT                                            |
@@ -474,7 +474,7 @@
    * Review first DataCamp assignment
    * Explore Linux on the command line
 
-* Linux shell, UNIX man pages - w4s7 (02/01/22)
+* Linux shell, UNIX man pages - w4s7 (1-Feb)
 ** Overview
 
    | HOW         | WHAT                                               |
@@ -598,7 +598,7 @@
    * Press the button on the KVM switch to return to Windows
    * Sign out of Windows if necessary
 
-* Shell commands, Linux file tree - w5s8 (02/08/22)
+* Shell commands, Linux file tree - w5s8 (8-Feb)
 ** Overview
 
    |---------------+-------------------------------------------------|
@@ -730,7 +730,7 @@
    * Manipulating files and data
    * New DataCamp assignment due Feb 15 ("[[https://campus.datacamp.com/courses/introduction-to-shell/combining-tools?ex=1][Combining tools]]"))
 
-* Raspberry Pi history and hardware - w5s9 (02/10/22)
+* Raspberry Pi history and hardware - w5s9 (10-Feb)
 ** Overview
 
    | HOW          | WHAT                                        |
@@ -762,7 +762,7 @@
 
      * [[file:pi/README.org::General Purpose Input Output (GPIO)][Introduction to GPIO pins]] ([[https://github.com/birkenkrahe/os420/tree/main/pi#general-purpose-input-output-gpio][gh]]) - my fifth Pi project
 
-* Review of test 1 - w6s10 (02/15/22)
+* Review of test 1 - w6s10 (15-Feb)
 ** News
 
    * *Eliminated* some DataCamp assignments (bash scripting) because
@@ -930,8 +930,8 @@
 
    * Test review
    * Raspberry Pi Hardware - GPIO pins
-
-* GPIO pins - w6s11 (02/17/22)
+     
+* GPIO pins - w6s11 (17-Feb)
 ** Overview
 
    | HOW             | WHAT                                                 |
@@ -953,8 +953,8 @@
 ** What's next
 
    * Catching up with DataCamp: back to the Linux command line tools
-
-* Wildcards and Links - w7s12 (02/22/22)
+     
+* Wildcards and Links - w7s12 (22-Feb)
 ** Objectives
 
    * [X] Review shell commands in DataCamp so far
@@ -1142,7 +1142,7 @@
    * Permissions
    * Processes
 
-* Standard streams, Notebook tutorial - w8s13 (03/01/22)
+* Standard streams, Notebook tutorial - w8s13 (1-Mar)
 ** Objectives
 
    * [X] Review: quiz 4-5 (comment/complain/challenge)
@@ -1254,7 +1254,7 @@
    * Permissions
    * Processes
 
-* Mid-term speech, REPLit, redirection revisited - w8s14
+* Mid-term speech, REPLit, redirection revisited - w8s14 (3-Mar)
 ** Objectives
 
    * [X] Notebooks stuff moved to GDrive
@@ -1453,11 +1453,16 @@
       ls -l ls-output.txt
       #+end_example
 
-* Redirection revisited 2 - w9s15
+* Redirection revisited 2 - w9s15 (8-Mar)
+** News
+
+   * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+
 ** Objectives
 
    * [ ] Improve your grade with a project
    * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
+   * [ ] Review DataCamp ("Batch Processing")
 
 ** Improve your grade with a project
 

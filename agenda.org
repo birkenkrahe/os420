@@ -930,7 +930,7 @@
 
    * Test review
    * Raspberry Pi Hardware - GPIO pins
-     
+
 * GPIO pins - w6s11 (17-Feb)
 ** Overview
 
@@ -953,7 +953,7 @@
 ** What's next
 
    * Catching up with DataCamp: back to the Linux command line tools
-     
+
 * Wildcards and Links - w7s12 (22-Feb)
 ** Objectives
 
@@ -1457,12 +1457,32 @@
 ** News
 
    * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+   * [ ] [[https://www.maketecheasier.com/create-symbolic-links-windows10/][Creating Symlinks in Windows 10]]
 
 ** Objectives
 
    * [ ] Improve your grade with a project
+   * [ ] Learning to create symlinks in Windows
    * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
    * [ ] Review DataCamp ("Batch Processing")
+
+** Creating symlinks in Windows 10
+
+   * I changed my Emacs HOME directory and needed to symlink the
+     ~.emacs~ file from there to the old location
+
+   * You can do this with the GUI or on the CMD line. Confusingly, the
+     argument order is the reverse from UNIX: ~mklink [link] [origin]~
+     instead of ~ln -s [origin] [link]~.
+
+     #+name: winsymlink
+     #+begin_example sh
+       mklink C:\Users\birkenkrahe\.emacs C:\Users\birkenkrahe\Documents\GitHub\.emacs
+     #+end_example
+
+     #+caption: symlink example in Windows 10
+     #+attr_html: :width 600px
+     [[./img/symlink.png]]
 
 ** Improve your grade with a project
 

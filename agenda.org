@@ -1463,8 +1463,15 @@
 
    * [ ] Improve your grade with a project
    * [ ] Learning to create symlinks in Windows
+   * [ ] Preparations for test 2 (Tue 15-Mar)
    * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
    * [ ] Review DataCamp ("Batch Processing")
+
+** Preparations for test 2 (Tue 15-Mar)
+
+   * Test 2 will only cover questions from quiz 4-6 + new questions.
+   * You can find quiz 4-6 with solutions + feedback as PDF (in /quiz)
+   * I will create an update of content Org files (in pdf/)
 
 ** Creating symlinks in Windows 10
 
@@ -1484,12 +1491,12 @@
      #+attr_html: :width 600px
      [[./img/symlink.png]]
 
-** Improve your grade with a project
+** Improve your grade with a project (FAQ)
 
    If you want to improve your grade, you can talk to me about doing
    a small, independent research project leading to a writeup in the
    form of a notebook, or a short (10-15 min) presentation. The topic
-   must be related to the topic of this course.
+   must be related to the topic of this course. ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][See FAQ.]])
 
 * References
 

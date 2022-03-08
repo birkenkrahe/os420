@@ -26,7 +26,7 @@
 
 * Redirecting standard output
 
-  * [ ] It's often useful to store results in a file. What does the
+  * [X] It's often useful to store results in a file. What does the
     command in [[redirect]] do?
 
     #+name: redirect
@@ -34,14 +34,17 @@
       ls -l /usr/bin > ls-output.txt
     #+end_src
 
-  * [ ] Let's look at the file from the outside first.
+  * [X] Let's look at the file from the outside first.
 
     #+name: ls
     #+begin_src bash
       ls -lh ls-output.txt
     #+end_src
 
-  * [ ] Let's look at the first and the last part of the file
+    #+RESULTS: ls
+    : -rw-r--r-- 1 pi pi 81K Mar  7 21:43 ls-output.txt
+
+  * [X] Let's look at the first and the last part of the file
 
     #+name: headtail
     #+begin_src bash :results output
@@ -49,7 +52,15 @@
       tail --lines=2 ls-output.txt
     #+end_src
 
-  * [ ] We redirect again, this time using a directory that does not
+    #+RESULTS: headtail
+    : total 205792
+    : -rwxr-xr-x 1 root root       42884 Sep 22  2020 [
+    : -rwxr-xr-x 1 root root          39 Aug 15  2020 7z
+    : -rwxr-xr-x 1 root root        1842 Mar  2  2021 zmore
+    : -rwxr-xr-x 1 root root        4553 Mar  2  2021 znew
+
+
+  * [X] We redirect again, this time using a directory that does not
     exist. This results in an error - but why is it
     not sent to the file instead of ~stdout~?
 
@@ -58,14 +69,17 @@
       ls -l /bin/usr > ls-output.txt
     #+end_src
 
-  * [ ] What happened to the output file? It's empty!
+  * [X] What happened to the output file? It's empty!
 
     #+name: ls1
     #+begin_src bash
       ls -l ls-output.txt
     #+end_src
 
-  * [ ] If you ever want to create a new empty file (instead of
+    #+RESULTS: ls1
+    : -rw-r--r-- 1 pi pi 0 Mar  7 21:39 ls-output.txt
+
+  * [X] If you ever want to create a new empty file (instead of
     using the ~touch~ command), you can use ~>~ without origin
     (empty stdout).
 
@@ -75,7 +89,10 @@
       ls -l ls-output.txt
     #+end_src
 
-  * [ ] To append redirected output to a file instead of overwriting
+    #+RESULTS: redirect2
+    : -rw-r--r-- 1 pi pi 0 Mar  7 21:41 ls-output.txt
+
+  * [X] To append redirected output to a file instead of overwriting
     it from the beginning, use ~>>~. Let's test this - compare with
     the initial size of the file (81K).
 
@@ -87,11 +104,14 @@
       ls -lh ls-output.txt
     #+end_src
 
+    #+RESULTS: redirect3
+    : -rw-r--r-- 1 pi pi 772K Mar  7 21:43 ls-output.txt
+
 * Redirecting standard error
 
-  * [ ] To redirect standard error, use its *file descriptor*
+  * [X] To redirect standard error, use its *file descriptor*
 
-  * [ ] File descriptors are internal steam references.
+  * [X] File descriptors are internal steam references.
 
     | STREAM | FILE DESCRIPTOR |
     |--------+-----------------|
@@ -99,7 +119,7 @@
     | stdout |               1 |
     | stderr |               2 |
 
-  * [ ] We redirect stderr with ~2>~. We use the command from before
+  * [X] We redirect stderr with ~2>~. We use the command from before
     that tries to list a non-existing directory producing an error.
 
     #+name: stderr1
@@ -108,10 +128,13 @@
     ls -lh ls-error.txt
   #+end_src
 
-  * [ ] What if we want to redirect both stdout and stderr to the same
+  #+RESULTS:
+  : -rw-r--r-- 1 pi pi 56 Mar  7 21:55 ls-error.txt
+
+  * [X] What if we want to redirect both stdout and stderr to the same
     file to capture all output in one place?
 
-  * [ ] Traditional method: use ~2>&1~ - "redirect stderr AND stdout":
+  * [X] Traditional method: use ~2>&1~ - "redirect stderr AND stdout":
     first we redirect stdout to a file, and then we redirect stderr
     (2) to stdout (1).
 
@@ -120,6 +143,9 @@
       ls -l /bin/usr > ls-output.txt 2>&1
       ls -lh ls-output.txt
     #+end_src
+
+    #+RESULTS: stderr2
+    : -rw-r--r-- 1 pi pi 56 Mar  7 22:07 ls-output.txt
 
   * [ ] The redirection of standard error must always occur *after*
     redirecting standard output. If the order is changed, stderr is
@@ -133,6 +159,9 @@
          ls -l /bin/usr >output.txt 2>&1
          cat output.txt
        #+end_src
+
+       #+RESULTS: stderr3
+       : ls: cannot access '/bin/usr': No such file or directory
 
     2) Change the order of the redirection: first redirect stdout and
        stderr, then redirect to a file ~output1.txt~ with >.
@@ -215,7 +244,7 @@
     : ls: cannot access '/bin/usr': No such file or directory
     : ls: cannot access '/bin/usr': No such file or directory
 
-  * [X] To have something to play with, let's split the
+  * [ ] To have something to play with, let's split the
     ~ls-output.txt~ file. If your current file is empty or only
     contains one line, quickly fill it up by running several times:
     #+begin_example
@@ -232,31 +261,17 @@
       wc -l x*
     #+end_src
 
-    #+RESULTS: split
-    : creating file 'xaa'
-    : creating file 'xab'
-    : creating file 'xac'
-    :   1 xaa
-    :   1 xab
-    :   1 xac
-    :   3 total
-
-  * [X] Now use ~cat~ to join the files back together and redirect the
+  * [ ] Now use ~cat~ to join the files back together and redirect the
     output into a file called ~joined.txt~. Use a wildcard to identify
     the split files.
 
     #+name: join
     #+begin_src bash
-      cat x* > joined.txt
-      cat joined.txt
+
+
     #+end_src
 
-    #+RESULTS:
-    : ls: cannot access '/bin/usr': No such file or directory
-    : ls: cannot access '/bin/usr': No such file or directory
-    : ls: cannot access '/bin/usr': No such file or directory
-
-  * [X] What happens if you enter ~cat~ with no arguments? Try this on
+  * [ ] What happens if you enter ~cat~ with no arguments? Try this on
     a system shell, in Emacs: ~M-x shell~. You should find that ~cat~
     just sits there waiting for input. When you enter anything, it's
     being mirrored back from stdin to stdout (your screen).
@@ -268,7 +283,7 @@
       The quick brown fox jumped over the lazy dog.
     #+end_example
 
-  * [X] To create a file called lazy-dog.txt, enter
+  * [ ] To create a file called lazy-dog.txt, enter
     #+begin_example
       cat > lazy-dog.txt
     #+end_example
@@ -283,18 +298,15 @@
 
     #+name: foxOut
     #+begin_src bash
-      cat lazy-dog.txt
-    #+end_src
 
-    #+RESULTS: fox
-    : The quick brown fox jumped over the lazy dog.
+    #+end_src
 
   * [ ] You can also redirect standard input from the keyboard to the
     file ~lazy-dog.txt~. Do this now.
 
     #+name: foxIn
     #+begin_src bash
-      cat < lazy-dog.txt
+
     #+end_src
 
     #+RESULTS: foxIn
@@ -306,7 +318,7 @@
 
 * Pipelines
 
-  * [X] Pipelines are used to perform complex operations on
+  * [ ] Pipelines are used to perform complex operations on
     data. Remember this works because
     1) every command is efficient at doing one specific job
     2) commands can be put together with the ~|~ operator
@@ -318,7 +330,7 @@
 
     #+name: pipe
     #+begin_src bash
-      ls /bin /usr/bin | sort | less
+
     #+end_src
 
     #+Results: ...
@@ -374,14 +386,10 @@
 
     #+name: uniq
     #+begin_src bash
-      ls /bin /usr/bin | sort | wc -l
-      ls /bin /usr/bin | sort | uniq | wc -l
+
+
     #+end_src
 
-    #+RESULTS: uniq
-    : 2831
-    : 1417
-    : 1414
 
   * [X] In the next command, copy [[uniq]], and add the flag ~-d~ to
     unique to only see the duplicates. Count the lines after each
@@ -389,15 +397,11 @@
 
     #+name: uniq1
     #+begin_src bash
-      ls /bin /usr/bin | sort | wc -l 
-      ls /bin /usr/bin | sort | uniq | wc -l
-      ls /bin /usr/bin | sort | uniq -d | wc -l
+
+
+
     #+end_src
 
-    #+RESULTS: uniq1
-    : 2831
-    : 1417
-    : 1414
 
   * [X] Another useful command is the pattern searching utility
     ~grep~. It's most important flags are ~-i~ to make the search case
@@ -406,45 +410,20 @@
 
   * [X] Use ~grep~ to find all ~zip~ related commands in the output of
     our pipe from [[uniq]] (without the word count at the end). The
-    beginning of the pipe is already in the block [[grep]] below.
+    beginning of the pipe is already in the block [[grep]] below. Replace
+    ???
 
     #+name: grep
     #+begin_src bash
-      ls /bin /usr/bin | sort | uniq | grep zip
+    ls /bin /usr/bin | sort | uniq ???
     #+end_src
-
-    #+RESULTS: grep
-    #+begin_example
-    bunzip2
-    bzip2
-    bzip2recover
-    fio-genzipf
-    funzip
-    gpg-zip
-    gunzip
-    gzip
-    p7zip
-    streamzip
-    unzip
-    unzipsfx
-    zip
-    zipcloak
-    zipdetails
-    zipgrep
-    zipinfo
-    zipnote
-    zipsplit
-    #+end_example
 
   * [X] How many programs in these directories are not zip-related?
 
     #+name: grep1
     #+begin_src bash
-      ls /bin /usr/bin | sort | uniq | grep -v zip | wc -l
-    #+end_src
 
-    #+RESULTS: grep1
-    : 1398
+    #+end_src
 
   * [X] The utilities ~head~ and ~tail~ with the ~-n N~ option (~N~
     number of lines printed, also ~--lines=N~ as a long option) show
@@ -462,23 +441,19 @@
     when new lines appear, they appear on screen right away until you
     type CTRL-C.
 
- * [ ] Linux plumbing is rounded off by the command ~tee~ that creates
-   a "tee" fitting on the pipe. It reads standard input and copies it
-   to both standard output and to one or more files. In this way, the
-   pipe can run on, and intermediate content can be captured, too. 
+  * [ ] Linux plumbing is rounded off by the command ~tee~ that creates
+    a "tee" fitting on the pipe. It reads standard input and copies it
+    to both standard output and to one or more files. In this way, the
+    pipe can run on, and intermediate content can be captured, too.
 
-   In the following command, we include ~tee~ in a pipe to capture the
-   ~ls~ listing before filtering with ~grep~.
+    In the following command, we include ~tee~ in a pipe to capture the
+    ~ls~ listing before filtering with ~grep~.
 
-   #+name: tee
-   #+begin_src bash
+    #+name: tee
+    #+begin_src bash
       ls /bin /usr/bin | tee ls.txt | grep zip | wc -l
       wc -l ls.txt
-   #+end_src
-
-   #+RESULTS: tee
-   : 38
-   : 2831 ls.txt
+    #+end_src
 
 * Linux is about Imagination
 

@@ -1458,7 +1458,7 @@
 
    * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
    * [ ] How to [[https://www.maketecheasier.com/create-symbolic-links-windows10/][Create Symlinks in Windows 10]] (it's not impossible!)
-   * [ ] Improve your grade with a project
+   * [ ] Improve your grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][see FAQ]])
    * [ ] Preparations for test 2 (Tue 15-Mar)
    * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
    * [ ] Complete Manipulate Files notebook on your own!
@@ -1496,6 +1496,12 @@
    must be related to the topic of this course. ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][See FAQ.]])
 
 ** Redirection revisited: stderr and stdout
+
+   * Download ~redirection.org~ from the ~practice~ directory in
+     GDrive (Link in Schoology), or from GitHub.
+
+   * Code along while working on the file in GNU Emacs.
+
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi

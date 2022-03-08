@@ -21,12 +21,12 @@
 
   * ~stdin~, ~stdout~ and ~stderr~ are special files
 
-  * [ ] Execute the following commands in your REPL of choice. I'll
+  * [X] Execute the following commands in your REPL of choice. I'll
     do it in GNU Emacs Org Mode, of course.
 
 * Redirecting standard output
 
-  * [ ] It's often useful to store results in a file. What does the
+  * [X] It's often useful to store results in a file. What does the
     command in [[redirect]] do?
 
     #+name: redirect
@@ -34,18 +34,19 @@
       ls -l /usr/bin > ls-output.txt
     #+end_src
 
-  * [ ] Let's look at the file from the outside first.
+  * [X] Let's look at the file from the outside first.
 
     #+name: ls
     #+begin_src bash
       ls -lh ls-output.txt
     #+end_src
 
-  * [ ] Let's look at the first and the last part of the file
+  * [X] Let's look at the first and the last part of the file
 
     #+name: headtail
     #+begin_src bash :results output
       head --lines=3 ls-output.txt
+      echo
       tail --lines=2 ls-output.txt
     #+end_src
 
@@ -91,7 +92,7 @@
 
   * [ ] To redirect standard error, use its *file descriptor*
 
-  * [ ] File descriptors are internal steam references.
+  * [ ] File descriptors are internal stream references.
 
     | STREAM | FILE DESCRIPTOR |
     |--------+-----------------|
@@ -99,7 +100,7 @@
     | stdout |               1 |
     | stderr |               2 |
 
-  * [ ] We redirect stderr with ~2>~. We use the command from before
+  * [X] We redirect stderr with ~2>~. We use the command from before
     that tries to list a non-existing directory producing an error.
 
     #+name: stderr1
@@ -147,7 +148,7 @@
        : ls: cannot access '/bin/usr': No such file or directory
        : -rw-r--r-- 1 pi pi 0 Mar  7 22:17 output1.txt
 
-  * [ ] There is a more streamline (but also more obscure) method for
+  * [ ] There is a more streamlined (but also more obscure) method for
     combined redirection with the single notation ~&>~.
 
     #+name: stderr5

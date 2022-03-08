@@ -1254,7 +1254,7 @@
    * Permissions
    * Processes
 
-* Mid-term speech, REPLit, redirection revisited - w8s14 (3-Mar)
+* Mid-term speech, REPLit, redirection stdout- w8s14 (3-Mar)
 ** Objectives
 
    * [X] Notebooks stuff moved to GDrive
@@ -1453,18 +1453,15 @@
       ls -l ls-output.txt
       #+end_example
 
-* Redirection revisited 2 - w9s15 (8-Mar)
-** News
+* Redirection stderr, stdin - w9s15 (8-Mar)
+** Agenda
 
    * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
-   * [ ] [[https://www.maketecheasier.com/create-symbolic-links-windows10/][Creating Symlinks in Windows 10]]
-
-** Objectives
-
+   * [ ] How to [[https://www.maketecheasier.com/create-symbolic-links-windows10/][Create Symlinks in Windows 10]] (it's not impossible!)
    * [ ] Improve your grade with a project
-   * [ ] Learning to create symlinks in Windows
    * [ ] Preparations for test 2 (Tue 15-Mar)
    * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
+   * [ ] Complete Manipulate Files notebook on your own!
    * [ ] Review DataCamp ("Batch Processing")
 
 ** Preparations for test 2 (Tue 15-Mar)
@@ -1498,6 +1495,7 @@
    form of a notebook, or a short (10-15 min) presentation. The topic
    must be related to the topic of this course. ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][See FAQ.]])
 
+** Redirection revisited: stderr and stdout
 * References
 
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi

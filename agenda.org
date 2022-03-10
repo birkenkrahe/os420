@@ -1453,7 +1453,7 @@
       ls -l ls-output.txt
       #+end_example
 
-* Redirection stderr, stdin - w9s15 (8-Mar)
+* Redirection: stderr, stdin - w9s15 (8-Mar)
 ** Agenda
 
    * [X] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
@@ -1501,6 +1501,12 @@
      GDrive (Link in Schoology), or from GitHub.
 
    * Code along while working on the file in GNU Emacs.
+
+* Redirection: pipeline commands - w9s16 (10-Mar)
+** Agenda
+
+   * [ ] Complete ~redirection.org~ workbook
+   * [ ] Review quiz questions quiz 4-6
 
 * References
 

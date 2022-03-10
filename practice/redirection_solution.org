@@ -415,15 +415,20 @@
 
     #+name: grep
     #+begin_src bash :exports both
-    ls /bin /usr/bin | sort | uniq ???
+    ls /bin /usr/bin | sort | uniq | grep zip
     #+end_src
 
   * [X] How many programs in these directories are not zip-related?
+    Count the lines at the end of the pipe so that you don't get a
+    huge output.
 
     #+name: grep1
     #+begin_src bash :exports both
-
+    ls /bin /usr/bin | sort | uniq | grep -v zip | wc -l
     #+end_src
+
+    #+RESULTS: grep1
+    : 1335
 
   * [X] The utilities ~head~ and ~tail~ with the ~-n N~ option (~N~
     number of lines printed, also ~--lines=N~ as a long option) show

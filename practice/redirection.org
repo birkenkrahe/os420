@@ -352,7 +352,7 @@
     znew
     #+end_example
 
-  * [ ] The redirection operator ~>~ is dangerous: it operates
+  * [X] The redirection operator ~>~ is dangerous: it operates
     silently and will overwrite any system file if you use ~sudo~
     privileges. This is a way to destroy your OS. For example (don't
     try this!) - what does this do?
@@ -362,7 +362,7 @@
       ls > less
     #+end_example
 
-  * [ ] ~uniq~ is often used with ~sort~. It accepts a sorte list of
+  * [ ] ~uniq~ is often used with ~sort~. It accepts a sorted list of
     data from stdout or from a file and removes any duplicates.
 
     Add ~uniq~ after the ~sort~ to the pipe above. Replace the ~less~
@@ -463,23 +463,23 @@
     when new lines appear, they appear on screen right away until you
     type CTRL-C.
 
- * [ ] Linux plumbing is rounded off by the command ~tee~ that creates
-   a "tee" fitting on the pipe. It reads standard input and copies it
-   to both standard output and to one or more files. In this way, the
-   pipe can run on, and intermediate content can be captured, too. 
+  * [ ] Linux plumbing is rounded off by the command ~tee~ that creates
+    a "tee" fitting on the pipe. It reads standard input and copies it
+    to both standard output and to one or more files. In this way, the
+    pipe can run on, and intermediate content can be captured, too. 
 
-   In the following command, we include ~tee~ in a pipe to capture the
-   ~ls~ listing before filtering with ~grep~.
+    In the following command, we include ~tee~ in a pipe to capture the
+    ~ls~ listing before filtering with ~grep~.
 
-   #+name: tee
-   #+begin_src bash
-      ls /bin /usr/bin | tee ls.txt | grep zip | wc -l
-      wc -l ls.txt
-   #+end_src
+    #+name: tee
+    #+begin_src bash
+       ls /bin /usr/bin | tee ls.txt | grep zip | wc -l
+       wc -l ls.txt
+    #+end_src
 
-   #+RESULTS: tee
-   : 38
-   : 2831 ls.txt
+    #+RESULTS: tee
+    : 38
+    : 2831 ls.txt
 
 * Linux is about Imagination
 

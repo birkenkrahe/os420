@@ -30,14 +30,14 @@
     command in [[redirect]] do?
 
     #+name: redirect
-    #+begin_src bash :results silent
+    #+begin_src bash :results silent :exports both
       ls -l /usr/bin > ls-output.txt
     #+end_src
 
   * [X] Let's look at the file from the outside first.
 
     #+name: ls
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls -lh ls-output.txt
     #+end_src
 
@@ -47,7 +47,7 @@
   * [X] Let's look at the first and the last part of the file
 
     #+name: headtail
-    #+begin_src bash :results output
+    #+begin_src bash :exports both :results output
       head --lines=3 ls-output.txt
       tail --lines=2 ls-output.txt
     #+end_src
@@ -65,14 +65,14 @@
     not sent to the file instead of ~stdout~?
 
     #+name: redirect1
-    #+begin_src bash :results silent
+    #+begin_src bash :exports both :results silent
       ls -l /bin/usr > ls-output.txt
     #+end_src
 
   * [X] What happened to the output file? It's empty!
 
     #+name: ls1
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls -l ls-output.txt
     #+end_src
 
@@ -84,7 +84,7 @@
     (empty stdout).
 
     #+name: redirect2
-    #+begin_src bash
+    #+begin_src bash :exports both
       > ls-output.txt
       ls -l ls-output.txt
     #+end_src
@@ -97,7 +97,7 @@
     the initial size of the file (81K).
 
     #+name: redirect3
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls -l /usr/bin >> ls-output.txt
       ls -l /usr/bin >> ls-output.txt
       ls -l /usr/bin >> ls-output.txt
@@ -123,7 +123,7 @@
     that tries to list a non-existing directory producing an error.
 
     #+name: stderr1
-  #+begin_src bash
+  #+begin_src bash :exports both
     ls -l /bin/usr 2> ls-error.txt
     ls -lh ls-error.txt
   #+end_src
@@ -139,7 +139,7 @@
     (2) to stdout (1).
 
     #+name: stderr2
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls -l /bin/usr > ls-output.txt 2>&1
       ls -lh ls-output.txt
     #+end_src
@@ -155,7 +155,7 @@
        stdout and stderr to it.
 
        #+name: stderr3
-       #+begin_src bash :results output
+       #+begin_src bash :exports both :results output
          ls -l /bin/usr >output.txt 2>&1
          cat output.txt
        #+end_src
@@ -167,7 +167,7 @@
        stderr, then redirect to a file ~output1.txt~ with >.
 
        #+name: stderr4
-       #+begin_src bash :results output
+       #+begin_src bash :exports both :results output
          ls -l /bin/usr 2>&1 >output1.txt
          ls -lh output1.txt
        #+end_src
@@ -180,7 +180,7 @@
     combined redirection with the single notation ~&>~.
 
     #+name: stderr5
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls -l /bin/usr &> ls-output.txt
       cat ls-output.txt
     #+end_src
@@ -193,7 +193,7 @@
     the appending redirection operator!
 
     #+name: stderr6
-    #+begin_src bash :results output
+    #+begin_src bash :exports both :results output
       ls -l /bin/usr &>> ls-output.txt
       cat ls-output.txt
     #+end_src
@@ -211,7 +211,7 @@
     list the bit bucket file.
 
     #+name: bitbucket
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls -l /bin/usr 2> /dev/null
       ls -lh /dev/null
     #+end_src
@@ -232,7 +232,7 @@
     will just be displayed as standard output.
 
     #+name: cat
-    #+begin_src bash
+    #+begin_src bash :exports both
       cat ls-output.txt ls-output.txt
     #+end_src
 
@@ -256,7 +256,7 @@
     be as many files as you have lines in the file.
 
     #+name: split
-    #+begin_src bash
+    #+begin_src bash :exports both
       split ls-output.txt -l 1 --verbose
       wc -l x*
     #+end_src
@@ -266,7 +266,7 @@
     the split files.
 
     #+name: join
-    #+begin_src bash
+    #+begin_src bash :exports both
 
 
     #+end_src
@@ -297,7 +297,7 @@
     Check your results by viewing the file with ~cat~.
 
     #+name: foxOut
-    #+begin_src bash
+    #+begin_src bash :exports both
 
     #+end_src
 
@@ -305,7 +305,7 @@
     file ~lazy-dog.txt~. Do this now.
 
     #+name: foxIn
-    #+begin_src bash
+    #+begin_src bash :exports both
 
     #+end_src
 
@@ -329,7 +329,7 @@
     entering TAB on the ~#+Results:~ line.
 
     #+name: pipe
-    #+begin_src bash
+    #+begin_src bash :exports both
 
     #+end_src
 
@@ -342,7 +342,7 @@
     between the commands (generating an empty line).
 
     #+name: NoPipe
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls /bin /usr/bin | sort | tail -n 5
       echo
       ls /bin /usr/bin | tail -n 5
@@ -385,7 +385,7 @@
     lets you compare the size of the output.
 
     #+name: uniq
-    #+begin_src bash
+    #+begin_src bash :exports both
 
 
     #+end_src
@@ -396,7 +396,7 @@
     command.
 
     #+name: uniq1
-    #+begin_src bash
+    #+begin_src bash :exports both
 
 
 
@@ -414,14 +414,14 @@
     ???
 
     #+name: grep
-    #+begin_src bash
+    #+begin_src bash :exports both
     ls /bin /usr/bin | sort | uniq ???
     #+end_src
 
   * [X] How many programs in these directories are not zip-related?
 
     #+name: grep1
-    #+begin_src bash
+    #+begin_src bash :exports both
 
     #+end_src
 
@@ -450,7 +450,7 @@
     ~ls~ listing before filtering with ~grep~.
 
     #+name: tee
-    #+begin_src bash
+    #+begin_src bash :exports both
       ls /bin /usr/bin | tee ls.txt | grep zip | wc -l
       wc -l ls.txt
     #+end_src

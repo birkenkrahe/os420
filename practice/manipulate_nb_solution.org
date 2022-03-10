@@ -25,7 +25,7 @@
   * Check that it worked using the wildcard ~play*~
 
   #+name: mkdir_playground
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd $HOME
     pwd
     mkdir -v playground
@@ -49,7 +49,7 @@
   * Check that it worked using the wildcard ~*[0-9]~
 
   #+name: make_dirs
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     pwd
     mkdir -v dir1 dir2
@@ -71,7 +71,7 @@
   * Check that it worked using the wildcard ~pass??~
 
   #+name: copy_file
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     cp -v /etc/passwd .
     echo "found:" pass??
@@ -90,7 +90,7 @@
   * Check that it worked with the wildcard ~*fun*~
 
   #+name: move_file
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     mv -v passwd fun
     echo "found:" *fun*
@@ -108,7 +108,7 @@
   * Check that it worked with ~ls -l~
 
   #+name: move_file_to_dir
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     mv -v fun dir1
     ls -l dir1
@@ -138,7 +138,7 @@
   * Confirm that the file is there with ~ls -l~
 
   #+name: move_dir_to_dir
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     mv -v fun dir1
     mv -v dir1 dir2
@@ -156,7 +156,7 @@
   * Put everthing back and confirm at the end with ~ls -l~
 
   #+name: move_back
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     mv -v dir2/dir1 .
     mv -v dir1/fun .
@@ -182,7 +182,7 @@
   * Confirm with ~ls -l ./~ and with ~ls -l dir*~
 
   #+name: hard
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     ln -v fun fun-hard
     ln -v fun dir1/fun-hard
@@ -215,7 +215,7 @@
   * Show that ~fun~ and ~fun-hard~ are indeed the same files
 
   #+name: inode
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     ls -li fun*
   #+end_src
@@ -235,7 +235,7 @@
   * Confirm with ~ls -l ./~ and with ~ls -l dir*~
 
   #+name: soft
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     ln -vs fun fun-sym
     ln -vs fun dir1/fun-sym
@@ -269,7 +269,7 @@
   * Create a symlink ~dir1-sym~ to ~dir1~ in ~./~
 
   #+name: soft_dir
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     ln -vs dir1 dir1-sym
     ls -l ./dir1*
@@ -292,7 +292,7 @@
   * Confirm with ~ls -l~
 
   #+name: rm_hard
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     rm -v fun-hard
   #+end_src
@@ -304,7 +304,7 @@
   * Confirm with ~ls -l~
 
   #+name: rm_fun
-  #+begin_src bash :cmdline < y
+  #+begin_src bash :cmdline < y :exports both
     cd ~/playground
     rm -iv fun
     ls -l
@@ -333,7 +333,7 @@
   * Confirm with ~ls -l~
 
   #+name: rm_sym
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/playground
     rm -v fun-sym dir1-sym
     ls -l
@@ -350,7 +350,7 @@
   * Check with ~ls -vl~
 
   #+name: rm_playground
-  #+begin_src bash
+  #+begin_src bash :exports both
     cd ~/
     rm -vr playground
     ls -vl 

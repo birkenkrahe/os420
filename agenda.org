@@ -1456,12 +1456,12 @@
 * Redirection stderr, stdin - w9s15 (8-Mar)
 ** Agenda
 
-   * [ ] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
-   * [ ] How to [[https://www.maketecheasier.com/create-symbolic-links-windows10/][Create Symlinks in Windows 10]] (it's not impossible!)
-   * [ ] Improve your grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][see FAQ]])
-   * [ ] Preparations for test 2 (Tue 15-Mar)
-   * [ ] Review Docker/container technology ([[file:notes.org::Docker][notes]])
-   * [ ] Complete Manipulate Files notebook on your own!
+   * [X] Waking up in ~AppData/Roaming~? [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-to-set-a-new-emacs-home-directory][Change your Emacs HOME now]].
+   * [X] How to [[https://www.maketecheasier.com/create-symbolic-links-windows10/][Create Symlinks in Windows 10]] (it's not impossible!)
+   * [X] Improve your grade with a project ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-improve-my-mid-term-grades][see FAQ]])
+   * [X] Preparations for test 2 (Tue 15-Mar)
+   * [X] Review Docker/container technology ([[file:notes.org::Docker][notes]])
+   * [X] Complete Manipulate Files notebook on your own!
    * [ ] Review DataCamp ("Batch Processing")
 
 ** Preparations for test 2 (Tue 15-Mar)

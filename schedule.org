@@ -29,8 +29,8 @@
   | 15 |    8 | Tue-01-Mar   | Manipulating files 2  | Quiz 5             | Manipulating files / ~cowsay~              |                              | LX:5 Working with commands |
   | 16 |      | Thu-03-Mar   |                       |                    |                                            |                              |                            |
   |----+------+--------------+-----------------------+--------------------+--------------------------------------------+------------------------------+----------------------------|
-  | 17 |    9 | Tue-08-Mar   |                       | Quiz 6             |                                            | Batch processing             | LX:6 Redirection           |
-  | 18 |      | Thu-10-Mar   |                       |                    |  Quiz review                               |                              |                            |
+  | 17 |    9 | Tue-08-Mar   | Redirection 1         | Quiz 6             |                                            | Batch processing             | LX:6 Redirection           |
+  | 18 |      | Thu-10-Mar   | Redirection 2         |                    |  Quiz review                               |                              |                            |
   |----+------+--------------+-----------------------+--------------------+--------------------------------------------+------------------------------+----------------------------|
   | 19 |   10 | Tue-15-Mar   |                       | Test 2             |                                            |                              | LX:9 Permissions           |
   | 20 |      | Thu-17-Mar   |                       |                    |                                            | Creating new tools           |                            |

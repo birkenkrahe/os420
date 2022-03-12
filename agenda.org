@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Agenda OS420 Operating Systems CSC 420
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: toc:1 num:nil ^:nil
 #+PROPERTY: header-args:bash :exports both
 #+PROPERTY: header-args:bash :results output
 * README
@@ -1558,7 +1558,7 @@ index, labels, and serves to search and find. Don't say "folder".
 
 [fn:3]A "distro" is a Linux distribution, like Ubuntu or Raspbian, or
 Kali. Distro design and distro news bind a lot of fanboy energy, see
-e.g. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/]["Best desktop Linux for pros 2022"]] ([[distro][Vaughan-Nichols, 2022]]).
+e.g. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/]["Best desktop Linux for pros 2022"]] (Vaughan-Nichols, 2022).
 
 [fn:2]An alternative (that takes much longer, because many files have
 to be downloaded, and the Pi 3B+ isn't the strongest networker) is to

@@ -2,7 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Followup for CSC420 Operating Systems Spring 2022
 #+STARTUP:overview hideblocks
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: toc:1 num:nil ^:nil
 * README
 
   Instead of bugging you with emails, I opt to summarize my course
@@ -479,7 +479,7 @@
   * I talked a little about SQL injection: here is the YouTube video
     "[[https://youtu.be/ciNHn38EyRc][Running an SQL Injection Attack]]" (again - I had already mentioned
     it a few wweks back). It's been a while since I've seen it and by
-    now it's become a classic, it seems ([[inject][Computerphile, 2016]])
+    now it's become a classic, it seems ([[sql][Computerphile, 2016]])
 
 * Mid-term speech, REPLit, redirection revisited - w8s14
   * <<Docker>> explains it well ([[https://www.docker.com/resources/what-container][docker.com]]):

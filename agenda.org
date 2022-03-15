@@ -1508,12 +1508,30 @@
    * [X] Complete ~redirection.org~ workbook
    * [X] Review quiz questions quiz 4-6
 
-* Review Test 2 - review SQL project - w10s17 (17-Mar)
+* NEXT Review Test 2 - permissions - w10s17 (17-Mar)
 
 ** News
 
+   * Improving your grade after test 2 with a project
    * Motivation to learn bash scripting by Steve Yegge
+     
+** Improving your grade with a project - ideas
 
+   * Create an Org-mode file with tutorial examples for one or more
+     shell commands - pose a problem and present a solution
+
+   * Present a bash script of your own design e.g. to automate a
+     process (my example [[https://github.com/birkenkrahe/org/blob/master/git.sh][~git.sh~]]: updating Git version control - this
+     could be improved quite a bit with control flow).
+
+   * Expand an explanation from class, or a topic from class and write
+     it up as a short essay, or create a presentation and screencast
+     it, or (better) present in class
+
+   * Whatever you do is not for the lecturer but for the class, so you
+     need to share it with everyone (e.g. YouTube or GDrive and then
+     post an issue in GitHub)
+   
 ** Bash scripting
 
     #+begin_quote
@@ -1529,6 +1547,8 @@
 
    Yegge is the guy from the original [[https://www.digitaltrends.com/social-media/google-engineer-who-publicly-bashed-google-nothing-bad-happened/][Google-Amazon rant]] (Couts, 2011)
    
+** NEXT Permissions
+
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

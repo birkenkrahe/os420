@@ -1505,16 +1505,43 @@
 * Redirection: pipeline commands - w9s16 (10-Mar)
 ** Agenda
 
-   * [ ] Complete ~redirection.org~ workbook
-   * [ ] Review quiz questions quiz 4-6
+   * [X] Complete ~redirection.org~ workbook
+   * [X] Review quiz questions quiz 4-6
 
+* Review Test 2 - review SQL project - w10s17 (17-Mar)
+
+** News
+
+   * Motivation to learn bash scripting by Steve Yegge
+
+** Bash scripting
+
+    #+begin_quote
+      "You have to know command-line interfaces and shell scripting
+      (or equivalent) in order to be a great programmer and a great
+      generalist. [...] The bottom line is that sometimes you need to
+      do custom batch (and/or streaming) tasks that are not handled by
+      your IDE or your favorite tools.  So what do you do?  Scripting
+      to the rescue."  (Steve Yegge)
+    #+end_quote
+
+   Watch [[https://youtu.be/mb8ayJEsnk8][Stevey's Tech Talk E37: sed -i 's/sorry/not sorry/g']] (2022)
+
+   Yegge is the guy from the original [[https://www.digitaltrends.com/social-media/google-engineer-who-publicly-bashed-google-nothing-bad-happened/][Google-Amazon rant]] (Couts, 2011)
+   
 * References
 
+  * Couts (October 21, 2011). Google engineer who publicly bashed
+    Google+: ‘Nothing bad happened’ [blog]. [[https://www.digitaltrends.com/social-media/google-engineer-who-publicly-bashed-google-nothing-bad-happened/][URL: digitaltrends.com]].
   * element14 (n.d.). Identifying Your MOdel of Raspberry Pi
     [blog]. [[https://community.element14.com/products/raspberry-pi/w/documents/879/identifying-your-model-of-raspberry-pi][URL: community.element14.com]].
   * Janssens (2021. Data Science at the Command Line
     (2e). O'Reilly. [[https://datascienceatthecommandline.com/][URL: datascienceatthecommandline.com]].
   * Shotts (2019). The Linux Command Line (2e). NoStarch Press.
+  * Steve Yegge (Feb 21, 2022). Stevey's Tech Talk - sed -i
+    's/sorry/not sorry/g' [video]. [[https://youtu.be/mb8ayJEsnk8][URL: youtube.com]].
+  * Steve Yegge (Mar 7, 2022). Stevey's Tech Talk - A guided tour of
+    Emacs [video]. [[https://youtu.be/lkIicfzPBys][URL: youtube.com]].
   * Vaughan-Nichols (9 Feb 2022). Best desktop Linux for pros 2022:
     Our top 5 choices [blog]. [[https://www.zdnet.com/article/best-linux-desktops-for-pros/][URL: www.zdnet.com.]]
   * Wikipedia (25 Dec 2021). The Treachery of Images [website]. [[https://en.wikipedia.org/wiki/The_Treachery_of_Images][URL:

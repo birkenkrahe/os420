@@ -1,0 +1,2 @@
+ls: cannot access '/etc/os-relaese': No such file or directory
+ls: cannot access '/etc/os-relaese': No such file or directory

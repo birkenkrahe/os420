@@ -1,0 +1,2 @@
+ls: cannot access '/etc/passdw': No such file or directory
+ls: cannot access '/etc/passdw': No such file or directory

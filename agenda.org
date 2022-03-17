@@ -1508,13 +1508,43 @@
    * [X] Complete ~redirection.org~ workbook
    * [X] Review quiz questions quiz 4-6
 
-* NEXT Review Test 2 - permissions - w10s17 (17-Mar)
+* w10s17 (17-Mar)
 
 ** News
 
-   * Improving your grade after test 2 with a project
-   * Motivation to learn bash scripting by Steve Yegge
-     
+   * [ ] Test 2 average result: 74% - not bad at all!
+   * [ ] Improving your grade after test 2 with a project
+   * [ ] Motivation to learn bash scripting by Steve Yegge
+
+** Test 2 review
+
+   * [ ] How can you start a command on the commandline and still use
+     that terminal? Answer: add ~&~ after cmd - process goes in
+     background
+
+   * [ ] When you type ~sudo~ before a command, you become ~root~? Answer:
+     No. You only get some system privileges associated with ~root~.
+
+   * [ ] Which command tees standard out off to an intermediate file?
+     Answer: the ~tee~ command. Example in [[tee]].
+     #+name: tee
+     #+begin_src bash :exports both 
+       ls . | tee ls.txt | grep org | wc -l
+     #+end_src
+
+     #+RESULTS: tee
+     : 8
+
+   * [ ] How do you append standard error and standard output to the
+     same file? Answer: you need ~&>>~ or ~>>~ and ~2>1&~. Example in
+     [[append]].
+
+     #+name: append
+     #+begin_src bash :results silent
+       ls -l /etc/passdw >> out1.txt 2>&1
+       ls -l /etc/os-relaese &>> out2.txt
+     #+end_src
+
 ** Improving your grade with a project - ideas
 
    * Create an Org-mode file with tutorial examples for one or more
@@ -1531,23 +1561,25 @@
    * Whatever you do is not for the lecturer but for the class, so you
      need to share it with everyone (e.g. YouTube or GDrive and then
      post an issue in GitHub)
-   
+
 ** Bash scripting
 
-    #+begin_quote
-      "You have to know command-line interfaces and shell scripting
-      (or equivalent) in order to be a great programmer and a great
-      generalist. [...] The bottom line is that sometimes you need to
-      do custom batch (and/or streaming) tasks that are not handled by
-      your IDE or your favorite tools.  So what do you do?  Scripting
-      to the rescue."  (Steve Yegge)
-    #+end_quote
+   #+begin_quote
+   "You have to know command-line interfaces and shell scripting
+   (or equivalent) in order to be a great programmer and a great
+   generalist. [...] The bottom line is that sometimes you need to
+   do custom batch (and/or streaming) tasks that are not handled by
+   your IDE or your favorite tools.  So what do you do?  Scripting
+   to the rescue."  (Steve Yegge)
+   #+end_quote
 
    Watch [[https://youtu.be/mb8ayJEsnk8][Stevey's Tech Talk E37: sed -i 's/sorry/not sorry/g']] (2022)
 
    Yegge is the guy from the original [[https://www.digitaltrends.com/social-media/google-engineer-who-publicly-bashed-google-nothing-bad-happened/][Google-Amazon rant]] (Couts, 2011)
-   
-** NEXT Permissions
+
+** Environment and editors
+
+   * See interactive notebook ~environment.org~ in GDrive
 
 * References
 

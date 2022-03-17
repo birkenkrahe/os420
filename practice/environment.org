@@ -182,7 +182,7 @@
     alias ls='ls --color=auto'
     #+end_example
 
-  * [ ] Go back to the shell buffer and create an alias ~dh~ for the
+  * [X] Go back to the shell buffer and create an alias ~dh~ for the
     human readable file system disk space usage information. Check the
     man page for ~df~ if necessary.
 
@@ -191,7 +191,7 @@
       alias dh='df --human-readable'
     #+end_example
 
-  * [ ] Now check the alias listing again. This is what I see on my
+  * [X] Now check the alias listing again. This is what I see on my
     Pi:
 
     #+name: df1
@@ -243,8 +243,25 @@
     echo "USER:" $USER
   #+end_src
 
+  #+RESULTS:
+  #+begin_example
+  DISPLAY: 
+  EDITOR: 
+  SHELL: /bin/bash
+  HOME: /home/marcus
+  LANG: C.UTF-8
+  OLDPWD: 
+  PAGER: 
+  PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Embarcadero/Studio/21.0/bin:/mnt/c/Users/Public/Documents/Embarcadero/Studio/21.0/Bpl:/mnt/c/Program Files (x86)/Embarcadero/Studio/21.0/bin64:/mnt/c/Users/Public/Documents/Embarcadero/Studio/21.0/Bpl/Win64:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/MySQL/MySQL Shell 8.0/bin/:/mnt/c/Users/birkenkrahe/scoop/shims:/mnt/c/Users/birkenkrahe/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/birkenkrahe/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin:/mnt/c/Program Files/R/R-4.1.2/bin/x64:/mnt/c/Users/birkenkrahe/R/win-library:/mnt/c/Program Files (x86)/Vim/vim82/:/mnt/c/Users/birkenkrahe/scoop/apps/unzip/6.00:/mnt/c/Users/birkenkrahe/scoop/apps/7zip/21.06:/mnt/c/Users/birkenkrahe/scoop/apps/zip/3.0:/mnt/c/Program Files/PuTTY:/mnt/c/Program Files/R1/R-4.1.2/bin:/mnt/c/Program Files (x86)/sqlite-tools-win32-x86-3360000:/mnt/c/Program Files/Emacs/x86_64/bin:/mnt/c/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin
+  PS1: 
+  PWD: /mnt/c/Users/birkenkrahe/Documents/GitHub/os420/practice
+  TERM: xterm-256color
+  TZ: 
+  USER: marcus
+  #+end_example
 
-  * [ ] Inside Org-mode, the value of ~TERM~ is most likely
+
+  * [X] Inside Org-mode, the value of ~TERM~ is most likely
     ~dumb~. Compare this with its value 1) on the Emacs ~*shell*~,
     and 2) in the regular terminal.
 

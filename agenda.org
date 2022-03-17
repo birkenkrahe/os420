@@ -1512,7 +1512,7 @@
 
 ** News
 
-   * [ ] Test 2 average result: 74% - not bad at all!
+   * [X] Test 2 average result: 74% - not bad at all!
    * [ ] Improving your grade after test 2 with a project
    * [ ] Motivation to learn bash scripting by Steve Yegge
 
@@ -1522,7 +1522,7 @@
      that terminal? Answer: add ~&~ after cmd - process goes in
      background
 
-   * [ ] When you type ~sudo~ before a command, you become ~root~? Answer:
+   * [X] When you type ~sudo~ before a command, you become ~root~? Answer:
      No. You only get some system privileges associated with ~root~.
 
    * [ ] Which command tees standard out off to an intermediate file?

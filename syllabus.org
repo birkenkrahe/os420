@@ -122,6 +122,8 @@
     - Complete weekly chapters of DataCamp assignments
     - Spend 30-45 min per week on an assignment
     - Bring questions and comments to class for discussion
+    - Late DataCamp submissions will be accepted but you'll lose 1
+      point for every day that your submission is late.
 
 *** Final exam (30%)
     - 120 min multiple choice exam

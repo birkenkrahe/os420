@@ -1581,7 +1581,6 @@
    * See interactive notebook ~environment.org~ in GDrive
 
 * Permissions - w11s18 (29-Mar)
-
 ** Plan for the remainder of the term
 
    * Week 11: Permissions / Intro to scripting

@@ -1587,7 +1587,7 @@
    * Week 12: Process management / Variables
    * Week 13: Customizing the prompt / Control 
    * Week 14: Networking / Functions
-   * Week 15: Scripting project
+   * Week 15: Scripting project?
 
 * References
 

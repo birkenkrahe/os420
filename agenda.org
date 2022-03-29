@@ -1508,8 +1508,7 @@
    * [X] Complete ~redirection.org~ workbook
    * [X] Review quiz questions quiz 4-6
 
-* w10s17 (17-Mar)
-
+* Test review, environment variables - w10s17 (17-Mar)
 ** News
 
    * [X] Test 2 average result: 74% - not bad at all!
@@ -1580,6 +1579,16 @@
 ** Environment and editors
 
    * See interactive notebook ~environment.org~ in GDrive
+
+* Permissions - w11s18 (29-Mar)
+
+** Plan for the remainder of the term
+
+   * Week 11: Permissions / Intro to scripting
+   * Week 12: Process management / Variables
+   * Week 13: Customizing the prompt / Control 
+   * Week 14: Networking / Functions
+   * Week 15: Scripting project
 
 * References
 

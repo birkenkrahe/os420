@@ -1462,7 +1462,7 @@
    * [X] Preparations for test 2 (Tue 15-Mar)
    * [X] Review Docker/container technology ([[file:notes.org::Docker][notes]])
    * [X] Complete Manipulate Files notebook on your own!
-   * [ ] Review DataCamp ("Batch Processing")
+   * [X] Review DataCamp ("Batch Processing")
 
 ** Preparations for test 2 (Tue 15-Mar)
 

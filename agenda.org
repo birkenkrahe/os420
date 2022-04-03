@@ -1589,6 +1589,15 @@
    * Week 14: Networking / Functions
    * Week 15: Scripting project?
 
+* vi editor - w11s19 (31-Mar)
+* Introduction to bash scripting
+* Linux process management
+* Linux networking
+* Linux storage management
+* Linux archiving and backup
+* Linux file searches
+* Compiling source code from scratch
+* Review: quizzes, tests, final exam preparation (3-May)
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

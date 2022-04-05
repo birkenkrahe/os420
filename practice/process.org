@@ -1,0 +1,52 @@
+#+TITLE:Processes
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:processes practice for CSC420 Operating Systems Spring 2022 Lyon College
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:bash :results output
+#+PROPERTY: header-args:bash :exports both
+* README
+
+  * This file accompanies lectures on the shell and ~bash(1)~. To gain
+    practice, you should type along in your own Org-mode file. You
+    have to have Emacs and my ~.emacs~ file installed on your PC or
+    the Pi you're working with.
+
+  * To make this easier, use the auto expansion (~<s~). This will only
+    work if you have my ~.emacs~ file ([[https://tinyurl.com/lyonemacs][from GDrive]]) installed.
+
+  * Add the following two lines at the top of your file, and activate
+    each line with ~C-c C-c~ (this is confirmed in the echo area as
+    ~Local setup has been refreshed~)):
+    #+begin_example
+    #+PROPERTY: header-args:bash :results output
+    #+end_example
+
+  * Remember that ~C-M-\~ inside a code block indents syntactically
+    (on Windows, this may only work if you have a marked region - set
+    the mark with ~C-SPC~).
+
+  * This section is based on chapter 10 of Shotts, The Linux Command
+    Line (2e), NoStarch Press (2019).
+
+* What is it?
+
+  * Modern operating systems are /multitasking/, which means they create
+    an illusion of doing more than one thing at once
+
+  * They do this by rapidly switching from one executing program to
+    another
+
+  * The *kernel* manages this through clever *process management*, which
+    really is clever *memory management*
+
+    #+caption: Memory Layout of a C Program (Source: Silberschatz et al)
+    [[./img/process.png]]
+
+
+* References
+  
+  * Silberschatz, Galvin and Gagne (2018). Operating System Concepts -
+    10th edition, Wiley.
+
+

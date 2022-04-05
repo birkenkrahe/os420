@@ -54,7 +54,7 @@
     | COMMAND  | MEANING                                |
     |----------+----------------------------------------|
     | ~ps~       | Report a snapshot of current processes |
-    | ~top~      | Display tasks                          |
+    | ~top~      | Display tasks dynamically              |
     | ~jobs~     | List active jobs                       |
     | ~bg~       | Place a job in the background          |
     | ~fg~       | Place a job in the foreground          |
@@ -86,7 +86,7 @@
 
     #+name: systemctl
     #+begin_src bash :results output
-
+      systemctl status 
     #+end_src
 
   * If a program (like ~init~) can launch other programs, it's a
@@ -105,16 +105,21 @@
 
   * The ~ps~ program has a lot of options (check ~ps(1)~)
 
-  * [ ] Run ~ps~ without options.
+  * [X] Run ~ps~ without options.
 
     #+name: ps
     #+begin_src bash :results output
-
+      ps
     #+end_src
+
+    #+RESULTS: ps
+    :   PID TTY          TIME CMD
+    :    10 tty1     00:00:00 bash
+    :    11 tty1     00:00:00 ps
 
   * The result is confusing because you're inside another program now. 
  
-  * [ ] Open a shell (in Emacs with ~M-x shell~ or a terminal) and type
+  * [X] Open a shell (in Emacs with ~M-x shell~ or a terminal) and type
     ~ps~. You should see something like this:
 
     #+begin_example
@@ -128,7 +133,7 @@
     - ~TTY~ ("teletype") is the /controlling terminal/ for the process
     - ~TIME~ is the amount of CPU time consumed by the process
 
-  * [ ] Run ~ps~ again, this time add the option ~x~ 
+  * [X] Run ~ps~ again, this time add the option ~x~ 
    
     #+name: psx
     #+begin_src bash :results output
@@ -138,18 +143,18 @@
   * ~ps x~ (no dash!) shows all processes regardless of what terminal
      they are controlled by. ~?~ indicates no terminal (like daemons).
 
-  * [ ] How many processes that you own that have no terminal?
+  * [X] How many processes that you own that have no terminal?
 
      #+name: noterm
      #+begin_src bash :results output
 
      #+end_src
 
-  * [ ] List only the first 5 lines of the ~ps x~ listing.
+  * [X] List only the first 5 lines of the ~ps x~ listing.
 
      #+name: headps
      #+begin_src bash :results output
-
+     
   #+end_src
 
   * The column ~STAT~ reveals the current status of the process, see
@@ -176,7 +181,7 @@
 
     #+name: aux
     #+begin_src bash :results output
-
+     ps aux | tee psaux.txt | head -5
     #+end_src
   
   * You should see ~PID 1~, the ~init~ program. The ~splash~ options means
@@ -198,7 +203,7 @@
     non-zero? How much RAM does the program actually use?
 
     #+begin_quote
-    ANSWER: ...
+    ANSWER: 
     #+end_quote
 
 * Viewing processes dynamically
@@ -357,6 +362,7 @@
 
    * Some of these signals are sent to the target program (identified
      by PID) while others are sent straight to the kernel.
+
 
 * More process commands
   

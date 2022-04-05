@@ -29,21 +29,6 @@
     (on Windows, this may only work if you have a marked region - set
     the mark with ~C-SPC~).
 
-* Hide Org-mode emphasis markers
-
-  * [ ] Add the string ~"(setq-default org-hide-emphasis-markers t"~ to
-    your ~$HOME/.emacs~ file so that you don't see the emphasis markers
-    in Org-mode. Then show the last line of the file to make sure it
-    worked.
-
-    /Tip: you need the commands ~echo, ~>>~, ~tail~./
-
-    #+name: emphasis
-    #+begin_src bash
-
-
-    #+end_src
-
 * Overview
 
   * Modern operating systems are /multitasking/, which means they create

@@ -1580,7 +1580,7 @@
 
    * See interactive notebook ~environment.org~ in GDrive
 
-* Permissions - w11s18 (29-Mar)
+* Permissions - w11s19 (29-Mar)
 ** Plan for the remainder of the term
 
    * Week 11: Permissions / Intro to scripting
@@ -1589,13 +1589,34 @@
    * Week 14: Networking / Functions
    * Week 15: Scripting project?
 
-* vi editor - w11s19 (31-Mar)
+* vi editor - w11s20 (31-Mar)
+* Process management - w12s21 (5-Apr)
+
+  * [ ] How a process works
+  * [ ] Viewing processes statically and dynamically
+  * [ ] Controlling processes with signals
+  * [ ] Interactive notebook (GDrive)
+
+** Warming up with pipelines
+
+  * [ ] Add the string ~"(setq-default org-hide-emphasis-markers t"~ to
+    your ~$HOME/.emacs~ file so that you don't see the emphasis markers
+    in Org-mode. Then show the last line of the file to make sure it
+    worked.
+
+    /Tip: you need the commands ~echo, ~>>~, ~tail~./
+
+    #+name: emphasis
+    #+begin_src bash
+
+
+    #+end_src
+    
 * Introduction to bash scripting
-* Linux process management
-* Linux networking
-* Linux storage management
-* Linux archiving and backup
-* Linux file searches
+* Networking
+* Storage management
+* Archiving and backup
+* Sophisticated file searches with regular expressions
 * Compiling source code from scratch
 * Review: quizzes, tests, final exam preparation (3-May)
 * References

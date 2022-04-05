@@ -1,0 +1,128 @@
+● raspberrypi
+    State: degraded
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Wed 1969-12-31 18:00:02 CST; 52 years 3 months ago
+   CGroup: /
+           ├─user.slice 
+           │ └─user-1000.slice 
+           │   ├─user@1000.service 
+           │   │ ├─init.scope 
+           │   │ │ ├─853 /lib/systemd/systemd --user
+           │   │ │ └─854 (sd-pam)
+           │   │ └─app.slice 
+           │   │   ├─pipewire.service 
+           │   │   │ ├─869 /usr/bin/pipewire
+           │   │   │ └─933 /usr/bin/pipewire-media-session
+           │   │   ├─pulseaudio.service 
+           │   │   │ └─872 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+           │   │   ├─gvfs-gphoto2-volume-monitor.service 
+           │   │   │ └─1354 /usr/libexec/gvfs-gphoto2-volume-monitor
+           │   │   ├─dbus.service 
+           │   │   │ ├─  922 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+           │   │   │ └─12896 /usr/libexec/dconf-service
+           │   │   ├─gvfs-udisks2-volume-monitor.service 
+           │   │   │ └─1330 /usr/libexec/gvfs-udisks2-volume-monitor
+           │   │   ├─gvfs-mtp-volume-monitor.service 
+           │   │   │ └─1358 /usr/libexec/gvfs-mtp-volume-monitor
+           │   │   ├─gvfs-goa-volume-monitor.service 
+           │   │   │ └─1362 /usr/libexec/gvfs-goa-volume-monitor
+           │   │   ├─gvfs-afc-volume-monitor.service 
+           │   │   │ └─1349 /usr/libexec/gvfs-afc-volume-monitor
+           │   │   └─gvfs-daemon.service 
+           │   │     ├─ 1242 /usr/libexec/gvfsd
+           │   │     ├─ 1247 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+           │   │     ├─ 1376 /usr/libexec/gvfsd-trash --spawner :1.7 /org/gtk/gvfs/exec_spaw/0
+           │   │     ├─12905 /usr/libexec/gvfsd-network --spawner :1.7 /org/gtk/gvfs/exec_spaw/1
+           │   │     └─12918 /usr/libexec/gvfsd-dnssd --spawner :1.7 /org/gtk/gvfs/exec_spaw/3
+           │   └─session-1.scope 
+           │     ├─  564 /bin/login -f
+           │     ├─  892 -bash
+           │     ├─ 1138 /bin/sh /usr/bin/startx
+           │     ├─ 1160 xinit /etc/X11/xinit/xinitrc -- /etc/X11/xinit/xserverrc :0 vt1 -keeptty -auth /tmp/serverauth.TIEzf5cJCP
+           │     ├─ 1161 /usr/lib/xorg/Xorg -nolisten tcp :0 vt1 -keeptty -auth /tmp/serverauth.TIEzf5cJCP
+           │     ├─ 1166 /usr/bin/lxsession -s LXDE-pi -e LXDE
+           │     ├─ 1215 /usr/bin/ssh-agent x-session-manager
+           │     ├─ 1258 mutter
+           │     ├─ 1261 lxpolkit
+           │     ├─ 1263 lxpanel --profile LXDE-pi
+           │     ├─ 1264 pcmanfm --desktop --profile LXDE-pi
+           │     ├─ 1272 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+           │     ├─ 1274 /usr/bin/ssh-agent -s
+           │     ├─ 1326 /usr/lib/menu-cache/menu-cached /run/user/1000/menu-cached-:0
+           │     ├─10819 /usr/lib/chromium-browser/chromium-browser-v7 --force-renderer-accessibility --enable-remote-extensions --enable-pinch --enable-crashpad
+           │     ├─10839 /usr/lib/chromium-browser/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/pi/.config/chromium/Crash Reports --annotation=channel=Built on Raspbian , running on Raspbian 11 --annotation=lsb-release=Raspbian GNU/Linux 11 (bullseye) --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=98.0.4758.106 --initial-client-fd=5 --shared-client-connection
+           │     ├─10843 /usr/lib/chromium-browser/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/home/pi/.config/chromium/Crash Reports --annotation=channel=Built on Raspbian , running on Raspbian 11 --annotation=lsb-release=Raspbian GNU/Linux 11 (bullseye) --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=98.0.4758.106 --initial-client-fd=4 --shared-client-connection
+           │     ├─10845 /usr/lib/chromium-browser/chromium-browser-v7 --type=zygote --no-zygote-sandbox --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --change-stack-guard-on-fork=enable --enable-crashpad
+           │     ├─10846 /usr/lib/chromium-browser/chromium-browser-v7 --type=zygote --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --change-stack-guard-on-fork=enable --enable-crashpad
+           │     ├─10848 /usr/lib/chromium-browser/chromium-browser-v7 --type=zygote --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --change-stack-guard-on-fork=enable --enable-crashpad
+           │     ├─10871 /usr/lib/chromium-browser/chromium-browser-v7 --type=gpu-process --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAABgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABgAAAAAAAAAGAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --shared-files --field-trial-handle=0,7525360689630647846,627907394476141022,131072
+           │     ├─10872 /usr/lib/chromium-browser/chromium-browser-v7 --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,7525360689630647846,627907394476141022,131072 --enable-crashpad
+           │     ├─10874 /usr/lib/chromium-browser/chromium-browser-v7 --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,7525360689630647846,627907394476141022,131072
+           │     ├─10926 /usr/lib/chromium-browser/chromium-browser-v7 --type=renderer --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --extension-process --display-capture-permissions-policy-allowed --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --launch-time-ticks=199470451122 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,7525360689630647846,627907394476141022,131072
+           │     ├─10975 /usr/lib/chromium-browser/chromium-browser-v7 --type=broker
+           │     ├─11042 /usr/lib/chromium-browser/chromium-browser-v7 --type=renderer --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --display-capture-permissions-policy-allowed --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=10 --launch-time-ticks=199486358282 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,7525360689630647846,627907394476141022,131072
+           │     ├─11161 /usr/lib/chromium-browser/chromium-browser-v7 --type=renderer --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --display-capture-permissions-policy-allowed --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=22 --launch-time-ticks=199587426201 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,7525360689630647846,627907394476141022,131072
+           │     ├─11228 /usr/lib/chromium-browser/chromium-browser-v7 --type=renderer --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --display-capture-permissions-policy-allowed --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=26 --launch-time-ticks=199690000091 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,7525360689630647846,627907394476141022,131072
+           │     ├─11913 /usr/bin/emacs
+           │     ├─12254 /bin/bash --noediting -i
+           │     ├─12543 /usr/lib/chromium-browser/chromium-browser-v7 --type=renderer --enable-crashpad --crashpad-handler-pid=0 --enable-crash-reporter=,Built on Raspbian , running on Raspbian 11 --display-capture-permissions-policy-allowed --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=29 --launch-time-ticks=205631692841 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,7525360689630647846,627907394476141022,131072
+           │     ├─13741 lxterminal
+           │     ├─13747 bash
+           │     ├─14005 emacs
+           │     ├─14053 bash
+           │     ├─14054 systemctl status
+           │     ├─14055 tee systemctl.txt
+           │     └─14056 grep logind
+           ├─init.scope 
+           │ └─1 /sbin/init splash
+           └─system.slice 
+             ├─colord.service 
+             │ └─592 /usr/libexec/colord
+             ├─systemd-timesyncd.service 
+             │ └─13808 /lib/systemd/systemd-timesyncd
+             ├─dbus.service 
+             │ └─327 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+             ├─hciuart.service 
+             │ └─875 /usr/bin/hciattach /dev/serial1 bcm43xx 3000000 flow -
+             ├─udisks2.service 
+             │ └─1333 /usr/libexec/udisks2/udisksd
+             ├─ssh.service 
+             │ └─595 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+             ├─avahi-daemon.service 
+             │ ├─321 avahi-daemon: running [raspberrypi.local]
+             │ └─331 avahi-daemon: chroot helper
+             ├─wpa_supplicant.service 
+             │ └─433 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+             ├─triggerhappy.service 
+             │ └─415 /usr/sbin/thd --triggers /etc/triggerhappy/triggers.d/ --socket /run/thd.socket --user nobody --deviceglob /dev/input/event*
+             ├─systemd-logind.service 
+             │ └─413 /lib/systemd/systemd-logind
+             ├─rtkit-daemon.service 
+             │ └─883 /usr/libexec/rtkit-daemon
+             ├─packagekit.service 
+             │ └─1458 /usr/libexec/packagekitd
+             ├─cups.service 
+             │ ├─8097 /usr/sbin/cupsd -l
+             │ └─8105 /usr/lib/cups/notifier/dbus dbus://
+             ├─polkit.service 
+             │ └─888 /usr/libexec/polkitd --no-debug
+             ├─cron.service 
+             │ └─326 /usr/sbin/cron -f
+             ├─systemd-udevd.service 
+             │ └─161 /lib/systemd/systemd-udevd
+             ├─rsyslog.service 
+             │ └─380 /usr/sbin/rsyslogd -n -iNONE
+             ├─bluetooth.service 
+             │ └─887 /usr/libexec/bluetooth/bluetoothd
+             ├─systemd-journald.service 
+             │ └─132 /lib/systemd/systemd-journald
+             ├─dhcpcd.service 
+             │ ├─398 /usr/sbin/dhcpcd -b -q
+             │ └─753 wpa_supplicant -B -c/etc/wpa_supplicant/wpa_supplicant.conf -iwlan0
+             ├─rng-tools-debian.service 
+             │ └─519 /usr/sbin/rngd -r /dev/hwrng
+             ├─cups-browsed.service 
+             │ └─8100 /usr/sbin/cups-browsed
+             └─exim4.service 
+               └─834 /usr/sbin/exim4 -bd -q30m

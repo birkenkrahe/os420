@@ -1527,7 +1527,7 @@
    * [ ] Which command tees standard out off to an intermediate file?
      Answer: the ~tee~ command. Example in [[tee]].
      #+name: tee
-     #+begin_src bash :exports both 
+     #+begin_src bash :exports both
        ls . | tee ls.txt | grep org | wc -l
      #+end_src
 
@@ -1585,7 +1585,7 @@
 
    * Week 11: Permissions / Intro to scripting
    * Week 12: Process management / Variables
-   * Week 13: Customizing the prompt / Control 
+   * Week 13: Customizing the prompt / Control
    * Week 14: Networking / Functions
    * Week 15: Scripting project?
 
@@ -1599,20 +1599,33 @@
 
 ** Warming up with pipelines
 
-  * [ ] Add the string ~"(setq-default org-hide-emphasis-markers t"~ to
-    your ~$HOME/.emacs~ file so that you don't see the emphasis markers
-    in Org-mode. Then show the last line of the file to make sure it
-    worked.
+   * [ ] Add the string ~"(setq-default org-hide-emphasis-markers t)"~ to
+     your ~$HOME/.emacs~ file so that you don't see the emphasis markers
+     in Org-mode. Then show the last line of the file to make sure it
+     worked.
 
-    /Tip: you need the commands ~echo, ~>>~, ~tail~./
+     /Tip: you need the commands ~echo, ~>>~, ~tail~./
 
-    #+name: emphasis
-    #+begin_src bash
+     #+name: emphasis
+     #+begin_src bash
 
 
-    #+end_src
-    
+     #+end_src
+
 * Introduction to bash scripting
+** Emacs tip
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   If you don't put it in your ~/.emacs~ file, the command will only work
+   for the current Emacs session.
+
 * Networking
 * Storage management
 * Archiving and backup

@@ -257,6 +257,17 @@
 
 * Controlling processes
 
+  To *not* see the emphatic characters like ~ or * or / in the Org file
+  text, run the following code chunk (or put the code in your ~/.emacs~
+  file): if successful, you should see ~"t"~ in the minibuffer.
+
+  #+begin_src emacs-lisp :results silent
+    (setq-default org-hide-emphasis-markers t)
+  #+end_src
+
+  If you don't put it in your ~/.emacs~ file, the command will only work
+  for the current Emacs session.
+  
 ** Interrupting a process
 
    * As a guinea pig program, we use ~emacs~.
@@ -281,19 +292,27 @@
      program so that it is immediately placed into the background,
      follow it with an ampersand ~&~ character
 
-   * [ ] Start Emacs from the shell in the background. An Emacs window
+   * [ ] Start Emacs from the shell /in the background/. An Emacs window
      should open. Look at the terminal.
 
    * The message that appeared is part of shell /job control/. It means
      that we have started job number 1 with the PID 13899. If you
-     check the process table with ~ps~, you should see the process
+     check the process table with ~ps~, you should see the process as
+     shown below (with a different ~PID~).
 
      #+begin_example
      [1] 13899
      #+end_example
 
-   * [ ] ~grep~ the ~emacs~ process from the process table using the PID.
+   * [ ] ~grep~ the ~emacs~ process from the process table using the
+     PID. Write the command in the code block below:
 
+     #+name: bg
+     #+begin_src bash
+       
+     #+end_src
+
+     The output in my terminal looks like this:
      #+begin_example
      13928 pts/1    00:00:04 emacs
      #+end_example
@@ -321,7 +340,8 @@
 
    * [ ] Start an ~emacs~ process in a terminal (NOT in an Emacs
      shell) - it's now in the foreground. If you press ~CTRL-z~ in the
-     shell, the process is stopped. 
+     shell (you may need to click in the terminal window), the process
+     is stopped.
 
      #+begin_example
      pi@raspberrypi:~ $ emacs
@@ -341,9 +361,20 @@
 
 ** Killing a process
 
+   * *Cygwin:* The process control commands below also work in
+     Cygwin. Every process has a ~PID~ and a ~WINPID~. The latter will
+     kill the process.
+
+     #+name: cygwin
+     #+attr_html: :width 500px
+     [[./img/cygwin.png]]
+      
    * [ ] ~kill~ is used to terminate processes using the PID. Start
      Emacs from the shell /in the background/ (inside or outside of
-     emacs), and then kill it with ~kill PID~. 
+     emacs), and then kill it with ~kill PID~.
+
+     *In Cygwin*: open another cygwin terminal, run ~ps~ and ~kill~ the
+     ~emacs~ process in the *other* cygwin shell.
 
      /Tip: you get the PID with ~ps~, or right after executing the
      background command./
@@ -362,7 +393,6 @@
 
    * Some of these signals are sent to the target program (identified
      by PID) while others are sent straight to the kernel.
-
 
 * More process commands
   

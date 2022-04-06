@@ -36,10 +36,10 @@
   | 18 |      | Thu-17-Mar | Creating new tools         |                              | Environment           | OS environment variables          |                    |
   |----+------+------------+----------------------------+------------------------------+-----------------------+-----------------------------------+--------------------|
   | 19 |   11 | Tue-29-Mar |                            | LX:12 The vi text editor     |                       |                                   |                    |
-  | 20 |      | Thu-31-Mar |                            | LX:9 Permissions             | vi editor             |                                   |                    |
+  | 20 |      | Thu-31-Mar |                            | LX:9 Permissions             | vi editor assignment  | Permissions                       |                    |
   |----+------+------------+----------------------------+------------------------------+-----------------------+-----------------------------------+--------------------|
-  | 21 |   12 | Tue-05-Apr | From Cmdline to script     | LX:10 Processes              |                       |                                   |                    |
-  |    |      | Thu-07-Apr |                            | LX:24 Writing bash scripts   |                       |                                   | Quiz 7             |
+  | 21 |   12 | Tue-05-Apr | From Cmdline to script     | LX:10 Processes              |                       | Processes                         |                    |
+  | 22 |      | Thu-07-Apr |                            | LX:24 Writing bash scripts   | Cygwin assignment     |                                   | Quiz 7             |
   |----+------+------------+----------------------------+------------------------------+-----------------------+-----------------------------------+--------------------|
   |    |   13 | Tue-12-Apr | Variables in Bash          | LX:15 Storage media          |                       |                                   |                    |
   |    |      | Thu-14-Apr |                            | LX:16 Networking             |                       |                                   | Quiz 8             |
@@ -70,7 +70,6 @@ assignments in this course, you get three DataCamp certificates that
 you can put on your resume! - At the start of the course, there'll be
 a few setup assignments outside of DataCamp.
 
-[fn:3]Quiz: covers the material of the past week. Usually 15 min at
-the beginning of the first class of each week, multiple choice. Test:
-in class exercises.
+[fn:3]Quiz: covers the material of the past week, multiple
+choice. Test: in class exercises.
 

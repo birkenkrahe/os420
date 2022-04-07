@@ -1612,7 +1612,14 @@
 
      #+end_src
 
-* Introduction to bash scripting
+* Cygwin assignment - w12s22 (7-Apr)
+
+  * [ ] [[https://lyon.schoology.com/assignment/5853804048][Cygwin assignment / controlling processes]]
+  * [ ] [[https://app.datacamp.com/learn/courses/introduction-to-bash-scripting][DataCamp assignment]]
+
+    [[./img/cygwin1.png]]
+  
+* Introduction to bash scripting 
 ** Emacs tip
 
    To *not* see the emphatic characters like ~ or * or / in the Org file

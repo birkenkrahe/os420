@@ -84,8 +84,95 @@
     [[egrep]]. Print it first, then run it using the code block below.
 
     #+begin_src bash
-      cat fruit.sh 
+      cat fruit.sh
       . fruit.sh
     #+end_src
 
-  * [ ] 
+    #+RESULTS:
+    : #!/usr/bin/bash
+    : cat new_fruits.txt | egrep 'na|ca' | wc -l
+    : 11
+
+  * [ ] When you run shell commands outside of an Emacs code block,
+    you need to change file permissions. Change permissions for
+    ~fruit.sh~ so that the owner can run the file from the shell, too!
+
+    #+begin_src bash
+      chmod u+x fruit.sh
+      ls -l fruit.sh
+    #+end_src
+
+    #+RESULTS:
+    : -rwxr--r-- 1 pi pi 59 Apr 11 22:58 fruit.sh
+
+  * [ ] Change the permissions of this file for all using the ~700~ or
+    ~755~ octal codes.
+
+    #+begin_src bash
+      chmod 755 fruit.sh
+      ls -l fruit.sh
+    #+end_src
+
+    #+RESULTS:
+    : -rwxr-xr-x 1 pi pi 59 Apr 11 22:58 fruit.sh
+
+
+* Standard streams and arguments
+
+  * [ ] Create an example script ~args.sh~
+
+    #+begin_example bash
+      #~/usr/bin/bash
+      echo $1
+      echo $@
+      echo "There are " $# "arguments"
+    #+end_example
+
+  * [ ] Run the script with a few words as arguments:
+
+    #+begin_src bash
+      . args.sh one two
+    #+end_src
+
+    #+RESULTS:
+    : one
+    : two
+    : one two
+    : There are  2 arguments
+
+  * [ ] Now do it on your own:
+
+    - Write a script ~echo.sh~ that echos out the *second* and *fourth*
+      argument of your input only
+    - Then echo out the entire ~ARGV~ array
+    - Then echo out the size of the array
+    - Run the script with the arguments
+    #+begin_example bash
+      one two three four five six seven
+    #+end_example
+
+    #+begin_src bash
+      . echo.sh  one two three four five six seven
+    #+end_src
+
+    #+RESULTS:
+    : two
+    : four
+    : one two three four five six seven
+    : 7
+
+  * [ ] Do this in the code block below. ~array~ stores your arguments
+    already. Tangle the code and run it on the command line.
+
+    #+begin_src bash :cmdline < array :tangle echo1.sh
+      echo "argument no. 2: " $2
+      echo "argument no. 4  " $4
+      echo "all arguments: "  $@
+      echo "number of args: " $#
+    #+end_src
+
+    #+RESULTS:
+    : argument no. 2: 
+    : argument no. 4  
+    : all arguments: 
+    : number of args:  0

@@ -1619,7 +1619,7 @@
 
     [[./img/cygwin1.png]]
   
-* Introduction to bash scripting 
+* Introduction to bash scripting  (12-Apr)
 ** Emacs tip
 
    To *not* see the emphatic characters like ~ or * or / in the Org file
@@ -1632,6 +1632,16 @@
 
    If you don't put it in your ~/.emacs~ file, the command will only work
    for the current Emacs session.
+
+** DataCamp review
+
+  #+attr_html: :width 700px
+  #+caption: DataCamp bash IDE
+  [[./img/ide.png]]
+
+  #+attr_html: :width 700px
+  #+caption: DataCamp pipe illustration
+  [[./img/pipe1.png]]
 
 * Networking
 * Storage management

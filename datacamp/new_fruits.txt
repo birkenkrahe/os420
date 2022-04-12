@@ -1,0 +1,17 @@
+banana
+apple
+carrot
+banana
+banana
+banana
+carrot
+carrot
+apple
+banana
+carrot
+apple
+apple
+apple
+apple
+carrot
+carrot

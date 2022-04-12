@@ -30,7 +30,6 @@
     (on Windows, this may only work if you have a marked region - set
     the mark with ~C-SPC~).
 
-
 * Overview
 
   * A shell script is a file containing a series of commands.
@@ -51,31 +50,45 @@
 
 * Script file format
 
-  * [ ] Fire up an editor and create a "Hello World" program
-    ~hello.sh~. You can use ~vi~ if you like!
+  * [X] Fire up an editor and create a "Hello World" program
+    ~hello.sh~. You can use ~vi~ or ~nano~ if you like!
 
-  * [ ] Put a comment in after the command, using ~#~
+    - In Emacs, ~C-x C-f hello.sh~ to create the file, and ~C-x C-s~ to save it
 
-  * [ ] You got to get the location of your ~bash~ program right.
+    - In vi, write ~vi hello.sh~ in the terminal, insert with ~i~, save
+      with ~:w~ and exit with ~:q~
 
-  * [ ] If successful, run the same command in the terminal (including
+  * [X] Put a comment in after the command, using ~#~
+
+  * [X] You got to get the location of your ~bash~ program right.
+
+    #+begin_example bash
+      which bash  # likely in /usr/bin/bash
+    #+end_example
+
+    First line of your script should look like this:
+    #+begin_example bash
+      #!/usr/bin/bash
+    #+end_example
+  
+  * [X] If successful, run the same command in the terminal (including
     the comment.
 
   * The first line of the script is the /shebang/ to tell the kernel the
     name of the interpreter that should be used to execute the script.
 
-  * [ ] Make a copy of the file, find a different interpreter
+  * [X] Make a copy of the file, find a different interpreter
     (e.g. ~csh~, the C shell) and modify the file accordingly. 
 
 * Executable permissions
 
-  * [ ] Check file permissions.
+  * [X] Check file permissions with the command ~chmod~
 
-  * [ ] Make your file executable. Check the permissions.
+  * [X] Make your file executable. Check the permissions.
 
 * Script file location
 
-  * [ ] Save and run the file on the shell (you can do that inside
+  * [X] Save and run the file on the shell (you can do that inside
     Emacs with ~M-x shell~).
 
   * For the file to run, an /explicit/ path has to be provided,
@@ -85,25 +98,49 @@
     is a shell builtin that reads a specified file of shell commands
     and treats it like input from the keyboard.
 
-  * [ ] Print the path that the OS searches when looking for a command
+  * [X] Print the path that the OS searches when looking for a command:
 
-  * [ ] Make a directory ~/bin~ in your home directory and add it to the
+    #+begin_example bash
+      echo $PATH
+    #+end_example
+
+  * [X] Make a directory ~/bin~ in your home directory and add it to the
     ~PATH~ using the syntax ~PATH=$HOME/bin:$PATH~
 
-  * [ ] Check that ~PATH~ was altered as you wanted. The new directory
+  * [X] Check that ~PATH~ was altered as you wanted. The new directory
     should be the first in the list.
 
-  * [ ] Copy ~hello.sh~ to that new directory and run the file again
+  * [X] Copy ~hello.sh~ to that new directory and run the file again
     from your current location.
 
   * [ ] To apply this change of ~PATH~ whenever ~bash~ is called, you need
     to include this line in your initialization file ~$HOME/.bashrc~:
 
-    #+begin_example bash
-      export PATH=~/bin:$PATH
+    To find the file:
+    #+begin_example
+      ls -la .bashrc
     #+end_example
 
-  * [ ] To make the change, you have to source the ~$HOME/.bashrc~ file.
+    #+begin_example bash
+      export PATH=$HOME/bin:$PATH
+    #+end_example
+
+    To append this line to ~.bashrc~ do:
+    #+begin_example bash
+      echo "export PATH=$HOME/bin:$PATH" >> .bashrc
+    #+end_example
+
+    To check if the appending was successful (~cat~ works, too):
+    #+begin_example bash
+      tail -1 .bashrc
+    #+end_example
+  
+    * [ ] To make the change, you have to source the ~$HOME/.bashrc~
+      file using the source operator ~.~:
+
+      #+begin_example bash
+      . .bashrc
+      #+end_example
 
 * Summary
 
@@ -113,3 +150,4 @@
   * DataCamp, Introduction to Bash Scripting (course).
 
 
+  

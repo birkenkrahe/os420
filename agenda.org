@@ -1643,6 +1643,13 @@
   #+caption: DataCamp pipe illustration
   [[./img/pipe1.png]]
 
+
+  * UNIX stream editor ~sed~
+
+    #+begin_example bash
+      cat file.txt | sed 's/Birkenkrahe/birchcrow/g' | grep 'Birkenkrahe'
+    #+end_example
+    
 * Networking
 * Storage management
 * Archiving and backup

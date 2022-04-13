@@ -1644,18 +1644,21 @@
   [[./img/pipe1.png]]
 
 
-  * UNIX stream editor ~sed~
+  * UNIX stream editor ~sed~ to change one pattern into another. 
 
     #+begin_example bash
       cat file.txt | sed 's/Birkenkrahe/birchcrow/g' | grep 'Birkenkrahe'
     #+end_example
     
-* Networking
-* Storage management
-* Archiving and backup
-* Sophisticated file searches with regular expressions
-* Compiling source code from scratch
-* Review: quizzes, tests, final exam preparation (3-May)
+** Scripting in bash - refresher
+
+   * [X] How to write a shell script in 3 steps
+   * [X] Script file format with /shebang/
+   * [X] Permission to execute with ~chmod~ 
+   * [X] Location with ~$PATH~
+
+* SOMEDAY Compiling source code from scratch
+* SOMEDAY Review: quizzes, tests, final exam preparation (3-May)
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

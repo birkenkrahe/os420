@@ -144,10 +144,28 @@
 
 * Summary
 
+   * [X] How to write a shell script in 3 steps
+   * [X] Script file format with /shebang/
+   * [X] Permission to execute with ~chmod~ 
+   * [X] Location with ~$PATH~
+
+* Appendix: "BASH scripting will change your life"
+
+  * These notes are based on NetworkChuck's video (Apr 12, 2022).
+
+  * This guy is a wildly successful Linux aficionado, who seems to
+    make quite a bit of money with the recent resurgence of the
+    command line[fn:1]
+
+  * Note: you're already on this journey while others are still only
+    thinking about it or have no clue on how to begin!
 * References
   
   * Shotts, The Linux Command Line (2e), NoStarch Press (2019).
   * DataCamp, Introduction to Bash Scripting (course).
 
+* Footnotes
 
-  
+[fn:1] In the wake of Microsoft and other vendors' decision to snuggle
+up to Linux, and the increased interest - partly politically
+motivated - to invest in cybersecurity. 

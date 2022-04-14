@@ -1,4 +1,4 @@
-#+TITLE:Bash scripting
+#+TITLE:Bash scripting 1
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:processes practice for CSC420 Operating Systems Spring 2022 Lyon College
 #+STARTUP:overview hideblocks
@@ -149,16 +149,6 @@
    * [X] Permission to execute with ~chmod~ 
    * [X] Location with ~$PATH~
 
-* Appendix: "BASH scripting will change your life"
-
-  * These notes are based on NetworkChuck's video (Apr 12, 2022).
-
-  * This guy is a wildly successful Linux aficionado, who seems to
-    make quite a bit of money with the recent resurgence of the
-    command line[fn:1]
-
-  * Note: you're already on this journey while others are still only
-    thinking about it or have no clue on how to begin!
 * References
   
   * Shotts, The Linux Command Line (2e), NoStarch Press (2019).

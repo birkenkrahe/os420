@@ -1,0 +1,314 @@
+#+TITLE:Bash scripting 2
+#+AUTHOR:Bash scripting 2
+#+SUBTITLE:Bash scripting 2 exercises Operating Systems CSC420 Spring '22
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:bash :results output
+#+PROPERTY: header-args:bash :exports both
+* README
+
+  * Work through this file using ~replit.com~ or ~Cygwin~ when you have no
+    access to a real ~bash~ shell. In class we'll use ~replit.com~.
+
+  * In this practice, we're going through some of the material in the
+    DataCamp course "Introduction to bash scripting" on DataCamp.
+
+* Revising shell commands
+
+  * [ ] Create ~fruit.txt~ with the words ~banana~, ~apple~ and ~carrot~ each
+    on one line.
+
+    #+begin_src bash :results output
+
+
+
+
+    #+end_src
+
+
+  * [ ] Look for the pattern ~'a'~ in ~fruits.txt~.
+
+    #+begin_src bash :results output
+
+    #+end_src
+
+
+  * [ ] Look for any line with a ~c~ or an ~e~ in ~fruit.txt~.
+
+    #+begin_src bash :results output
+
+    #+end_src
+
+
+
+  * [ ] Invert the search. Look for anything that does not have
+    a ~c~ or an ~e~ in ~fruit.txt~.
+
+    #+begin_src bash :results output
+
+    #+end_src
+
+
+  * [ ] Sort the file ~new_fruits.txt~, ~tee~ off the sorted result, and
+    count only the the /distinct/ entries.
+
+    #+begin_src bash
+
+    #+end_src
+
+
+  * [ ] ~egrep~ is the same as ~grep -E~ and amounts to an OR operator
+    between different patterns. That is, ~egrep 'p|q'~ checks if either
+    ~p~ or ~q~ are found.
+
+    Use this knowledge to count the lines that contain either ~'na'~ or
+    ~'ca'~.
+
+    #+name: egrep
+    #+begin_src bash
+
+    #+end_src
+
+
+* Your first bash script
+
+  * [ ] Create a bash file ~fruit.sh~ that executes the code in [[egrep]]
+    that you just created. Print the file first, then run it using the
+    code block below.
+
+    #+begin_src bash
+      cat fruit.sh
+      . fruit.sh
+    #+end_src
+
+
+  * [ ] When you run shell commands outside of an Emacs code block,
+    you need to change file permissions. Change permissions for
+    ~fruit.sh~ so that the *owner* can run the file from the shell, but
+    not the world, and list the file with permissions.
+
+    #+begin_src bash
+
+
+    #+end_src
+
+
+  * [ ] Change the permissions of this file for all using the ~700~ or
+    ~755~ octal codes.
+
+    #+begin_src bash
+
+
+    #+end_src
+
+
+* Standard streams and arguments
+
+  * [ ] Create an example script ~args.sh~ as shown below.
+
+    #+begin_example bash
+      #~/usr/bin/bash
+      echo $1
+      echo $@
+      echo "There are " $# "arguments"
+    #+end_example
+
+  * [ ] Run the script with a few words as arguments:
+
+    #+begin_src bash
+      . args.sh one two
+    #+end_src
+
+
+  * [ ] Now do it on your own:
+
+    - Write a script ~echo.sh~ that echos out the *second* and *fourth*
+      argument of your input only
+    - Then echo out the entire ~ARGV~ array
+    - Then echo out the size of the array
+    - Run the script with the arguments
+
+    Desired output:
+    #+begin_example bash
+      one two three four five six seven
+    #+end_example
+
+    Solution:
+    #+begin_example bash
+
+        #+end_example
+
+    Code to run the file:
+    #+begin_src bash
+      . echo.sh  one two three four five six seven
+    #+end_src
+
+
+  * [ ] If you're in Emacs, do this in the code block below. ~array~
+    stores your arguments already. Tangle the code and run it on the
+    command line.
+
+    If you are *not in Emacs*, create a file with this code
+
+    #+begin_src bash :cmdline < array :tangle echo1.sh
+      echo "argument no. 2: " $2
+      echo "argument no. 4  " $4
+      echo "all arguments: "  $@
+      echo "number of args: " $#
+    #+end_src
+
+
+* Single and double quotes
+
+  * [ ] What should the output of the code below be? Run the code to
+    check your guess.
+
+    #+begin_src bash
+      now_var='NOW'
+      now_var_singlequote='$now_var'
+      echo $now_var_singlequote
+    #+end_src
+
+
+  * [ ] What should the output of the code below be? Run the code to
+    check your guess.
+
+    #+begin_src bash :results output
+      now_var='NOW'
+      now_var_doublequote="$now_var"
+      echo $now_var_doublequote
+    #+end_src
+
+
+* The date program - shell within a shell
+
+  * [ ] Print the current data and time on the shell.
+
+  #+begin_src bash
+
+  #+end_src
+
+
+  * [ ] Generate the output shown below using the "shell within a
+    shell" operator. There are two ways to do this.
+
+    Desired output:
+    #+begin_src bash
+      The date is Wed Apr 13 22:57:49 CDT 2022.
+    #+end_src
+
+    Code:
+    #+begin_src bash
+
+
+    #+end_src
+
+* Practice shell within a shell
+
+  * [ ] Which of these three commands uses a "shell within a shell" to
+    print out the date? Guess and then run the code.
+
+    #+begin_src bash
+      echo "Right now it is "date""
+      echo "Right now it is `date`"
+      echo "Right now it is $date"
+    #+end_src
+
+
+* Numeric variables in bash
+
+  * Arithmetic is not automatically built into ~bash~ as it is in R
+    e.g. Numbers are not natively supported.
+
+    #+begin_src R :exports both :session :results output
+      1 + 4
+    #+end_src
+
+
+    Try this on the shell, but redirect the error message to the "bit
+    bucket" ~/dev/null~ (make it disappear).
+
+    /Tip: watch the standard error stream (descriptor 2)/
+
+    /In Emacs, this means that you won't see the ~*Org-Babel Error
+    Output*~./
+
+    Code:
+    #+begin_src bash :results silent
+
+    #+end_src
+
+* Express yourself numerically with ~expr~
+
+  * [ ] Compute ~1+4~ on the shell using the built-in ~expr~ function.
+
+    /Tip: whitespace (empty space) is meaningful on the shell./
+
+    Code: 
+    #+begin_src bash
+
+    #+end_src
+
+
+  * [ ] As you experiment with this, you'll find that ~expr~ is not
+    reliable. Compute ~2*2~ with ~expr~ and then with the *arithmetic
+    expansion operator* ~$((...))~
+
+    Code: 
+    #+begin_src bash
+
+
+
+    #+end_src
+
+    On a real shell (not on Windows), you can do niftier things that
+    you may know from C, like compound operators ~++i~ (prefix
+    only). This would work on a real shell, and it'll work in
+    replit.com, too:
+
+    #+begin_example bash
+      foo=2      # assigns 2 to variable foo
+      echo $foo  # print 2
+      echo $((++foo))  # print 3
+    #+end_example
+
+    You can use this to build ~for~ loop iterative structures.
+
+    /Note: ~expr~ and ~$((..))~ only work for *integer constants*.
+
+*  The basic calculator ~bc~
+
+  * This will *not* work in replit.com because ~bc~ is not installed. It
+    will work in Cygwin and under Linux.
+    
+  * [ ] Compute ~2*2~ using ~bc~ and a pipe.
+
+    #+begin_src bash
+
+    #+end_src
+
+
+  * [ ] Compute ~314 * 0.01~ using ~bc~, the ~scale~ attribute, and a pipe.
+
+    #+begin_src bash
+
+    #+end_src
+
+
+  * [ ] Define a string variable ~cat_name~ and a numerical variable
+    ~cat_age~. Assign the values ~Jack~ and ~1~ to them and generate the
+    following output:
+
+    #+begin_example bash
+      My cat's name is Jack and his age is 1.
+    #+end_example
+
+    Code:
+    #+begin_src bash
+
+
+
+    #+end_src
+
+
+    /Note: in Emacs, you may get some control characters like ~^M~, too./

@@ -13,10 +13,20 @@
   * In this practice, we're going through some of the material in the
     DataCamp course "Introduction to bash scripting" on DataCamp.
 
+  * Text is therefore rather terse - there are no explanations for the
+    tasks. If you find yourself clueless, please go back to the
+    DataCamp lesson and look e.g. at the presentation for the video
+    and/or the transcript below it. You can download the presentation
+    with a button at the upper left of the video dashboard.
+
+    #+attr_html: :width 600px
+    #+caption: Getting the DataCamp slides for videos
+    [[./slides.png]]
+  
 * Revising shell commands
 
   * [ ] Create ~fruit.txt~ with the words ~banana~, ~apple~ and ~carrot~ each
-    on one line.
+    on one line *using the shell* (so not just by editing the file).
 
     #+begin_src bash :results output
 
@@ -61,8 +71,8 @@
     between different patterns. That is, ~egrep 'p|q'~ checks if either
     ~p~ or ~q~ are found.
 
-    Use this knowledge to count the lines that contain either ~'na'~ or
-    ~'ca'~.
+    Use this knowledge to count the lines in ~new_fruits.txt~ that
+    contain either ~'na'~ or ~'ca'~.
 
     #+name: egrep
     #+begin_src bash
@@ -124,7 +134,7 @@
 
     - Write a script ~echo.sh~ that echos out the *second* and *fourth*
       argument of your input only
-    - Then echo out the entire ~ARGV~ array
+    - Then echo out the entire ~ARGV~ array (that you put in)
     - Then echo out the size of the array
     - Run the script with the arguments
 

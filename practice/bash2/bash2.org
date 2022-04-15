@@ -134,7 +134,7 @@
 
     - Write a script ~echo.sh~ that echos out the *second* and *fourth*
       argument of your input only
-    - Then echo out the entire ~ARGV~ array (that you put in)
+    - Then echo out the entire input array (that you put in)
     - Then echo out the size of the array
     - Run the script with the arguments
 

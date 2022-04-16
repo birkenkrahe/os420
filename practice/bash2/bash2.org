@@ -154,20 +154,6 @@
     #+end_src
 
 
-  * [ ] If you're in Emacs, do this in the code block below. ~array~
-    stores your arguments already. Tangle the code and run it on the
-    command line.
-
-    If you are *not in Emacs*, create a file with this code
-
-    #+begin_src bash :cmdline < array :tangle echo1.sh
-      echo "argument no. 2: " $2
-      echo "argument no. 4  " $4
-      echo "all arguments: "  $@
-      echo "number of args: " $#
-    #+end_src
-
-
 * Single and double quotes
 
   * [ ] What should the output of the code below be? Run the code to
@@ -286,6 +272,25 @@
 
     /Note: ~expr~ and ~$((..))~ only work for *integer constants*.
 
+* Assign numerical and string variables 
+  
+  * [ ] Define a string variable ~cat_name~ and a numerical variable
+    ~cat_age~. Assign the values ~Jack~ and ~1~ to them and generate the
+    following output:
+
+    #+begin_example bash
+      My cat's name is Jack and his age is 1.
+    #+end_example
+
+    Code:
+    #+begin_src bash
+
+
+
+    #+end_src
+
+
+    /Note: in Emacs, you may get some control characters like ~^M~, too./
 *  The basic calculator ~bc~
 
   * This will *not* work in replit.com because ~bc~ is not installed. It
@@ -304,21 +309,3 @@
 
     #+end_src
 
-
-  * [ ] Define a string variable ~cat_name~ and a numerical variable
-    ~cat_age~. Assign the values ~Jack~ and ~1~ to them and generate the
-    following output:
-
-    #+begin_example bash
-      My cat's name is Jack and his age is 1.
-    #+end_example
-
-    Code:
-    #+begin_src bash
-
-
-
-    #+end_src
-
-
-    /Note: in Emacs, you may get some control characters like ~^M~, too./

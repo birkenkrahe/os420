@@ -1,0 +1,56 @@
+#+TITLE:Networking
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:networking lecture & practice for CSC420 Operating Systems Spring 2022 Lyon College
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:bash :results output
+#+PROPERTY: header-args:bash :exports both
+* README
+
+  * This file accompanies lectures on the shell and ~bash(1)~. To gain
+    practice, you should type along in your own Org-mode file. You
+    have to have Emacs and my ~.emacs~ file installed on your PC or
+    the Pi you're working with.
+
+  * This section is based on chapter 16 of Shotts, The Linux Command
+    Line (2e), NoStarch Press (2019).
+
+  * To make this easier, use the auto expansion (~<s~). This will only
+    work if you have my ~.emacs~ file ([[https://tinyurl.com/lyonemacs][from GDrive]]) installed and the
+    ~org-tempo~ library loaded.
+
+  * Add the following two lines at the top of your file, and activate
+    each line with ~C-c C-c~ (this is confirmed in the echo area as
+    ~Local setup has been refreshed~)):
+    #+begin_example
+    #+PROPERTY: header-args:bash :results output
+    #+end_example
+
+  * Remember that ~C-M-\~ inside a code block indents syntactically
+    (on Windows, this may only work if you have a marked region - set
+    the mark with ~C-SPC~).
+
+   To *not* see the emphatic characters like ~ or * or / in the Org file
+   text, run the following code chunk (or put the code in your ~/.emacs~
+   file): if successful, you should see ~"t"~ in the minibuffer.
+
+   #+begin_src emacs-lisp :results silent
+     (setq-default org-hide-emphasis-markers t)
+   #+end_src
+
+   If you don't put it in your ~/.emacs~ file, the command will only work
+   for the current Emacs session.
+  
+* NEXT Overview
+
+* Network address on Windows
+
+  * Go to Settings > Network & Internet > Wi-Fi > Hardware properties
+
+    Here you see the IPv4 adress, e.g. for my computer: 192.168.1.116
+  
+* TODO Summary
+* TODO References
+  
+
+

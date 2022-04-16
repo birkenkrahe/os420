@@ -1619,7 +1619,7 @@
 
     [[./img/cygwin1.png]]
   
-* Introduction to bash scripting  (12-Apr)
+* Introduction to bash scripting  - w13s23 (12-Apr)
 ** Emacs tip
 
    To *not* see the emphatic characters like ~ or * or / in the Org file
@@ -1657,8 +1657,47 @@
    * [X] Permission to execute with ~chmod~ 
    * [X] Location with ~$PATH~
 
-* SOMEDAY Compiling source code from scratch
-* SOMEDAY Review: quizzes, tests, final exam preparation (3-May)
+* Bash scripting lab practice - w13s24 (14-Apr)
+
+  * We use the online bash installation ~replit.com~ for this practice.
+
+  * You find the practice notebook in GDrive (practice directory)
+
+  * All exercises are directly or indirectly taken from the first two
+    DataCamp chapters of
+  
+  * [X] Revising shell commands
+  * [X] Standard streams and arguments
+  * [X] Single and double quotes
+  * [X] Shell within a shell
+  * [X] Numeric vaiables and arithmetic on the shell
+
+  * The exercises with ~bc~ cannot be completed in replit.com or in
+    Cygwin, you need a native Linux installation for that (like
+    Raspbian on the Raspberry Pi)
+  
+* NEXT Networking - w14s25 (21-Apr)
+
+  * [ ] Last two *DataCamp* assignments for EXTRA CREDIT only
+  * [ ] *Quiz 7-9* are live (bash scripting/permissions/processes)
+  * [ ] Play the quizzes by April 22 (Friday) 4 pm
+  * [ ] *Test 3* will be online - open Thu-28-Apr to Fri-28-Apr
+  * [ ] *Test 3* will not have any new questions - only Q7-Q9
+  * [ ] *Topic* today: Networking under Linux
+
+** Networking
+
+   * [ ] ~ping~ other network hosts
+   * [ ] ~traceroute~ to print network travel routes
+   * [ ] ~ip~ to show/manipulate network devices
+   * [ ] ~netstat~ to print network stats
+   * [ ] ~ftp~ for internet file transfer
+   * [ ] ~wget~ for non-interactive network downloads
+   * [ ] ~ssh~ for remote shell login
+    
+* TODO Archiving and backup - w15s26 (26-Apr)
+* TODO Compiling source code from scratch - w15s27 (28-Apr)
+* TODO Review: quizzes, tests, final exam preparation (3-May)
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

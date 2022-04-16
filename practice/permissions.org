@@ -62,33 +62,25 @@
 
      #+name: permission0
      #+begin_src bash :results output
-       file /etc/shadow
-     #+end_src
 
-     #+RESULTS: permission0
-     : /etc/shadow: regular file, no read permission
+     #+end_src
 
    * Try to page the file using the ~less~ command. Anticipating an
      error, redirect the standard error to standard output.
 
      #+name: permission1
      #+begin_src bash :results output
-       less /etc/shadow 2>&1
-     #+end_src
 
-     #+RESULTS: permission1
-     : /etc/shadow: Permission denied
+     #+end_src
 
    * As regular user, you don't have permission to look at this
      file. Check if you can at least see who does have permission.
 
      #+name: permission2
      #+begin_src bash :results output
-       ls -l /etc/shadow
+
      #+end_src
 
-     #+RESULTS: permission2
-     : -rw-r----- 1 root shadow 975 Jan 23 18:47 /etc/shadow
 
 ** The security model
 
@@ -106,12 +98,8 @@
 
      #+name: id
      #+begin_src bash :results output
-       id
-     #+end_src
 
-     #+RESULTS: id
-     : uid=1000(marcus) gid=1000(marcus) groups=1000(marcus),4(adm),20(dialout),
-     24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),117(netdev)
+     #+end_src
 
    * When users are created, they are assigned a /user ID/ (/uid/),
      which is mapped to a user name
@@ -125,9 +113,6 @@
 
    * This information is stored in text files, of course: user
      accounts in /etc/passwd, groups in /etc/group.
-
-   * [ ] Remember why text is so great: portability, performance, and
-     readibility
 
    * [ ] Take a look at /etc/passwd and /etc/group.
 
@@ -160,12 +145,10 @@
 
     #+name: ll
     #+begin_src bash :results output
-      touch foo.txt
-      ls -l foo.txt
+
+
     #+end_src
 
-    #+RESULTS: ll
-    : -rwxrwxrwx 1 marcus marcus 0 Mar 29 10:10 foo.txt
 
 * File attributes
 
@@ -188,7 +171,7 @@
     These files handle data as a stream of bytes.
 
     #+begin_quote
-    Answers: /dev/null is a character special file
+    Answers: 
     #+end_quote
 
   * A block special file handles data in blocks, e.g. a hard drive.
@@ -238,22 +221,15 @@
     Answer without checking directly, only based on the file
     attributes: Can you write to the files ~export~ and ~unexport~?
 
-    #+begin_src bash
-     ls -l /sys/class/gpio
-    #+end_src
-
     #+begin_quote
-    Answer: YES, because pi is member of the group gpio, like the
-    file's owner, root. But you cannot directly write to it.
+    Answer:
     #+end_quote
 
   * [ ] Check your $HOME. What are the permissions, and what is
     everybody (the world) allowed to do or see?
 
     #+begin_quote
-    Answer: "drwxr-xr-x" means that the world can enter (cd) my $HOME,
-    and list the content, but the world cannot create, rename or
-    remove files.
+    Answer: 
     #+end_quote
 
 * Changing file modes
@@ -302,9 +278,6 @@
        ls -l foo.txt
      #+end_src
 
-     #+RESULTS: chmod
-     : -rwxrwxrwx 1 marcus marcus 0 Mar 29 10:10 foo.txt
-
    * [ ] In the block [[chmod1]] below, change the permissions (file mode)
      to 600 with the command ~chmod 600 [filename]~ and list the file.
 
@@ -314,29 +287,24 @@
 
      #+name: chmod1
      #+begin_src bash :results output
-       chmod 600 foo.txt
-       ls -l foo.txt
-     #+end_src
 
-     #+RESULTS: chmod1
-     : -rw------- 1 marcus marcus 0 Mar 29 10:10 foo.txt
+
+     #+end_src
 
    * [ ] Change the mode of foo.txt to be readable by owner, group,
      and world, with no other permissions for any of these.
 
      #+name: chmod2
      #+begin_src bash :results output
-       chmod 444 foo.txt
-       ls -l foo.txt
+
+
      #+end_src
 
-     #+RESULTS: chmod2
-     : -r--r--r-- 1 marcus marcus 0 Mar 29 10:10 foo.txt
 
 ** Changing file modes with symbols
 
    * Symbolic notation is divided into three parts:
-     - Whom the change will affect
+     - Who the change will affect
      - Which operation will be performed
      - What permission will be set
 
@@ -385,9 +353,6 @@
        ls -l bar.txt
      #+end_src
 
-     #+RESULTS: chmod3
-     : -rwxrwxrwx 1 marcus marcus 0 Mar 29 10:42 bar.txt
-
 
    * [ ] In the block [[chmod4]] below, set the permissions for the owner,
      the group and others to read and write only. Use the command
@@ -395,8 +360,8 @@
 
      #+name: chmod4
      #+begin_src bash :results output
-       chmod ugo=rw bar.txt
-       ls -l bar.txt
+
+
      #+end_src
 
 
@@ -405,8 +370,10 @@
 
      #+name: chmod5
      #+begin_src bash :results output
-       chmod a=r  bar.txt
-       ls -l bar.txt
+
+
      #+end_src
 
+
 * Summary
+

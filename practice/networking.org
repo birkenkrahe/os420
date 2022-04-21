@@ -438,7 +438,6 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
      Raspberry Pi (this is it), network printers etc. 
 
 * Transporting files over a network with ~ftp~ and ~wget~
-
 ** FTP
 
   * ~ftp~ (File Transfer Protocol) is a "classic" program. It is
@@ -467,7 +466,15 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
     FTP servers that allow you to login using the username /anonymous/
     and a meaningless password. 
 
+  * Try ~lftp~ - a better FTP client. On Windows, I used Cyberduck years
+    ago. Dedicated clients offer a lot more features.
+
 ** An FTP session
+
+    #+attr_html: :width 500px
+    #+caption: FTP session example
+    [[./img/ftp.png]]
+
 
   * [ ] Install ~ftp~ as ~sudo~ - use an Emacs shell or a terminal for that.
 
@@ -491,8 +498,167 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
 
   * [ ] Close the connection with ~close~ and quit with ~quit~
 
+** wget 
 
-* TODO Secure communication with ~ssh~
+   * ~wget~ is a tool for file downloading both from web and FTP
+     sites. It exhibits network resilience, e.g. it will keep trying
+     to get the job done even if the network is slow or unstable. It
+     does the job in the background 
+
+   * ~wget~ uses "recursive downloading" and recreates the entire file
+     structure that it finds remotely at the local site while
+     respecting the local "Robot Exclusion Standard" of the ~robots.txt~
+     file[fn:1].
+
+   * You can download files, directories, and entire sites.
+
+   * [ ] Download the Lyon College landing page with ~wget~ using
+     ~lyon.edu~ as the only command. The program will substitute any
+     other information necessary. 
+     - Check the current directory for the result (~index.html~).
+
+     #+begin_src bash :results silent
+     wget lyon.edu
+     #+end_src
+
+     - Go to a terminal (or the Emacs shell) and run the command there
+       again to see the full screen message:
+
+       #+attr_html: :width 700px
+       #+caption: wget terminal screen message
+       [[./img/wget.png]]
+
+     - The man page is better-than-average and highly readable. 
+
+
+     - In Emacs, you can also go to the ~Dired~ buffer with ~C-x d~ and
+       type ~! chromium browswer RET~ on the file ~index.html~. This will
+       open the page locally in a browser.
+
+       #+attr_html: :width 500px
+       #+caption: local copy of lyon.edu/index.html in Chromium browser
+       [[./img/lyon.png]]
+
+* Secure communication with ~ssh~
+
+  * Popular remote access programs included ~rlogin~ and ~telnet~
+
+  * Like ~FTP~ these transmit all their communications in cleartext
+
+  * ~ssh~ (Secure SHell) on the other hand:
+
+    - authenticates that the remote host is who it says it is
+      (preventing so-called "man-in-the-middle" attacks)
+
+    - encrypts all of the communication between the local and remote
+      hosts
+
+  * On Raspberry Pi, you may need to enable ~ssh~ using the ~sudo
+    raspi-config~ terminal command. This opens a screen dialog.
+
+  * [ ] To check if ~ssh~ is active, run
+
+    #+begin_src bash :results output
+      ps aux | grep sshd
+    #+end_src
+
+    #+RESULTS:
+    : root       556  0.0  0.1  12372  6004 ?        Ss   Apr15   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+    : root     17230  0.0  0.1  14484  7052 ?        Ss   Apr20   0:00 sshd: pi [priv]
+    : pi       17236  0.0  0.1  14484  4464 ?        S    Apr20   0:00 sshd: pi@pts/1
+    : root     17295  0.0  0.1  14484  6920 ?        Ss   Apr20   0:00 sshd: pi [priv]
+    : pi       17301  0.0  0.1  14484  4500 ?        S    Apr20   0:00 sshd: pi@pts/2
+    : pi       22899  0.0  0.0   7452   568 ?        S    08:45   0:00 grep sshd
+    
+    I get this result, which shows that I (as ~pi~) have one active
+    secure shell connections. It is controlled by ~root~ and asleep.
+
+    #+begin_example
+    : root     17230  Ss   Apr20   0:00 sshd: pi [priv]
+    : pi       17236  S    Apr20   0:00 sshd: pi@pts/1
+    #+end_example
+
+    Here are the Emacs buffers that show the remote connection:
+
+    #+begin_example
+    %  /rclone:pi@gdrive:/       1971 Dired by name    /rclone:pi@gdrive:/
+    * *tramp/rclone pi@gdrive*     0 Fundamental      
+    #+end_example
+
+  * SSH consists of two parts:
+    - An SSH server runs on the /remote host/, listening for incoming
+      connections by default on port 22
+    - An SSH client runs on the /local system/ to communicate with the
+      remote server.
+  
+  * To enable a system to receive remote connections, it must have the
+    OpenSSH-server package installed, configured, and running, and (if
+    the system is behind a firewall) it must allow incoming
+    connections on TCP port 22.
+
+  * [ ] Connect with your neighboring Pi using SSH.
+
+    - Make sure ssh is alive and running: type ~systemctl status ssh~ in
+      a terminal or Emacs shell or run the block below and check the file.
+
+      #+begin_src bash :results output
+      systemctl status ssh > ssh.status
+      cat ssh.status
+      #+end_src
+
+      #+RESULTS:
+      #+begin_example
+      ● ssh.service - OpenBSD Secure Shell server
+	   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+	   Active: active (running) since Fri 2022-04-15 12:48:23 CDT; 5 days ago
+	     Docs: man:sshd(8)
+		   man:sshd_config(5)
+	  Process: 531 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+	 Main PID: 556 (sshd)
+	    Tasks: 1 (limit: 4915)
+	      CPU: 4.204s
+	   CGroup: /system.slice/ssh.service
+		   └─556 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+      Apr 20 21:06:12 raspberrypi sshd[17170]: Connection reset by authenticating user pi 192.168.1.116 port 64112 [preauth]
+      Apr 20 21:07:34 raspberrypi sshd[17201]: Connection closed by 192.168.1.116 port 64135 [preauth]
+      Apr 20 21:09:37 raspberrypi sshd[17209]: Accepted password for pi from 192.168.1.116 port 64169 ssh2
+      Apr 20 21:09:37 raspberrypi sshd[17209]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
+      Apr 20 21:10:20 raspberrypi sshd[17230]: Accepted password for pi from 192.168.1.116 port 64181 ssh2
+      Apr 20 21:10:20 raspberrypi sshd[17230]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
+      Apr 20 21:10:43 raspberrypi sshd[17295]: Accepted password for pi from 192.168.1.116 port 64184 ssh2
+      Apr 20 21:10:43 raspberrypi sshd[17295]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
+      Apr 20 21:11:49 raspberrypi sshd[17332]: Accepted password for pi from 192.168.1.116 port 64193 ssh2
+      Apr 20 21:11:49 raspberrypi sshd[17332]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
+      #+end_example
+
+    - Find your own and the other party's hostname with ~hostname -I~:
+      this is the only information you need, apart from the username.
+
+      #+begin_src bash :results output
+      hostname -I
+      #+end_src
+
+      #+RESULTS:
+      : 192.168.1.160 
+
+    - In a terminal: enter ~ssh pi@hostname~ then enter the password,
+      which is ~ly0Np1_Numb3r_xx~ where ~xx~ is the number of your
+      Pi. ~hostname~ is the IP address you just obtained.
+
+    - If successful, check that you're on the other machine by
+      checking the SSH ~systemctl status~ and/or the ~hostname~. You can
+      even open Emacs here with ~emacs -nw~ (non-graphical Emacs).
+
+    - In Emacs: open a ~Dired~ buffer with ~C-x d~ and at the prompt, enter
+
+      #+begin_example
+      /ssh:pi@hostname:~/
+      #+end_example
+
+      You should now see the other computer's ~/home/pi~ directory. Open
+      a shell with ~M-x shell~ and you'll see that it will open on the
+      other computer. 
 
 * Emacs special
 
@@ -560,6 +726,10 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
   #+attr_html: :width 600px
   [[./img/rclone.png]]
 
-
 * TODO Summary
-* TODO References
+* Footnotes
+
+[fn:1]This file specifies rules for web crawlers. If you have your own
+web server somewhere with an Internet connection, you're likely to
+have such a file. You can e.g. use it to block sites. It has a simple
+syntax. [[https://syspree.com/create-robots-txt-file-guide/][Here is a simple guide]].

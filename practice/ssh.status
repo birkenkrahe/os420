@@ -1,0 +1,22 @@
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2022-04-15 12:48:23 CDT; 5 days ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 531 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 556 (sshd)
+      Tasks: 1 (limit: 4915)
+        CPU: 4.204s
+     CGroup: /system.slice/ssh.service
+             └─556 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+Apr 20 21:06:12 raspberrypi sshd[17170]: Connection reset by authenticating user pi 192.168.1.116 port 64112 [preauth]
+Apr 20 21:07:34 raspberrypi sshd[17201]: Connection closed by 192.168.1.116 port 64135 [preauth]
+Apr 20 21:09:37 raspberrypi sshd[17209]: Accepted password for pi from 192.168.1.116 port 64169 ssh2
+Apr 20 21:09:37 raspberrypi sshd[17209]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
+Apr 20 21:10:20 raspberrypi sshd[17230]: Accepted password for pi from 192.168.1.116 port 64181 ssh2
+Apr 20 21:10:20 raspberrypi sshd[17230]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
+Apr 20 21:10:43 raspberrypi sshd[17295]: Accepted password for pi from 192.168.1.116 port 64184 ssh2
+Apr 20 21:10:43 raspberrypi sshd[17295]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
+Apr 20 21:11:49 raspberrypi sshd[17332]: Accepted password for pi from 192.168.1.116 port 64193 ssh2
+Apr 20 21:11:49 raspberrypi sshd[17332]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)

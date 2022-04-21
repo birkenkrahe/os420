@@ -1694,6 +1694,11 @@
    * [ ] ~ftp~ for internet file transfer
    * [ ] ~wget~ for non-interactive network downloads
    * [ ] ~ssh~ for remote shell login
+
+** Bonus features
+
+   * [ ] How to connect your Pi to GDrive using ~rclone~
+   * [ ] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
     
 * TODO Archiving and backup - w15s26 (26-Apr)
 * TODO Compiling source code from scratch - w15s27 (28-Apr)

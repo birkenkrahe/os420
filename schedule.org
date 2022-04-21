@@ -44,7 +44,7 @@
   | 23 |   13 | Tue-12-Apr | Variables in Bash (ch 2)       |                    | LX:24 Writing bash scripts   | 9 bash scripting 1      |                                   |
   | 24 |      | Thu-14-Apr |                                | Quiz 8             |                              | 10 bash scripting 2     |                                   |
   |----+------+------------+--------------------------------+--------------------+------------------------------+-------------------------+-----------------------------------|
-  |    |   14 | +Tue-19-Apr+ |                                |                    |                              | 11 bash scripting 3     | (CANCELLED - Honors Convocation)  |
+  |    |   14 | +Tue-19-Apr+ |                                |                    |                              |                         | (CANCELLED - Honors Convocation)  |
   | 25 |      | Thu-21-Apr | Control Statements (BONUS)     | Quiz 9             | LX:16 Networking             | 12 networking           |                                   |
   |----+------+------------+--------------------------------+--------------------+------------------------------+-------------------------+-----------------------------------|
   | 26 |   15 | Tue-26-Apr |                                |                    | LX:18 Archiving and Backup   | 13 archiving/backup     |                                   |

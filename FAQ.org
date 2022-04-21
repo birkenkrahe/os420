@@ -15,12 +15,14 @@
      #+begin_example
      $ sudo apt-get install rclone
      #+end_example
+
   2) Change file permissions of ~$HOME/.config/rclone~ to ~rwx~ for
      owner only
      #+begin_example
      $ chmod 0700 ./.config/rclone  # change permissions
      $ ls -la ./.config/rclone      # check - you should see drwx------
      #+end_example
+
   3) Follow the detailed instructions in [[https://rclone.org/drive/][rclone.org/drive]] until you
      see the ~Success!~ web page after connecting rclone to GDrive
 
@@ -47,7 +49,7 @@
 
   You can now access your GDrive from the Pi from the command line
   with: ~rclone [cmd] gdrive:~, or inside GNU Emacs as an [[https://www.gnu.org/software/emacs/manual/html_node/tramp/External-methods.html][external
-  method]]:~ ~C-x d RET /rclone:gdrive:/~.
+  method]]:~ ~C-x d  /rclone:gdrive:/~.
 
   #+caption: GDrive via rclone in Emacs
   #+attr_html: :width 600px

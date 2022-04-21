@@ -23,7 +23,7 @@
     each line with ~C-c C-c~ (this is confirmed in the echo area as
     ~Local setup has been refreshed~)):
     #+begin_example
-    #+PROPERTY: header-args:bash :results output
+    #+PROPERTY: header-args:bash :results output :exports both
     #+end_example
 
   * Remember that ~C-M-\~ inside a code block indents syntactically
@@ -103,7 +103,7 @@
 
     1) process check with ~ps aux~ - use ~grep~ to search for ~dhcp~.
 
-       #+begin_src bash :results output
+       #+begin_src bash :results output :exports both
          ps aux | grep --exclude=grep dhcp
        #+end_src
 
@@ -115,7 +115,7 @@
        (the program that talks to ~systemd~). Pipe the output of
        ~systemctl status~ into ~grep~.
 
-       #+begin_src bash :results output
+       #+begin_src bash :results output :exports both
          systemctl status | grep dhcp
        #+end_src
 
@@ -290,7 +290,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
 
    * [ ] Run ~ip a~ in the code block below.
 
-     #+begin_src bash :results output
+     #+begin_src bash :results output :exports both
        ip a
      #+end_src
 
@@ -324,7 +324,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
    * [ ] Run ~ifconfig -a~ in the code block below. This command is a
      little easier to understand, I think.
 
-     #+begin_src bash :results output
+     #+begin_src bash :results output :exports both
        ifconfig -a
      #+end_src
 
@@ -363,7 +363,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
 
    * [ ] Run ~netstat -ie~ to examine network interfaces.
 
-     #+begin_src bash :results output
+     #+begin_src bash :results output :exports both
      netstat -ie
      #+end_src
 
@@ -404,7 +404,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
    * [ ] Run ~netstat -r~ to see the routing table, which shows how the
      network is configured to send packets from network to network:
 
-     #+begin_src bash :results output
+     #+begin_src bash :results output :exports both
        netstat -r
      #+end_src
 
@@ -426,7 +426,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
 
    * [ ] Run the ~hostname -I~ command to see your own host on your LAN:
 
-     #+begin_src bash :results output
+     #+begin_src bash :results output :exports both
      hostname -I
      #+end_src
 
@@ -445,7 +445,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
 
   * [ ] Check is the ~ftp~ daemon ~ftpd~ is awake.
 
-    #+begin_src bash :results output
+    #+begin_src bash :results output :exports both
     systemctl status | grep ftpd
     #+end_src
 
@@ -558,7 +558,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
 
   * [ ] To check if ~ssh~ is active, run
 
-    #+begin_src bash :results output
+    #+begin_src bash :results output :exports both
       ps aux | grep sshd
     #+end_src
 
@@ -601,7 +601,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
     - Make sure ssh is alive and running: type ~systemctl status ssh~ in
       a terminal or Emacs shell or run the block below and check the file.
 
-      #+begin_src bash :results output
+      #+begin_src bash :results output :exports both
       systemctl status ssh > ssh.status
       cat ssh.status
       #+end_src
@@ -635,7 +635,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
     - Find your own and the other party's hostname with ~hostname -I~:
       this is the only information you need, apart from the username.
 
-      #+begin_src bash :results output
+      #+begin_src bash :results output :exports both
       hostname -I
       #+end_src
 

@@ -104,32 +104,25 @@
     1) process check with ~ps aux~ - use ~grep~ to search for ~dhcp~.
 
        #+begin_src bash :results output :exports both
-         ps aux | grep --exclude=grep dhcp
+
        #+end_src
 
-       #+RESULTS:
-       : root       534  0.0  0.0   2876  1948 ?        Ss   Apr15   0:01 /usr/sbin/dhcpcd -b -q
-       : pi       17861  0.0  0.0   7452   572 ?        S    21:59   0:00 grep --exclude=grep dhcp
 
     2) search for ~dhcp~ in the output of the ~systemctl~ service program
        (the program that talks to ~systemd~). Pipe the output of
        ~systemctl status~ into ~grep~.
 
        #+begin_src bash :results output :exports both
-         systemctl status | grep dhcp
+
        #+end_src
 
-       #+RESULTS:
-       :            │   │ └─17858 grep dhcp
-       :              ├─dhcpcd.service
-       :              │ ├─534 /usr/sbin/dhcpcd -b -q
 
     * [ ] Find out what the active flags ~-b -q~ for the ~dhcpcd(8)~
       program mean.
 
       #+begin_quote
-      ~-b~ stands for "background" (startup scripts)
-      ~-q~ stands for "quiet" (level of system messages)
+      ~-b~ stands for ...
+      ~-q~ stands for ...
       #+end_quote
 
     * On the man page, you find the information that this daemon
@@ -181,7 +174,8 @@
 
     Here you see the IPv4 adress, e.g. for my computer: 192.168.1.116
 
-  * On Windows, the ~hostname~ command only gives you the
+  * On Windows, the ~hostname~ command only gives you the computer's name
+    
 * Examining and monitoring a network
 
   Look at the man page for each of these programs if you're interested
@@ -224,8 +218,8 @@
      and then Google. Do you see a difference?
 
      #+begin_example
-       ping lyon.edu
-       ping google.com
+     ping lyon.edu
+     ping google.com
      #+end_example
 
 ** What's the route: ~traceroute~
@@ -281,7 +275,6 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
      again with the ~traceroute~ to ~google.com~. Check if ~-T~ or ~-I~ make a
      difference.
 
-
 ** What's interfaced: ~ip~ and ~ifconfig~
 
    * The ~ip(8)~ program is a multi-purpose network configuration tool
@@ -291,26 +284,9 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
    * [ ] Run ~ip a~ in the code block below.
 
      #+begin_src bash :results output :exports both
-       ip a
+
      #+end_src
 
-     #+RESULTS:
-     #+begin_example
-     1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-	 link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-	 inet 127.0.0.1/8 scope host lo
-	    valid_lft forever preferred_lft forever
-	 inet6 ::1/128 scope host 
-	    valid_lft forever preferred_lft forever
-     2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-	 link/ether e4:5f:01:60:ae:84 brd ff:ff:ff:ff:ff:ff
-     3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
-	 link/ether e4:5f:01:60:ae:85 brd ff:ff:ff:ff:ff:ff
-	 inet 192.168.1.160/24 brd 192.168.1.255 scope global dynamic noprefixroute wlan0
-	    valid_lft 2621sec preferred_lft 1993sec
-	 inet6 fe80::b5d0:307e:bbaf:151d/64 scope link 
-	    valid_lft forever preferred_lft forever
-     #+end_example
 
      - My system has three network interfaces: 
      - ~lo~ for loopback, used by the OS to talk to itself
@@ -325,37 +301,9 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
      little easier to understand, I think.
 
      #+begin_src bash :results output :exports both
-       ifconfig -a
+
      #+end_src
 
-     #+RESULTS:
-     #+begin_example
-     eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-             ether e4:5f:01:60:ae:84  txqueuelen 1000  (Ethernet)
-             RX packets 0  bytes 0 (0.0 B)
-             RX errors 0  dropped 0  overruns 0  frame 0
-             TX packets 0  bytes 0 (0.0 B)
-             TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-     lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-             inet 127.0.0.1  netmask 255.0.0.0
-             inet6 ::1  prefixlen 128  scopeid 0x10<host>
-             loop  txqueuelen 1000  (Local Loopback)
-             RX packets 186  bytes 16186 (15.8 KiB)
-             RX errors 0  dropped 0  overruns 0  frame 0
-             TX packets 186  bytes 16186 (15.8 KiB)
-             TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-     wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-             inet 192.168.1.160  netmask 255.255.255.0  broadcast 192.168.1.255
-             inet6 fe80::b5d0:307e:bbaf:151d  prefixlen 64  scopeid 0x20<link>
-             ether e4:5f:01:60:ae:85  txqueuelen 1000  (Ethernet)
-             RX packets 818249  bytes 181591941 (173.1 MiB)
-             RX errors 0  dropped 0  overruns 0  frame 0
-             TX packets 68467  bytes 10239884 (9.7 MiB)
-             TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-     #+end_example
 
 ** What's on the net: ~netstat~
 
@@ -364,38 +312,9 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
    * [ ] Run ~netstat -ie~ to examine network interfaces.
 
      #+begin_src bash :results output :exports both
-     netstat -ie
+
      #+end_src
 
-     #+RESULTS:
-     #+begin_example
-     Kernel Interface table
-     eth0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
-	     ether e4:5f:01:60:ae:84  txqueuelen 1000  (Ethernet)
-	     RX packets 0  bytes 0 (0.0 B)
-	     RX errors 0  dropped 0  overruns 0  frame 0
-	     TX packets 0  bytes 0 (0.0 B)
-	     TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-     lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
-	     inet 127.0.0.1  netmask 255.0.0.0
-	     inet6 ::1  prefixlen 128  scopeid 0x10<host>
-	     loop  txqueuelen 1000  (Local Loopback)
-	     RX packets 186  bytes 16186 (15.8 KiB)
-	     RX errors 0  dropped 0  overruns 0  frame 0
-	     TX packets 186  bytes 16186 (15.8 KiB)
-	     TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-     wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-	     inet 192.168.1.160  netmask 255.255.255.0  broadcast 192.168.1.255
-	     inet6 fe80::b5d0:307e:bbaf:151d  prefixlen 64  scopeid 0x20<link>
-	     ether e4:5f:01:60:ae:85  txqueuelen 1000  (Ethernet)
-	     RX packets 819114  bytes 181716818 (173.2 MiB)
-	     RX errors 0  dropped 0  overruns 0  frame 0
-	     TX packets 68692  bytes 10296698 (9.8 MiB)
-	     TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
-
-     #+end_example
 
    * The output of ~netstat -ie~ looks similar to the ~ifconfig~ command
      because it focuses on network interfaces. Only ~lo~ and ~wlan0~
@@ -405,14 +324,8 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
      network is configured to send packets from network to network:
 
      #+begin_src bash :results output :exports both
-       netstat -r
-     #+end_src
 
-     #+RESULTS:
-     : Kernel IP routing table
-     : Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
-     : default         Docsis-Gateway  0.0.0.0         UG        0 0          0 wlan0
-     : 192.168.1.0     0.0.0.0         255.255.255.0   U         0 0          0 wlan0
+     #+end_src
 
      - This is a typical table for a client on a local area network
        (LAN) behind a firewall/router. The first line shows the
@@ -427,11 +340,8 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
    * [ ] Run the ~hostname -I~ command to see your own host on your LAN:
 
      #+begin_src bash :results output :exports both
-     hostname -I
-     #+end_src
 
-     #+RESULTS:
-     : 192.168.1.160 
+     #+end_src
 
      Mine is ~192.168.1.160~. One of about 20 network devices in my
      house, including: PS5, SmartTV, Kindle tablets, PCs, Mac,
@@ -446,16 +356,13 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
   * [ ] Check is the ~ftp~ daemon ~ftpd~ is awake.
 
     #+begin_src bash :results output :exports both
-    systemctl status | grep ftpd
-    #+end_src
 
-    #+RESULTS:
-    :            │   │ └─19490 grep ftpd
+    #+end_src
 
   * [ ] Check if the program ~ftp~ is even available/installed.
 
     #+begin_src bash :results silent
-    which ftp
+
     #+end_src
 
   * FTP in its original form is *not safe* because it sends account
@@ -518,7 +425,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
      - Check the current directory for the result (~index.html~).
 
      #+begin_src bash :results silent
-     wget lyon.edu
+
      #+end_src
 
      - Go to a terminal (or the Emacs shell) and run the command there
@@ -529,7 +436,6 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
        [[./img/wget.png]]
 
      - The man page is better-than-average and highly readable. 
-
 
      - In Emacs, you can also go to the ~Dired~ buffer with ~C-x d~ and
        type ~! chromium browswer RET~ on the file ~index.html~. This will
@@ -556,20 +462,12 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
   * On Raspberry Pi, you may need to enable ~ssh~ using the ~sudo
     raspi-config~ terminal command. This opens a screen dialog.
 
-  * [ ] To check if ~ssh~ is active, run
+  * [ ] To check if ~ssh~ is active, run ~ps aux~ on the SSH daemon.
 
     #+begin_src bash :results output :exports both
-      ps aux | grep sshd
+
     #+end_src
 
-    #+RESULTS:
-    : root       556  0.0  0.1  12372  6004 ?        Ss   Apr15   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
-    : root     17230  0.0  0.1  14484  7052 ?        Ss   Apr20   0:00 sshd: pi [priv]
-    : pi       17236  0.0  0.1  14484  4464 ?        S    Apr20   0:00 sshd: pi@pts/1
-    : root     17295  0.0  0.1  14484  6920 ?        Ss   Apr20   0:00 sshd: pi [priv]
-    : pi       17301  0.0  0.1  14484  4500 ?        S    Apr20   0:00 sshd: pi@pts/2
-    : pi       22899  0.0  0.0   7452   568 ?        S    08:45   0:00 grep sshd
-    
     I get this result, which shows that I (as ~pi~) have one active
     secure shell connections. It is controlled by ~root~ and asleep.
 
@@ -606,41 +504,12 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
       cat ssh.status
       #+end_src
 
-      #+RESULTS:
-      #+begin_example
-      ● ssh.service - OpenBSD Secure Shell server
-	   Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
-	   Active: active (running) since Fri 2022-04-15 12:48:23 CDT; 5 days ago
-	     Docs: man:sshd(8)
-		   man:sshd_config(5)
-	  Process: 531 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
-	 Main PID: 556 (sshd)
-	    Tasks: 1 (limit: 4915)
-	      CPU: 4.204s
-	   CGroup: /system.slice/ssh.service
-		   └─556 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
-
-      Apr 20 21:06:12 raspberrypi sshd[17170]: Connection reset by authenticating user pi 192.168.1.116 port 64112 [preauth]
-      Apr 20 21:07:34 raspberrypi sshd[17201]: Connection closed by 192.168.1.116 port 64135 [preauth]
-      Apr 20 21:09:37 raspberrypi sshd[17209]: Accepted password for pi from 192.168.1.116 port 64169 ssh2
-      Apr 20 21:09:37 raspberrypi sshd[17209]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
-      Apr 20 21:10:20 raspberrypi sshd[17230]: Accepted password for pi from 192.168.1.116 port 64181 ssh2
-      Apr 20 21:10:20 raspberrypi sshd[17230]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
-      Apr 20 21:10:43 raspberrypi sshd[17295]: Accepted password for pi from 192.168.1.116 port 64184 ssh2
-      Apr 20 21:10:43 raspberrypi sshd[17295]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
-      Apr 20 21:11:49 raspberrypi sshd[17332]: Accepted password for pi from 192.168.1.116 port 64193 ssh2
-      Apr 20 21:11:49 raspberrypi sshd[17332]: pam_unix(sshd:session): session opened for user pi(uid=1000) by (uid=0)
-      #+end_example
-
     - Find your own and the other party's hostname with ~hostname -I~:
       this is the only information you need, apart from the username.
 
       #+begin_src bash :results output :exports both
-      hostname -I
-      #+end_src
 
-      #+RESULTS:
-      : 192.168.1.160 
+      #+end_src
 
     - In a terminal: enter ~ssh pi@hostname~ then enter the password,
       which is ~ly0Np1_Numb3r_xx~ where ~xx~ is the number of your

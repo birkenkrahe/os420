@@ -1678,12 +1678,12 @@
   
 * NEXT Networking - w14s25 (21-Apr)
 
-  * [ ] Last two *DataCamp* assignments for EXTRA CREDIT only
-  * [ ] *Quiz 7-9* are live (bash scripting/permissions/processes)
-  * [ ] Play the quizzes by April 22 (Friday) 4 pm
-  * [ ] *Test 3* will be online - open Thu-28-Apr to Fri-28-Apr
-  * [ ] *Test 3* will not have any new questions - only Q7-Q9
-  * [ ] *Topic* today: Networking under Linux
+  * [X] Last two *DataCamp* assignments for EXTRA CREDIT only
+  * [X] *Quiz 7-9* are live (bash scripting/permissions/processes)
+  * [X] Play the quizzes by April 22 (Friday) 4 pm
+  * [X] *Test 3* will be online - open Thu-28-Apr to Fri-28-Apr
+  * [X] *Test 3* will not have any new questions - only Q7-Q9
+  * [X] *Topic* today: Networking under Linux
 
 ** Networking
 

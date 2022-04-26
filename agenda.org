@@ -1676,7 +1676,7 @@
     Cygwin, you need a native Linux installation for that (like
     Raspbian on the Raspberry Pi)
   
-* NEXT Networking - w14s25 (21-Apr)
+* Networking - w14s25 (21-Apr)
 
   * [X] Last two *DataCamp* assignments for EXTRA CREDIT only
   * [X] *Quiz 7-9* are live (bash scripting/permissions/processes)
@@ -1687,11 +1687,11 @@
 
 ** Networking
 
-   * [ ] ~ping~ other network hosts
-   * [ ] ~traceroute~ to print network travel routes
-   * [ ] ~ip~ to show/manipulate network devices
-   * [ ] ~netstat~ to print network stats
-   * [ ] ~ftp~ for internet file transfer
+   * [X] ~ping~ other network hosts
+   * [X] ~traceroute~ to print network travel routes
+   * [X] ~ip~ to show/manipulate network devices
+   * [X] ~netstat~ to print network stats
+   * [X] ~ftp~ for internet file transfer
    * [ ] ~wget~ for non-interactive network downloads
    * [ ] ~ssh~ for remote shell login
 
@@ -1700,9 +1700,31 @@
    * [ ] How to connect your Pi to GDrive using ~rclone~
    * [ ] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
     
-* TODO Archiving and backup - w15s26 (26-Apr)
-* TODO Compiling source code from scratch - w15s27 (28-Apr)
-* TODO Review: quizzes, tests, final exam preparation (3-May)
+* NEXT ~ssh~ and ~wget~ and review quiz 7-9 - w15s26 (26-Apr)
+
+** Plans for the last weeks of term (Schoology update)
+
+   * On *Tuesday, April 26*, we will finish our look at networking with
+     ~ssh~ and ~wget~, and review the 3 quizzes for /test 3/ (scheduled for
+     online submission Thursday 28-April 11 am to Friday 29-April 11
+     am).
+   * On *Thursday, April 28*, we will start with finding, archiving and
+     compressing files under Linux.
+   * On our last meeting, on *Tuesday May 3*, we will talk about the
+     final exam (scheduled for Thursday 5-May 6 pm to Saturday 7-May
+     8 am), summarize what we've achieved together, and look at
+     compiling source code using the [[https://www.gnu.org/software/make/][GNU ~make(1)~ program]].
+   * You will get a detailed list with curated links and other
+     sources from me for the DIY continuation of your OS journey (@
+     end of May), and a /bonus video/ if the muse cooperates and if
+     your evaluations are mostly positive :-)
+
+   #+caption: training for finals in penguin world
+   [[./img/finals_os420.gif]]
+
+  
+* TODO Finding, archiving, compressing - w15s27 (28-Apr)
+* TODO Compiling from source, and final exam preparation (3-May)
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

@@ -1708,8 +1708,8 @@
    * [X] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
     
 <<<<<<< HEAD
-* ~wget~ and ~ssh~,  review quiz 7-9 - w15s26 (26-Apr)
 
+* Review quiz 7-9 - w15s26 (26-Apr)
 ** Plans for the last weeks of term (Schoology update)
 
    * On *Tuesday, April 26*, we will finish our look at networking with
@@ -1730,13 +1730,35 @@
    #+caption: training for finals in penguin world
    [[./img/finals_os420.gif]]
   
+** Course evaluations - open until May 5
+
+   * [X] Made a lot of changes after the last evaluations.
+   * [X] Support the development of this course
+   * [X] Help me and Lyon College decide if I stay or if I go
+
+     *Extra credit* for evaluating! - Don't forget to click the box.
+
+     [[./img/survey.png]]
+
+** Review quiz 7-9
+
+   * [ ] Quiz 7: Permissions
+   * [ ] Quiz 8: Processes 
+   * [ ] Quiz 9: Bash scripting
+
+   * Test 3 will have 15 questions and last 30 minutes
+   * Open between Thu 6 pm to Sat 8 am
+   * ALL questions for test 3 and final exam are KNOWN
+     (in principle - I will make small modifications)
+*  ~wget~ and ~ssh~ - w15s27 (28-Apr)
 ** Networking 2
 
+   *DOWNLOAD UPDATED FILE ~networking.org~ FROM GDRIVE*
+   
    * [ ] Did anyone look at the "Bonus features" (~rclone~ / ~Tramp~)?
    * [ ] See also "[[https://www.raspberrypi.com/documentation/computers/remote-access.html#remote-access][Remotely accessing your Raspberry Pi]]" (networking)
    * [ ] ~wget~ for non-interactive network downloads
    * [ ] ~ssh~ for remote shell login
-
    * [ ] *Bonus challenge: what is "Raspbian" (technically)?*
 
      #+begin_quote Answer
@@ -1748,12 +1770,6 @@
      Desktop, which is based on Gnome (one of two popular desktop
      architectures - the other one is KDE[fn:9]). (Source: [[https://www.raspberrypi.com/software/][raspberrypi.com]])
      #+end_quote
-   
-** Review quiz 7-9
-
-   * [ ] Quiz 7: 
-   * [ ] Quiz 8:
-   * [ ] Quiz 9: 
    
 * References
 

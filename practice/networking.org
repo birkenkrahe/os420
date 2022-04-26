@@ -476,91 +476,233 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
 
 <<<<<<< HEAD
 * Secure communication with ~ssh~
+** Overview
 
-  * Popular remote access programs included ~rlogin~ and ~telnet~
+   * Popular remote access programs included ~rlogin~ and ~telnet~
 
-  * Like ~FTP~ these transmit all their communications in cleartext
+   * Like ~FTP~ these transmit all their communications in cleartext
 
-  * ~ssh~ (Secure SHell) on the other hand:
+   * ~ssh~ (Secure SHell) on the other hand:
 
-    - authenticates that the remote host is who it says it is
-      (preventing so-called "man-in-the-middle" attacks)
+     - *authenticates* that the remote host is who it says it is
+       (preventing so-called "man-in-the-middle" attacks)
 
-    - encrypts all of the communication between the local and remote
-      hosts
+     - *encrypts* all of the communication between the local and remote
+       hosts
 
-  * On Raspberry Pi, you may need to enable ~ssh~ using the ~sudo
-    raspi-config~ terminal command. This opens a screen dialog.
+   * SSH consists of two parts:
 
-  * [ ] To check if ~ssh~ is active, run ~ps aux~ on the SSH daemon.
+     - An *SSH server* that runs on the /remote host/, listening for
+       incoming connections by default on port 22
 
-    #+begin_src bash :results output :exports both
+     - An *SSH client* that runs on the /local system/ to communicate with
+       the remote server.
 
-    #+end_src
+   * To enable a system to receive remote connections, it must have the
+     OpenSSH-server package installed, configured, and running, and (if
+     the system is behind a firewall) it must allow incoming
+     connections on TCP port 22.
 
-    I get this result, which shows that I (as ~pi~) have one active
-    secure shell connections. It is controlled by ~root~ and asleep.
+   * ~ssh~ creates a sort of virtual private network between client and
+     host computer.
 
-    #+begin_example
-    : root     17230  Ss   Apr20   0:00 sshd: pi [priv]
-    : pi       17236  S    Apr20   0:00 sshd: pi@pts/1
-    #+end_example
+** Enable ssh on your Pi
 
-    Here are the Emacs buffers that show the remote connection:
+   * Update your Pi now: run these commands in a shell
 
-    #+begin_example
-    %  /rclone:pi@gdrive:/       1971 Dired by name    /rclone:pi@gdrive:/
-    * *tramp/rclone pi@gdrive*     0 Fundamental      
-    #+end_example
+     #+begin_example bash
+     sudo apt update -y
+     sudo apt upgrade -y
+     #+end_example
 
-  * SSH consists of two parts:
-    - An SSH server runs on the /remote host/, listening for incoming
-      connections by default on port 22
-    - An SSH client runs on the /local system/ to communicate with the
-      remote server.
-  
-  * To enable a system to receive remote connections, it must have the
-    OpenSSH-server package installed, configured, and running, and (if
-    the system is behind a firewall) it must allow incoming
-    connections on TCP port 22.
+     Call me if either of them are unsuccessful.
 
-  * [ ] Connect with your neighboring Pi using SSH.
+   * On Raspberry Pi, you may need to enable ~ssh~ using the ~sudo
+     raspi-config~ terminal command. This opens a screen dialog.
 
-    - Make sure ssh is alive and running: type ~systemctl status ssh~ in
-      a terminal or Emacs shell or run the block below and check the file.
+     - Go to ~Interfacing options~ and ~Enable ssh~, then ~Save~ and ~Finish~.
 
-      #+begin_src bash :results output :exports both
-      systemctl status ssh > ssh.status
-      cat ssh.status
-      #+end_src
+     #+attr_html:L :width 400px
+     #+caption: Raspi Config screen dialog (ssh)
+     [[./img/raspi-config.png]]
 
-    - Find your own and the other party's hostname with ~hostname -I~:
-      this is the only information you need, apart from the username.
+   * [ ] Once enabled, check if ~ssh~ is active by searching for its daemon, ~sshd~.
 
-      #+begin_src bash :results output :exports both
+     #+begin_src bash :results output :exports both
 
-      #+end_src
+     #+end_src
 
-    - In a terminal: enter ~ssh pi@hostname~ then enter the password,
-      which is ~ly0Np1_Numb3r_xx~ where ~xx~ is the number of your
-      Pi. ~hostname~ is the IP address you just obtained.
+     When logged in on my Pi from my Windows box, I get this result,
+     which shows that I (as ~pi~) have one active secure shell
+     connections. It is controlled by ~root~ and asleep:
 
-    - If successful, check that you're on the other machine by
-      checking the SSH ~systemctl status~ and/or the ~hostname~. You can
-      even open Emacs here with ~emacs -nw~ (non-graphical Emacs).
+     #+begin_example
+     : root       527  0.0  0.1  12356  5768 ?        Ss   20:32   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+     : root      1972  2.5  0.1  14452  6936 ?        Ss   20:57   0:00 sshd: pi [priv]
+     : pi        1978  0.0  0.1  14452  4404 ?        S    20:57   0:00 sshd: pi@pts/0
+     : pi        1993  0.0  0.0   7452   572 ?        S    20:57   0:00 grep sshd
+     #+end_example
 
-    - In Emacs: open a ~Dired~ buffer with ~C-x d~ and at the prompt, enter
+     When I used ~rclone~ to connect to my GDrive from within Emacs, I
+     get these buffers in my buffer list:
 
-      #+begin_example
-      /ssh:pi@hostname:~/
+     #+begin_example
+     %  /rclone:pi@gdrive:/       1971 Dired by name    /rclone:pi@gdrive:/
+     * *tramp/rclone pi@gdrive*     0 Fundamental
+     #+end_example
+
+** Map your network neighborhood with ~nmap~
+
+   - [ ] Find your own and the other party's hostname with ~hostname -I~:
+     this is the only information you need, apart from the username.
+
+     #+begin_src bash :results output :exports both
+
+     #+end_src
+
+   - [ ] Install the ~nmap~ tool to map the whole subnet (all computers in
+     your network vicinity): run ~sudo apt install nmap~ in a shell.
+
+   - [ ] Run ~nmap -sn~ on your whole subnet range. You need to take
+     the network address that you obtained earlier with ~hostname~ and
+     replace the last number by ~0/24~, like so:
+
+     #+begin_src bash :results output
+       nmap -sn 192.168.1.0/24
+     #+end_src
+
+     This is what I get at home at the moment:
+
+     #+begin_example
+     Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-25 21:10 CDT
+     Nmap scan report for Docsis-Gateway (192.168.1.1)
+     Host is up (0.011s latency).
+     Nmap scan report for BRW5C6199417261 (192.168.1.19)
+     Host is up (0.030s latency).
+     Nmap scan report for Carlyes-MacMini (192.168.1.30)
+     Host is up (0.080s latency).
+     Nmap scan report for RE230 (192.168.1.97)
+     Host is up (0.0087s latency).
+     Nmap scan report for Galaxy-A32-5G (192.168.1.98)
+     Host is up (0.039s latency).
+     Nmap scan report for raspberrypi (192.168.1.161)
+     Host is up (0.00011s latency).
+     Nmap scan report for RE230 (192.168.1.179)
+     Host is up (0.023s latency).
+     Nmap scan report for 192.168.1.207
+     Host is up (0.020s latency).
+     Nmap done: 256 IP addresses (8 hosts up) scanned in 2.44 seconds
+     #+end_example
+
+     If you try this at home, you better make sure that you know who
+     all the participants of your subnet are. You can also ~ping~ them
+     and if they are other computers with ~ssh~, connect to them
+     remotely.
+
+** Connect with your neighboring Pi using SSH.
+
+   * [ ] Make sure ssh is alive and running: type ~systemctl status ssh~ in
+     a terminal or Emacs shell or run the block below and check the file.
+
+     #+begin_src bash :results output :exports both
+       systemctl status ssh > ssh.status
+       cat ssh.status
+     #+end_src
+
+   * [ ] In a terminal: enter ~ssh pi@hostname~ then enter the password,
+     which is ~ly0Np1_Numb3r_xx~ where ~xx~ is the number of your
+     Pi. ~hostname~ is the IP address you just obtained.
+
+   * The first time the connection is attempted, a message is
+     displayed that the authenticity of the remote host cannot be
+     established (because the client - your computer - has never seen
+     this remote host before). You need to explicitly OK this (~yes~)
+
+   * If the ~connection is refused~ by the host computer, then ~ssh~ is
+     not installed or enabled, or not running.
+
+   * If the remote host answers but does not successfully
+     authenticate, you get a message like this:
+
+     #+caption: Remote connection not authenticated
+     [[./img/host.png]]
+
+   * This message can be the result of two situations:
+     1) an attacker may be attempting a man-in-the-middle attack. This
+        is unlikely because it is known that ~ssh~ signals an alert.
+     2) the remote system has been altered since the last connection -
+        the OS or the ~ssh~ server may have been re-installed.
+
+   * To clean up the *client side*, you need to remove obsolete keys
+     from the ~/.ssh/known_hosts file:
+
+     #+caption: Known hosts file in $HOME/.ssh/
+     [[./img/known_hosts.png]]
+
+   * [ ] Take a look at your ~known_hosts~ file with ~cat~.
+
+   * [ ] If your connection is successful, check that you're on the
+     other machine by checking the SSH ~systemctl status~ and/or the
+     ~hostname~. You can even open Emacs here with ~emacs -nw~
+     (non-graphical Emacs).
+
+   * [ ] In Emacs: open a ~Dired~ buffer with ~C-x d~ and at the prompt, enter
+
+     #+begin_example
+     /ssh:pi@hostname:~/
+     #+end_example
+
+     You should now see the other computer's ~/home/pi~ directory. Open
+     a shell with ~M-x shell~ and you'll see that it will open on the
+     other computer.
+
+** Get a directory list from the remote system
+
+    * [ ] This is unexciting if you're in Emacs with ~Dired~ but if you
+      do it on the shell, it has hacker qualities: get a remote
+      directory listing on your computer with
+
+      #+begin_example bash
+      ssh [remote-system] 'ls -l' > dirlist
       #+end_example
 
-      You should now see the other computer's ~/home/pi~ directory. Open
-      a shell with ~M-x shell~ and you'll see that it will open on the
-      other computer. 
-=======
->>>>>>> eb3b79c (update)
+      Or create a dirlist on the host computer with 
+   
+      #+begin_example bash
+      ssh [remote-system] 'ls -l > dirlist'
+      #+end_example
 
+** ~scp~ and ~sftp~
+
+   * The OpenSSH package contains two more service programs that can
+     make use of the encrypted ~ssh~ tunnel: ~scp~ for remote file copy,
+     and ~sftp~ for remote file transfer (without a remote FTP server).
+
+   * [ ] On both client and host, create an empty file with your own
+     ~hostname~ as the title, e.g. ~192.168.1.161~.
+
+   * [ ] Copy the file to each other's computer using the syntax:
+
+     #+begin_example bash
+     scp pi@192.168.1.161:/home/pi/192.168.1.161 ./hostfile
+     #+end_example
+
+     This will copy ~/home/pi/192.168.1.161~ from the host into ~hostfile~
+     on your client computer.
+
+   * [ ] Run a remote FTP session with:
+
+     #+begin_example bash
+     sftp pi@192.168.1.161
+     #+end_example
+
+     This will open an ~sftp>~ shell on which you can execute the
+     command ~ls~ or ~help~. To get out of the session, type ~bye~.
+
+   * Many of the graphical file managers found in Linux distributions
+     support the ~sftp~ protocol. You can enter a URI beginning with
+     ~sftp://~ in the location bar and operate on files stored on a
+     remote system running an SSH server.
 * Emacs special
 
   * [[https://www.gnu.org/software/tramp/tramp-emacs.html][Tramp]] ("Transparent Remote (file) Access, Multiple Protocol" is a

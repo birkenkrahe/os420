@@ -1708,8 +1708,7 @@
    * [X] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
     
 <<<<<<< HEAD
-* NEXT ~ssh~ and ~wget~ and review quiz 7-9 - w15s26 (26-Apr)
-  
+* ~wget~ and ~ssh~,  review quiz 7-9 - w15s26 (26-Apr)
 
 ** Plans for the last weeks of term (Schoology update)
 
@@ -1750,18 +1749,12 @@
      architectures - the other one is KDE[fn:9]). (Source: [[https://www.raspberrypi.com/software/][raspberrypi.com]])
      #+end_quote
    
-** Review quiz 7-9 
+** Review quiz 7-9
+
+   * [ ] Quiz 7: 
+   * [ ] Quiz 8:
+   * [ ] Quiz 9: 
    
-* TODO Finding, archiving, compressing - w15s27 (28-Apr)
-* TODO Compiling from source, and final exam preparation (3-May)
-=======
-* TODO Archiving and backup - w15s26 (26-Apr)
-
-  * [ ] Finish networking: ~ftp~ session, ~ssh~ session
-
-* TODO Compiling source code from scratch - w15s27 (28-Apr)
-* TODO Review: quizzes, tests, final exam preparation (3-May)
->>>>>>> eb3b79c (update)
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

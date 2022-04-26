@@ -1695,12 +1695,15 @@
    * [ ] ~wget~ for non-interactive network downloads
    * [ ] ~ssh~ for remote shell login
 
+   See workbook (for use on the Raspberry Pi) in GDrive.
+   
 ** Bonus features
 
    * [ ] How to connect your Pi to GDrive using ~rclone~
    * [ ] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
     
 * NEXT ~ssh~ and ~wget~ and review quiz 7-9 - w15s26 (26-Apr)
+
 
 ** Plans for the last weeks of term (Schoology update)
 
@@ -1714,15 +1717,35 @@
      final exam (scheduled for Thursday 5-May 6 pm to Saturday 7-May
      8 am), summarize what we've achieved together, and look at
      compiling source code using the [[https://www.gnu.org/software/make/][GNU ~make(1)~ program]].
-   * You will get a detailed list with curated links and other
-     sources from me for the DIY continuation of your OS journey (@
-     end of May), and a /bonus video/ if the muse cooperates and if
-     your evaluations are mostly positive :-)
+   * You will get a detailed list with curated links and other sources
+     from me for the DIY continuation of your OS journey (@ end of
+     May), and a /bonus video/ if my muse cooperates and if your
+     evaluations are mostly positive :-)
 
    #+caption: training for finals in penguin world
    [[./img/finals_os420.gif]]
-
   
+** Networking 2
+
+   * [ ] Did anyone look at the "Bonus features" (~rclone~ / ~Tramp~)?
+   * [ ] See also "[[https://www.raspberrypi.com/documentation/computers/remote-access.html#remote-access][Remotely accessing your Raspberry Pi]]" (networking)
+   * [ ] ~wget~ for non-interactive network downloads
+   * [ ] ~ssh~ for remote shell login
+
+   * [ ] *Bonus challenge: what is "Raspbian" (technically)?*
+
+     #+begin_quote Answer
+     "Raspbian" was the former name of what is now called "Raspberry
+     Pi OS". It is a Debian-based Linux Operating System for the
+     Raspberry Pi single-board computer series. In turn, Debian is one
+     of the oldest operating systems with a Linux kernel (first
+     released in 1993). Raspberry Pi OS is Debian + the Raspberry Pi
+     Desktop, which is based on Gnome (one of two popular desktop
+     architectures - the other one is KDE[fn:9]). (Source: [[https://www.raspberrypi.com/software/][raspberrypi.com]])
+     #+end_quote
+   
+** Review quiz 7-9 
+   
 * TODO Finding, archiving, compressing - w15s27 (28-Apr)
 * TODO Compiling from source, and final exam preparation (3-May)
 * References
@@ -1744,6 +1767,11 @@
     wikipedia.org]].
 
 * Footnotes
+
+[fn:9]The choice of visual desktop environment (Gnome or KDE)
+parallels other choice-wars, like for editors (Emacs vs. vi). KDE (the
+"Kool Desktop Environment") comes from Germany, Gnome comes from the
+Americas.
 
 [fn:8](1) Virtualbox with a Linux image; (2) Cygwin utility tool
 bundle; (3) dual boot with Linux e.g. from a USB Stick or an SD-card;

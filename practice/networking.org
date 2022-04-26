@@ -71,6 +71,7 @@
     | ~irc~        | Internet relay chat program                  |
     | ~wget~       | Non-interactive network downloader           |
     | ~ssh~        | OpenSSH secure shell client (remote login)   |
+    | ~nmap~       | Map network like your local subnet           |
 
   * This section also assumes some familiarity with the concepts
     - Internet Protocol (IP) address
@@ -104,18 +105,28 @@
     1) process check with ~ps aux~ - use ~grep~ to search for ~dhcp~.
 
        #+begin_src bash :results output :exports both
+<<<<<<< HEAD
 
        #+end_src
 
+=======
+
+       #+end_src
+>>>>>>> eb3b79c (update)
 
     2) search for ~dhcp~ in the output of the ~systemctl~ service program
        (the program that talks to ~systemd~). Pipe the output of
        ~systemctl status~ into ~grep~.
 
        #+begin_src bash :results output :exports both
+<<<<<<< HEAD
 
        #+end_src
 
+=======
+
+       #+end_src
+>>>>>>> eb3b79c (update)
 
     * [ ] Find out what the active flags ~-b -q~ for the ~dhcpcd(8)~
       program mean.
@@ -284,9 +295,14 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
    * [ ] Run ~ip a~ in the code block below.
 
      #+begin_src bash :results output :exports both
+<<<<<<< HEAD
 
      #+end_src
 
+=======
+
+     #+end_src
+>>>>>>> eb3b79c (update)
 
      - My system has three network interfaces: 
      - ~lo~ for loopback, used by the OS to talk to itself
@@ -301,9 +317,14 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
      little easier to understand, I think.
 
      #+begin_src bash :results output :exports both
+<<<<<<< HEAD
 
      #+end_src
 
+=======
+
+     #+end_src
+>>>>>>> eb3b79c (update)
 
 ** What's on the net: ~netstat~
 
@@ -314,7 +335,10 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
      #+begin_src bash :results output :exports both
 
      #+end_src
+<<<<<<< HEAD
 
+=======
+>>>>>>> eb3b79c (update)
 
    * The output of ~netstat -ie~ looks similar to the ~ifconfig~ command
      because it focuses on network interfaces. Only ~lo~ and ~wlan0~
@@ -356,6 +380,11 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
   * [ ] Check is the ~ftp~ daemon ~ftpd~ is awake.
 
     #+begin_src bash :results output :exports both
+<<<<<<< HEAD
+=======
+
+    #+end_src
+>>>>>>> eb3b79c (update)
 
     #+end_src
 
@@ -445,6 +474,7 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
        #+caption: local copy of lyon.edu/index.html in Chromium browser
        [[./img/lyon.png]]
 
+<<<<<<< HEAD
 * Secure communication with ~ssh~
 
   * Popular remote access programs included ~rlogin~ and ~telnet~
@@ -528,6 +558,8 @@ traceroute to lyon.edu (40.119.1.254), 30 hops max, 60 byte packets
       You should now see the other computer's ~/home/pi~ directory. Open
       a shell with ~M-x shell~ and you'll see that it will open on the
       other computer. 
+=======
+>>>>>>> eb3b79c (update)
 
 * Emacs special
 

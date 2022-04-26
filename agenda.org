@@ -1692,18 +1692,24 @@
    * [X] ~ip~ to show/manipulate network devices
    * [X] ~netstat~ to print network stats
    * [X] ~ftp~ for internet file transfer
+<<<<<<< HEAD
    * [ ] ~wget~ for non-interactive network downloads
    * [ ] ~ssh~ for remote shell login
+=======
+   * [X] ~wget~ for non-interactive network downloads
+   * [X] ~ssh~ for remote shell login
+>>>>>>> eb3b79c (update)
 
    See workbook (for use on the Raspberry Pi) in GDrive.
    
 ** Bonus features
 
-   * [ ] How to connect your Pi to GDrive using ~rclone~
-   * [ ] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
+   * [X] How to connect your Pi to GDrive using ~rclone~
+   * [X] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
     
+<<<<<<< HEAD
 * NEXT ~ssh~ and ~wget~ and review quiz 7-9 - w15s26 (26-Apr)
-
+  
 
 ** Plans for the last weeks of term (Schoology update)
 
@@ -1748,6 +1754,14 @@
    
 * TODO Finding, archiving, compressing - w15s27 (28-Apr)
 * TODO Compiling from source, and final exam preparation (3-May)
+=======
+* TODO Archiving and backup - w15s26 (26-Apr)
+
+  * [ ] Finish networking: ~ftp~ session, ~ssh~ session
+
+* TODO Compiling source code from scratch - w15s27 (28-Apr)
+* TODO Review: quizzes, tests, final exam preparation (3-May)
+>>>>>>> eb3b79c (update)
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

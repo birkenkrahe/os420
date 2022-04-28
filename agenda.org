@@ -1618,7 +1618,7 @@
   * [ ] [[https://app.datacamp.com/learn/courses/introduction-to-bash-scripting][DataCamp assignment]]
 
     [[./img/cygwin1.png]]
-  
+
 * Introduction to bash scripting  - w13s23 (12-Apr)
 ** Emacs tip
 
@@ -1635,26 +1635,26 @@
 
 ** DataCamp review
 
-  #+attr_html: :width 700px
-  #+caption: DataCamp bash IDE
-  [[./img/ide.png]]
+   #+attr_html: :width 700px
+   #+caption: DataCamp bash IDE
+   [[./img/ide.png]]
 
-  #+attr_html: :width 700px
-  #+caption: DataCamp pipe illustration
-  [[./img/pipe1.png]]
+   #+attr_html: :width 700px
+   #+caption: DataCamp pipe illustration
+   [[./img/pipe1.png]]
 
 
-  * UNIX stream editor ~sed~ to change one pattern into another. 
+   * UNIX stream editor ~sed~ to change one pattern into another.
 
-    #+begin_example bash
-      cat file.txt | sed 's/Birkenkrahe/birchcrow/g' | grep 'Birkenkrahe'
-    #+end_example
-    
+     #+begin_example bash
+       cat file.txt | sed 's/Birkenkrahe/birchcrow/g' | grep 'Birkenkrahe'
+     #+end_example
+
 ** Scripting in bash - refresher
 
    * [X] How to write a shell script in 3 steps
    * [X] Script file format with /shebang/
-   * [X] Permission to execute with ~chmod~ 
+   * [X] Permission to execute with ~chmod~
    * [X] Location with ~$PATH~
 
 * Bash scripting lab practice - w13s24 (14-Apr)
@@ -1665,7 +1665,7 @@
 
   * All exercises are directly or indirectly taken from the first two
     DataCamp chapters of
-  
+
   * [X] Revising shell commands
   * [X] Standard streams and arguments
   * [X] Single and double quotes
@@ -1675,7 +1675,7 @@
   * The exercises with ~bc~ cannot be completed in replit.com or in
     Cygwin, you need a native Linux installation for that (like
     Raspbian on the Raspberry Pi)
-  
+
 * Networking - w14s25 (21-Apr)
 
   * [X] Last two *DataCamp* assignments for EXTRA CREDIT only
@@ -1692,22 +1692,22 @@
    * [X] ~ip~ to show/manipulate network devices
    * [X] ~netstat~ to print network stats
    * [X] ~ftp~ for internet file transfer
-<<<<<<< HEAD
+   <<<<<<< HEAD
    * [ ] ~wget~ for non-interactive network downloads
    * [ ] ~ssh~ for remote shell login
-=======
+   =======
    * [X] ~wget~ for non-interactive network downloads
    * [X] ~ssh~ for remote shell login
->>>>>>> eb3b79c (update)
+   >>>>>>> eb3b79c (update)
 
    See workbook (for use on the Raspberry Pi) in GDrive.
-   
+
 ** Bonus features
 
    * [X] How to connect your Pi to GDrive using ~rclone~
    * [X] Emacs special: using ~Dired~ and ~shell~ remotely with ~Tramp~
-    
-<<<<<<< HEAD
+
+   <<<<<<< HEAD
 
 * Review quiz 7-9 - w15s26 (26-Apr)
 ** Plans for the last weeks of term (Schoology update)
@@ -1729,7 +1729,7 @@
 
    #+caption: training for finals in penguin world
    [[./img/finals_os420.gif]]
-  
+
 ** Course evaluations - open until May 5
 
    * [X] Made a lot of changes after the last evaluations.
@@ -1742,19 +1742,79 @@
 
 ** Review quiz 7-9
 
-   * [ ] Quiz 7: Permissions
-   * [ ] Quiz 8: Processes 
-   * [ ] Quiz 9: Bash scripting
+   * [X] Quiz 7: Permissions
+   * [X] Quiz 8: Processes
+   * [X] Quiz 9: Bash scripting
 
    * Test 3 will have 15 questions and last 30 minutes
    * Open between Thu 6 pm to Sat 8 am
-   * ALL questions for test 3 and final exam are KNOWN
-     (in principle - I will make small modifications)
-*  ~wget~ and ~ssh~ - w15s27 (28-Apr)
-** Networking 2
+   * ALL questions for test 3 and final exam are KNOWN (in principle -
+     I will make small modifications)
 
-   *DOWNLOAD UPDATED FILE ~networking.org~ FROM GDRIVE*
-   
+*  Networking 2 - remote work - w15s27 (28-Apr)
+** "Microsoft finds Linux desktop flaw that gives ~root~ to untrusted users"
+
+   * [ ] Saved as a [[https://github.com/birkenkrahe/os420/issues][GitHub issue]]
+   * [ ] Is this the end of Linux and a new dawn for Microsoft?
+
+     #+begin_quote
+     »Vulnerabilities recently discovered by Microsoft make it easy for
+     people with a toehold on many Linux desktop systems to quickly gain
+     root system rights— the latest elevation of privileges flaw to come to
+     light in the open source OS.«
+     #+end_quote
+
+   * [ ] Exhibits the strength of Open Source and independent development:
+
+     #+begin_quote
+     »The proof-of-concept exploit works only when it can use the
+     “org.freedesktop.network1” bus name. The researcher found
+     several environments where this happens, including Linux Mint,
+     in which the systemd-networkd by default doesn’t own the
+     org.freedodesktop.network1 bus name at boot. [...]
+
+     [[https://www.linkedin.com/in/jonathan-bar-or-89876474/][The researcher]] also found several processes that run as the
+     systemd-network user, which is permitted to use the bus name required
+     to run arbitrary code from world-writable locations. The vulnerable
+     processes include several gpgv plugins, which are launched when
+     apt-get installs or upgrades, and the Erlang Port Mapper Daemon, which
+     allows running arbitrary code under some scenarios.
+
+     The vulnerability has been patched in the networkd-dispatcher,
+     although it wasn’t immediately clear when or in what version, and
+     attempts to reach the developer weren’t immediately successful. People
+     using vulnerable versions of Linux should patch their systems as soon
+     as possible.« ([[https://arstechnica.com/information-technology/2022/04/microsoft-finds-linux-desktop-flaw-that-gives-root-to-untrusted-users/][Goodin, 26 April 2022]])
+     #+end_quote
+
+     #+begin_quote
+     »Fixes for these vulnerabilities, now identified as
+     CVE-2022-29799 and CVE-2022-29800, have been successfully
+     deployed by the maintainer of the networkd-dispatcher, Clayton
+     Craft.« ([[https://www.microsoft.com/security/blog/2022/04/26/microsoft-finds-new-elevation-of-privilege-linux-vulnerability-nimbuspwn/][Or, 26 April 2022]])
+     #+end_quote
+
+   * [ ] Used in this article and covered in this course:
+
+     - boot process and root privileges
+     - systemd and networkd daemon processes
+     - OS Linux distro dependencies
+     - UID, PID, GID
+     - Linux file system /sbin /tmp /etc
+     - Shell script
+     - Symlinks
+     - Environment variables
+
+   * [ ] [[https://youtu.be/0gRuqu_-0bI][Microsoft Defender for Endpoint]] "real-time threat detection"
+     platform commercial video
+     - "Allows only trusted applications to run" etc.
+     - More stuff from the Microsoft software propaganda machine for
+       the clueless and scared (= not for you)
+     
+** Networking 2 - ~wget~, ~ssh~, ~scp~ and ~sftp~
+
+   *DOWNLOAD UPDATED FILE ~networking_2.org~ FROM GDRIVE*
+
    * [ ] Did anyone look at the "Bonus features" (~rclone~ / ~Tramp~)?
    * [ ] See also "[[https://www.raspberrypi.com/documentation/computers/remote-access.html#remote-access][Remotely accessing your Raspberry Pi]]" (networking)
    * [ ] ~wget~ for non-interactive network downloads
@@ -1770,7 +1830,7 @@
      Desktop, which is based on Gnome (one of two popular desktop
      architectures - the other one is KDE[fn:9]). (Source: [[https://www.raspberrypi.com/software/][raspberrypi.com]])
      #+end_quote
-   
+
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed

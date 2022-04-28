@@ -1805,11 +1805,22 @@
      - Symlinks
      - Environment variables
 
-   * [ ] [[https://youtu.be/0gRuqu_-0bI][Microsoft Defender for Endpoint]] "real-time threat detection"
-     platform commercial video
-     - "Allows only trusted applications to run" etc.
+   * [ ] From the [[https://youtu.be/0gRuqu_-0bI][Microsoft Defender for Endpoint]] "real-time threat
+     detection" platform commercial video (6 min):
+     - Old news: "Allows only trusted applications to run" etc.
      - More stuff from the Microsoft software propaganda machine for
        the clueless and scared (= not for you)
+     - Automatic threat detection and forensic evidence = do not
+       (only) trust dashboards ("uses inspection algorithms that an
+       analyst would use")
+     - Service offering
+     - "We encourage you  to read the documentation  on Microsoft docs
+       to learn more."
+
+   * [ ] *What to do?* Embrace the BS - connect with Microsoft
+     (subscribe to their channel, network with their experts) and
+     continue to grow your Linux knowledge using Open Source
+     technology (100% transparency).
      
 ** Networking 2 - ~wget~, ~ssh~, ~scp~ and ~sftp~
 

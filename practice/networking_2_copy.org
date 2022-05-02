@@ -1,0 +1,375 @@
+#+TITLE:Networking 2
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:networking lecture & practice for CSC420 Operating Systems Spring 2022 Lyon College
+#+STARTUP:overview hideblocks
+#+OPTIONS: toc:nil num:nil ^:nil
+#+PROPERTY: header-args:bash :results output
+#+PROPERTY: header-args:bash :exports both
+* README
+
+  * This file accompanies lectures on the shell and ~bash(1)~. To gain
+    practice, you should type along in your own Org-mode file. You
+    have to have Emacs and my ~.emacs~ file installed on your PC or
+    the Pi you're working with.
+
+  * This section is based on chapter 16 of Shotts, The Linux Command
+    Line (2e), NoStarch Press (2019) - "Networking".
+
+  * To make this easier, use the auto expansion (~<s~). This will only
+    work if you have my ~.emacs~ file ([[https://tinyurl.com/lyonemacs][from GDrive]]) installed and the
+    ~org-tempo~ library loaded.
+
+  * Add the following two lines at the top of your file, and activate
+    each line with ~C-c C-c~ (this is confirmed in the echo area as
+    ~Local setup has been refreshed~)):
+    #+begin_example
+    #+PROPERTY: header-args:bash :results output :exports both
+    #+end_example
+
+  * Remember that ~C-M-\~ inside a code block indents syntactically
+    (on Windows, this may only work if you have a marked region - set
+    the mark with ~C-SPC~).
+
+  * To *not* see the emphatic characters like ~ or * or / in the Org file
+    text, run the following code chunk (or put the code in your ~/.emacs~
+    file): if successful, you should see ~"t"~ in the minibuffer.
+
+    #+begin_src emacs-lisp :results silent
+      (setq-default org-hide-emphasis-markers t)
+    #+end_src
+
+    If you don't put it in your ~/.emacs~ file, the command will only work
+    for the current Emacs session.
+
+  * If you have difficulty distinguishing the code blocks from the
+    documentation, change your Emacs theme with ~M-x custom-themes~ -
+    ~Leuven~ is great if you like a light theme, or ~Manoj-dark~ if you
+    like it dark.
+
+* Transporting files over a network with ~ftp~ and ~wget~
+** FTP
+
+  * ~ftp~ (File Transfer Protocol) is a "classic" program. It is
+    supported by all web browsers.
+
+  * [ ] Check is the ~ftp~ daemon ~ftpd~ is awake.
+
+    #+begin_src bash :results output :exports both
+
+
+    #+end_src
+
+  * [ ] Check if the program ~ftp~ is even available/installed.
+
+    #+begin_src bash :results silent
+
+    #+end_src
+
+  * FTP in its original form is *not safe* because it sends account
+    names and passwords in clear text, i.e. unencrypted. Anyone
+    sniffing the network can see them.
+
+  * Therefore, all FTP traffic on the Internet is done by /anonymous/
+    FTP servers that allow you to login using the username /anonymous/
+    and a meaningless password. 
+
+  * Try ~lftp~ - a better FTP client. On Windows, I used Cyberduck years
+    ago. Dedicated clients offer a lot more features.
+
+** An FTP session
+
+    #+attr_html: :width 500px
+    #+caption: FTP session example
+    [[./img/ftp.png]]
+
+
+  * [ ] Install ~ftp~ as ~sudo~ - use an Emacs shell or a terminal for that.
+
+  * [ ] In a terminal or on an Emacs shell, run ~ftp~
+
+  * [ ] On the ~ftp>~ shell, type ~help~ to see the available commands
+
+  * [ ] Open a connection with ~open~
+
+  * [ ] As target IP address, enter ~ftp.gnu.org~
+
+  * [ ] Login as ~anonymous~
+
+  * [ ] List the current directory with ~ls~
+
+  * [ ] Get the ~README~ file with ~get README~
+
+  * [ ] Rename ~README~ on your computer to ~README1~
+
+  * [ ] Send ~README1~ to the other location with ~send README1~
+
+  * [ ] Close the connection with ~close~ and quit with ~quit~
+
+** wget 
+
+   * ~wget~ is a tool for file downloading both from web and FTP
+     sites. It exhibits network resilience, e.g. it will keep trying
+     to get the job done even if the network is slow or unstable. It
+     does the job in the background 
+
+   * ~wget~ uses "recursive downloading" and recreates the entire file
+     structure that it finds remotely at the local site while
+     respecting the local "Robot Exclusion Standard" of the ~robots.txt~
+     file[fn:1].
+
+   * You can download files, directories, and entire sites.
+
+   * [X] Download the Lyon College landing page with ~wget~ using
+     ~lyon.edu~ as the only command. The program will substitute any
+     other information necessary. 
+     - Check the current directory for the result (~index.html~).
+
+     #+begin_src bash :results silent
+       wget https://www.lyon.edu   ## only from WITHIN the Lyon network!!?
+     #+end_src
+
+     - Go to a terminal (or the Emacs shell) and run the command there
+       again to see the full screen message:
+
+       #+attr_html: :width 700px
+       #+caption: wget terminal screen message
+       [[./img/wget.png]]
+
+     - The man page is better-than-average and highly readable. 
+
+     - In Emacs, you can also go to the ~Dired~ buffer with ~C-x d~ and
+       type ~! chromium browswer RET~ on the file ~index.html~. This will
+       open the page locally in a browser.
+
+       #+attr_html: :width 500px
+       #+caption: local copy of lyon.edu/index.html in Chromium browser
+       [[./img/lyon.png]]
+
+* Secure communication with ~ssh~
+** Overview
+
+   * Popular remote access programs included ~rlogin~ and ~telnet~
+
+   * Like ~FTP~ these transmit all their communications in cleartext
+
+   * ~ssh~ (Secure SHell) on the other hand:
+
+     - *authenticates* that the remote host is who it says it is
+       (preventing so-called "man-in-the-middle" attacks)
+
+     - *encrypts* all of the communication between the local and remote
+       hosts
+
+   * SSH consists of two parts:
+
+     - An *SSH server* that runs on the /remote host/, listening for
+       incoming connections by default on port 22
+
+     - An *SSH client* that runs on the /local system/ to communicate with
+       the remote server.
+
+   * To enable a system to receive remote connections, it must have
+     the OpenSSH-server package installed, configured, and running,
+     and (if the system is behind a firewall) it must allow incoming
+     connections on TCP port 22.
+
+   * ~ssh~ creates a sort of virtual private network between client and
+     host computer.
+
+** Enable ssh on your Pi
+
+   * Update your Pi now: run these commands in a shell
+
+     #+begin_example bash
+     sudo apt update -y
+     sudo apt upgrade -y
+     #+end_example
+
+     Call me if either of them are unsuccessful.
+
+   * On Raspberry Pi, you may need to enable ~ssh~ using the ~sudo
+     raspi-config~ terminal command. This opens a screen dialog.
+
+     - Go to ~Interfacing options~ and ~Enable ssh~, then ~Save~ and ~Finish~.
+
+     #+attr_html:L :width 400px
+     #+caption: Raspi Config screen dialog (ssh)
+     [[./img/raspi-config.png]]
+
+   * [ ] Once enabled, check if ~ssh~ is active by searching for its daemon, ~sshd~.
+
+     #+begin_src bash :results output :exports both
+       systemctl status
+     #+end_src
+
+     When logged in on my Pi from my Windows box, I get this result,
+     which shows that I (as ~pi~) have one active secure shell
+     connections. It is controlled by ~root~ and asleep:
+
+     #+begin_example
+     : root       527  0.0  0.1  12356  5768 ?        Ss   20:32   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+     : root      1972  2.5  0.1  14452  6936 ?        Ss   20:57   0:00 sshd: pi [priv]
+     : pi        1978  0.0  0.1  14452  4404 ?        S    20:57   0:00 sshd: pi@pts/0
+     : pi        1993  0.0  0.0   7452   572 ?        S    20:57   0:00 grep sshd
+     #+end_example
+
+     When I used ~rclone~ to connect to my GDrive from within Emacs, I
+     get these buffers in my buffer list:
+
+     #+begin_example
+     %  /rclone:pi@gdrive:/       1971 Dired by name    /rclone:pi@gdrive:/
+     * *tramp/rclone pi@gdrive*     0 Fundamental
+     #+end_example
+
+** Map your network neighborhood with ~nmap~
+
+   - [ ] Find your own and the other party's hostname with ~hostname -I~:
+     this is the only information you need, apart from the username.
+
+     #+begin_src bash :results output :exports both
+
+     #+end_src
+
+   - [ ] Install the ~nmap~ tool to map the whole subnet (all computers in
+     your network vicinity): run ~sudo apt install nmap~ in a shell.
+
+   - [ ] Run ~nmap -sn~ on your whole subnet range. You need to take
+     the network address that you obtained earlier with ~hostname~ and
+     replace the last number by ~0/24~ (~24~ is the ~port~), like so:
+
+     #+begin_src bash :results output
+       nmap -sn 192.168.1.0/24
+     #+end_src
+
+     This is what I get at home at the moment:
+
+     #+begin_example
+     Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-25 21:10 CDT
+     Nmap scan report for Docsis-Gateway (192.168.1.1)
+     Host is up (0.011s latency).
+     Nmap scan report for BRW5C6199417261 (192.168.1.19)
+     Host is up (0.030s latency).
+     Nmap scan report for Carlyes-MacMini (192.168.1.30)
+     Host is up (0.080s latency).
+     Nmap scan report for RE230 (192.168.1.97)
+     Host is up (0.0087s latency).
+     Nmap scan report for Galaxy-A32-5G (192.168.1.98)
+     Host is up (0.039s latency).
+     Nmap scan report for raspberrypi (192.168.1.161)
+     Host is up (0.00011s latency).
+     Nmap scan report for RE230 (192.168.1.179)
+     Host is up (0.023s latency).
+     Nmap scan report for 192.168.1.207
+     Host is up (0.020s latency).
+     Nmap done: 256 IP addresses (8 hosts up) scanned in 2.44 seconds
+     #+end_example
+
+     If you try this at home, you better make sure that you know who
+     all the participants of your subnet are. You can also ~ping~ them
+     and if they are other computers with ~ssh~, connect to them
+     remotely.
+
+** Connect with your neighboring Pi using SSH.
+
+   * [ ] Make sure ssh is alive and running: type ~systemctl status ssh~ in
+     a terminal or Emacs shell or run the block below and check the file.
+
+     #+begin_src bash :results output :exports both
+       systemctl status ssh > ssh.status
+       cat ssh.status
+     #+end_src
+
+   * [ ] In a terminal: enter ~ssh pi@hostname~ then enter the password,
+     which is ~ly0Np1_Numb3r_xx~ where ~xx~ is the number of your
+     Pi. ~hostname~ is the IP address you just obtained.
+
+   * The first time the connection is attempted, a message is
+     displayed that the authenticity of the remote host cannot be
+     established (because the client - your computer - has never seen
+     this remote host before). You need to explicitly OK this (~yes~)
+
+   * If the ~connection is refused~ by the host computer, then ~ssh~ is
+     not installed or enabled, or not running.
+
+   * If the remote host answers but does not successfully
+     authenticate, you get a message like this:
+
+     #+caption: Remote connection not authenticated
+     [[./img/host.png]]
+
+   * This message can be the result of two situations:
+     1) an attacker may be attempting a man-in-the-middle attack. This
+        is unlikely because it is known that ~ssh~ signals an alert.
+     2) the remote system has been altered since the last connection -
+        the OS or the ~ssh~ server may have been re-installed.
+
+   * To clean up the *client side*, you need to remove obsolete keys
+     from the ~/.ssh/known_hosts file:
+
+     #+caption: Known hosts file in $HOME/.ssh/
+     [[./img/known_hosts.png]]
+
+   * [ ] Take a look at your ~known_hosts~ file with ~cat~.
+
+   * [ ] If your connection is successful, check that you're on the
+     other machine by checking the SSH ~systemctl status~ and/or the
+     ~hostname~. You can even open Emacs here with ~emacs -nw~
+     (non-graphical Emacs).
+
+   * [ ] In Emacs: open a ~Dired~ buffer with ~C-x d~ and at the prompt, enter
+
+     #+begin_example
+     /ssh:pi@hostname:~/
+     #+end_example
+
+     You should now see the other computer's ~/home/pi~ directory. Open
+     a shell with ~M-x shell~ and you'll see that it will open on the
+     other computer.
+
+** Get a directory list from the remote system
+
+    * [ ] This is unexciting if you're in Emacs with ~Dired~ but if you
+      do it on the shell, it has hacker qualities: get a remote
+      directory listing on your computer with
+
+      #+begin_example bash
+      ssh [remote-system] 'ls -l' > dirlist
+      #+end_example
+
+      Or create a dirlist on the host computer with 
+   
+      #+begin_example bash
+      ssh [remote-system] 'ls -l > dirlist'
+      #+end_example
+
+** ~scp~ and ~sftp~
+
+   * The OpenSSH package contains two more service programs that can
+     make use of the encrypted ~ssh~ tunnel: ~scp~ for remote file copy,
+     and ~sftp~ for remote file transfer (without a remote FTP server).
+
+   * [ ] On both client and host, create an empty file with your own
+     ~hostname~ as the title, e.g. ~192.168.1.161~.
+
+   * [ ] Copy the file to each other's computer using the syntax:
+
+     #+begin_example bash
+     scp pi@192.168.1.161:/home/pi/192.168.1.161 ./hostfile
+     #+end_example
+
+     This will copy ~/home/pi/192.168.1.161~ from the host into ~hostfile~
+     on your client computer.
+
+   * [ ] Run a remote FTP session with:
+
+     #+begin_example bash
+     sftp pi@192.168.1.161
+     #+end_example
+
+     This will open an ~sftp>~ shell on which you can execute the
+     command ~ls~ or ~help~. To get out of the session, type ~bye~.
+
+   * Many of the graphical file managers found in Linux distributions
+     support the ~sftp~ protocol. You can enter a URI beginning with
+     ~sftp://~ in the location bar and operate on files stored on a
+     remote system running an SSH server.

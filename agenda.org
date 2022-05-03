@@ -1850,25 +1850,58 @@
      - Quizzes and tests will be disabled before the exam
 
 * Compiling from source with ~make~ - w16s28 (3-May)
+** Content warning
 
-  * [ ] What is compiling?
-  * [ ] Source code compilation pipeline
-  * [ ] Last Rites and Outlook
-  * [ ] Final exam review
-  * [ ] *Any outstanding work must be finished by Monday May 9*
-  
-* Final exam - w16s29 (7-May 1pm-3pm)
+   #+attr_html: :width 400px
+   #+caption: Content warning on my phone!
+   [[./img/warning.jpg]]
 
-    | COURSE NO | MEETS    | TIME                    | ROOM      |
-    |-----------+----------+-------------------------+-----------|
-    | *CSC 420*   | *TR 9.30a* | *Thu 5-May 6.00p - 8.00p* | *Lyon 104*  |
-    |-----------+----------+-------------------------+-----------|
-    |           |          | Fri 6-May 1.00p - 3.00p | Derby 209 |
-    |           |          | Fri 6-May 3.30p - 5.30p | Derby 209 |
-    |           |          | Mon 9-May 1.00p - 3.00p | Derby 209 |
-    |           |          | Mon 9-May 3.30p - 5.30p | Derby 209 |
+** Topics
 
-  
+   * [ ] See practice file ~compiling.org~ [[https://drive.google.com/drive/folders/1Dp9z3e4HOoB-LAs6IthcDIOqXUfhhE4T?usp=sharing][in GDrive]]
+
+   * [ ] Works well with Cygwin (except the last step?)
+   
+   * [ ] What is compiling?
+
+   * [ ] Source code compilation pipeline
+
+   * [ ] Final exam review
+
+   * [X] *Any outstanding work must be finished by Monday May 9*
+
+   * [ ] *Please take 10 minutes to complete the course evaluation now*
+
+       [[./img/evaluation.jpg]]
+
+* Final exam - w16s29 (Thu 5-May 6-8 pm)
+
+  | COURSE NO | MEETS    | TIME                    | ROOM      |
+  |-----------+----------+-------------------------+-----------|
+  | *CSC 420*   | *TR 9.30a* | *Thu 5-May 6.00p - 8.00p* | *Lyon 104*  |
+  |-----------+----------+-------------------------+-----------|
+  |           |          | Fri 6-May 1.00p - 3.00p | Derby 209 |
+  |           |          | Fri 6-May 3.30p - 5.30p | Derby 209 |
+  |           |          | Mon 9-May 1.00p - 3.00p | Derby 209 |
+  |           |          | Mon 9-May 3.30p - 5.30p | Derby 209 |
+
+  The final exam will take place *in room 104 of the Lyon building*
+  (our usual classroom) on *Thursday, May 5 from 6.00 pm to 8.00 pm*
+  ([[https://assets.speakcdn.com/assets/2433/sp22_final_exam_schedule_final-2022042203012665.pdf][see exam schedule]]).
+
+  The exam will consist of 40 questions drawn at random from the
+  pool of quiz and test questions. Completing the various quizzes
+  and tests until you've reached 100%, and revisiting your past
+  tests should enable you to pass this exam with flying colors!
+
+  Please reach out to me if you have difficulties taking the exam at
+  this time. I'm going to offer a limited number of seats to take
+  this exam on Friday May 6 or on Monday May 9. Graduating seniors
+  must complete the exam no later than May 8.
+
+  #+caption: penguin drop off
+  [[./img/final.gif]]
+
 * References
 
   * Couts (October 21, 2011). Google engineer who publicly bashed
